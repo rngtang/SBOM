@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hediet/semantic-json": "^0.4.2",
+    "@monaco-editor/react": "^4.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "d3": "^7.8.5",
+    "mobx-react-lite": "^3.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "rsuite": "^5.35.1",
+    "vis": "^4.21.0-EOL",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
