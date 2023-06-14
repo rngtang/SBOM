@@ -1,6 +1,7 @@
 import React from 'react';
 import SyftParser from './SyftParser';
-import CodeVisualizer from './CodeVisualizer';
+import { CodeVisualizer } from './CodeVisualizer';
+
 
 const App = () => {
   return (
