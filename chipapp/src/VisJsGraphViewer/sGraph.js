@@ -3,28 +3,25 @@ import {
     sLiteral,
     sArrayOf,
     sString,
-    sOptionalProp,
+    optionalProp,
     sUnion,
 } from "@hediet/semantic-json";
 import { visualizationNs } from "./consts";
 
-export type NodeGraphData = typeof sGraphNode.T;
-export type EdgeGraphData = typeof sGraphEdge.T;
-
 export const sGraphNode = sOpenObject({
     id: sString(),
-    label: sOptionalProp(sString(), {}),
-    color: sOptionalProp(sString(), {}),
-    shape: sOptionalProp(sUnion([sLiteral("ellipse"), sLiteral("box")]), {}),
+    label: optionalProp(sString(), {}),
+    color: optionalProp(sString(), {}),
+    shape: optionalProp(sUnion([sLiteral("ellipse"), sLiteral("box")]), {}),
 }).defineAs(visualizationNs("GraphNode"));
 
 export const sGraphEdge = sOpenObject({
     from: sString(),
     to: sString(),
-    label: sOptionalProp(sString(), {}),
-    id: sOptionalProp(sString(), {}),
-    color: sOptionalProp(sString(), {}),
-    style: sOptionalProp(
+    label: optionalProp(sString(), {}),
+    id: optionalProp(sString(), {}),
+    color: optionalProp(sString(), {}),
+    style: optionalProp(
         sUnion([sLiteral("solid"), sLiteral("dashed"), sLiteral("dotted")]),
         {}
     ),

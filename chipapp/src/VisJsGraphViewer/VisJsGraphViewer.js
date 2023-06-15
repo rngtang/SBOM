@@ -1,32 +1,14 @@
 import { Network, Options, DataSet } from "vis-network/standalone";
 import { observer } from "mobx-react-lite";
-import * as React from "react";
-import {EdgeGraphData, NodeGraphData} from "./VisJsGraphViewer/sGraph";
+import React from "react";
 
-export const VisJsGraphViewer = observer((props: {
-    nodes: NodeGraphData[];
-    edges: EdgeGraphData[];
-    style?: React.CSSProperties;
-}) => {
-    const divRef = React.createRef<HTMLDivElement>();
-    const nodes = new DataSet<{
-        id: string;
-        label?: string;
-        color?: string;
-        shape?: string;
-    }>();
-    const edges = new DataSet<{
-        id: string;
-        from: string;
-        to: string;
-        label?: string;
-        color?: string;
-        dashes?: boolean | number[];
-        shape?: boolean;
-    }>();
+export const VisJsGraphViewer = observer((props) => {
+    const divRef = React.createRef();
+    const nodes = new DataSet();
+    const edges = new DataSet();
 
     function synchronizeData() {
-        const newNodes = new Set<string>();
+        const newNodes = new Set();
         for (const n of props.nodes) {
             newNodes.add(n.id);
             nodes.update({
@@ -42,14 +24,14 @@ export const VisJsGraphViewer = observer((props: {
             }
         });
 
-        function getIdOfEdge(e: EdgeGraphData): string {
+        function getIdOfEdge(e) {
             if (e.id) {
                 return e.id;
             }
             return e.from + "####" + e.to + "|" + e.label;
         }
 
-        const newEdges = new Set<string>();
+        const newEdges = new Set();
         for (const n of props.edges) {
             const id = getIdOfEdge(n);
             newEdges.add(id);
@@ -59,9 +41,7 @@ export const VisJsGraphViewer = observer((props: {
                 from: n.from,
                 to: n.to,
                 color: n.color,
-                dashes: { dashed: true, dotted: [1, 4], solid: false }[
-                n.style || "solid"
-                    ],
+                dashes: { dashed: true, dotted: [1, 4], solid: false }[n.style || "solid"],
             });
         }
         edges.forEach(item => {
@@ -78,7 +58,7 @@ export const VisJsGraphViewer = observer((props: {
             nodes: nodes,
             edges: edges,
         };
-        const options: Options = {
+        const options = {
             edges: {
                 arrows: {
                     to: { enabled: true, scaleFactor: 1, type: "arrow" },
@@ -86,7 +66,7 @@ export const VisJsGraphViewer = observer((props: {
             },
         };
         // @ts-ignore
-        const network = new Network(divRef.current!, data, options);
+        const network = new Network(divRef.current, data, options);
     }, [props.nodes, props.edges]);
 
     return (

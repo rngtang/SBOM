@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
     const SendJSON = () => {
-      const [selectedFile, setSelectedFile] = useState();
+      const [jsonFile, setJsonFile] = useState();
 
       const fileChangeHandler = event => {
-        setSelectedFile(event.target.files[0]);
+        setJsonFile(event.target.files[0]);
       };
 
       const fileUploadHandler = () => {
         const formData = new FormData();
-        formData.append('file', selectedFile);
+        formData.append('file', jsonFile);
 
         fetch('http://localhost:3000/upload_json', {
           method: 'POST',
