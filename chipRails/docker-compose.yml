@@ -1,3 +1,5 @@
+# shoved into .dockerignore
+
 version: '3.8'
 services:
   db:
