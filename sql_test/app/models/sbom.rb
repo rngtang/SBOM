@@ -1,0 +1,3 @@
+class Sbom < ApplicationRecord
+    
+end
