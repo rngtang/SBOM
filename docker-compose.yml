@@ -35,4 +35,4 @@ services:
       - "3000:3000"
     image: app:chip_react
     container_name: chip_react
-    command: npm start
+    command: npm run start
