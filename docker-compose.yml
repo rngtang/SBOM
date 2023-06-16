@@ -15,7 +15,7 @@ services:
     build: ./chipRails
     command: "bundle exec rails s -p 8080 -b '0.0.0.0'"
     volumes:
-      - .:/Rails-Docker
+      - ./chipRails:/Rails-Docker
     ports:
       - "8080:8080"
     depends_on:
@@ -30,7 +30,7 @@ services:
   react_app:
     build: ./chip_react
     volumes:
-      - .:/react
+      - ./chip_react:/app
     ports:
       - "3000:3000"
     image: app:chip_react
