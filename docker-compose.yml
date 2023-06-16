@@ -15,7 +15,7 @@ services:
     build: ./chipRails
     command: "bundle exec rails s -p 8080 -b '0.0.0.0'"
     volumes:
-      - ./chipRails:/Rails-Docker
+      - ./chipRails:/app
     ports:
       - "8080:8080"
     depends_on:
