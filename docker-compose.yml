@@ -4,10 +4,9 @@ version: '3.8'
 services:
   db:
     image: mysql:5.7
-    #restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: db_test_development
+      MYSQL_DATABASE: db_development
       MYSQL_USER: ren11
       MYSQL_PASSWORD: password
     ports:
@@ -25,7 +24,7 @@ services:
       - db
     environment:
       DB_USER: ren11
-      DB_NAME: db_test_development
+      DB_NAME: db_development
       DB_PASSWORD: password
       DB_HOST: db
 
