@@ -1,0 +1,46 @@
+# shoved into .dockerignore
+
+version: '3.8'
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: db_development
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"
+  rails_app:
+    build: ./chipRails
+    entrypoint: ./entrypoint.sh
+    command: "rails s -p 8080 -b '0.0.0.0'"
+    volumes:
+      - ./chipRails:/app
+    ports:
+      - "8080:8080"
+    image: chip_rails:latest
+    container_name: chip_rails
+    depends_on:
+      - db
+    links:
+      - db
+    environment:
+      RAILS_ENV: development
+      DB_USER: dbuser
+      DB_NAME: db_development
+      DB_PASSWORD: password
+      DB_HOST: db
+  react_app:
+    build: ./chipReact
+    volumes:
+      - ./chipReact:/app
+      - exclude:/app/node_modules 
+    ports:
+      - "3000:3000"
+    image: chip_react:latest
+    container_name: chip_react
+    command: ./entrypoint.sh
+volumes: 
+  exclude:
