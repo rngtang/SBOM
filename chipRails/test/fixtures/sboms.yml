@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bomFormat: MyString
+  specVersion: MyString
+  serialNumber: MyString
+  version: 1
+
+two:
+  bomFormat: MyString
+  specVersion: MyString
+  serialNumber: MyString
+  version: 1

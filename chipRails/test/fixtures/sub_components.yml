@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bom_ref: MyString
+  type: 
+  publisher: MyString
+  name: MyString
+  version: MyString
+  cpe: MyString
+  purl: MyString
+
+two:
+  bom_ref: MyString
+  type: 
+  publisher: MyString
+  name: MyString
+  version: MyString
+  cpe: MyString
+  purl: MyString

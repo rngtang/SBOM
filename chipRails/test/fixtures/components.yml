@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bom-ref: MyString
+  type: 
+  name: MyString
+  version: MyString
+
+two:
+  bom-ref: MyString
+  type: 
+  name: MyString
+  version: MyString
