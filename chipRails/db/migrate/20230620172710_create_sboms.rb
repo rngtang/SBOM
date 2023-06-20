@@ -5,6 +5,7 @@ class CreateSboms < ActiveRecord::Migration[7.0]
       t.string :specVersion
       t.string :serialNumber
       t.integer :version
+      t.belongs_to :user, foreign_key: true
 
       t.timestamps
     end

@@ -4,6 +4,7 @@ class CreateTools < ActiveRecord::Migration[7.0]
       t.string :vendor
       t.string :name
       t.string :version
+      t.belongs_to :metadatum, foreign_key: true
 
       t.timestamps
     end

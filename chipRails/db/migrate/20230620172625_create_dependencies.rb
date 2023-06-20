@@ -8,6 +8,7 @@ class CreateDependencies < ActiveRecord::Migration[7.0]
       t.string :version
       t.string :cpe
       t.string :purl
+      t.belongs_to :sbom,  foreign_key: true
 
       t.timestamps
     end

@@ -8,6 +8,7 @@ class CreateSubComponents < ActiveRecord::Migration[7.0]
       t.string :version
       t.string :cpe
       t.string :purl
+      t.belongs_to :dependency
 
       t.timestamps
     end
