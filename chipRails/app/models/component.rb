@@ -1,3 +1,3 @@
 class Component < ApplicationRecord
-    belongs_to :metadatum
+    belongs_to :metad
 end

@@ -1,6 +1,6 @@
 require "test_helper"
 
-class MetadatumTest < ActiveSupport::TestCase
+class MetadTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
