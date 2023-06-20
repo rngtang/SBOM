@@ -4,7 +4,7 @@ import Tree from './Tree';
 const App = () => {
   return (
     <div>
-      <h1>Collapsible Tree Example</h1>
+      <h1>Tree Example</h1>
       <Tree />
     </div>
   );
