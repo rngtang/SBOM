@@ -1,0 +1,2 @@
+class ToolController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class MetadController < ApplicationController
+end
