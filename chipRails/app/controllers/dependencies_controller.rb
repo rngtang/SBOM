@@ -1,0 +1,2 @@
+class DependenciesController < ApplicationController
+end

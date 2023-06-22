@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>References</h1>
+
+<div id="references">
+  <% @references.each do |reference| %>
+    <%= render reference %>
+    <p>
+      <%= link_to "Show this reference", reference %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New reference", new_reference_path %>

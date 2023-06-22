@@ -1,0 +1,2 @@
+class SbomsController < ApplicationController
+end
