@@ -1,7 +1,7 @@
 class CreateSubComponents < ActiveRecord::Migration[7.0]
   def change
     create_table :sub_components do |t|
-      t.string :bom-ref
+      t.string :bom_ref
       t.string :type
       t.string :publisher
       t.string :name
