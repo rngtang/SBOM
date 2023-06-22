@@ -1,32 +1,40 @@
 {
-    "name": "Root",
-    "children": [
-      {
-        "name": "Node 1",
-        "children": [
-          {
-            "name": "Node 1.1",
-            "children": []
-          },
-          {
-            "name": "Node 1.2",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Node 2",
-        "children": [
-          {
-            "name": "Node 2.1",
-            "children": []
-          },
-          {
-            "name": "Node 2.2",
-            "children": []
-          }
-        ]
-      }
-    ]
-  }
-  
+  "name": "An Example Application",
+  "children": [
+    {
+      "name": "Web Application",
+      "children": [
+        {
+          "name": "Frontend Framework",
+          "children": []
+        },
+        {
+          "name": "Backend Server",
+          "children": [
+            {
+              "name": "Database",
+              "children": []
+            },
+            {
+              "name": "API Gateway",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Analytics Module",
+      "children": [
+        {
+          "name": "Data Processing Library",
+          "children": []
+        },
+        {
+          "name": "Reporting Dashboard",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

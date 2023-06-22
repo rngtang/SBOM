@@ -4,7 +4,7 @@ import Tree from './Tree';
 const App = () => {
   return (
     <div>
-      <h1>Tree Example</h1>
+      <h1>&emsp; Tree Example</h1>
       <Tree />
     </div>
   );
