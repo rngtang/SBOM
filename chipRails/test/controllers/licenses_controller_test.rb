@@ -1,6 +1,6 @@
 require "test_helper"
 
-class LicencesControllerTest < ActionDispatch::IntegrationTest
+class LicensesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

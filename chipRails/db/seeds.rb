@@ -31,12 +31,12 @@ component1= metadatum1.components.create!(group: 'software', name:'Duke', versio
 component2= metadatum2.components.create!(group: 'software', name:'Unc', version: '1.2.3', metadatum: metadatum2)
 
 #license
-license1= dependency1.licenses.create!(id: 'uncdown100', dependency: dependency1)
-license2= dependency2.licenses.create!(id: 'dukeup100', dependency: dependency2)
+license1= dependency1.licenses.create!(iden: 'uncdown145', dependency: dependency1)
+license2= dependency2.licenses.create!(iden: 'dukeup176', dependency: dependency2)
 
 #sub_component
-sub_component1= dependency1.sub_components.create!(type: 'random', name: 'salesforce', dependency: dependency1)
-sub_component2= dependency2.sub_components.create!(type: 'soccer', name: 'psg', dependency: dependency2)
+sub_component1= dependency1.sub_components.create!(group: 'random', name: 'salesforce', dependency: dependency1)
+sub_component2= dependency2.sub_components.create!(group: 'soccer', name: 'psg', dependency: dependency2)
 
 #property)
 property1=dependency1.properties.create!(name: 'kk', value: '234', dependency: dependency1)

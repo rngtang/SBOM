@@ -35,12 +35,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_174520) do
     t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
   end
 
-  create_table "licences", charset: "utf8mb4", force: :cascade do |t|
+  create_table "licenses", charset: "utf8mb4", force: :cascade do |t|
     t.string "iden"
     t.bigint "dependency_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["dependency_id"], name: "index_licences_on_dependency_id"
+    t.index ["dependency_id"], name: "index_licenses_on_dependency_id"
   end
 
   create_table "metadata", charset: "utf8mb4", force: :cascade do |t|
@@ -115,7 +115,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_174520) do
 
   add_foreign_key "components", "metadata"
   add_foreign_key "dependencies", "sboms"
-  add_foreign_key "licences", "dependencies"
+  add_foreign_key "licenses", "dependencies"
   add_foreign_key "metadata", "sboms"
   add_foreign_key "properties", "dependencies"
   add_foreign_key "sboms", "users"

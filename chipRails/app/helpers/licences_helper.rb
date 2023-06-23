@@ -1,2 +1,2 @@
-module LicencesHelper
+module LicensesHelper
 end

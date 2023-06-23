@@ -1,6 +1,6 @@
-class CreateLicences < ActiveRecord::Migration[7.0]
+class CreateLicenses < ActiveRecord::Migration[7.0]
   def change
-    create_table :licences do |t|
+    create_table :licenses do |t|
       t.string :iden
       t.references :dependency, null: false, foreign_key: true
 
