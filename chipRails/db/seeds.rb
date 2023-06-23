@@ -27,8 +27,8 @@ tool1 = metadatum1.tools.create!(vendor: 'meta', name: 'cyclonedx', version: '2.
 tool1 = metadatum2.tools.create!(vendor: 'Google', name: 'cyclonedx', version: '2.3.4', metadatum: metadatum2)
 
 #some components
-component1= metadatum1.components.create!(type: 'software', name:'Duke', version: '1.2.2', metadatum: metadatum1)
-component2= metadatum2.components.create!(type: 'software', name:'Unc', version: '1.2.3', metadatum: metadatum2)
+component1= metadatum1.components.create!(group: 'software', name:'Duke', version: '1.2.2', metadatum: metadatum1)
+component2= metadatum2.components.create!(group: 'software', name:'Unc', version: '1.2.3', metadatum: metadatum2)
 
 #license
 license1= dependency1.licenses.create!(id: 'uncdown100', dependency: dependency1)
