@@ -44,4 +44,12 @@ sub_component2 = SubComponent.create(bom_ref: 'bom ref 2', group: 'os', publishe
 property1 = Property.create(name: 'kk', value: '234', dependency: dependency1)
 property2 = Property.create(name: 'll', value: '432', dependency: dependency2)
 
+# external reference
+externalReference1 = ExternalReference.create(group: 'ejowe', url: 'gregrhrehreher.com', dependency: dependency1)
+externalReference2 = ExternalReference.create(group: 'kppihup', url: 'externalReference2.com', dependency: dependency2)
+
+# child
+child1 = Child.create(ref: 'sdgewpjgweig', dependsOn: ['first element', 'second element'], sbom: sbom1)
+child2 = Child.create(ref: 'pjipip[kl[]]', dependsOn: ['first element', 'second element'], sbom: sbom2)
+
 puts 'seed complete'

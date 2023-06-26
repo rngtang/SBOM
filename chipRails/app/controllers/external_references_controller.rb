@@ -5,7 +5,7 @@ class ExternalReferencesController < ApplicationController
 
     def create
         @dependency = Dependency.find(params[:dependency_id])
-        @externalReference = @dependency.components.new(externalReference_params)
+        @externalReference = @dependency.externalReferences.new(externalReference_params)
     end
 
     def externalReference_params

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_26_153647) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_26_155006) do
+  create_table "children", charset: "latin1", force: :cascade do |t|
+    t.string "ref"
+    t.text "dependsOn"
+    t.bigint "sbom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sbom_id"], name: "index_children_on_sbom_id"
+  end
+
   create_table "components", charset: "latin1", force: :cascade do |t|
     t.string "group"
     t.string "name"
@@ -114,6 +123,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_153647) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "children", "sboms"
   add_foreign_key "components", "metadata"
   add_foreign_key "dependencies", "sboms"
   add_foreign_key "external_references", "dependencies"
