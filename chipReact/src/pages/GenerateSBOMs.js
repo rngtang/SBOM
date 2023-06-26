@@ -1,33 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout';
 
-const Prereqs = () => {
+const Section = ({bgColor, textColor, code}) => {
+    const [isCopied, setIsCopied] = useState(false);
+
+    const handleCopy = async () => {
+        await navigator.clipboard.writeText(code);
+        setIsCopied(true);
+        setTimeout(() => setIsCopied(false), 2000); // reset after 2 seconds
+    };
+
     return (
-        <div>
-            <h3>Prerequisites</h3>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur metus vitae volutpat mollis. Cras vestibulum, nisi vel placerat accumsan, nisl lectus pharetra ex, vitae auctor ligula velit ac purus. Ut sodales nulla lectus, ut dictum ante consequat nec. Phasellus viverra ex tempus velit venenatis, ac facilisis sapien facilisis. Aliquam et mauris lacinia quam rutrum pellentesque at consequat dolor. Maecenas at tempus sem. Aliquam in magna non urna facilisis tincidunt. Sed nec dolor ligula. Nunc lorem odio, pulvinar quis est eget, commodo varius lacus.
-            </p>
+        <div style={{ backgroundColor: bgColor, color: textColor, padding: "20px" }}>
+            <div style={{ position: "relative" }}>
+                <button onClick={handleCopy} style={{ position: "absolute", top: 0, right: 0 }}>
+                    {isCopied ? 'Copied!' : 'Copy code'}
+                </button>
+                <pre>
+                    <code>{code}</code>
+                </pre>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+                Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. 
+                Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+            </div>
         </div>
     );
 };
 
-const WhatAreSBOMs = () => {
-    return (
-        <div className="what-sboms-section">
-            <h3>What are SBOMs?</h3>
-            <p>
-                A Software Bill of Materials (SBOM) is a formal record of all software packages and components used by a software project or machine.
-                These components can be commercial or open-source, and in turn rely on other components themselves. This creates a series of reliances, or a chain of dependencies, that is not easily visible to the creator or user of the main project.
-            </p>
-        </div>
-    );
-};
+const codeSnippets = [
+    "Code snippet 1",
+    "Code snippet 2",
+    "Code snippet 3",
+    "Code snippet 4"
+];
 
 const GenerateSBOMs = () => {
     return (
         <Layout>
-            <Prereqs />
+            {codeSnippets.map((snippet, index) => (
+                <Section 
+                    key={index}
+                    bgColor={['#f0f0f0', '#d0d0d0', '#b0b0b0', '#909090'][index]}
+                    textColor={['#000', '#000', '#fff', '#fff'][index]}
+                    code={snippet}
+                />
+            ))}
         </Layout>
     );
 };
