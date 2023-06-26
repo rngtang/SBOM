@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
+import styles from './GenerateSBOMs.css'; // import CSS file
 
-const Section = ({bgColor, textColor, code}) => {
+const Section = ({code}) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const handleCopy = async () => {
@@ -11,18 +12,15 @@ const Section = ({bgColor, textColor, code}) => {
     };
 
     return (
-        <div style={{ backgroundColor: bgColor, color: textColor, padding: "20px" }}>
-            <div style={{ position: "relative" }}>
-                <button onClick={handleCopy} style={{ position: "absolute", top: 0, right: 0 }}>
+        <div className={styles.section}>
+            <div>
+                <button onClick={handleCopy}>
                     {isCopied ? 'Copied!' : 'Copy code'}
                 </button>
                 <pre>
                     <code>{code}</code>
                 </pre>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
-                Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. 
-                Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
     );
@@ -35,14 +33,12 @@ const codeSnippets = [
     "Code snippet 4"
 ];
 
-const GenerateSBOMs = () => {
+const AnotherPage = () => {
     return (
         <Layout>
             {codeSnippets.map((snippet, index) => (
                 <Section 
                     key={index}
-                    bgColor={['#f0f0f0', '#d0d0d0', '#b0b0b0', '#909090'][index]}
-                    textColor={['#000', '#000', '#fff', '#fff'][index]}
                     code={snippet}
                 />
             ))}
@@ -50,4 +46,4 @@ const GenerateSBOMs = () => {
     );
 };
 
-export default GenerateSBOMs;
+export default AnotherPage;
