@@ -20,12 +20,12 @@ function MySideNav({onToggle, isOpen}){
         >
             <SideNav.Toggle />
             <SideNav.Nav defaultSelected = "home">
-                <NavItem eventKey="logo" className="nav-item-logo">
-                    {/* <NavIcon>
+                {/* <NavItem eventKey="logo" className="nav-item-logo">
+                    <NavIcon>
                         <img src={logo} alt="Logo" style={{width: "100%", maxHeight: "120px"}}/>
-                    </NavIcon> */}
+                    </NavIcon>
                     
-                </NavItem>
+                </NavItem>  */}
                 <NavItem eventKey="home">
                     <NavIcon>
                         <i className="fa fa-fw fa-home" style={{fontSize: "1.5em"}} />
