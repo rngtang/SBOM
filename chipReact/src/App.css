@@ -1,9 +1,9 @@
 .mysidenav {
-  background-color:rgb(28, 112, 186);
+  background-color:rgb(11, 89, 158) !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdata, sans-serif;
 }
 .page {
   font: 5rem;
   text-align: center;
-  
+
 }
