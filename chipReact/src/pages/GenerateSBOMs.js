@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import styles from './GenerateSBOMs.css'; // import CSS file
+import styles from './GenerateSBOMs.module.css'; // import CSS file
+import CodeBox from '../components/CodeBox';
 
-const Section = ({code}) => {
+const Section = ({ code }) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const handleCopy = async () => {
@@ -20,7 +21,7 @@ const Section = ({code}) => {
                 <pre>
                     <code>{code}</code>
                 </pre>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             </div>
         </div>
     );
@@ -37,11 +38,12 @@ const AnotherPage = () => {
     return (
         <Layout>
             {codeSnippets.map((snippet, index) => (
-                <Section 
+                <Section
                     key={index}
                     code={snippet}
                 />
             ))}
+            <CodeBox text='turn this into code that someone can copy asdf asdfasdf' />
         </Layout>
     );
 };
