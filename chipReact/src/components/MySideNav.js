@@ -5,18 +5,17 @@ import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import { useNavigate } from 'react-router-dom';
 import logo from './images/chip.png';
 
-function MySideNav(){
-    const navigate = useNavigate({onToggle, isOpen});
+function MySideNav({onToggle, isOpen}){
+    const navigate = useNavigate();
     
     return (
         <SideNav
-            onToggle={onToggle}
-            expanded={isOpen}
-
             onSelect={(selected) => {
                 console.log(selected);
-                navigate('/'+selected);
+                navigate('/' + selected);
             }}
+            onToggle={onToggle}
+            expanded={isOpen}
             className='mysidenav'
         >
             <SideNav.Toggle />
