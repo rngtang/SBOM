@@ -7,3 +7,17 @@
   text-align: center;
 
 }
+.intro-section {
+  background-color: #f0f0f0; /* Or any other color */
+  padding: 20px;
+  h3 {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+  }
+  
+}
+
+.what-sboms-section {
+  background-color: #d0d0d0; /* Or any other color */
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+  padding: 20px;
+}
