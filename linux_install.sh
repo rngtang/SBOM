@@ -10,7 +10,8 @@ wget https://raw.githubusercontent.com/anchore/syft/main/install.sh
 chmod +x install.sh
 ./install.sh
 
-sudo mv ./bin/syft /usr/local/bin
+cd bin 
+sudo mv ./syft /usr/local/bin
 syft -h 
 
 echo "DONE"
