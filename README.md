@@ -2,7 +2,6 @@
 Version 2. 6/26/2023 ------------------------------------------------------------------
 
 -- BACKGROUND --
-
 Welcome to the Centralized Hub for Inventories Platform (CHIP), a web-based application
 for the creation, visualization, and use of Software Bills of Materials (SBOMs)!
 
@@ -29,7 +28,7 @@ own using Syft. On the left will be a navigation bar containing the options to g
 'View SBOMs', 'Generate SBOMs', 'Profile', and 'Logout' pages. 
 
 
--- HOW TO MAKE AN SBOM --
+-- HOW TO MAKE AN SBOM -- 
 If you do not already have a CycloneDX formatted JSON file to upload as your SBOM, here 
 are the instructions on how to make one. These can also be found on our 'Generate SBOMs'
 page after logging in.
