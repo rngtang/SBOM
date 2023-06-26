@@ -14,6 +14,9 @@ const Layout = ({ children }) => {
             <div style={{ marginLeft: isOpen ? '240px' : '64px', transition: 'margin-left 0.3s ease', padding: '15px' }}>
                 {children}
             </div>
+             <div style={{ marginRight: '12px', transition: 'margin-right 0.3s ease', padding: '10px' }}>
+             
+            </div> 
         </div>
     );
 };
