@@ -2,6 +2,7 @@
 Version 2. 6/26/2023 ------------------------------------------------------------------
 
 -- BACKGROUND --
+
 Welcome to the Centralized Hub for Inventories Platform (CHIP), a web-based application
 for the creation, visualization, and use of Software Bills of Materials (SBOMs)!
 
