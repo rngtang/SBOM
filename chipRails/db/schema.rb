@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_23_174520) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_26_153647) do
   create_table "components", charset: "latin1", force: :cascade do |t|
     t.string "group"
     t.string "name"
@@ -33,6 +33,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_174520) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
+  end
+
+  create_table "external_references", charset: "latin1", force: :cascade do |t|
+    t.string "group"
+    t.string "url"
+    t.bigint "dependency_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dependency_id"], name: "index_external_references_on_dependency_id"
   end
 
   create_table "licenses", charset: "latin1", force: :cascade do |t|
@@ -58,14 +67,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_174520) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dependency_id"], name: "index_properties_on_dependency_id"
-  end
-
-  create_table "references", charset: "latin1", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "sboms", charset: "latin1", force: :cascade do |t|
@@ -115,6 +116,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_174520) do
 
   add_foreign_key "components", "metadata"
   add_foreign_key "dependencies", "sboms"
+  add_foreign_key "external_references", "dependencies"
   add_foreign_key "licenses", "dependencies"
   add_foreign_key "metadata", "sboms"
   add_foreign_key "properties", "dependencies"

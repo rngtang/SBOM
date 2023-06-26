@@ -1,0 +1,2 @@
+module ExternalReferencesHelper
+end
