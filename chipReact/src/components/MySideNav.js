@@ -6,10 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import logo from './images/chip.png';
 
 function MySideNav(){
-    const navigate = useNavigate();
+    const navigate = useNavigate({onToggle, isOpen});
     
     return (
         <SideNav
+            onToggle={onToggle}
+            expanded={isOpen}
+
             onSelect={(selected) => {
                 console.log(selected);
                 navigate('/'+selected);
