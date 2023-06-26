@@ -2,6 +2,7 @@
 Version 2. 6/26/2023 ------------------------------------------------------------------
 
 -- BACKGROUND --
+
 Welcome to the Centralized Hub for Inventories Platform (CHIP), a web-based application
 for the creation, visualization, and use of Software Bills of Materials (SBOMs)!
 
@@ -21,6 +22,7 @@ formatted JSON file that has been created with Syft, an open-source SBOM generat
 
 
 -- HOW TO USE -- 
+
 The intended use of our website will be as so: first, the user will need to log in with 
 their Duke ID through Shibboleth SSO. Then, the user will be brought to our home page, 
 which details what an SBOM is, what our website does, and how to create an SBOM of their
@@ -29,6 +31,7 @@ own using Syft. On the left will be a navigation bar containing the options to g
 
 
 -- HOW TO MAKE AN SBOM -- 
+
 If you do not already have a CycloneDX formatted JSON file to upload as your SBOM, here 
 are the instructions on how to make one. These can also be found on our 'Generate SBOMs'
 page after logging in.
