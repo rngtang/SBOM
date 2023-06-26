@@ -7,6 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Creating some users
+puts 'seeding'
+
 user1 = User.create(username: 'user1')
 user2 = User.create(username: 'user2')
 
@@ -41,3 +43,5 @@ sub_component2 = SubComponent.create(bom_ref: 'bom ref 2', group: 'os', publishe
 # property
 property1 = Property.create(name: 'kk', value: '234', dependency: dependency1)
 property2 = Property.create(name: 'll', value: '432', dependency: dependency2)
+
+puts 'seed complete'
