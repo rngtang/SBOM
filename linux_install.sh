@@ -14,4 +14,4 @@ cd bin
 sudo mv ./syft /usr/local/bin
 syft -h 
 
-echo "DONE"
+echo "INSTALLED SYFT"
