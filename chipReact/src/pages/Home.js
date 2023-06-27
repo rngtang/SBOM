@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../components/Layout';
 
 const Intro = () => {
     return (
@@ -25,13 +24,9 @@ const WhatAreSBOMs = () => {
 const Home = () => {
     return (
         <div className='page'>
-        <Layout >
-            
             <Intro />
             <WhatAreSBOMs />
             {/* Continue adding other sections as needed */}
-            
-        </Layout>
         </div>
     );
 };

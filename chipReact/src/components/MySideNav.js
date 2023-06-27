@@ -1,64 +1,47 @@
 import React from 'react';
-import '../App.css';
-import SideNav, { Toggle, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import { useNavigate } from 'react-router-dom';
-import logo from './images/chip.png';
+import { NavLink } from 'react-router-dom';
+import chipImage from './images/chip.png';
+import './MySideNav.css';
 
-function MySideNav({onToggle, isOpen}){
-    const navigate = useNavigate();
-    
+const MySideNav = () => {
     return (
-        <SideNav
-            onSelect={(selected) => {
-                console.log(selected);
-                navigate('/' + selected);
-            }}
-            onToggle={onToggle}
-            expanded={isOpen}
-            className='mysidenav'
-        >
-            <SideNav.Toggle />
-            <SideNav.Nav defaultSelected = "home">
-                {/* <NavItem eventKey="logo" className="nav-item-logo">
-                    <NavIcon>
-                        <img src={logo} alt="Logo" style={{width: "100%", maxHeight: "120px"}}/>
-                    </NavIcon>
-                    
-                </NavItem>  */}
-                <NavItem eventKey="home">
-                    <NavIcon>
-                        <i className="fa fa-fw fa-home" style={{fontSize: "1.5em"}} />
-                    </NavIcon>
-                    <NavText>Home</NavText>
-                </NavItem>  
-                <NavItem eventKey="viewsboms">
-                    <NavIcon>
-                        <i className="fa fa-fw fa-eye" style={{fontSize: "1.5em"}} />
-                    </NavIcon>
-                    <NavText>View SBOMs</NavText>
-                </NavItem>
-                <NavItem eventKey="generatesboms">
-                    <NavIcon>
-                        <i className="fa fa-fw fa-screwdriver-wrench" style={{fontSize: "1.5em"}} />
-                    </NavIcon>
-                    <NavText>Generate SBOMs</NavText>
-                </NavItem>
-                <NavItem eventKey="Profile">
-                    <NavIcon>
-                        <i className="fa fa-fw fa-user" style={{fontSize: "1.5em"}} />
-                    </NavIcon>
-                    <NavText>Profile</NavText>
-                </NavItem>
-                <NavItem eventKey="Logout">
-                    <NavIcon>
-                        <i className="fa fa-fw fa-right-from-bracket" style={{fontSize: "1.5em"}} />
-                    </NavIcon>
-                    <NavText>Logout</NavText>
-                </NavItem>
-            </SideNav.Nav>
-        </SideNav>
+        <nav className="col-md-2 d-none d-md-block bg-royalblue rounded sidebar">
+      <div className="sidebar-sticky">
+        <div className="navbar-logo">
+          <NavLink to="/home">
+            <img src={chipImage} alt="Logo" className="logo-image" />
+          </NavLink>
+        </div>
+        <ul className="nav flex-column">
+          <li className="nav-item">
+            <NavLink to="/home" className="nav-link" activeClassName="active">
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/viewsboms" className="nav-link" activeClassName="active">
+              View SBOMs
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/generatesboms" className="nav-link" activeClassName="active">
+              Generate SBOMs
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/profile" className="nav-link" activeClassName="active">
+              Profile
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/logout" className="nav-link" activeClassName="active">
+              Logout
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+    </nav>
     );
-}
+};
 
 export default MySideNav;
