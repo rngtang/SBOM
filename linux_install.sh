@@ -1,6 +1,7 @@
 #!/bin/bash
 chmod +x linux_install.sh
 
+# pulls script to install syft into a new file called install.sh and runs it 
 echo "--- INSTALLING SYFT... ---" 
 wget https://raw.githubusercontent.com/anchore/syft/main/install.sh
 chmod +x install.sh
@@ -8,6 +9,7 @@ chmod +x install.sh
 sudo mv ./bin/syft /usr/local/bin
 echo "--- Successful: INSTALLED SYFT ---"
 
+# pulls script to install grype into a new file called install.sh.1 and runs it 
 echo "--- INSTALLING GRYPE... ---" 
 wget https://raw.githubusercontent.com/anchore/grype/main/install.sh
 chmod +x install.sh.1
@@ -15,8 +17,8 @@ chmod +x install.sh.1
 sudo mv ./bin/grype /usr/local/bin
 echo "--- Successful: INSTALLED GRYPE ---"
 
-
-
+# asks user to give the file to run 
+# needs to be precise name -> need to add error handling
 echo "Which file would you like to create an SBOM for?"
 read NAME
 echo "Creating $NAME.cdx.json ..."
