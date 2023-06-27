@@ -78,7 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
     t.index ["dependency_id"], name: "index_properties_on_dependency_id"
   end
 
-  create_table "ratings", charset: "utf8mb4", force: :cascade do |t|
+  create_table "ratings", charset: "latin1", force: :cascade do |t|
     t.integer "score"
     t.string "severity"
     t.bigint "vulnerability_id", null: false
@@ -100,7 +100,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
     t.index ["user_id"], name: "index_sboms_on_user_id"
   end
 
-  create_table "sources", charset: "utf8mb4", force: :cascade do |t|
+  create_table "sources", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.string "url"
     t.bigint "rating_id", null: false
@@ -150,6 +150,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
     t.string "created"
     t.string "published"
     t.string "updated"
+    t.text "affected"
     t.bigint "sbom_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

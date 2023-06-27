@@ -9,6 +9,7 @@ class CreateVulnerabilities < ActiveRecord::Migration[7.0]
       t.string :created
       t.string :published
       t.string :updated
+      t.text :affected
       t.references :sbom, null: false, foreign_key: true
 
       t.timestamps
