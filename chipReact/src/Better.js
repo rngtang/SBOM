@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 export default function Better() {
-  const [url, setUrl] = useState(null);
   const [error, setError] = useState(null);
 
   const handleDownload = () => {
@@ -15,13 +14,16 @@ export default function Better() {
         if (!response.ok) {
           throw new Error('Failed to download the script.');
         }
-        console.log("this is the response: ", response)
+        // console.log("this is the response: ", response)
         return response.blob();
       })
       .then((blob) => {
-        const scriptElement = document.createElement('script');
-        // scriptElement.src = URL.createObjectURL(blob);
-        // document.body.appendChild(scriptElement);
+        const fileUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'linux_install.sh'; 
+        link.click();
+        URL.revokeObjectURL(fileUrl);
       })
       .catch((error) => {
         setError(error.message);
@@ -30,13 +32,8 @@ export default function Better() {
 
   return (
     <div>
-        <a href = {"http://localhost:8080/scripts/download"} download="linux_install">
-            <button onClick={handleDownload}>Download Script</button>
-        </a>
-     
-      {url && <p>Script downloaded: {url}</p>}
+      <button onClick={handleDownload}>Download Script</button>
       {error && <p>Error: {error}</p>}
-      
     </div>
   );
 };

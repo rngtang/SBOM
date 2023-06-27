@@ -7,9 +7,8 @@ import Best from './Best';
 function App() {
   return (
     <>
-    <body>
     <Better />
-    </body>
+
     </>
   );
 }
