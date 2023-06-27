@@ -7,8 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Creating some users
-user1 = User.create!(username: 'user1', email: 'user1@duke.edu', password: 'password')
-user2 = User.create!(username: 'user2', email: 'user2@duke.edu', password: 'password')
+user1 = User.create!(username: 'user1', email: 'user1@duke.edu', netid: 'passwor4')
+user2 = User.create!(username: 'user2', email: 'user2@duke.edu', netid: 'passwor6')
 
 # Creating some sboms associated with the users
 sbom1 = user1.sboms.create!(name: 'sbom1', description: 'This is an sbom for user1', user: user1) #we could add more fields to match all the attributes of sboms
