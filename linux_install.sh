@@ -1,30 +1,36 @@
 #!/bin/bash
 chmod +x linux_install.sh
+COLOR='\033[0;32m'
+NC='\033[0m' # No Color
+
+# RUN WITH: bash script.sh "path/to/selected/file.txt"
+# selected_file="$1" # Access the selected file
+# echo -e "${COLOR}Selected file: $selected_file${NC}" # Perform operations on the selected file
 
 # pulls script to install syft into a new file called install.sh and runs it 
-echo "--- INSTALLING SYFT... ---" 
+echo -e "${COLOR}--- INSTALLING SYFT... ---${NC}"  
 wget https://raw.githubusercontent.com/anchore/syft/main/install.sh
 chmod +x install.sh
 ./install.sh
 sudo mv ./bin/syft /usr/local/bin
-echo "--- Successful: INSTALLED SYFT ---"
+echo -e "${COLOR}--- Successful: INSTALLED SYFT ---${NC}"
 
 # pulls script to install grype into a new file called install.sh.1 and runs it 
-echo "--- INSTALLING GRYPE... ---" 
+echo -e "${COLOR}--- INSTALLING GRYPE... ---${NC}" 
 wget https://raw.githubusercontent.com/anchore/grype/main/install.sh
 chmod +x install.sh.1
 ./install.sh.1
 sudo mv ./bin/grype /usr/local/bin
-echo "--- Successful: INSTALLED GRYPE ---"
+echo -e "${COLOR}--- Successful: INSTALLED GRYPE ---${NC}"
 
 # asks user to give the file to run 
 # needs to be precise name -> need to add error handling
-echo "Which file would you like to create an SBOM for?"
+echo -e "${COLOR}Which file would you like to create an SBOM for?${NC}"
 read NAME
-echo "Creating $NAME.cdx.json ..."
+echo -e "${COLOR}Creating $NAME.sbom.json ...${NC}"
 
 syft $NAME -o cyclonedx-json=$NAME.sbom.json
 grype sbom:$NAME.sbom.json 
 # -o cyclonedx-json
 
-echo "You have now created $NAME.sbom.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>"
+echo -e "${COLOR}You have now created $NAME.sbom.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"
