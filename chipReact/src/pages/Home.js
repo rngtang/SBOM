@@ -24,11 +24,15 @@ const WhatAreSBOMs = () => {
 
 const Home = () => {
     return (
-        <Layout>
+        <div className='page'>
+        <Layout >
+            
             <Intro />
             <WhatAreSBOMs />
             {/* Continue adding other sections as needed */}
+            
         </Layout>
+        </div>
     );
 };
 

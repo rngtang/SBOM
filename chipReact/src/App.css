@@ -9,14 +9,15 @@
 }
 
 .mysidenav {
-  background-color: rgb(5, 119, 177) !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdata, sans-serif;
+ background-color: rgb(5, 119, 177) !important; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdata, sans-serif ;
 }
 
-/* ??? */
 .page {
   font: 5rem;
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdata, sans-serif ;
+  
 }
 
 .intro-section {
