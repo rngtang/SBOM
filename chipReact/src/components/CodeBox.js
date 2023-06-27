@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const CodeBox = ({ text }) => {
-    const handleCopyClick = () => {
-        navigator.clipboard.writeText(text);
+    const [isCopied, setIsCopied] = useState(false);
+    
+    const handleCopyClick = async () => {
+        await navigator.clipboard.writeText(text);
+        setIsCopied(true);
+
+        // Reset the isCopied state after one second
+        setTimeout(() => setIsCopied(false), 1000);
     };
+
 
     return (
         <div style={styles.box}>
             <code style={styles.code}>{text}</code>
             <button onClick={handleCopyClick} style={styles.button}>
-                <i className="fa-regular fa-copy"></i>
+                {isCopied ? <i class="fa-solid fa-check"></i> : <i className="fa-regular fa-copy"></i>}
             </button>
         </div>
     );
@@ -36,7 +43,7 @@ const styles = {
         whiteSpace: 'pre-wrap',
         margin: '0',
         textAlign: 'left',
-        marginRight: '10px',
+        marginRight: '15px',
     },
     button: {
         backgroundColor: 'transparent',
