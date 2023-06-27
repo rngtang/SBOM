@@ -2,48 +2,32 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import styles from './GenerateSBOMs.module.css'; // import CSS file
 import CodeBox from '../components/CodeBox';
+import data1 from '../data/linux.json';
+import data2 from '../data/windows.json';
+import data3 from '../data/apple.json';
 
-const Section = ({ code }) => {
+const Section = ({title, text, code}) => {
     const [isCopied, setIsCopied] = useState(false);
-
-    const handleCopy = async () => {
-        await navigator.clipboard.writeText(code);
-        setIsCopied(true);
-        setTimeout(() => setIsCopied(false), 2000); // reset after 2 seconds
-    };
-
     return (
         <div className={styles.section}>
             <div>
-                <button onClick={handleCopy}>
-                    {isCopied ? 'Copied!' : 'Copy code'}
-                </button>
-                <pre>
-                    <code>{code}</code>
-                </pre>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <h2>{title}</h2>
+                <p>{text}</p>
+                <CodeBox text={code} />
             </div>
         </div>
     );
 };
 
-const codeSnippets = [
-    "Code snippet 1",
-    "Code snippet 2",
-    "Code snippet 3",
-    "Code snippet 4"
-];
+//display 4 sections with 3 input
+//get the title, text and code from 3 separate json files
 
 const AnotherPage = () => {
     return (
         <Layout>
-            {codeSnippets.map((snippet, index) => (
-                <Section
-                    key={index}
-                    code={snippet}
-                />
-            ))}
-            <CodeBox text='turn this into code that someone can copy asdf asdfasdf' />
+            <Section title={data1.title} text={data1.text} code={data1.code}/>
+            <Section title={data2.title} text={data2.text} code={data2.code}/>
+            <Section title={data3.title} text={data3.text} code={data3.code}/>
         </Layout>
     );
 };
