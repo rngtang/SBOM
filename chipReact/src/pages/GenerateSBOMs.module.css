@@ -3,7 +3,11 @@
 .section {
     padding: 20px;
     border-radius: 10px;
-    margin:15px;
+    margin:35px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(79px, 90px);
+    width: 1000px;
+
 }
 
 .section div {

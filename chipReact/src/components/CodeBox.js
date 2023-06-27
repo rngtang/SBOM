@@ -30,16 +30,21 @@ const styles = {
         fontFamily: 'Consolas, monospace',
         padding: '16px',
         border: '1px solid gray',
+        position: 'relative',
     },
     code: {
         whiteSpace: 'pre-wrap',
         margin: '0',
         textAlign: 'left',
+        marginRight: '10px',
     },
     button: {
         backgroundColor: 'transparent',
         border: 'none',
         cursor: 'pointer',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        marginRight: '10px',
     },
     icon: {
         fontSize: '16px',
