@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
-  create_table "components", charset: "utf8mb4", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2023_06_27_181043) do
+  create_table "components", charset: "latin1", force: :cascade do |t|
     t.string "group"
     t.string "name"
     t.string "version"
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.index ["metadatum_id"], name: "index_components_on_metadatum_id"
   end
 
-  create_table "dependencies", charset: "utf8mb4", force: :cascade do |t|
+  create_table "dependencies", charset: "latin1", force: :cascade do |t|
     t.string "bom_ref"
     t.string "group"
     t.string "publisher"
@@ -35,7 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
   end
 
-  create_table "licenses", charset: "utf8mb4", force: :cascade do |t|
+  create_table "licenses", charset: "latin1", force: :cascade do |t|
     t.string "iden"
     t.bigint "dependency_id", null: false
     t.datetime "created_at", null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.index ["dependency_id"], name: "index_licenses_on_dependency_id"
   end
 
-  create_table "metadata", charset: "utf8mb4", force: :cascade do |t|
+  create_table "metadata", charset: "latin1", force: :cascade do |t|
     t.string "timestamp"
     t.bigint "sbom_id", null: false
     t.datetime "created_at", null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.index ["sbom_id"], name: "index_metadata_on_sbom_id"
   end
 
-  create_table "properties", charset: "utf8mb4", force: :cascade do |t|
+  create_table "properties", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.string "value"
     t.bigint "dependency_id", null: false
@@ -60,7 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.index ["dependency_id"], name: "index_properties_on_dependency_id"
   end
 
-  create_table "references", charset: "utf8mb4", force: :cascade do |t|
+  create_table "references", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.string "description"
@@ -68,7 +68,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "sboms", charset: "utf8mb4", force: :cascade do |t|
+  create_table "sboms", charset: "latin1", force: :cascade do |t|
     t.string "bomFormat"
     t.string "specVersion"
     t.string "serialNumber"
@@ -81,7 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.index ["user_id"], name: "index_sboms_on_user_id"
   end
 
-  create_table "sub_components", charset: "utf8mb4", force: :cascade do |t|
+  create_table "sub_components", charset: "latin1", force: :cascade do |t|
     t.string "bom_ref"
     t.string "group"
     t.string "publisher"
@@ -95,7 +95,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.index ["dependency_id"], name: "index_sub_components_on_dependency_id"
   end
 
-  create_table "tools", charset: "utf8mb4", force: :cascade do |t|
+  create_table "tools", charset: "latin1", force: :cascade do |t|
     t.string "vendor"
     t.string "name"
     t.string "version"
@@ -105,17 +105,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_144236) do
     t.index ["metadatum_id"], name: "index_tools_on_metadatum_id"
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "latin1", force: :cascade do |t|
     t.string "username"
     t.string "email"
-    t.string "encrypted_password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "components", "metadata"

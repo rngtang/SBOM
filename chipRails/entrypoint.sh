@@ -6,3 +6,6 @@ if [ -f tmp/pids/server.pid ]; then
 fi
 
 exec bundle exec "$@"
+
+gem install devise
+gem install devise_saml_authenticatble
