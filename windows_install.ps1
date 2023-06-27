@@ -1,4 +1,4 @@
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+# Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 Function Check-RunAsAdministrator()
 {
   #Get current user context
@@ -41,8 +41,8 @@ ForegroundColor Green
 Write-Host "Hello World" -ForegroundColor Green
 
 # using syft to create a SBOM for a file in same directory
-# Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-choco 
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+# choco 
 choco install syft -y
 
 Write-Host "Which file would you like to create an SBOM for?" -ForegroundColor Green
