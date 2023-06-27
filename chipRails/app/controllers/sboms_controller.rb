@@ -9,6 +9,6 @@ class SbomsController < ApplicationController
     end
 
     def user_params
-        params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :name, :description)
+        params.permit(:bomFormat, :specVersion, :serialNumber, :version, :name, :description)
     end
 end

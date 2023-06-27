@@ -9,6 +9,6 @@ class ToolsController < ApplicationController
     end
 
     def tool_params
-        params.require(:tool).permit(:vendor, :name, :version)
+        params.permit(:vendor, :name, :version)
     end
 end

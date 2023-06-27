@@ -9,6 +9,6 @@ class ChildrenController < ApplicationController
     end
 
     def child_params
-        params.require(:child).permit(:ref, dependsOn: [])
+        params.permit(:ref, dependsOn: [])
     end
 end

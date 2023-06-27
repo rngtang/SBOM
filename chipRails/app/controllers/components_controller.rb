@@ -9,6 +9,6 @@ class ComponentsController < ApplicationController
     end
 
     def component_params
-        params.require(:component).permit(:vendor, :name, :version)
+        params.permit(:vendor, :name, :version)
     end
 end

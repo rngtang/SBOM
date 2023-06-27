@@ -9,6 +9,6 @@ class DependenciesController < ApplicationController
     end
 
     def dependency_params
-        params.require(:depency).permit(:bom_ref, :group, :publisher, :name, :version, :cpe, :purl)
+        params.permit(:bom_ref, :group, :publisher, :name, :version, :cpe, :purl)
     end
 end

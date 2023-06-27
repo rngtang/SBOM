@@ -9,6 +9,6 @@ class LicensesController < ApplicationController
     end
 
     def license_params
-        params.require(:license).permit(:iden)
+        paramspermit(:iden)
     end
 end

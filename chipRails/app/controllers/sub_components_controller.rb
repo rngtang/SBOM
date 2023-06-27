@@ -9,6 +9,6 @@ class SubComponentsController < ApplicationController
     end
 
     def subComponent_params
-        params.require(:subComponent).permit(:bom_ref, :group, :publisher, :name, :version, :cpe, :purl)
+        params.permit(:bom_ref, :group, :publisher, :name, :version, :cpe, :purl)
     end
 end

@@ -9,6 +9,6 @@ class ExternalReferencesController < ApplicationController
     end
 
     def externalReference_params
-        params.require(:externalReference).permit(:group, :url)
+        params.permit(:group, :url)
     end
 end

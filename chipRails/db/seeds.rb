@@ -52,4 +52,18 @@ externalReference2 = ExternalReference.create(group: 'kppihup', url: 'externalRe
 child1 = Child.create(ref: 'sdgewpjgweig', dependsOn: ['first element', 'second element'], sbom: sbom1)
 child2 = Child.create(ref: 'pjipip[kl[]]', dependsOn: ['first element', 'second element'], sbom: sbom2)
 
+# vulnerability
+vuln1 = Vulnerability.create(bom_ref: 'sdsdgsdf', vulnID: 'sdfsdgsd', description: 'egeg', detail: 'wgrer', recommendation: 'wegewg', created: 'sadf', published: 'sadfdsfd', updated: 'asdfsf', sbom: sbom1)
+vuln2 = Vulnerability.create(bom_ref: 'sdsdgsdf', vulnID: 'sdfsdgsd', description: 'egeg', detail: 'wgrer', recommendation: 'wegewg', created: 'sadf', published: 'sadfdsfd', updated: 'asdfsf', sbom: sbom2)
+
+# ratings
+rating1 = Rating.create(score: 4.5, severity: 'high', vulnerability: vuln1)
+rating2 = Rating.create(score: 1, severity: 'low', vulnerability: vuln2)
+
+# source
+source1 = Source.create(name: 'google', url: 'fdasdfds.com', rating: rating1)
+source2 = Source.create(name: 'baidu', url: 'kopok.com', rating: rating2)
+
+# affected
+
 puts 'seed complete'

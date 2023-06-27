@@ -9,6 +9,6 @@ class MetadataController < ApplicationController
     end
 
     def user_params
-        params.require(:metadatum).permit(:timestamp)
+        params.permit(:timestamp)
     end
 end

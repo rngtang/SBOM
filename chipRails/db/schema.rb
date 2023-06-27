@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_26_155006) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
   create_table "children", charset: "latin1", force: :cascade do |t|
     t.string "ref"
     t.text "dependsOn"
@@ -78,6 +78,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_155006) do
     t.index ["dependency_id"], name: "index_properties_on_dependency_id"
   end
 
+  create_table "ratings", charset: "utf8mb4", force: :cascade do |t|
+    t.integer "score"
+    t.string "severity"
+    t.bigint "vulnerability_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vulnerability_id"], name: "index_ratings_on_vulnerability_id"
+  end
+
   create_table "sboms", charset: "latin1", force: :cascade do |t|
     t.string "bomFormat"
     t.string "specVersion"
@@ -89,6 +98,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_155006) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_sboms_on_user_id"
+  end
+
+  create_table "sources", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.bigint "rating_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rating_id"], name: "index_sources_on_rating_id"
   end
 
   create_table "sub_components", charset: "latin1", force: :cascade do |t|
@@ -123,14 +141,30 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_155006) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "children", "sboms"
-  add_foreign_key "components", "metadata"
+  create_table "vulnerabilities", charset: "latin1", force: :cascade do |t|
+    t.string "bom_ref"
+    t.string "vulnID"
+    t.string "description"
+    t.string "detail"
+    t.string "recommendation"
+    t.string "created"
+    t.string "published"
+    t.string "updated"
+    t.bigint "sbom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sbom_id"], name: "index_vulnerabilities_on_sbom_id"
+  end
+
   add_foreign_key "dependencies", "sboms"
   add_foreign_key "external_references", "dependencies"
   add_foreign_key "licenses", "dependencies"
   add_foreign_key "metadata", "sboms"
   add_foreign_key "properties", "dependencies"
+  add_foreign_key "ratings", "vulnerabilities"
   add_foreign_key "sboms", "users"
+  add_foreign_key "sources", "ratings"
   add_foreign_key "sub_components", "dependencies"
   add_foreign_key "tools", "metadata"
+  add_foreign_key "vulnerabilities", "sboms"
 end
