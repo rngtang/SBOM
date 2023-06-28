@@ -36,4 +36,5 @@ Rails.application.routes.draw do
     resources :sboms
   end
   delete '/users', to: 'users#index'
+  
 end
