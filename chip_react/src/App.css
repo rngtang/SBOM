@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:wght@400;600;800&display=swap');
+
+/* big reset */
+* {
+  padding: 0;
+  margin: 20;
+  box-sizing: border-box;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+}
+
+.mysidenav {
+ background-color: rgb(5, 119, 177) !important; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdata, sans-serif ;
+}
+
+.page {
+  font: 5rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdata, sans-serif ;
+  
+}
+
+.intro-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.what-sboms-section {
+  background-color: #d0d0d0;
+  padding: 20px;
+}
+
+.generatesboms-1{
+  background-color: #d0d0d0;
+  padding: 20px;
+}
+
+/* navbar color */
+.bg-royalblue {
+  background-color: #0577B1;
+}
