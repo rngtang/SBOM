@@ -4,8 +4,8 @@ class ComponentsController < ApplicationController
     end
 
     def index
-        @components = Component.find(params[:metadatum_id])
-        render json: @components, status: :ok
+        @metadatum = Metadatum.find(params[:metadatum_id])
+        render json: @metadatum.components, status: :ok
     end
 
     def create

@@ -12,8 +12,8 @@ class SbomsController < ApplicationController
     end
 
     def index
-        @sboms = Sbom.find(params[:user_id])
-        render json: @sboms, status: :ok
+        @user = User.find(params[:user_id])
+        render json: @user.sboms, status: :ok
     end
 
 

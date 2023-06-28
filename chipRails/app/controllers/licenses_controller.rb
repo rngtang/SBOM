@@ -1,7 +1,7 @@
 class LicensesController < ApplicationController
     def index
-        @licenses = License.find(params[:dependency_id])
-        render json: @licenses, status: :ok
+        @dependency = Dependency.find(params[:dependency_id])
+        render json: @dependency.licenses, status: :ok
     end
     
     def new

@@ -4,8 +4,8 @@ class MetadataController < ApplicationController
     end
 
     def index
-        @metadata = Metadatum.find(params[:sbom_id])
-        render json: @metadata, status: :ok
+        @sbom = Sbom.find(params[:sbom_id])
+        render json: @sbom.metadata, status: :ok
     end
 
     def create

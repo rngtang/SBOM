@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   # opens up /sboms/:id/dependencies (GET[all, ;id], DELETE)
   resources :sboms, shallow: true do
     resources :metadata, only: [:index]
-    resources :dependencies, only: [:index, :show]
+    resources :dependencies, only: [:index]
+    resources :vulnerabilities, only: [:index]
+    resources :children, only: [:index]
   end
-  
+  get 'vulnerabilities_all', to: 'vulnerabilities#all'
 
   get '/sboms_all', to: 'sboms#all'
   delete '/sboms_all', to: 'sboms#all'
@@ -19,17 +21,27 @@ Rails.application.routes.draw do
   # opens up /dependencies for all dependencies
   get '/dependencies', to: 'dependencies#all'
 
+  # get '/children_all', to: 'children#all'
+  get '/children/:id/tree', to: 'children#tree'
   # opens up /dependencies/:id/licenses (GET)
   # opens up /dependencies/:id/sub_components
   resources :dependencies, shallow: true do
     resources :licenses, only: [:index]
-    resources :sub_components, only: [:index]
     resources :properties, only: [:index]
+    # resources :externalReferences, only: [:index]
   end
 
   resources :metadata, shallow: true do
     resources :tools, only: [:index]
     resources :components, only: [:index]
+  end
+
+  resources :vulnerabilities, shallow: true do
+    resources :ratings, only: [:index]
+  end
+
+  resources :ratings, shallow: true do
+    resources :sources, only: [:index]
   end
 
   resources :users, shallow: true do

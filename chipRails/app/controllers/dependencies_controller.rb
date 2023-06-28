@@ -1,8 +1,8 @@
 class DependenciesController < ApplicationController
     protect_from_forgery with: :null_session
     def index
-        @dependencies = Dependency.find(params[:sbom_id])
-        render json: @dependencies, status: :ok
+        @sbom = Sbom.find(params[:sbom_id])
+        render json: @sbom.dependencies, status: :ok
     end
 
     def all

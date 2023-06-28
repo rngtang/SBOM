@@ -4,8 +4,8 @@ class PropertiesController < ApplicationController
     end
 
     def index
-        @propoerties = Property.find(params[:dependency_id])
-        render json: @properties, status: :ok
+        @dependency = Dependency.find(params[:dependency_id])
+        render json: @dependency.properties, status: :ok
     end
 
     def create

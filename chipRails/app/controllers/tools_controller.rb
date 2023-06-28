@@ -4,8 +4,8 @@ class ToolsController < ApplicationController
     end
     
     def index
-        @tools = Tool.all
-        render json: @tools, status: :ok
+        @metadatum = Metadatum.find(params[:metadatum_id])
+        render json: @metadatum.tools, status: :ok
     end
     
     def create
