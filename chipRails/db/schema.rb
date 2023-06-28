@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
   create_table "children", charset: "latin1", force: :cascade do |t|
     t.string "ref"
     t.text "dependsOn"
@@ -109,20 +109,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
     t.index ["rating_id"], name: "index_sources_on_rating_id"
   end
 
-  create_table "sub_components", charset: "latin1", force: :cascade do |t|
-    t.string "bom_ref"
-    t.string "group"
-    t.string "publisher"
-    t.string "name"
-    t.string "version"
-    t.string "cpe"
-    t.string "purl"
-    t.bigint "dependency_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["dependency_id"], name: "index_sub_components_on_dependency_id"
-  end
-
   create_table "tools", charset: "latin1", force: :cascade do |t|
     t.string "vendor"
     t.string "name"
@@ -157,6 +143,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
     t.index ["sbom_id"], name: "index_vulnerabilities_on_sbom_id"
   end
 
+  add_foreign_key "children", "sboms"
+  add_foreign_key "components", "metadata"
   add_foreign_key "dependencies", "sboms"
   add_foreign_key "external_references", "dependencies"
   add_foreign_key "licenses", "dependencies"
@@ -165,7 +153,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
   add_foreign_key "ratings", "vulnerabilities"
   add_foreign_key "sboms", "users"
   add_foreign_key "sources", "ratings"
-  add_foreign_key "sub_components", "dependencies"
   add_foreign_key "tools", "metadata"
   add_foreign_key "vulnerabilities", "sboms"
 end

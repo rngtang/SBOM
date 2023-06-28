@@ -4,6 +4,5 @@ class RenameColumns < ActiveRecord::Migration[7.0]
 
     rename_column :dependencies, :type, :group
 
-    rename_column :sub_components, :type, :group
   end
 end

@@ -36,10 +36,6 @@ component2 = metadatum2.components.create(group: 'software', name:'Unc', version
 license1 = License.create(iden: 'uncdown145', dependency: dependency1)
 license2 = License.create(iden: 'dukeup176', dependency: dependency2)
 
-# sub_component
-sub_component1 = SubComponent.create(bom_ref: 'bom ref 1', group: 'library', publisher: 'Sbom team', name: 'name component', version: '2', cpe: 'erg3rehg', purl: 'kerpghkoern', dependency: dependency1)
-sub_component2 = SubComponent.create(bom_ref: 'bom ref 2', group: 'os', publisher: 'Sbom team', name: 'name component 2', version: '435', cpe: 'ulidsfg', purl: 'hgjetjt', dependency: dependency2)
-
 # property
 property1 = Property.create(name: 'kk', value: '234', dependency: dependency1)
 property2 = Property.create(name: 'll', value: '432', dependency: dependency2)
