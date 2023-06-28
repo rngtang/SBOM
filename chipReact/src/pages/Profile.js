@@ -11,6 +11,7 @@ const Profile = () => {
         <div className={styles.leftHeader}>
           <h2>{username}</h2>
           <p>{netid}</p>
+          
         </div>
 
         <div className={styles.profileSection}>
