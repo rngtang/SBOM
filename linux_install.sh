@@ -1,11 +1,31 @@
-#!/bin/bash
-chmod +x linux_install.sh
-COLOR='\033[0;32m'
-NC='\033[0m' # No Color
+# !/bin/bash
 
-# RUN WITH: bash script.sh "path/to/selected/file.txt"
-# selected_file="$1" # Access the selected file
-# echo -e "${COLOR}Selected file: $selected_file${NC}" # Perform operations on the selected file
+# chmod +x linux_install.sh 
+COLOR='\033[0;32m'
+NC='\033[0m' 
+
+# RUN WITH: bash linux_install "/absolute/path/use/command/pwd"
+selected_file="$1" 
+echo -e "${COLOR} Absolute path of selected file: ${NC} $selected_file" 
+
+# function abspath {
+#     if [ -d "$1" ]; then
+#         # dir
+#         current_location=$(cd "$1" && pwd)
+#     elif [ -f "$1" ]; then
+#         # file
+#         if [[ $1 = /* ]]; then
+#             current_location="$1"
+#         elif [[ $1 == */* ]]; then
+#             current_location="$(cd "${1%/*}" && pwd)/${1##*/}"
+#         else
+#             current_location="$(pwd)/$1"
+#         fi
+#     fi
+# }
+
+# abspath "."
+# echo -e "${COLOR} Here is your current position's absolute path:${NC} $current_location " 
 
 # pulls script to install syft into a new file called install.sh and runs it 
 echo -e "${COLOR}--- INSTALLING SYFT... ---${NC}"  
@@ -23,13 +43,11 @@ chmod +x install.sh.1
 # sudo mv ./bin/grype /usr/local/bin
 echo -e "${COLOR}--- Successful: INSTALLED GRYPE ---${NC}"
 
-# asks user to give the file to run 
-# needs to be precise name -> need to add error handling
-echo -e "${COLOR}Which file would you like to create an SBOM for?${NC}"
-read NAME
-echo -e "${COLOR}Creating $NAME.sbom.json ...${NC}"
+echo -e "${COLOR} Creating an SBOM for your file... ${NC}"
+./bin/syft $selected_file -o cyclonedx-json=$selected_file.sbom.json
+# ./bin/syft $NAME -o cyclonedx-json=$NAME.sbom.json
+echo -e "${COLOR} Finished creating $selected_file.sbom.json ${NC}"
 
-./bin/syft $NAME -o cyclonedx-json=$NAME.sbom.json
-./bin/grype sbom:$NAME.sbom.json 
+./bin/grype sbom:$selected_file.sbom.json 
 
-echo -e "${COLOR}You have now created $NAME.sbom.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"
+echo -e "${COLOR}You have now created $selected_file.sbom.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"

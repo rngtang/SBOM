@@ -21,6 +21,7 @@ export default function Better() {
       })
       .then((blob) => {
         const url = URL.createObjectURL(blob);
+        console.log(url)
         setFileurl(url);
       })
       .catch((error) => {
