@@ -1,0 +1,16 @@
+{
+    "username": "vPrice123",
+    "netid": "vprice",
+    "platformSettings": {
+        "emailUpdates": true,
+        "textUpdates": false,
+        "monthlyUpdates": true
+    },
+    "profileInformation": {
+    "email": "president@duke.edu",
+    "fullName": "Vincent Price, Ph.D.",
+    "mobileNumber": "919 684 2424",
+    "position": "President",
+    "sbomCounter": 200
+    }
+}
