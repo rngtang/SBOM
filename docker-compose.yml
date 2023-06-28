@@ -33,9 +33,9 @@ services:
       DB_PASSWORD: password
       DB_HOST: db
   react_app:
-    build: ./chipReact
+    build: ./chip_react
     volumes:
-      - ./chipReact:/app
+      - ./chip_react:/app
       - exclude:/app/node_modules 
     ports:
       - "3000:3000"
