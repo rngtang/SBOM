@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 
 export default function Better() {
   const [error, setError] = useState(null);
+  const [fileurl, setFileurl] = useState(null);
 
   const handleDownload = () => {
     fetch("http://localhost:8080/scripts/download", {
       method: 'GET',
       headers: {
+        // headers for authorization? 
         'Content-Type': 'application/octet-stream',
       },
     })
@@ -18,12 +20,8 @@ export default function Better() {
         return response.blob();
       })
       .then((blob) => {
-        const fileUrl = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = fileUrl;
-        link.download = 'linux_install.sh'; 
-        link.click();
-        URL.revokeObjectURL(fileUrl);
+        const url = URL.createObjectURL(blob);
+        setFileurl(url);
       })
       .catch((error) => {
         setError(error.message);
@@ -32,7 +30,14 @@ export default function Better() {
 
   return (
     <div>
-      <button onClick={handleDownload}>Download Script</button>
+      <a 
+        href = {fileurl}
+        download = "linux_install.sh"
+        // target="_blank" // if target set to blank, opens download in new tab
+        rel="noreferrer" // security 
+      >
+        <button onClick={handleDownload}>Download Script</button>
+      </a>
       {error && <p>Error: {error}</p>}
     </div>
   );
