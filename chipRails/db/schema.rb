@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2023_06_27_142942) do
+  create_table "children", charset: "latin1", force: :cascade do |t|
+    t.string "ref"
+    t.text "dependsOn"
+    t.bigint "sbom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sbom_id"], name: "index_children_on_sbom_id"
+  end
+
+>>>>>>> 10-expandDatabase
   create_table "components", charset: "latin1", force: :cascade do |t|
     t.string "group"
     t.string "name"
@@ -35,6 +48,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "external_references", charset: "latin1", force: :cascade do |t|
+    t.string "group"
+    t.string "url"
+    t.bigint "dependency_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dependency_id"], name: "index_external_references_on_dependency_id"
+  end
+
+>>>>>>> 10-expandDatabase
   create_table "licenses", charset: "latin1", force: :cascade do |t|
     t.string "iden"
     t.bigint "dependency_id", null: false
@@ -60,6 +85,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["dependency_id"], name: "index_properties_on_dependency_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "ratings", charset: "latin1", force: :cascade do |t|
+    t.integer "score"
+    t.string "severity"
+    t.bigint "vulnerability_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vulnerability_id"], name: "index_ratings_on_vulnerability_id"
+  end
+
+>>>>>>> 10-expandDatabase
   create_table "sboms", charset: "latin1", force: :cascade do |t|
     t.string "bomFormat"
     t.string "specVersion"
@@ -67,12 +104,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.integer "version"
     t.string "name"
     t.string "description"
+<<<<<<< HEAD
     t.bigint "user_id"
+=======
+    t.bigint "user_id", null: false
+>>>>>>> 10-expandDatabase
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_sboms_on_user_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "sources", charset: "latin1", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.bigint "rating_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rating_id"], name: "index_sources_on_rating_id"
+  end
+
+>>>>>>> 10-expandDatabase
   create_table "sub_components", charset: "latin1", force: :cascade do |t|
     t.string "bom_ref"
     t.string "group"
@@ -105,6 +158,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   add_foreign_key "dependencies", "sboms"
   add_foreign_key "licenses", "dependencies"
   add_foreign_key "metadata", "sboms"
@@ -112,4 +166,33 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
   add_foreign_key "sboms", "users"
   add_foreign_key "sub_components", "dependencies"
   add_foreign_key "tools", "metadata"
+=======
+  create_table "vulnerabilities", charset: "latin1", force: :cascade do |t|
+    t.string "bom_ref"
+    t.string "vulnID"
+    t.string "description"
+    t.string "detail"
+    t.string "recommendation"
+    t.string "created"
+    t.string "published"
+    t.string "updated"
+    t.text "affected"
+    t.bigint "sbom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sbom_id"], name: "index_vulnerabilities_on_sbom_id"
+  end
+
+  add_foreign_key "dependencies", "sboms"
+  add_foreign_key "external_references", "dependencies"
+  add_foreign_key "licenses", "dependencies"
+  add_foreign_key "metadata", "sboms"
+  add_foreign_key "properties", "dependencies"
+  add_foreign_key "ratings", "vulnerabilities"
+  add_foreign_key "sboms", "users"
+  add_foreign_key "sources", "ratings"
+  add_foreign_key "sub_components", "dependencies"
+  add_foreign_key "tools", "metadata"
+  add_foreign_key "vulnerabilities", "sboms"
+>>>>>>> 10-expandDatabase
 end
