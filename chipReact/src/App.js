@@ -6,6 +6,7 @@ import ViewSBOMs from './pages/ViewSBOMs';
 import GenerateSBOMs from './pages/GenerateSBOMs';
 import Profile from './pages/Profile';
 import Logout from './pages/Logout';
+import MyAccordian from './pages/MyAccordian';
 import MySideNav from './components/MySideNav';
 
 const App = () => {
@@ -14,8 +15,8 @@ const App = () => {
       <div className="container-fluid">
         <div className="row">
           <MySideNav />
-
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <MyAccordian />
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/viewsboms" element={<ViewSBOMs />} />
@@ -27,6 +28,7 @@ const App = () => {
         </div>
       </div>
     </Router>
+
   );
 };
 

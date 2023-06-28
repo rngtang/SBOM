@@ -5,7 +5,6 @@ import ToDo from '../components/ToDo.jsx';
 import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function ViewSBOMs() {
 
   // Tasks (ToDo List) State
@@ -105,6 +104,9 @@ function ViewSBOMs() {
     />  
 
     </div>
+    
+      
+
   );
 }
 
