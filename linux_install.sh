@@ -35,6 +35,7 @@ chmod +x install.sh
 # sudo mv ./bin/syft /usr/local/bin
 echo -e "${COLOR}--- Successful: INSTALLED SYFT ---${NC}"
 
+
 # pulls script to install grype into a new file called install.sh.1 and runs it 
 echo -e "${COLOR}--- INSTALLING GRYPE... ---${NC}" 
 wget https://raw.githubusercontent.com/anchore/grype/main/install.sh
@@ -43,9 +44,9 @@ chmod +x install.sh.1
 # sudo mv ./bin/grype /usr/local/bin
 echo -e "${COLOR}--- Successful: INSTALLED GRYPE ---${NC}"
 
+
 echo -e "${COLOR} Creating an SBOM for your file... ${NC}"
-./bin/syft $selected_file -o cyclonedx-json=$selected_file.sbom.json
-# ./bin/syft $NAME -o cyclonedx-json=$NAME.sbom.json
+./bin/syft $selected_file -o cyclonedx-json=$selected_file.sbom.json # ./bin/syft $NAME -o cyclonedx-json=$NAME.sbom.json
 echo -e "${COLOR} Finished creating $selected_file.sbom.json ${NC}"
 
 ./bin/grype sbom:$selected_file.sbom.json 
