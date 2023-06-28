@@ -20,10 +20,14 @@ class UsersController < ApplicationController
     end
 
     def update
-        @user.update(user_params)
         respond_to do |format|
-            format.html { redirect_to user_url(@user) }
-            format.json { head :no_content}
+            if @user.update(user_params)
+                format.html { redirect_to user_url(@user) }
+                format.json { head :no_content}
+            else
+                format.json {head :no_content}
+            end
+            
         end
     end
 
@@ -36,6 +40,8 @@ class UsersController < ApplicationController
         respond_to do |format|
             if @user.save
                 format.json { render json: @user}
+            else
+                format.json { head :no_content}
             end
         end
     end

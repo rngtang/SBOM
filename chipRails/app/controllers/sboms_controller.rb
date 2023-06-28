@@ -36,12 +36,12 @@ class SbomsController < ApplicationController
         @sbom = @user.sboms.new(sbom_params)
         @sbom.save
         respond_to do |format|
-            format.html { redirect_to '/sboms_all'}
-            format.json { head :no_content}
-        else
-            format.json { head :no_content}
+            if @sbom.save
+                render json: @sbom, status: :ok
+            else
+                format.json { head :no_content}
+            end
         end
-        render json: @sbom, status: :ok
 
     end
 
