@@ -44,8 +44,6 @@ sub_component2 = SubComponent.create(bom_ref: 'bom ref 2', group: 'os', publishe
 property1 = Property.create(name: 'kk', value: '234', dependency: dependency1)
 property2 = Property.create(name: 'll', value: '432', dependency: dependency2)
 
-<<<<<<< HEAD
-=======
 # external reference
 externalReference1 = ExternalReference.create(group: 'ejowe', url: 'gregrhrehreher.com', dependency: dependency1)
 externalReference2 = ExternalReference.create(group: 'kppihup', url: 'externalReference2.com', dependency: dependency2)
@@ -66,5 +64,4 @@ rating2 = Rating.create(score: 1, severity: 'low', vulnerability: vuln2)
 source1 = Source.create(name: 'google', url: 'fdasdfds.com', rating: rating1)
 source2 = Source.create(name: 'baidu', url: 'kopok.com', rating: rating2)
 
->>>>>>> 10-expandDatabase
 puts 'seed complete'
