@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import LoginPage from './pages/LoginPage';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -12,23 +13,9 @@ import Login from './components/Login';
 import ProtectedRoute from './utils/ProtectedRoute'; 
 import { UserContext } from './UserContext';
 
-
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
 
-  const getCurrentUser = async () => {
-    const response = await fetch('/current_user', { credentials: 'include' });
-    if (response.ok) {
-      const user = await response.json();
-      setUser(user);
-    } else {
-      console.log('No user is logged in');
-    }
-  };
-
-  useEffect(() => {
-    getCurrentUser();
-  }, []);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
@@ -44,7 +31,7 @@ const App = () => {
                 <Route path="/generatesboms" element={<ProtectedRoute element={<GenerateSBOMs />} />} />
                 <Route path="/profile" element={<ProtectedRoute element={<Profile />} />} />
                 <Route path="/logout" element={<Logout />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={<LoginPage />} />
               </Routes>
             </main>
           </div>

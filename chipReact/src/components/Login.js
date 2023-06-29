@@ -34,14 +34,16 @@
 // }
 
 // export default Login;
-import { useEffect } from 'react';
+// Login.js
+import React, { useEffect } from 'react';
 
-function Login() {
+const Login = () => {
   useEffect(() => {
-    window.location.href = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu';  
+    window.location.href = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu';
   }, []);
 
   return null;
-}
+};
 
 export default Login;
+
