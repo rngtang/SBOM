@@ -5,8 +5,8 @@ import prereq1 from '../data/prereq.json';
 import data1 from '../data/linux.json';
 import data2 from '../data/windows.json';
 import data3 from '../data/apple.json';
-import DownloadLinuxScript from '../DownloadLinuxScript';
-import DownloadWindowsScript from '../DownloadWindowsScript';
+import DownloadLinuxScript from '../components/DownloadLinuxScript';
+import DownloadWindowsScript from '../components/DownloadWindowsScript';
 
 const Prereq = ({title, text}) => {
     return (
@@ -19,7 +19,7 @@ const Prereq = ({title, text}) => {
     );
 };
 
-const Section = ({title, text, code}) => {
+const Section = ({title, text, code, downloadComponent}) => {
     const [isCopied, setIsCopied] = useState(false);
     return (
         <div className={styles.section}>
@@ -27,6 +27,7 @@ const Section = ({title, text, code}) => {
                 <h2>{title}</h2>
                 <p>{text}</p>
                 <CodeBox text={code} />
+                {downloadComponent && downloadComponent}
             </div>
         </div>
     );
@@ -38,17 +39,13 @@ const Section = ({title, text, code}) => {
 const AnotherPage = () => {
     return (
         <>
-            <h2>Judy's super cool button: </h2> 
-            <DownloadLinuxScript />
-            <h2>Judy's second super cool button: </h2>
-            <DownloadWindowsScript />
-
             <Prereq title={prereq1.title} text={prereq1.text} />
-            <Section title={data1.title} text={data1.text} code={data1.code}/>
-            <Section title={data2.title} text={data2.text} code={data2.code}/>
+            <Section title={data1.title} text={data1.text} code={data1.code} downloadComponent={<DownloadLinuxScript />} />
+            <Section title={data2.title} text={data2.text} code={data2.code} downloadComponent={<DownloadWindowsScript />} />
             <Section title={data3.title} text={data3.text} code={data3.code}/>
         </>
     );
 };
+
 
 export default AnotherPage;
