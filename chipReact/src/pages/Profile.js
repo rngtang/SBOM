@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Profile.module.css';
+import styles from './GenerateSBOMs.module.css';
 import user1 from '../data/user.json';
 
 const Profile = () => {
