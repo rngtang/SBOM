@@ -1,8 +1,32 @@
 class ScriptsController < ApplicationController
     protect_from_forgery with: :null_session
 
-    def download 
-        script_code = <<-SCRIPT
+    def windows 
+        script_windows = <<-SCRIPT
+        Write-Host "Hello World" -ForegroundColor Green
+
+        Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+        # choco 
+        choco install syft -y --force
+
+        Write-Host "Which file would you like to create an SBOM for?" -ForegroundColor Green
+        $selectedFile= Read-Host 
+        Write-Host "Creating $selectedFile.json ..." -ForegroundColor Green
+
+        syft $selectedFile -o json=$selectedFile.json
+
+        Write-Host "You have now created $selectedFile.sbom.json, which is your SBOM to upload." -ForegroundColor Green
+
+        Read-Host -Prompt "Press Enter to exit script and terminal" 
+
+        Exit
+        SCRIPT
+        
+        send_data script_windows, filename: 'windows_install.ps1', type: 'application/x-powershell'
+    end 
+
+    def linux
+        script_linux = <<-SCRIPT
         # !/bin/bash
 
         # chmod +x linux_install.sh 
@@ -41,7 +65,7 @@ class ScriptsController < ApplicationController
         
         SCRIPT
 
-        send_data script_code, filename: 'install_linux.sh', type: 'text/x-sh'
+        send_data script_linux, filename: 'install_linux.sh', type: 'text/x-sh'
     end 
   end
   

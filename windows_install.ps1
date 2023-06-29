@@ -1,5 +1,3 @@
-# Start-Process PowerShell -Verb runAs -ArgumentList "-NoExit 'C:\Users\87jud\OneDrive - Duke University\Documents\Code+\windows_install.ps1'"
-
 Write-Host "Hello World" -ForegroundColor Green
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -17,4 +15,3 @@ Write-Host "You have now created $selectedFile.sbom.json, which is your SBOM to 
 Read-Host -Prompt "Press Enter to exit script and terminal" 
 
 Exit
-

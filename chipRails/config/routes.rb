@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get '/scripts/download', to: 'scripts#download'
+  get '/scripts/linux', to: 'scripts#linux'
+  get '/scripts/windows', to: 'scripts#windows'
 
 end
