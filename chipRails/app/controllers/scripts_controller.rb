@@ -65,7 +65,7 @@ class ScriptsController < ApplicationController
         
         SCRIPT
 
-        send_data script_linux, filename: 'install_linux.sh', type: 'text/x-sh'
+        send_data script_linux, filename: 'install_linux.sh', type: 'application/x-sh'
     end 
   end
   
