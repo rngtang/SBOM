@@ -45,10 +45,10 @@ echo -e "${COLOR} Absolute path of selected file: ${NC} $selected_file"
 # echo -e "${COLOR}--- Successful: INSTALLED GRYPE ---${NC}"
 
 
-# echo -e "${COLOR} Creating an SBOM for your file... ${NC}"
-# ./bin/syft $selected_file -o json=$selected_file.json 
-# echo -e "${COLOR} Finished creating $selected_file.sbom.json ${NC}"
+echo -e "${COLOR} Creating an SBOM for your file... ${NC}"
+./bin/syft $selected_file -o spdx-json=$selected_file.spdx.json 
+echo -e "${COLOR} Finished creating $selected_file.sbom.json ${NC}"
 
-./bin/grype sbom:$selected_file.json -o json
+# ./bin/grype sbom:$selected_file.json -o json
 
 echo -e "${COLOR}You have now created $selected_file.sbom.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"
