@@ -9,7 +9,7 @@ export default function DownloadWindowsScript() {
       method: 'GET',
       headers: {
         // headers for authorization? 
-        'Content-Type': 'application/octet-stream',
+        'Content-Type': 'application/x-powershell',
       },
     })
       .then((response) => {
@@ -33,7 +33,7 @@ export default function DownloadWindowsScript() {
     <div>
       <a 
         href = {fileurl}
-        download = "windows_install.sh"
+        download = "windows_install.ps1"
         // target="_blank" // if target set to blank, opens download in new tab
         rel="noreferrer" // security 
       >

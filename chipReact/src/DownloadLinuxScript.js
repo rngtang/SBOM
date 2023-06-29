@@ -9,7 +9,7 @@ export default function DownloadLinuxScript() {
       method: 'GET',
       headers: {
         // headers for authorization? 
-        'Content-Type': 'application/octet-stream',
+        'Content-Type': 'text/x-sh',
       },
     })
       .then((response) => {
