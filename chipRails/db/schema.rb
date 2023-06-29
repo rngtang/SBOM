@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
-  create_table "children", charset: "latin1", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2023_06_29_191538) do
+  create_table "children", charset: "utf8mb4", force: :cascade do |t|
     t.string "ref"
     t.text "dependsOn"
     t.bigint "sbom_id", null: false
@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["sbom_id"], name: "index_children_on_sbom_id"
   end
 
-  create_table "components", charset: "latin1", force: :cascade do |t|
+  create_table "components", charset: "utf8mb4", force: :cascade do |t|
     t.string "group"
     t.string "name"
     t.string "version"
@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["metadatum_id"], name: "index_components_on_metadatum_id"
   end
 
-  create_table "dependencies", charset: "latin1", force: :cascade do |t|
+  create_table "dependencies", charset: "utf8mb4", force: :cascade do |t|
     t.string "bom_ref"
     t.string "group"
     t.string "publisher"
@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
   end
 
-  create_table "external_references", charset: "latin1", force: :cascade do |t|
+  create_table "external_references", charset: "utf8mb4", force: :cascade do |t|
     t.string "group"
     t.string "url"
     t.bigint "dependency_id", null: false
@@ -53,7 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["dependency_id"], name: "index_external_references_on_dependency_id"
   end
 
-  create_table "licenses", charset: "latin1", force: :cascade do |t|
+  create_table "licenses", charset: "utf8mb4", force: :cascade do |t|
     t.string "iden"
     t.bigint "dependency_id", null: false
     t.datetime "created_at", null: false
@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["dependency_id"], name: "index_licenses_on_dependency_id"
   end
 
-  create_table "metadata", charset: "latin1", force: :cascade do |t|
+  create_table "metadata", charset: "utf8mb4", force: :cascade do |t|
     t.string "timestamp"
     t.bigint "sbom_id", null: false
     t.datetime "created_at", null: false
@@ -69,7 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["sbom_id"], name: "index_metadata_on_sbom_id"
   end
 
-  create_table "properties", charset: "latin1", force: :cascade do |t|
+  create_table "properties", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "value"
     t.bigint "dependency_id", null: false
@@ -78,7 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["dependency_id"], name: "index_properties_on_dependency_id"
   end
 
-  create_table "ratings", charset: "latin1", force: :cascade do |t|
+  create_table "ratings", charset: "utf8mb4", force: :cascade do |t|
     t.integer "score"
     t.string "severity"
     t.bigint "vulnerability_id", null: false
@@ -87,7 +87,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["vulnerability_id"], name: "index_ratings_on_vulnerability_id"
   end
 
-  create_table "sboms", charset: "latin1", force: :cascade do |t|
+  create_table "sboms", charset: "utf8mb4", force: :cascade do |t|
     t.string "bomFormat"
     t.string "specVersion"
     t.string "serialNumber"
@@ -100,7 +100,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["user_id"], name: "index_sboms_on_user_id"
   end
 
-  create_table "sources", charset: "latin1", force: :cascade do |t|
+  create_table "sources", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "url"
     t.bigint "rating_id", null: false
@@ -109,7 +109,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["rating_id"], name: "index_sources_on_rating_id"
   end
 
-  create_table "tools", charset: "latin1", force: :cascade do |t|
+  create_table "tools", charset: "utf8mb4", force: :cascade do |t|
     t.string "vendor"
     t.string "name"
     t.string "version"
@@ -119,15 +119,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["metadatum_id"], name: "index_tools_on_metadatum_id"
   end
 
-  create_table "users", charset: "latin1", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "username"
-    t.string "email"
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "provider"
+    t.string "uid"
   end
 
-  create_table "vulnerabilities", charset: "latin1", force: :cascade do |t|
+  create_table "vulnerabilities", charset: "utf8mb4", force: :cascade do |t|
     t.string "bom_ref"
     t.string "vulnID"
     t.string "description"
