@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-export default function DownloadLinuxScript() {
+export default function DownloadWindowsScript() {
   const [error, setError] = useState(null);
   const [fileurl, setFileurl] = useState(null);
 
   const handleDownload = () => {
-    fetch("http://localhost:8080/scripts/linux", {
+    fetch("http://localhost:8080/scripts/windows", {
       method: 'GET',
       headers: {
         // headers for authorization? 
@@ -33,11 +33,11 @@ export default function DownloadLinuxScript() {
     <div>
       <a 
         href = {fileurl}
-        download = "linux_install.sh"
+        download = "windows_install.sh"
         // target="_blank" // if target set to blank, opens download in new tab
         rel="noreferrer" // security 
       >
-        <button onClick={handleDownload}>Download Linux Script</button>
+        <button onClick={handleDownload}>Download Windows Script</button>
       </a>
       {error && <p>Error: {error}</p>}
     </div>
