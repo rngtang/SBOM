@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './GenerateSBOMs.module.css';
+import { Button } from 'react-bootstrap';
 
 const Intro = () => {
     return (
@@ -27,6 +28,7 @@ const Home = () => {
         <div className='page'>
             <Intro />
             <WhatAreSBOMs />
+            <Button > Rout SAML2 Post </Button>
             {/* Continue adding other sections as needed */}
         </div>
     );

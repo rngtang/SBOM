@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
 
+
 const App = () => {
   return (
     <Router>
@@ -17,6 +18,7 @@ const App = () => {
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4">
             <Routes>
               <Route path="/home" element={<Home />} />
+              /* Conditional Rendering: login && */
               <Route path="/viewsboms" element={<ViewSBOMs />} />
               <Route path="/generatesboms" element={<GenerateSBOMs />} />
               <Route path="/profile" element={<Profile />} />
