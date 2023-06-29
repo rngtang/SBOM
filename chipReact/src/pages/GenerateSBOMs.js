@@ -26,8 +26,9 @@ const Section = ({title, text, code, downloadComponent}) => {
             <div>
                 <h2>{title}</h2>
                 <p>{text}</p>
-                <CodeBox text={code} />
                 {downloadComponent && downloadComponent}
+                <CodeBox text={code} />
+                
             </div>
         </div>
     );
