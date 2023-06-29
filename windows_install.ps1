@@ -1,5 +1,6 @@
 # Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # Start-Process powershell -Verb RunAs 
+# Start-Process PowerShell -Verb runAs -ArgumentList "-file c:\temp\powershell\powershellexamplescript.ps1"
 
 # Code beyond this point will be executed in the elevated PowerShell session
 

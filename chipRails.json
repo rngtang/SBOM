@@ -1,0 +1,2779 @@
+{
+ "artifacts": [
+  {
+   "id": "c7c994624ca3d5c3",
+   "name": "actioncable",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:actioncable:actioncable:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:actioncable:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:actioncable:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:actioncable:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/actioncable@7.0.5"
+  },
+  {
+   "id": "e452712d4acb93d0",
+   "name": "actionmailbox",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:actionmailbox:actionmailbox:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:actionmailbox:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:actionmailbox:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:actionmailbox:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/actionmailbox@7.0.5"
+  },
+  {
+   "id": "4524670f40d07607",
+   "name": "actionmailer",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:actionmailer:actionmailer:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:actionmailer:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:actionmailer:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:actionmailer:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/actionmailer@7.0.5"
+  },
+  {
+   "id": "3d2f023eb63b0253",
+   "name": "actionpack",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:actionpack:actionpack:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:actionpack:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:actionpack:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:actionpack:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/actionpack@7.0.5"
+  },
+  {
+   "id": "a7f81318c212ea99",
+   "name": "actiontext",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:actiontext:actiontext:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:actiontext:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:actiontext:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:actiontext:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/actiontext@7.0.5"
+  },
+  {
+   "id": "748c57bb34abb81c",
+   "name": "actionview",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:actionview:actionview:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:actionview:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:actionview:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:actionview:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/actionview@7.0.5"
+  },
+  {
+   "id": "b4f70f6e3efc81f2",
+   "name": "activejob",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:activejob:activejob:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:activejob:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:activejob:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:activejob:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/activejob@7.0.5"
+  },
+  {
+   "id": "edb6a250ef838dd0",
+   "name": "activemodel",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:activemodel:activemodel:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:activemodel:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:activemodel:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:activemodel:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/activemodel@7.0.5"
+  },
+  {
+   "id": "bb464a533d053a3a",
+   "name": "activerecord",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:activerecord:activerecord:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:activerecord:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:activerecord:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:activerecord:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/activerecord@7.0.5"
+  },
+  {
+   "id": "b0686fe62f037c98",
+   "name": "activestorage",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:activestorage:activestorage:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:activestorage:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:activestorage:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:activestorage:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/activestorage@7.0.5"
+  },
+  {
+   "id": "c9e8df10adcf9c38",
+   "name": "activesupport",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:activesupport:activesupport:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:activesupport:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:activesupport:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:activesupport:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/activesupport@7.0.5"
+  },
+  {
+   "id": "8de2e1e9341a894b",
+   "name": "addressable",
+   "version": "2.8.4",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:addressable:addressable:2.8.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:addressable:2.8.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:addressable:2.8.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:addressable:2.8.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/addressable@2.8.4"
+  },
+  {
+   "id": "9c5bafe0836a0383",
+   "name": "bindex",
+   "version": "0.8.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:bindex:0.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:bindex:0.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:bindex:bindex:0.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:bindex:0.8.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/bindex@0.8.1"
+  },
+  {
+   "id": "62632bbb16ddf2a0",
+   "name": "bootsnap",
+   "version": "1.16.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:bootsnap:1.16.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:bootsnap:1.16.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:bootsnap:bootsnap:1.16.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:bootsnap:1.16.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/bootsnap@1.16.0"
+  },
+  {
+   "id": "00deb7f6e8f473c4",
+   "name": "builder",
+   "version": "3.2.4",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:builder:3.2.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:builder:3.2.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:builder:builder:3.2.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:builder:3.2.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/builder@3.2.4"
+  },
+  {
+   "id": "fcb4d9199aca41a7",
+   "name": "capybara",
+   "version": "3.39.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:capybara:3.39.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:capybara:3.39.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:capybara:capybara:3.39.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:capybara:3.39.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/capybara@3.39.2"
+  },
+  {
+   "id": "5d0c4968b34902e0",
+   "name": "concurrent-ruby",
+   "version": "1.2.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:concurrent-ruby:concurrent-ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:concurrent-ruby:concurrent_ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:concurrent_ruby:concurrent-ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:concurrent_ruby:concurrent_ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:concurrent:concurrent-ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:concurrent:concurrent_ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:concurrent-ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:concurrent_ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:concurrent-ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:concurrent_ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:concurrent-ruby:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:concurrent_ruby:1.2.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/concurrent-ruby@1.2.2"
+  },
+  {
+   "id": "5f79afbd4eea1193",
+   "name": "crass",
+   "version": "1.0.6",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:crass:1.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:crass:1.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:crass:crass:1.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:crass:1.0.6:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/crass@1.0.6"
+  },
+  {
+   "id": "f77eae22da44530c",
+   "name": "date",
+   "version": "3.3.3",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:date:3.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:date:3.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:date:date:3.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:date:3.3.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/date@3.3.3"
+  },
+  {
+   "id": "22a6b83c948955bd",
+   "name": "debug",
+   "version": "1.8.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:debug:1.8.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:debug:1.8.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:debug:debug:1.8.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:debug:1.8.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/debug@1.8.0"
+  },
+  {
+   "id": "09168bd775b03fa0",
+   "name": "erubi",
+   "version": "1.12.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:erubi:1.12.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:erubi:1.12.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:erubi:erubi:1.12.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:erubi:1.12.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/erubi@1.12.0"
+  },
+  {
+   "id": "df248ac663e0b4e0",
+   "name": "globalid",
+   "version": "1.1.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:globalid:1.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:globalid:1.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:globalid:globalid:1.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:globalid:1.1.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/globalid@1.1.0"
+  },
+  {
+   "id": "71d0b04c2484f4f4",
+   "name": "i18n",
+   "version": "1.14.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:i18n:1.14.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:i18n:1.14.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:i18n:i18n:1.14.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:i18n:1.14.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/i18n@1.14.1"
+  },
+  {
+   "id": "6aa66e5a31dedb79",
+   "name": "importmap-rails",
+   "version": "1.1.6",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:importmap-rails:importmap-rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:importmap-rails:importmap_rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:importmap_rails:importmap-rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:importmap_rails:importmap_rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:importmap:importmap-rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:importmap:importmap_rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:importmap-rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:importmap_rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:importmap-rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:importmap_rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:importmap-rails:1.1.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:importmap_rails:1.1.6:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/importmap-rails@1.1.6"
+  },
+  {
+   "id": "04ad2f22aadd4b5e",
+   "name": "io-console",
+   "version": "0.6.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:io-console:io-console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:io-console:io_console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:io_console:io-console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:io_console:io_console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:io-console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:io_console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:io-console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:io_console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:io-console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:io_console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:io:io-console:0.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:io:io_console:0.6.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/io-console@0.6.0"
+  },
+  {
+   "id": "1e660d73a760f81d",
+   "name": "irb",
+   "version": "1.7.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:irb:1.7.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:irb:1.7.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:irb:1.7.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:irb:irb:1.7.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/irb@1.7.0"
+  },
+  {
+   "id": "30682bb60f3b76c2",
+   "name": "jbuilder",
+   "version": "2.11.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:jbuilder:2.11.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:jbuilder:2.11.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:jbuilder:jbuilder:2.11.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:jbuilder:2.11.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/jbuilder@2.11.5"
+  },
+  {
+   "id": "2a9cef5657ca722e",
+   "name": "loofah",
+   "version": "2.21.3",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:loofah:2.21.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:loofah:2.21.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:loofah:loofah:2.21.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:loofah:2.21.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/loofah@2.21.3"
+  },
+  {
+   "id": "5e330dff5f59cd0c",
+   "name": "mail",
+   "version": "2.8.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:mail:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:mail:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:mail:mail:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:mail:2.8.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/mail@2.8.1"
+  },
+  {
+   "id": "807ee4a11607bd01",
+   "name": "marcel",
+   "version": "1.0.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:marcel:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:marcel:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:marcel:marcel:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:marcel:1.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/marcel@1.0.2"
+  },
+  {
+   "id": "1d611339320dd81f",
+   "name": "matrix",
+   "version": "0.4.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:matrix:0.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:matrix:0.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:matrix:matrix:0.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:matrix:0.4.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/matrix@0.4.2"
+  },
+  {
+   "id": "18d66c0a2b596558",
+   "name": "method_source",
+   "version": "1.0.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:method-source:method-source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:method-source:method_source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:method_source:method-source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:method_source:method_source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:method-source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:method_source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:method-source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:method_source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:method:method-source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:method:method_source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:method-source:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:method_source:1.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/method_source@1.0.0"
+  },
+  {
+   "id": "0d1777cc33e4dc5f",
+   "name": "mini_mime",
+   "version": "1.1.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:mini-mime:mini-mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:mini-mime:mini_mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:mini_mime:mini-mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:mini_mime:mini_mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:mini-mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:mini_mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:mini-mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:mini_mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:mini:mini-mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:mini:mini_mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:mini-mime:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:mini_mime:1.1.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/mini_mime@1.1.2"
+  },
+  {
+   "id": "813fc6547c0d7134",
+   "name": "minitest",
+   "version": "5.18.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:minitest:5.18.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:minitest:5.18.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:minitest:minitest:5.18.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:minitest:5.18.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/minitest@5.18.0"
+  },
+  {
+   "id": "4b7cc49437729c02",
+   "name": "msgpack",
+   "version": "1.7.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:msgpack:1.7.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:msgpack:1.7.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:msgpack:msgpack:1.7.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:msgpack:1.7.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/msgpack@1.7.1"
+  },
+  {
+   "id": "975c92192d9581d0",
+   "name": "mysql2",
+   "version": "0.5.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:mysql2:0.5.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:mysql2:0.5.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:mysql2:mysql2:0.5.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:mysql2:0.5.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/mysql2@0.5.5"
+  },
+  {
+   "id": "708675e26196d7ad",
+   "name": "net-imap",
+   "version": "0.3.6",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:net-imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:net_imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:net-imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:net_imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net-imap:net-imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net-imap:net_imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net_imap:net-imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net_imap:net_imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:net-imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:net_imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net:net-imap:0.3.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net:net_imap:0.3.6:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/net-imap@0.3.6"
+  },
+  {
+   "id": "9082f369750a4731",
+   "name": "net-pop",
+   "version": "0.1.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:net-pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:net_pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:net-pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:net_pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net-pop:net-pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net-pop:net_pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net_pop:net-pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net_pop:net_pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:net-pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:net_pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net:net-pop:0.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net:net_pop:0.1.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/net-pop@0.1.2"
+  },
+  {
+   "id": "edac35cc9de064dc",
+   "name": "net-protocol",
+   "version": "0.2.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:net-protocol:net-protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net-protocol:net_protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net_protocol:net-protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net_protocol:net_protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:net-protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:net_protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:net-protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:net_protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:net-protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:net_protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net:net-protocol:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net:net_protocol:0.2.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/net-protocol@0.2.1"
+  },
+  {
+   "id": "00d429d699f2ffa7",
+   "name": "net-smtp",
+   "version": "0.3.3",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:net-smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:net_smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:net-smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:net_smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net-smtp:net-smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net-smtp:net_smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net_smtp:net-smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net_smtp:net_smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:net-smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:net_smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net:net-smtp:0.3.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:net:net_smtp:0.3.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/net-smtp@0.3.3"
+  },
+  {
+   "id": "0004d5344df3e6d1",
+   "name": "nio4r",
+   "version": "2.5.9",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:nio4r:2.5.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:nio4r:2.5.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:nio4r:nio4r:2.5.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:nio4r:2.5.9:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/nio4r@2.5.9"
+  },
+  {
+   "id": "e8e21cdc5c08096c",
+   "name": "nokogiri",
+   "version": "1.15.2-aarch64-linux",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:nokogiri:1.15.2-aarch64-linux:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:nokogiri:1.15.2-aarch64-linux:*:*:*:*:*:*:*",
+    "cpe:2.3:a:nokogiri:nokogiri:1.15.2-aarch64-linux:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:nokogiri:1.15.2-aarch64-linux:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/nokogiri@1.15.2-aarch64-linux"
+  },
+  {
+   "id": "b3a864e19452d5cc",
+   "name": "nokogiri",
+   "version": "1.15.2-x86_64-linux",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:nokogiri:1.15.2-x86_64-linux:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:nokogiri:1.15.2-x86_64-linux:*:*:*:*:*:*:*",
+    "cpe:2.3:a:nokogiri:nokogiri:1.15.2-x86_64-linux:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:nokogiri:1.15.2-x86_64-linux:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/nokogiri@1.15.2-x86_64-linux"
+  },
+  {
+   "id": "e2d4d91fe8741e97",
+   "name": "public_suffix",
+   "version": "5.0.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:public-suffix:public-suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:public-suffix:public_suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:public_suffix:public-suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:public_suffix:public_suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:public-suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:public_suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:public-suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:public_suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:public:public-suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:public:public_suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:public-suffix:5.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:public_suffix:5.0.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/public_suffix@5.0.1"
+  },
+  {
+   "id": "83fadc55acf61cad",
+   "name": "puma",
+   "version": "5.6.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:puma:5.6.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:puma:5.6.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:puma:puma:5.6.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:puma:5.6.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/puma@5.6.5"
+  },
+  {
+   "id": "4a71d24b0d5723d5",
+   "name": "racc",
+   "version": "1.7.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:racc:1.7.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:racc:1.7.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:racc:racc:1.7.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:racc:1.7.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/racc@1.7.1"
+  },
+  {
+   "id": "c59d2099b7e7b959",
+   "name": "rack",
+   "version": "2.2.7",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:rack:2.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rack:2.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack:rack:2.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rack:2.2.7:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rack@2.2.7"
+  },
+  {
+   "id": "192258ac06a90737",
+   "name": "rack-cors",
+   "version": "2.0.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:rack-cors:rack-cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack-cors:rack_cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack_cors:rack-cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack_cors:rack_cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:rack-cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:rack_cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rack-cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rack_cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack:rack-cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack:rack_cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rack-cors:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rack_cors:2.0.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rack-cors@2.0.1"
+  },
+  {
+   "id": "fde95f4618741f4c",
+   "name": "rack-test",
+   "version": "2.1.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:rack-test:rack-test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack-test:rack_test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack_test:rack-test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack_test:rack_test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:rack-test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:rack_test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rack-test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rack_test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack:rack-test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rack:rack_test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rack-test:2.1.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rack_test:2.1.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rack-test@2.1.0"
+  },
+  {
+   "id": "2f729c3ac1ccbc2e",
+   "name": "rails",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:rails:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rails:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails:rails:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rails:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rails@7.0.5"
+  },
+  {
+   "id": "6d722ac0b6f91531",
+   "name": "rails-dom-testing",
+   "version": "2.0.3",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:rails-dom-testing:rails-dom-testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails-dom-testing:rails_dom_testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails_dom_testing:rails-dom-testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails_dom_testing:rails_dom_testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails-dom:rails-dom-testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails-dom:rails_dom_testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails_dom:rails-dom-testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails_dom:rails_dom_testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:rails-dom-testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:rails_dom_testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rails-dom-testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rails_dom_testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails:rails-dom-testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails:rails_dom_testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rails-dom-testing:2.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rails_dom_testing:2.0.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rails-dom-testing@2.0.3"
+  },
+  {
+   "id": "ee6e72e0f567fe79",
+   "name": "rails-html-sanitizer",
+   "version": "1.6.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:rails-html-sanitizer:rails-html-sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails-html-sanitizer:rails_html_sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails_html_sanitizer:rails-html-sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails_html_sanitizer:rails_html_sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails-html:rails-html-sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails-html:rails_html_sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails_html:rails-html-sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails_html:rails_html_sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:rails-html-sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:rails_html_sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rails-html-sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rails_html_sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails:rails-html-sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rails:rails_html_sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rails-html-sanitizer:1.6.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rails_html_sanitizer:1.6.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rails-html-sanitizer@1.6.0"
+  },
+  {
+   "id": "b53a126c2c1f103d",
+   "name": "railties",
+   "version": "7.0.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:railties:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:railties:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:railties:railties:7.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:railties:7.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/railties@7.0.5"
+  },
+  {
+   "id": "d10fa6c4ce24ce0a",
+   "name": "rake",
+   "version": "13.0.6",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:rake:13.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rake:13.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rake:rake:13.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rake:13.0.6:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rake@13.0.6"
+  },
+  {
+   "id": "c6fd6ca906b93183",
+   "name": "regexp_parser",
+   "version": "2.8.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:regexp-parser:regexp-parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:regexp-parser:regexp_parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:regexp_parser:regexp-parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:regexp_parser:regexp_parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:regexp-parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:regexp_parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:regexp-parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:regexp_parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:regexp:regexp-parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:regexp:regexp_parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:regexp-parser:2.8.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:regexp_parser:2.8.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/regexp_parser@2.8.1"
+  },
+  {
+   "id": "6d31635eda01fd63",
+   "name": "reline",
+   "version": "0.3.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:reline:0.3.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:reline:0.3.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:reline:reline:0.3.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:reline:0.3.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/reline@0.3.5"
+  },
+  {
+   "id": "a8b2367d967e7e15",
+   "name": "rexml",
+   "version": "3.2.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:rexml:3.2.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rexml:3.2.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rexml:rexml:3.2.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rexml:3.2.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rexml@3.2.5"
+  },
+  {
+   "id": "34b750b298857f49",
+   "name": "rubyzip",
+   "version": "2.3.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:rubyzip:2.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:rubyzip:2.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:rubyzip:rubyzip:2.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:rubyzip:2.3.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/rubyzip@2.3.2"
+  },
+  {
+   "id": "611b03889ce54070",
+   "name": "selenium-webdriver",
+   "version": "4.10.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:selenium-webdriver:selenium-webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:selenium-webdriver:selenium_webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:selenium_webdriver:selenium-webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:selenium_webdriver:selenium_webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:selenium-webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:selenium_webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:selenium-webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:selenium_webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:selenium:selenium-webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:selenium:selenium_webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:selenium-webdriver:4.10.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:selenium_webdriver:4.10.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/selenium-webdriver@4.10.0"
+  },
+  {
+   "id": "dffb1e38857c6ae5",
+   "name": "sprockets",
+   "version": "4.2.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:sprockets:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:sprockets:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:sprockets:sprockets:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:sprockets:4.2.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/sprockets@4.2.0"
+  },
+  {
+   "id": "d91b4e3da5a8d560",
+   "name": "sprockets-rails",
+   "version": "3.4.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:sprockets-rails:sprockets-rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:sprockets-rails:sprockets_rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:sprockets_rails:sprockets-rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:sprockets_rails:sprockets_rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:sprockets-rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:sprockets_rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:sprockets-rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:sprockets_rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:sprockets:sprockets-rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:sprockets:sprockets_rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:sprockets-rails:3.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:sprockets_rails:3.4.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/sprockets-rails@3.4.2"
+  },
+  {
+   "id": "52735f548abea692",
+   "name": "stimulus-rails",
+   "version": "1.2.1",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:stimulus-rails:stimulus-rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:stimulus-rails:stimulus_rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:stimulus_rails:stimulus-rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:stimulus_rails:stimulus_rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:stimulus-rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:stimulus_rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:stimulus-rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:stimulus_rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:stimulus:stimulus-rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:stimulus:stimulus_rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:stimulus-rails:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:stimulus_rails:1.2.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/stimulus-rails@1.2.1"
+  },
+  {
+   "id": "fa580143b8160423",
+   "name": "thor",
+   "version": "1.2.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:thor:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:thor:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:thor:1.2.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:thor:thor:1.2.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/thor@1.2.2"
+  },
+  {
+   "id": "ebd3c9c93e32e23c",
+   "name": "timeout",
+   "version": "0.3.2",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:timeout:0.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:timeout:0.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:timeout:timeout:0.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:timeout:0.3.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/timeout@0.3.2"
+  },
+  {
+   "id": "87d4f2a115c3f792",
+   "name": "turbo-rails",
+   "version": "1.4.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:turbo-rails:turbo-rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:turbo-rails:turbo_rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:turbo_rails:turbo-rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:turbo_rails:turbo_rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:turbo-rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:turbo_rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:turbo-rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:turbo_rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:turbo:turbo-rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:turbo:turbo_rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:turbo-rails:1.4.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:turbo_rails:1.4.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/turbo-rails@1.4.0"
+  },
+  {
+   "id": "053778af1200bb86",
+   "name": "tzinfo",
+   "version": "2.0.6",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:tzinfo:2.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:tzinfo:2.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:tzinfo:tzinfo:2.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:tzinfo:2.0.6:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/tzinfo@2.0.6"
+  },
+  {
+   "id": "87e857a027af977f",
+   "name": "web-console",
+   "version": "4.2.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:web-console:web-console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:web-console:web_console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:web_console:web-console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:web_console:web_console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:web-console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:web_console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:web-console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:web_console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:web-console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:web_console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:web:web-console:4.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:web:web_console:4.2.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/web-console@4.2.0"
+  },
+  {
+   "id": "aa3f51a85f459ac0",
+   "name": "webdrivers",
+   "version": "5.2.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:webdrivers:webdrivers:5.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:webdrivers:5.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:webdrivers:5.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:webdrivers:5.2.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/webdrivers@5.2.0"
+  },
+  {
+   "id": "6cc05bfbc37d7a32",
+   "name": "websocket",
+   "version": "1.2.9",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:websocket:1.2.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:websocket:1.2.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket:websocket:1.2.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:websocket:1.2.9:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/websocket@1.2.9"
+  },
+  {
+   "id": "fba0255911e31cec",
+   "name": "websocket-driver",
+   "version": "0.7.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:websocket-driver:websocket-driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket-driver:websocket_driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket_driver:websocket-driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket_driver:websocket_driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:websocket-driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:websocket_driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:websocket-driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:websocket_driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket:websocket-driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket:websocket_driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:websocket-driver:0.7.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:websocket_driver:0.7.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/websocket-driver@0.7.5"
+  },
+  {
+   "id": "e7ccffcc1bd072f3",
+   "name": "websocket-extensions",
+   "version": "0.1.5",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:websocket-extensions:websocket-extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket-extensions:websocket_extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket_extensions:websocket-extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket_extensions:websocket_extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:websocket-extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby-lang:websocket_extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:websocket-extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:websocket_extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket:websocket-extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:websocket:websocket_extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:websocket-extensions:0.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:websocket_extensions:0.1.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/websocket-extensions@0.1.5"
+  },
+  {
+   "id": "1b76f3994802dae0",
+   "name": "xpath",
+   "version": "3.2.0",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:xpath:3.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:xpath:3.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:xpath:xpath:3.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:xpath:3.2.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/xpath@3.2.0"
+  },
+  {
+   "id": "365c9456eee52f62",
+   "name": "zeitwerk",
+   "version": "2.6.8",
+   "type": "gem",
+   "foundBy": "ruby-gemfile-cataloger",
+   "locations": [
+    {
+     "path": "Gemfile.lock",
+     "annotations": {
+      "evidence": "primary"
+     }
+    }
+   ],
+   "licenses": [],
+   "language": "ruby",
+   "cpes": [
+    "cpe:2.3:a:ruby-lang:zeitwerk:2.6.8:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby_lang:zeitwerk:2.6.8:*:*:*:*:*:*:*",
+    "cpe:2.3:a:zeitwerk:zeitwerk:2.6.8:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ruby:zeitwerk:2.6.8:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:gem/zeitwerk@2.6.8"
+  }
+ ],
+ "artifactRelationships": [
+  {
+   "parent": "0004d5344df3e6d1",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "00d429d699f2ffa7",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "00deb7f6e8f473c4",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "04ad2f22aadd4b5e",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "053778af1200bb86",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "09168bd775b03fa0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "0d1777cc33e4dc5f",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "0004d5344df3e6d1",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "00d429d699f2ffa7",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "00deb7f6e8f473c4",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "04ad2f22aadd4b5e",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "053778af1200bb86",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "09168bd775b03fa0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "0d1777cc33e4dc5f",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "18d66c0a2b596558",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "192258ac06a90737",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "1b76f3994802dae0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "1d611339320dd81f",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "1e660d73a760f81d",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "22a6b83c948955bd",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "2a9cef5657ca722e",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "2f729c3ac1ccbc2e",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "30682bb60f3b76c2",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "34b750b298857f49",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "365c9456eee52f62",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "3d2f023eb63b0253",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "4524670f40d07607",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "4a71d24b0d5723d5",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "4b7cc49437729c02",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "52735f548abea692",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "5d0c4968b34902e0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "5e330dff5f59cd0c",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "5f79afbd4eea1193",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "611b03889ce54070",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "62632bbb16ddf2a0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "6aa66e5a31dedb79",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "6cc05bfbc37d7a32",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "6d31635eda01fd63",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "6d722ac0b6f91531",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "708675e26196d7ad",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "71d0b04c2484f4f4",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "748c57bb34abb81c",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "807ee4a11607bd01",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "813fc6547c0d7134",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "83fadc55acf61cad",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "87d4f2a115c3f792",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "87e857a027af977f",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "8de2e1e9341a894b",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "9082f369750a4731",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "975c92192d9581d0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "9c5bafe0836a0383",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "a7f81318c212ea99",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "a8b2367d967e7e15",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "aa3f51a85f459ac0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "b0686fe62f037c98",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "b3a864e19452d5cc",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "b4f70f6e3efc81f2",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "b53a126c2c1f103d",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "bb464a533d053a3a",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "c59d2099b7e7b959",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "c6fd6ca906b93183",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "c7c994624ca3d5c3",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "c9e8df10adcf9c38",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "d10fa6c4ce24ce0a",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "d91b4e3da5a8d560",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "df248ac663e0b4e0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "dffb1e38857c6ae5",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "e2d4d91fe8741e97",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "e452712d4acb93d0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "e7ccffcc1bd072f3",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "e8e21cdc5c08096c",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "ebd3c9c93e32e23c",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "edac35cc9de064dc",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "edb6a250ef838dd0",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "ee6e72e0f567fe79",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "f77eae22da44530c",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "fa580143b8160423",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "fba0255911e31cec",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "fcb4d9199aca41a7",
+   "type": "contains"
+  },
+  {
+   "parent": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+   "child": "fde95f4618741f4c",
+   "type": "contains"
+  },
+  {
+   "parent": "18d66c0a2b596558",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "192258ac06a90737",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "1b76f3994802dae0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "1d611339320dd81f",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "1e660d73a760f81d",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "22a6b83c948955bd",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "2a9cef5657ca722e",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "2f729c3ac1ccbc2e",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "30682bb60f3b76c2",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "34b750b298857f49",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "365c9456eee52f62",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "3d2f023eb63b0253",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "4524670f40d07607",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "4a71d24b0d5723d5",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "4b7cc49437729c02",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "52735f548abea692",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "5d0c4968b34902e0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "5e330dff5f59cd0c",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "5f79afbd4eea1193",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "611b03889ce54070",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "62632bbb16ddf2a0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "6aa66e5a31dedb79",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "6cc05bfbc37d7a32",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "6d31635eda01fd63",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "6d722ac0b6f91531",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "708675e26196d7ad",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "71d0b04c2484f4f4",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "748c57bb34abb81c",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "807ee4a11607bd01",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "813fc6547c0d7134",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "83fadc55acf61cad",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "87d4f2a115c3f792",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "87e857a027af977f",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "8de2e1e9341a894b",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "9082f369750a4731",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "975c92192d9581d0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "9c5bafe0836a0383",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "a7f81318c212ea99",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "a8b2367d967e7e15",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "aa3f51a85f459ac0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "b0686fe62f037c98",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "b3a864e19452d5cc",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "b4f70f6e3efc81f2",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "b53a126c2c1f103d",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "bb464a533d053a3a",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "c59d2099b7e7b959",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "c6fd6ca906b93183",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "c7c994624ca3d5c3",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "c9e8df10adcf9c38",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "d10fa6c4ce24ce0a",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "d91b4e3da5a8d560",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "df248ac663e0b4e0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "dffb1e38857c6ae5",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "e2d4d91fe8741e97",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "e452712d4acb93d0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "e7ccffcc1bd072f3",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "e8e21cdc5c08096c",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "ebd3c9c93e32e23c",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "edac35cc9de064dc",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "edb6a250ef838dd0",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "ee6e72e0f567fe79",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "f77eae22da44530c",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "fa580143b8160423",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "fba0255911e31cec",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "fcb4d9199aca41a7",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  },
+  {
+   "parent": "fde95f4618741f4c",
+   "child": "92c35a006ac37c9b",
+   "type": "evident-by"
+  }
+ ],
+ "files": [
+  {
+   "id": "92c35a006ac37c9b",
+   "location": {
+    "path": "Gemfile.lock"
+   }
+  }
+ ],
+ "source": {
+  "id": "16b08cf17c07e0c373d9fc3202a7f5ae3e449996fe2513dfef69d3154cb85a2f",
+  "type": "directory",
+  "target": "chipRails"
+ },
+ "distro": {},
+ "descriptor": {
+  "name": "syft",
+  "version": "0.84.0",
+  "configuration": {
+   "configPath": "",
+   "verbosity": 0,
+   "quiet": false,
+   "output": [
+    "json=chipRails.json"
+   ],
+   "output-template-path": "",
+   "file": "",
+   "check-for-app-update": true,
+   "dev": {
+    "profile-cpu": false,
+    "profile-mem": false
+   },
+   "log": {
+    "structured": false,
+    "level": "warn",
+    "file-location": ""
+   },
+   "catalogers": null,
+   "package": {
+    "cataloger": {
+     "enabled": true,
+     "scope": "Squashed"
+    },
+    "search-unindexed-archives": false,
+    "search-indexed-archives": true
+   },
+   "golang": {
+    "search-local-mod-cache-licenses": false,
+    "local-mod-cache-dir": "",
+    "search-remote-licenses": false,
+    "proxy": "",
+    "no-proxy": ""
+   },
+   "linux-kernel": {
+    "catalog-modules": true
+   },
+   "attest": {},
+   "file-metadata": {
+    "cataloger": {
+     "enabled": false,
+     "scope": "Squashed"
+    },
+    "digests": [
+     "sha256"
+    ]
+   },
+   "file-classification": {
+    "cataloger": {
+     "enabled": false,
+     "scope": "Squashed"
+    }
+   },
+   "file-contents": {
+    "cataloger": {
+     "enabled": false,
+     "scope": "Squashed"
+    },
+    "skip-files-above-size": 1048576,
+    "globs": []
+   },
+   "secrets": {
+    "cataloger": {
+     "enabled": false,
+     "scope": "AllLayers"
+    },
+    "additional-patterns": {},
+    "exclude-pattern-names": [],
+    "reveal-values": false,
+    "skip-files-above-size": 1048576
+   },
+   "registry": {
+    "insecure-skip-tls-verify": false,
+    "insecure-use-http": false,
+    "auth": []
+   },
+   "exclude": [],
+   "platform": "",
+   "name": "",
+   "source-name": "",
+   "source-version": "",
+   "parallelism": 1,
+   "default-image-pull-source": ""
+  }
+ },
+ "schema": {
+  "version": "8.0.1",
+  "url": "https://raw.githubusercontent.com/anchore/syft/main/schema/json/schema-8.0.1.json"
+ }
+}
