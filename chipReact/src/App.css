@@ -39,3 +39,14 @@
 .bg-royalblue {
   background-color: #0577B1;
 }
+
+.main-content {
+  margin-left: 250px; /* adjust as needed */
+}
+
+.login-button {
+  background-color: #0577B1; /* your preferred color */
+  color: white; /* your preferred text color */
+  /* other styles as needed */
+  margin-left: 560px;
+}

@@ -6,7 +6,7 @@ const LogoutMessage = () => {
     return (
         <div className={styles.section}> 
         {/* stole the css from the generate page */}
-            <h3>You have successfully logged out!</h3>
+            <h3>If you pressed Log Out, You have successfully logged out!</h3>
             <HomeButton />
         </div>
     );
@@ -33,6 +33,7 @@ const Logout = ({ setLoggedIn }) => {
     return (
         <div>
             <button onClick={handleLogoutClick}>Log out</button>
+            <LogoutMessage/>
         </div>
     );
 };

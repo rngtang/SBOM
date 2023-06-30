@@ -8,6 +8,7 @@ import data3 from '../data/apple.json';
 import DownloadLinuxScript from '../components/DownloadLinuxScript';
 import DownloadWindowsScript from '../components/DownloadWindowsScript';
 
+
 const Prereq = ({title, text}) => {
     return (
         <div className={styles.section}>

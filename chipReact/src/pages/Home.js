@@ -29,7 +29,7 @@ const Home = () => {
             <Intro />
             <WhatAreSBOMs />
             <Button > Rout SAML2 Post </Button>
-            {/* Continue adding other sections as needed */}
+            
         </div>
     );
 };
