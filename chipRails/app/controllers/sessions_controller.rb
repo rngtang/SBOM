@@ -1,10 +1,8 @@
-# app/controllers/sessions_controller.rb
 class SessionsController < ApplicationController
     def new
       redirect_to "https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu"
     end
   
-
     def create
       saml_response = params[:SAMLResponse] 
       response = OneLogin::RubySaml::Response.new(saml_response)
@@ -12,7 +10,6 @@ class SessionsController < ApplicationController
       if response.is_valid?
         netid = response.attributes['netid']
   
-
         user = User.find_by(netid: netid)
         if user
           session[:user_id] = user.id

@@ -1,8 +1,10 @@
 import React from 'react';
+import styles from './GenerateSBOMs.module.css';
+import { Button } from 'react-bootstrap';
 
 const Intro = () => {
     return (
-        <div className="intro-section">
+        <div className={styles.section}>
             <h1>Centralized Hub for Inventories Platform</h1>
             <p>A simple way to create and consume SBOMs</p>
         </div>
@@ -11,7 +13,7 @@ const Intro = () => {
 
 const WhatAreSBOMs = () => {
     return (
-        <div className="what-sboms-section">
+        <div className={styles.section}>
             <h3>What are SBOMs?</h3>
             <p>
                 A Software Bill of Materials (SBOM) is a formal record of all software packages and components used by a software project or machine.
@@ -26,7 +28,8 @@ const Home = () => {
         <div className='page'>
             <Intro />
             <WhatAreSBOMs />
-            {/* Continue adding other sections as needed */}
+            <Button > Rout SAML2 Post </Button>
+            
         </div>
     );
 };

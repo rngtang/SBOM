@@ -1,113 +1,41 @@
-import {useState} from 'react';
-// import AddSBOM from '../components/AddSBOM.jsx';
-// import UpdateSBOM from '../components/UpdateSBOM.jsx';
-// import ToDo from '../components/ToDo.jsx';
-// import './ViewSBOMs.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MyAccordian from '../components/MyAccordian.js';
+import styles from './GenerateSBOMs.module.css';
+import { Button } from 'react-bootstrap';
+import { useRef } from 'react';
+
 
 function ViewSBOMs() {
+  const fileInput = useRef();
 
-  // // Tasks (ToDo List) State
-  // const [toDo, setToDo] = useState([]);
+  const handleButtonClick = () => {
+    fileInput.current.click();
+  }
 
-  // // Temp State
-  // const [newTask, setNewTask] = useState('');
-  // const [updateData, setUpdateData] = useState('');
+  const handleFileUpload = event => {
+    const file = event.target.files[0];
+    console.log(file);  // You can process the uploaded file here
+  }
 
-  // // Add task 
-  // ///////////////////////////
-  // const addTask = () => {
-  //   if(newTask) {
-  //     let num = toDo.length + 1; 
-  //     let newEntry = { id: num, title: newTask, status: false }
-  //     setToDo([...toDo, newEntry])
-  //     setNewTask('');
-  //   }
-  // }
-
-  // // Delete task 
-  // ///////////////////////////
-  // const deleteTask = (id) => {
-  //   let newTasks = toDo.filter( task => task.id !== id)
-  //   setToDo(newTasks);
-  // }
-
-  // // Mark task as done or completed
-  // ///////////////////////////
-  // const markDone = (id) => {
-  //   let newTask = toDo.map( task => {
-  //     if( task.id === id ) {
-  //       return ({ ...task, status: !task.status })
-  //     }
-  //     return task;
-  //   })
-  //   setToDo(newTask);
-  // }
-
-  // // Cancel update
-  // ///////////////////////////
-  // const cancelUpdate = () => {
-  //   setUpdateData('');
-  // }
-
-  // // Change task for update
-  // ///////////////////////////
-  // const changeTask = (e) => {
-  //   let newEntry = {
-  //     id: updateData.id,
-  //     title: e.target.value,
-  //     status: updateData.status ? true : false
-  //   }
-  //   setUpdateData(newEntry);
-  // }
-
-  // // Update task
-  // ///////////////////////////
-  // const updateTask = () => {
-  //   let filterRecords = [...toDo].filter( task => task.id !== updateData.id );
-  //   let updatedObject = [...filterRecords, updateData]
-  //   setToDo(updatedObject);
-  //   setUpdateData('');
-  // }
-
-  // return (
-  //   <div className="container App">
-
-  //   <br /><br />
-  //   <h2>View SBOMs Page</h2>
-  //   <br /><br />
-
-  //   {updateData && updateData ? (
-  //     <UpdateSBOM 
-  //       updateData={updateData}
-  //       changeTask={changeTask}
-  //       updateTask={updateTask}
-  //       cancelUpdate={cancelUpdate}
-  //     />
-  //   ) : (
-  //     <AddSBOM 
-  //       newTask={newTask}
-  //       setNewTask={setNewTask}
-  //       addTask={addTask}
-  //     />
-  //   )}
-
-  //   {/* Display ToDos */}
-
-  //   {toDo && toDo.length ? '' : 'No Tasks...'}
-
-  //   <ToDo
-  //     toDo={toDo}
-  //     markDone={markDone}
-  //     setUpdateData={setUpdateData}
-  //     deleteTask={deleteTask}
-  //   />  
-
-  //   </div>
-    
+  return (
+    <>
+    <div className='page'>
+      <Button variant="primary" className={styles.top} onClick={handleButtonClick}>Upload File</Button>
+      <input 
+        type="file" 
+        style={{ display: 'none' }} 
+        ref={fileInput} 
+        onChange={handleFileUpload} 
+      />
+    </div>
+    <div className={styles.section}>
       
-
-  // );
+      <MyAccordian name={'SBOM #1'} meta={'this was imported from idk'}/>
+      <MyAccordian name={'SBOM #2'} meta={'bruh i dont even know'}/>
+    </div>
+    </>
+  );
 }
 
 export default ViewSBOMs;
