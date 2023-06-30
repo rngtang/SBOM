@@ -88,6 +88,7 @@ body {
   height: 60px;
   margin-left: 5%;
   margin-right: 0;
+  width: 110%;
 }
 
 .headerRight {
@@ -97,19 +98,56 @@ body {
 }
 
 .searchBar {
-  margin-top: 6%;
+  margin-top: 4.7%;
   margin-left: 5px;
   width: 212px;
 }
 
 #searchInput {
   /* border: 3px; */
+  height: 40px;
   border: 1px solid gray;
+  background-color: transparent;
   border-radius: 7px;
 }
 #uploadButton {
-  width:150px;
+  width:200px;
+  height: 40px;
   font-weight: 500;
   border: none;
   background-image: linear-gradient(to top right, var(--shaleblue) 40%, #6db7dc );
+}
+
+.mainBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sbomHeader {
+  margin-left: 13%;
+  width: 95%  ;
+  height: 60px;
+  background-image: linear-gradient(to left, #49A3F1, #1668d5);
+  background-color: var(--shaleblue);
+  color: white;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 33px;
+  z-index: 1;
+  /* position: absolute; */
+}
+
+#sbomHeader h5 {
+  margin-left: 30px;
+  margin-top: 7px;
+}
+
+#sbomList {
+  margin-top: -10px;
+  margin-left: 4%;
+  width: 100%;
 }

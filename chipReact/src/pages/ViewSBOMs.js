@@ -24,7 +24,7 @@ function ViewSBOMs() {
       <div className='header'>
         <p>Home</p>
         <div className='headerRight'>
-          <Button variant="primary" id='uploadButton' className={styles.top} onClick={handleButtonClick}>Upload File +</Button>
+          <Button variant="primary" id='uploadButton' className={styles.top} onClick={handleButtonClick}>Upload New SBOM +</Button>
           <input 
             type="file" 
             style={{ display: 'none' }} 
@@ -42,14 +42,17 @@ function ViewSBOMs() {
       </div>
       
     </div>
-    <div id='sbomHeader'>
-      <h3>Your SBOMs</h3>
+    <div className='mainBody'>
+      <div id='sbomHeader'>
+        <h5>Your SBOMs</h5>
+      </div>
+      <div id='sbomList' className={styles.section}>
+        
+        <MyAccordian name={'SBOM #1'} meta={'this was imported from idk'}/>
+        <MyAccordian name={'SBOM #2'} meta={'bruh i dont even know'}/>
+      </div>
     </div>
-    <div className={styles.section}>
-      
-      <MyAccordian name={'SBOM #1'} meta={'this was imported from idk'}/>
-      <MyAccordian name={'SBOM #2'} meta={'bruh i dont even know'}/>
-    </div>
+    
     </>
   );
 }
