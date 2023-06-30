@@ -11,15 +11,14 @@ html, body {
 }
 
 .sidebar {
-    margin-top: 0px;
     padding-left: 10px;
     height: 100%;
     position: fixed;
-    border-radius: 16px;
+    border-radius: 16px;  
 }
 
 .sidebar-sticky {
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,20 +34,24 @@ html, body {
     color: white;
     text-align: center;
     padding: 10px;
+    border-radius: 8px;
     transition: background-color 0.3s;
 }
 
 .nav-link:hover {
     background-color: var(--limestone);
     color: var(--dukeblue);
-    border-radius: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
 }
 
 .active {
     background-color: var(--shaleblue);
     color: white;
     border-radius: 10px;
+    background-image: linear-gradient(to top right, #0577B1, var(--piedmont));
 }
+/* #0672A9 */
 
 .logo-image {
     width: 150px;
