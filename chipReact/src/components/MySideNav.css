@@ -1,3 +1,11 @@
+:root {
+    --dukeblue: #012169; 
+    --shaleblue: #0577B1;
+    --limestone: #E5E5E5;
+    --piedmont: #A1B70D;
+    --persimmon: #E89923;
+}
+
 html, body {
     height: 100%;
 }
@@ -30,12 +38,14 @@ html, body {
 }
 
 .nav-link:hover {
-    background-color: lightblue;
+    background-color: var(--limestone);
+    color: var(--dukeblue);
     border-radius: 10px;
 }
 
 .active {
-    background-color: lightblue;
+    background-color: var(--shaleblue);
+    color: white;
     border-radius: 10px;
 }
 
