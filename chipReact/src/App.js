@@ -22,9 +22,12 @@ const App = () => {
   }
 
   const handleLoginClick =() => {
-    //TODO: add any login logic here @Caleb
+    const acsUrl = encodeURIComponent('https://localhost:3000/Shibboleth.sso/SAML2/POST');
+    const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
+    window.location.href = `${samlEndpoint}${acsUrl}`;
     setLoggedIn(true);
   }
+  
 
   return (
     <Router>
