@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './GenerateSBOMs.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const LogoutMessage = () => {
     return (
@@ -19,11 +20,23 @@ const HomeButton = () => {
     );
 };
 
-const Logout = () => {
+
+const Logout = ({ setLoggedIn }) => {
+    const navigate = useNavigate();
+
+    const handleLogoutClick = () => {
+        // TODO: @calbe Replace with actual logout logic
+        setLoggedIn(false);
+        navigate("/home");
+    }
+
     return (
-    <div className='page'>
-        <LogoutMessage />
-    </div>
+        <div>
+            <button onClick={handleLogoutClick}>Log out</button>
+        </div>
     );
 };
+
 export default Logout;
+
+
