@@ -5,7 +5,7 @@ import './MySideNav.css';
 
 const MySideNav = ({loggedIn}) => {
     return (
-        <nav className="col-md-2 d-none d-md-block bg-royalblue rounded sidebar">
+        <nav className="col-md-2 d-none d-md-block bg-navblue sidebar">
       <div className="sidebar-sticky">
         <div className="navbar-logo">
           <NavLink to="/home">
