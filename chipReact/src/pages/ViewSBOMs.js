@@ -1,10 +1,10 @@
 import React from 'react';
+import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyAccordian from '../components/MyAccordian.js';
 import styles from './GenerateSBOMs.module.css';
 import { Button } from 'react-bootstrap';
 import { useRef } from 'react';
-
 
 function ViewSBOMs() {
   const fileInput = useRef();
@@ -21,13 +21,26 @@ function ViewSBOMs() {
   return (
     <>
     <div className='page'>
-      <Button variant="primary" className={styles.top} onClick={handleButtonClick}>Upload File</Button>
-      <input 
-        type="file" 
-        style={{ display: 'none' }} 
-        ref={fileInput} 
-        onChange={handleFileUpload} 
-      />
+      <div className='header'>
+        <p>Home</p>
+        <div className='headerRight'>
+          <Button variant="primary" className={styles.top} onClick={handleButtonClick}>Upload File</Button>
+          <input 
+            type="file" 
+            style={{ display: 'none' }} 
+            ref={fileInput} 
+            onChange={handleFileUpload} 
+          />
+          <div className='searchBar'>
+            <input 
+              type="text"
+              placeholder='Search here'
+              />
+          </div>
+        </div>
+        
+      </div>
+      
     </div>
     <div className={styles.section}>
       
