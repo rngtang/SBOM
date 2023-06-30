@@ -24,7 +24,7 @@ function ViewSBOMs() {
       <div className='header'>
         <p>Home</p>
         <div className='headerRight'>
-          <Button variant="primary" className={styles.top} onClick={handleButtonClick}>Upload File</Button>
+          <Button variant="primary" id='uploadButton' className={styles.top} onClick={handleButtonClick}>Upload File +</Button>
           <input 
             type="file" 
             style={{ display: 'none' }} 
@@ -32,15 +32,18 @@ function ViewSBOMs() {
             onChange={handleFileUpload} 
           />
           <div className='searchBar'>
-            <input 
+            <input id='searchInput'
               type="text"
-              placeholder='Search here'
+              placeholder=' Search here'
               />
           </div>
         </div>
         
       </div>
       
+    </div>
+    <div id='sbomHeader'>
+      <h3>Your SBOMs</h3>
     </div>
     <div className={styles.section}>
       
