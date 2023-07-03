@@ -17,13 +17,19 @@ const App = () => {
   }, []);
 
   const checkLoginStatus = () => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      setLoggedIn(true);
-    } else {
-      setLoggedIn(false);
-    }
-  }
+    fetch('/current_user')
+      .then((response) => {
+        if (response.ok) {
+          setLoggedIn(true);
+        } else {
+          throw new Error('Not logged in');
+        }
+      })
+      .catch((error) => {
+        setLoggedIn(false);
+      });
+};
+
 
   const handleLoginClick = () => {
     const acsUrl = encodeURIComponent(process.env.REACT_APP_ACS_URL);
