@@ -17,16 +17,21 @@ const App = () => {
   }, []);
 
   const checkLoginStatus = () => {
-    //TODO: need to replace with actual logic to check if user is logged in
-    //setLogedIn(true) if user is logged in
+    const token = localStorage.getItem('token');
+    if (token) {
+      setLoggedIn(true);
+    } else {
+      setLoggedIn(false);
+    }
   }
 
-  const handleLoginClick =() => {
-    const acsUrl = encodeURIComponent('https://localhost:3000/Shibboleth.sso/SAML2/POST');
+  const handleLoginClick = () => {
+    const acsUrl = encodeURIComponent(process.env.REACT_APP_ACS_URL);
     const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
     window.location.href = `${samlEndpoint}${acsUrl}`;
     setLoggedIn(true);
-  }
+}
+
   
 
   return (
