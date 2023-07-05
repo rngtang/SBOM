@@ -22,7 +22,7 @@ chmod +x install.sh.1
 # sudo mv ./bin/grype /usr/local/bin
 echo -e "${COLOR}--- Successful: INSTALLED GRYPE ---${NC}"
 echo -e "${COLOR} Creating an SBOM for your file... ${NC}"
-cdxgen -o $selected_file.json
+cdxgen -r-o $selected_file.json
 # ./bin/syft $selected_file -o json=$selected_file.json
 echo -e "${COLOR} Finished creating $selected_file.json ${NC}"
 ./bin/grype sbom:$selected_file.json -o cyclonedx-json > grype.json
