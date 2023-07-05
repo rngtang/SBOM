@@ -14,9 +14,8 @@ const Prereq = ({title, para1}) => {
             <div>
                 <h2>{title}</h2>
                 <p>{para1}</p>
-                <p>Because the tool we use for scanning SBOMs (Grype) is only developed for macOS/linux devices, {<> <span style={{ backgroundColor: "var(--piedmont)" }}>scanning dependencies on a Windows OS requires the use of <strong>Docker</strong>.</span> </>} </p>
                 <p> SBOMs will be created using the open-source tool <a href="https://github.com/CycloneDX/cdxgen">cdxgen</a>, which generates SBOMs in the CycloneDX format. After the SBOM is created, it will be scanned using the open-source vulnerability scanner <a href="https://github.com/anchore/grype">Grype</a>. More details about how to use these tools can be found in their respective repositories.</p>
-                
+                <p>Because the tool we use for scanning SBOMs (Grype) is only developed for macOS/linux devices, {<> <span style={{ backgroundColor: "var(--piedmont)" }}>scanning dependencies on a Windows OS requires the use of <strong>Docker</strong>.</span> </>} For more information about how to install Docker for Windows, click <a href="https://docs.docker.com/desktop/install/windows-install/">here</a>.</p> 
             </div>
         </div>
     );
