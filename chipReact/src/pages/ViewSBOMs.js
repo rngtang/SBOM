@@ -1,8 +1,8 @@
 import React from 'react';
 import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyAccordian from '../components/MyAccordian.js';
-import styles from './GenerateSBOMs.module.css';
+import MyAccordian from '../components/ViewSBOMsAccordian.js';
+import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
 import { useRef } from 'react';
 
@@ -47,8 +47,16 @@ function ViewSBOMs() {
         <h5>Your SBOMs</h5>
       </div>
       <div id='sbomList' className={styles.section}>
-        
-        <MyAccordian name={'SBOM #1'} meta={'this was imported from idk'}/>
+        <div id='sbomHeadRow'>
+          <p>SBOM LIST</p>
+          <div id='rowFunct'>
+            <p>SBOM TYPE</p>
+            <p>STATUS</p>
+            <p>VISUALIZATION</p>
+            <p>ACTION</p>
+          </div>
+        </div>
+        <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'this was imported from idk'}/>
         <MyAccordian name={'SBOM #2'} meta={'bruh i dont even know'}/>
       </div>
     </div>

@@ -1,0 +1,4 @@
+#accordianRight {
+    display: flex;
+    flex-direction: row;
+}

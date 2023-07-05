@@ -90,7 +90,9 @@ body {
   margin-right: 0;
   width: 110%;
 }
-
+.header p {
+  color: gray;
+}
 .headerRight {
   display: flex;
   justify-content: center;
@@ -111,7 +113,7 @@ body {
   border-radius: 7px;
 }
 #uploadButton {
-  width:200px;
+  width:50%;
   height: 40px;
   font-weight: 500;
   border: none;
@@ -123,10 +125,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width:100%;
 }
 #sbomHeader {
-  margin-left: 13%;
-  width: 95%  ;
+  margin-left: 14%;
+  width: 98%  ;
   height: 60px;
   background-image: linear-gradient(to left, #49A3F1, #1668d5);
   background-color: var(--shaleblue);
@@ -147,7 +150,31 @@ body {
 }
 
 #sbomList {
-  margin-top: -10px;
+  margin-top: -32px;
   margin-left: 4%;
   width: 100%;
+}
+
+#sbomHeadRow {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#sbomHeadRow p{
+  font-size: small;
+}
+
+#rowFunct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+
+#sbomList MyAccordian {
+  width: 120%;
+  border-radius: 0;
+  background-color: #00ff89;
 }
