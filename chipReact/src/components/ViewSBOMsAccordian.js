@@ -1,12 +1,12 @@
 import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
 import './ViewAccordian.css';
+import Accordion from 'react-bootstrap/Accordion';
 
 const MyAccordion = ({ name, meta, type, stat }) => {
     return (
-        <Accordion alwaysOpen flush>
-            <Accordion.Item eventKey="0">
-                <Accordion.Header>{name} <div id='accordian right'>{type}{stat}<p>View</p><p>Update SBOM</p></div></Accordion.Header>
+        <Accordion alwaysOpen>
+            <Accordion.Item eventKey="0" flush>
+                <Accordion.Header><p>{name}</p>              <div id='accordianRight'><p>{type}</p><p>{stat}</p><p>View</p><p>Update SBOM</p></div></Accordion.Header>
                 <Accordion.Body>
                     {meta}
                 </Accordion.Body>
