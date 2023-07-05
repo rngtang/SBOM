@@ -6,13 +6,17 @@
     --persimmon: #E89923;
 }
 
+html, body {
+    height: 100%;
+}
+
 .section {
     padding: 16px;
     border-radius: 16px;
-    margin: 40px;
+    margin: 40px 40px 40px 0;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
-    transform: translate(79px, 0px);
-    width: 1000px;
+    transform: translate(24px, 0px);
+    width: 100%;
     background-color: var(--limestone);
 }
 
@@ -20,59 +24,3 @@
     position: relative;
 }
 
-.top {
-    order: -1; 
-    /* margin-top: 20px;  optional - use it if you want some space between button and accordions */
-}
-
-.downloadSection {
-    /* Add your CSS properties here */
-    margin: -20px; 
-} 
-
-
-/* things from profile.css */
-
-/* .section {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 10px;
-} */
-
-.profileContainer {
-    margin: 0 auto;
-    max-width: 500px;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.profileSection {
-    display: flex;
-}
-
-.leftSection {
-    flex: 1;
-}
-
-.rightSection {
-    flex: 1;
-}
-
-.toggleContainer {
-    margin-top: 10px;
-}
-
-.toggleContainer label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.toggleContainer input {
-    margin-left: 5px;
-}

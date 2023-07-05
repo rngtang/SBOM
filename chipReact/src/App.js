@@ -31,8 +31,10 @@ const App = () => {
       <div className="container-fluid">
         <div className="row">
         <MySideNav loggedIn={loggedIn} />
-          <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4 main-content">
+
+          <main role="main" className="col-md-9 ml-sm-2 col-lg-10 px-4 main-content">
             <Button className="login-button" onClick={handleLoginClick}>Log in</Button>
+
             <Routes>
               <Route path="/home" element={<Home />} />
               {loggedIn && (
@@ -44,7 +46,9 @@ const App = () => {
                 </>
               )}
             </Routes>
+            
           </main>
+
         </div>
       </div>
     </Router>
