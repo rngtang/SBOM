@@ -11,15 +11,16 @@ html, body {
 }
 
 .sidebar {
-    padding-left: 10px;
-    height: 100%;
+    height: 95%;
+    width: 208px;
     position: fixed;
     border-radius: 16px;  
 }
 
-.sidebar-sticky {
-    /* height: 100%; */
-    display: flex;
+.sidebar-sticky {    
+    padding-top: 16px;
+    padding-bottom: 16px;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
 }
@@ -42,21 +43,20 @@ html, body {
     background-color: var(--limestone);
     color: var(--dukeblue);
     border-radius: 8px;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
 }
 
 .active {
-    background-color: var(--shaleblue);
     color: white;
     border-radius: 10px;
-    background-image: linear-gradient(to top right, #0577B1, var(--piedmont));
+    background-image: linear-gradient(to top right, #0577B1, #0672A9);
 }
-/* #0672A9 */
 
 .logo-image {
-    width: 150px;
+    width: 128px;
     height: auto;
     display: block;
-    margin: 10px auto;
+    margin: 8px auto;
     margin-top: 20px;
+    padding: 16px 0;
 }

@@ -7,6 +7,7 @@ const MySideNav = ({loggedIn}) => {
     return (
       <div className="sidebar-sticky">
       <nav className="col-md-2 d-md-block bg-navblue sidebar">
+        
       
         <div className="navbar-logo">
           <NavLink to="/home">
@@ -44,7 +45,7 @@ const MySideNav = ({loggedIn}) => {
               </>
           )}
         </ul>
-      
+        
     </nav>
     </div>
     );
