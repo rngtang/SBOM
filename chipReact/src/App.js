@@ -1,14 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from './Button';
-import Better from './Better';
-import Best from './Best';
+import DownloadLinuxScript from './DownloadLinuxScript';
 
 function App() {
   return (
     <>
-    <Better />
-
+      <DownloadLinuxScript />
     </>
   );
 }

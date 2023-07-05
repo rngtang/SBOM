@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Better() {
+export default function DownloadLinuxScript() {
   const [error, setError] = useState(null);
   const [fileurl, setFileurl] = useState(null);
 
@@ -21,6 +21,7 @@ export default function Better() {
       })
       .then((blob) => {
         const url = URL.createObjectURL(blob);
+        console.log(url)
         setFileurl(url);
       })
       .catch((error) => {
