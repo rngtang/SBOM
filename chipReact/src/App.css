@@ -41,7 +41,7 @@
 }
 
 .generatesboms-1{
-  background-color: #d0d0d0;
+  background-color: var(--limestone);
   padding: 20px;
 }
 
