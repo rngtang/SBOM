@@ -9,7 +9,6 @@
   --persimmon: #E89923;
 }
 
-
 /* big reset */
 * {
   padding: 0;
@@ -23,12 +22,13 @@
   font-family: Roboto, 'Open Sans', sans-serif;
 }
 
-.page {
+/* Where is .page being used?  */
+/* .page {
   font: 5rem;
   text-align: center;
   font-family: 'Open Sans', sans-serif ;
   
-}
+} */
 
 .intro-section {
   background-color: #f0f0f0;
@@ -41,7 +41,7 @@
 }
 
 .generatesboms-1{
-  background-color: #d0d0d0;
+  background-color: var(--limestone);
   padding: 20px;
 }
 
