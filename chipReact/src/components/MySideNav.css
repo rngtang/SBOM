@@ -30,25 +30,28 @@ html, body {
     padding-bottom: 20px;
 }
 
-/* Rest of the CSS styles */
 .nav-link {
-    color: white;
-    text-align: center;
-    padding: 10px;
+    color: var(--limestone);
+    padding-left: 24px;
+}
+
+.nav-item {
+    text-align: left;
     border-radius: 8px;
+    /* margin: 2px 0; */
     transition: background-color 0.3s;
 }
 
-.nav-link:hover {
+.nav-item:hover {
     background-color: var(--limestone);
-    color: var(--dukeblue);
     border-radius: 8px;
     transition: background-color 0.3s;
-}
+} 
 
-.active {
-    color: white;
-    border-radius: 10px;
+.nav-item .active {
+    color: var(--limestone);
+    border-radius: 8px;
+    margin: 8px;
     background-image: linear-gradient(to top right, #0577B1, #0672A9);
 }
 
