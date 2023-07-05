@@ -38,12 +38,12 @@ npm install -g @cyclonedx/cdxgen@8.6.0
 echo -e "${COLOR}--- Successful: INSTALLED CDXGEN ---${NC}"
 
 # pulls script to install grype into a new file called install.sh.1 and runs it 
-# echo -e "${COLOR}--- INSTALLING GRYPE... ---${NC}" 
-# wget https://raw.githubusercontent.com/anchore/grype/main/install.sh
-# chmod +x install.sh.1
-# ./install.sh.1
+echo -e "${COLOR}--- INSTALLING GRYPE... ---${NC}" 
+wget https://raw.githubusercontent.com/anchore/grype/main/install.sh
+chmod +x install.sh.1
+./install.sh.1
 # # sudo mv ./bin/grype /usr/local/bin
-# echo -e "${COLOR}--- Successful: INSTALLED GRYPE ---${NC}"
+echo -e "${COLOR}--- Successful: INSTALLED GRYPE ---${NC}"
 
 # asks user to give the file to run 
 # needs to be precise name -> need to add error handling
