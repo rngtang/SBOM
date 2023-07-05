@@ -1,30 +1,35 @@
+:root {
+    --dukeblue: #012169; 
+    --shaleblue: #0577B1;
+    --limestone: #E5E5E5;
+    --piedmont: #A1B70D;
+    --persimmon: #E89923;
+}
+
 .section {
-    padding: 20px;
-    border-radius: 10px;
-    margin:35px;
+    padding: 16px;
+    border-radius: 16px;
+    margin: 40px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
     transform: translate(79px, 0px);
     width: 1000px;
-    background-color: rgb(243,242,241);
+    background-color: var(--limestone);
 }
 
 .section div {
     position: relative;
 }
 
-
 .top {
     order: -1; 
-    margin-top: 20px;  /* optional - use it if you want some space between button and accordions */
+    /* margin-top: 20px;  optional - use it if you want some space between button and accordions */
 }
 
 .downloadSection {
     /* Add your CSS properties here */
-    margin: -20px;
-  }
-  
+    margin: -20px; 
+} 
 
-  
 
 /* things from profile.css */
 

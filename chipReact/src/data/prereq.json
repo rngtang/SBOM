@@ -1,4 +1,4 @@
 {
-    "title": "Prerequisites",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut. Habitasse platea dictumst quisque sagittis. Rhoncus aenean vel elit scelerisque mauris. Arcu non odio euismod lacinia at quis risus. Aliquam eleifend mi in nulla. Nunc sed velit dignissim sodales ut eu sem. Dui sapien eget mi proin sed libero enim sed faucibus. Sed viverra tellus in hac habitasse platea dictumst vestibulum. Commodo nulla facilisi nullam vehicula ipsum."
+    "title": "Creating and scanning SBOMs",
+    "para1": "The following page details the steps for creating SBOMs. Please note that there are different steps to follow depending on which operating system you are using. Both processes will essentially download a script onto your local machine, which you can then run to execute all the steps of creating, scanning, and uploading an SBOM for you."
   }
