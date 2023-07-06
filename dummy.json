@@ -90,9 +90,9 @@
               "bom-ref": "urn:uuid:ea726d0e-2d53-4867-89c2-d591b195fba5",
               "id": "GHSA-23gm-4mrr-r6pg",
               "source": {
-              "name": "github-language-javascript",
-              "url": "https://github.com/advisories/GHSA-23gm-4mrr-r6pg"
-              },
+                "name": "github-language-javascript",
+                "url": "https://github.com/advisories/GHSA-23gm-4mrr-r6pg"
+                },
               "references": [
               {
                   "id": "GHSA-23gm-4mrr-r6pg",

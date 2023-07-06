@@ -30,17 +30,29 @@ class SbomsController < ApplicationController
         end
     end
 
+    def createSbomComponent (sbomComp)
+        # sbom.sbomComponent = sbomComp
+        sbomComp.properties.each do |prop|
+            @property = @component.properties
+            @property.name = prop["name"]
+            @property.value = prop["value"]
+        end
+    end
 
     def create
-        byebug
-        puts "==" *30
-        puts sbom_params.keys
-        puts "++" *30
-        blowup
+        # byebug
+        # puts "==" *30
+        # puts sbom_params.keys
+        # puts "++" *30
+        # blowup
         @user = User.find(params[:user_id])
         @sbom = @user.sboms.new(sbom_params)
-        p sbom_params
-        @sbom.sbomComponents = params["sbomComponents"]
+        # p sbom_params
+        sbom_params["components"].each do |sbomComp|
+            @sbom.sbomComponent =createSbomComponent(sbomComp:sbomComp)
+        end
+        # @sbom.sbomComponent = createSbomComponent
+        # @sbom.sbomComponents = params["sbomComponents"]
 
         if @sbom.save
             render json: @sbom, status: :created
@@ -52,7 +64,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities => [], :sbomComponents => [])
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, :sbomComponents)
         end
 
         def set_sboms
