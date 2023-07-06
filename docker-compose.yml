@@ -41,6 +41,6 @@ services:
     container_name: chip_react
     command: ./entrypoint.sh
     environment:
-      REACT_APP_ACS_URL: https://localhost:8080/Shibboleth.sso/saml/consume
+      REACT_APP_ACS_URL: http://localhost:8080/Shibboleth.sso/saml/consume
 volumes: 
   exclude:

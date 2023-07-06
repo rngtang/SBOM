@@ -24,7 +24,7 @@ class SamlController < ApplicationController
     if response.is_valid?
       session[:netid] = response.nameid
       # Redirecting to the frontend
-      redirect_to "https://localhost:3000"
+      redirect_to "http://localhost:3000"
     else
       # Invalid response
       render plain: "Invalid SAML response", status: :unauthorized
