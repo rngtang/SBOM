@@ -1,2 +1,2 @@
-module sbomComponentsHelper
+module SbomComponentsHelper
 end

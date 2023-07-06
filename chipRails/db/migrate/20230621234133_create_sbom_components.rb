@@ -1,6 +1,6 @@
 class CreateSbomComponents < ActiveRecord::Migration[7.0]
   def change
-    create_table :sbomComponents do |t|
+    create_table :sbom_components do |t|
       t.string :bom_ref
       t.string :type
       t.string :publisher

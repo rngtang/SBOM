@@ -1,2 +1,2 @@
-module dependencyHelper
+module DependencyHelper
 end

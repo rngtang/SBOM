@@ -49,7 +49,7 @@ class SbomsController < ApplicationController
         @sbom = @user.sboms.new(sbom_params)
         # p sbom_params
         sbom_params["components"].each do |sbomComp|
-            @sbom.sbomComponent =createSbomComponent(sbomComp:sbomComp)
+            @sbom.sbom_component =createSbomComponent(sbomComp:sbomComp)
         end
         # @sbom.sbomComponent = createSbomComponent
         # @sbom.sbomComponents = params["sbomComponents"]
@@ -64,7 +64,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, :sbomComponents)
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities)
         end
 
         def set_sboms

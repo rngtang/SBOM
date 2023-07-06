@@ -1,4 +1,4 @@
-class CreateDpendencies < ActiveRecord::Migration[7.0]
+class CreateDependencies < ActiveRecord::Migration[7.0]
   def change
     create_table :dependencies do |t|
       t.string :ref
