@@ -28,25 +28,21 @@ const App = () => {
 
   const [loggingOut, setLoggingOut] = useState(false);
 
-  const handleLoggingOut = () => {
-    setLoggingOut(true);
-  }
-
   return (
     <Router>
       <div className="container-fluid">
         <div className="row">
           {!loggingOut && <MySideNav loggedIn={loggedIn} />}
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4 main-content">
-            {!loggedIn && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
+            {!loggedIn && !loggingOut &&<Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
             <Routes>
               <Route path="/home" element={<Home />} />
+              <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} />} />
               {loggedIn && (
                 <>
                   <Route path="/viewsboms" element={<ViewSBOMs />} />
                   <Route path="/generatesboms" element={<GenerateSBOMs />} />
                   <Route path="/profile" element={<Profile />} />
-                  <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} />} />
                 </>
               )}
             </Routes>

@@ -1,22 +1,20 @@
 import React from 'react';
 
-const LogoutButton = ({ setLoggedIn }) => {
-    const handleLogoutClick = () => {
-        setLoggedIn(false);
-    }
+const LogoutMessage = () => {
     return (
         <div className='page'>
-            <a href='/home' onClick={handleLogoutClick}>Log out</a>
+            <a href='/home'>you have logged out. press here to go home.</a>
         </div>
     );
 };
 
 
-const Logout = ({ setLoggingOut }) => {
+const Logout = ({ setLoggedIn, setLoggingOut }) => {
+    setLoggedIn(false);
     setLoggingOut(true);
     return (
         <div>
-            <LogoutButton />
+            <LogoutMessage />
         </div>
     );
 };
