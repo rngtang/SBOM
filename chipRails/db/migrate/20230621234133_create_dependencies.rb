@@ -1,4 +1,4 @@
-class CreatesbomComponents < ActiveRecord::Migration[7.0]
+class CreateSbomComponents < ActiveRecord::Migration[7.0]
   def change
     create_table :sbomComponents do |t|
       t.string :bom_ref
