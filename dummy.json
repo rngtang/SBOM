@@ -15,7 +15,7 @@
       },
       "components": [
           {
-          "bom-ref": "1",
+          "bom-ref": "2",
           "type": "library",
           "name": "abab",
           "version": "2.0.6",
@@ -30,15 +30,48 @@
               "value": "npm"
               }
           ]
-          }],
+          },
+          {
+            "bom-ref": "3",
+            "type": "library",
+            "name": "abab",
+            "version": "2.0.6",
+            "purl": "pkg:npm/abab@2.0.6",
+            "properties": [
+                {
+                "name": "syft:package:language",
+                "value": "javascript"
+                },
+                {
+                "name": "syft:package:type",
+                "value": "npm"
+                }
+            ]
+            },
+            {
+                "bom-ref": "4",
+                "type": "library",
+                "name": "abab",
+                "version": "2.0.6",
+                "purl": "pkg:npm/abab@2.0.6",
+                "properties": [
+                    {
+                    "name": "syft:package:language",
+                    "value": "javascript"
+                    },
+                    {
+                    "name": "syft:package:type",
+                    "value": "npm"
+                    }
+                ]
+                }],
       "services": [],
       "dependencies": [
           {
             "ref": "2",
             "dependsOn": [
               "3",
-              "4",
-              "100"
+              "4"      
             ]
           },
           {
@@ -49,10 +82,6 @@
           },
           {
               "ref": "4",
-              "dependsOn": []
-          },
-          {
-              "ref": "100",
               "dependsOn": []
           }],
       "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
