@@ -21,17 +21,33 @@ const Prereq = ({title, para1}) => {
     );
 };
 
-const Section = ({title, text, code, downloadComponent}) => {
-    const [isCopied, setIsCopied] = useState(false);
-    const steps = Array.isArray(text) ? text : [text];
+const Section = ({ title, text, code, downloadComponent }) => {
+const [isCopied, setIsCopied] = useState(false);
+const steps = Array.isArray(text) ? text : [text];
+
+const renderSteps = (steps) => {
+    return steps.map((step, index) => {
+        if (Array.isArray(step)) {
+            // Render sublist
+            return (
+            <ul key={index} className={styles.sublist}>
+                {renderSteps(step)}
+            </ul>
+            );
+        } else {
+            return (
+            <li key={index} className={styles.step}>{step}</li>
+            );
+        }
+        });
+    };
+
     return (
         <div className={styles.section}>
             <div>
                 <h2>{title}</h2>
-                <ol>
-                    {steps.map((step, index) => (
-                        <li key={index}>{step}</li>
-                    ))}
+                <ol className={styles.mainList}>
+                    {renderSteps(steps)}
                 </ol>
                 {downloadComponent && downloadComponent}
                 <CodeBox text={code} />

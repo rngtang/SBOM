@@ -15,8 +15,8 @@ html, body {
     border-radius: 16px;
     margin: 40px 40px 40px 0;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
-    transform: translate(24px, 0px);
-    width: 100%;
+    transform: translate(40px, 0px);
+    width: 95%;
     background-color: var(--limestone);
 }
 
@@ -24,3 +24,23 @@ html, body {
     position: relative;
 }
 
+.sublist {
+    list-style-type: none;
+    padding: 0px 4px 0px 20px;
+}
+  
+.sublist li:before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000;
+    margin-right: 5px;
+    vertical-align: middle;  
+}
+
+.step {
+    padding: 4px 4px 4px 8px;
+}
+  
