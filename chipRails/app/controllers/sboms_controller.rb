@@ -32,9 +32,16 @@ class SbomsController < ApplicationController
 
 
     def create
+        byebug
+        puts "==" *30
+        puts sbom_params.keys
+        puts "++" *30
+        blowup
         @user = User.find(params[:user_id])
         @sbom = @user.sboms.new(sbom_params)
         p sbom_params
+        @sbom.dependencies = params["dependencies"]
+
         if @sbom.save
             render json: @sbom, status: :created
         else
@@ -45,8 +52,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            byebug
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :name, :description, :packages, :dependencies, :vulnerabilities, :user_id)
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities => [], :dependencies => [])
         end
 
         def set_sboms
