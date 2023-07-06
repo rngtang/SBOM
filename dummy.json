@@ -1,0 +1,156 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.4",
+    "serialNumber": "urn:uuid:79e42b7c-882b-4a7e-a94b-ea5d9a89f825",
+    "version": 1,
+    "metadata": {
+          "timestamp": "2023-07-06T10:48:36-04:00",
+          "tools": [
+          {
+              "vendor": "anchore",
+              "name": "grype",
+              "version": "0.63.1"
+          }
+          ]
+      },
+      "components": [
+          {
+          "bom-ref": "2",
+          "type": "library",
+          "name": "abab",
+          "version": "2.0.6",
+          "purl": "pkg:npm/abab@2.0.6",
+          "properties": [
+              {
+              "name": "syft:package:language",
+              "value": "javascript"
+              },
+              {
+              "name": "syft:package:type",
+              "value": "npm"
+              }
+          ]
+          },
+          {
+            "bom-ref": "3",
+            "type": "library",
+            "name": "abab",
+            "version": "2.0.6",
+            "purl": "pkg:npm/abab@2.0.6",
+            "properties": [
+                {
+                "name": "syft:package:language",
+                "value": "javascript"
+                },
+                {
+                "name": "syft:package:type",
+                "value": "npm"
+                }
+            ]
+            },
+            {
+                "bom-ref": "4",
+                "type": "library",
+                "name": "abab",
+                "version": "2.0.6",
+                "purl": "pkg:npm/abab@2.0.6",
+                "properties": [
+                    {
+                    "name": "syft:package:language",
+                    "value": "javascript"
+                    },
+                    {
+                    "name": "syft:package:type",
+                    "value": "npm"
+                    }
+                ]
+                }],
+      "services": [],
+      "dependencies": [
+          {
+            "ref": "2",
+            "dependsOn": [
+              "3",
+              "4"      
+            ]
+          },
+          {
+              "ref": "3",
+              "dependsOn": [
+                  "4"
+              ]
+          },
+          {
+              "ref": "4",
+              "dependsOn": []
+          }],
+      "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+      "vulnerabilities": [
+          {
+              "bom-ref": "urn:uuid:ea726d0e-2d53-4867-89c2-d591b195fba5",
+              "id": "GHSA-23gm-4mrr-r6pg",
+              "source": {
+              "name": "github-language-javascript",
+              "url": "https://github.com/advisories/GHSA-23gm-4mrr-r6pg"
+              },
+              "references": [
+              {
+                  "id": "GHSA-23gm-4mrr-r6pg",
+                  "source": {
+                  "name": "github-language-javascript",
+                  "url": "https://github.com/advisories/GHSA-23gm-4mrr-r6pg"
+                  }
+              }
+              ],
+              "ratings": [
+              {
+                  "severity": "critical"
+              }
+              ],
+              "description": "Malware in preset-modules",
+              "advisories": [
+              {
+                  "url": "https://github.com/advisories/GHSA-23gm-4mrr-r6pg"
+              }
+              ],
+              "affects": [
+              {
+                  "ref": "4"
+              }            
+              ]
+          },
+          {
+              "bom-ref": "urn:uuid:a33eb9eb-c435-44fe-a4b6-943e708501d3",
+              "id": "GHSA-3rhh-9j6r-68h4",
+              "source": {
+                "name": "github-language-javascript",
+                "url": "https://github.com/advisories/GHSA-3rhh-9j6r-68h4"
+              },
+              "references": [
+                {
+                  "id": "GHSA-3rhh-9j6r-68h4",
+                  "source": {
+                    "name": "github-language-javascript",
+                    "url": "https://github.com/advisories/GHSA-3rhh-9j6r-68h4"
+                  }
+                }
+              ],
+              "ratings": [
+                {
+                  "severity": "critical"
+                }
+              ],
+              "description": "Malware in plugin-transform-typeof-symbol",
+              "advisories": [
+                {
+                  "url": "https://github.com/advisories/GHSA-3rhh-9j6r-68h4"
+                }
+              ],
+              "affects": [
+                {
+                  "ref": "pkg:npm/babel/plugin-transform-typeof-symbol@7.22.5?package-id=57bd4a75f73d40ca"
+                }
+              ]
+            }
+      ]
+  }
