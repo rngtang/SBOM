@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   # opens up /sbomComponents for all sbomComponents
   get '/sbomComponents', to: 'sbomComponents#all'
 
-  # get '/dependencyren_all', to: 'dependencyren#all'
-  get '/dependencyren/:id/tree', to: 'dependencyren#tree'
+  # get '/dependency_all', to: 'dependency#all'
+  get '/dependency/:id/tree', to: 'dependency#tree'
   # opens up /sbomComponents/:id/licenses (GET)
   # opens up /sbomComponents/:id/sub_components
   resources :sbomComponents, shallow: true do

@@ -1,6 +1,6 @@
 require "test_helper"
 
-class sbomComponentsControllerTest < ActionDispatch::IntegrationTest
+class dependenciesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
