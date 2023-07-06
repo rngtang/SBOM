@@ -12,10 +12,11 @@ const LogoutButton = ({ setLoggedIn }) => {
 };
 
 
-const Logout = () => {
+const Logout = ({ setLoggingOut }) => {
+    setLoggingOut(true);
     return (
         <div>
-            <LogoutButton/>
+            <LogoutButton />
         </div>
     );
 };
