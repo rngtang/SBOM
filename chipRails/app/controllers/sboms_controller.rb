@@ -45,6 +45,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
+            byebug
             params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :name, :description, :packages, :dependencies, :vulnerabilities, :user_id)
         end
 
