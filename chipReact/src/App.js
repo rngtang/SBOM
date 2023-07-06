@@ -31,14 +31,15 @@ const App = () => {
 };
 
 
-  const handleLoginClick = () => {
-    const acsUrl = encodeURIComponent(process.env.REACT_APP_ACS_URL);
-    const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
-    window.location.href = `${samlEndpoint}${acsUrl}`;
-    setLoggedIn(true);
+const handleLoginClick = () => {
+  const acsUrl = process.env.REACT_APP_ACS_URL;
+  const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
+  window.location.href = `${samlEndpoint}${acsUrl}`;
+  setLoggedIn(true);
 }
 
-  
+// 
+ // add it in the docker compose in the react pp and rebuild
 
   return (
     <Router>
