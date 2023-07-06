@@ -6,26 +6,26 @@ Rails.application.routes.draw do
   
   # opens up /sboms (GET [all, :id], PUT, DELETE)
   # opens up /sboms/:id/metadata (GET)
-  # opens up /sboms/:id/dependencies (GET[all, ;id], DELETE)
+  # opens up /sboms/:id/sbomComponents (GET[all, ;id], DELETE)
   resources :sboms, shallow: true do
     resources :metadata, only: [:index]
-    resources :dependencies, only: [:index]
+    resources :sbomComponents, only: [:index]
     resources :vulnerabilities, only: [:index]
-    resources :children, only: [:index]
+    resources :dependencyren, only: [:index]
   end
   get 'vulnerabilities_all', to: 'vulnerabilities#all'
 
   get '/sboms_all', to: 'sboms#all'
   delete '/sboms_all', to: 'sboms#all'
 
-  # opens up /dependencies for all dependencies
-  get '/dependencies', to: 'dependencies#all'
+  # opens up /sbomComponents for all sbomComponents
+  get '/sbomComponents', to: 'sbomComponents#all'
 
-  # get '/children_all', to: 'children#all'
-  get '/children/:id/tree', to: 'children#tree'
-  # opens up /dependencies/:id/licenses (GET)
-  # opens up /dependencies/:id/sub_components
-  resources :dependencies, shallow: true do
+  # get '/dependencyren_all', to: 'dependencyren#all'
+  get '/dependencyren/:id/tree', to: 'dependencyren#tree'
+  # opens up /sbomComponents/:id/licenses (GET)
+  # opens up /sbomComponents/:id/sub_components
+  resources :sbomComponents, shallow: true do
     resources :licenses, only: [:index]
     resources :properties, only: [:index]
     # resources :externalReferences, only: [:index]

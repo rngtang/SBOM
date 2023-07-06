@@ -20,9 +20,9 @@ sbom2 = user2.sboms.create(bomFormat: 'CycloneDX', specVersion: '1.4', serialNum
 metadatum1 = sbom1.metadata.create(timestamp: '2023-06-22 7:22:00')
 metadatum2 = sbom2.metadata.create(timestamp: '2023-06-22 7:22:00')
 
-# Creating some dependencies associated with the sboms
-dependency1 = sbom1.dependencies.create(bom_ref: 'reference depency 1', group: 'library', publisher: 'Duke', name: 'DEPENDENCY NAME 1', version: '1.1', cpe: 'jeoigfjeogi', purl: 'eiwghjewoijg')
-dependency2 = sbom2.dependencies.create(bom_ref: 'reference depency 1', group: 'library', publisher: 'Duke', name: 'DEPENDENCY NAME 2', version: '1.1', cpe: 'jeoigfjeogi', purl: 'eiwghjewoijg')
+# Creating some sbomComponents associated with the sboms
+sbomComponent1 = sbom1.sbomComponents.create(bom_ref: 'reference depency 1', group: 'library', publisher: 'Duke', name: 'sbomComponent NAME 1', version: '1.1', cpe: 'jeoigfjeogi', purl: 'eiwghjewoijg')
+sbomComponent2 = sbom2.sbomComponents.create(bom_ref: 'reference depency 1', group: 'library', publisher: 'Duke', name: 'sbomComponent NAME 2', version: '1.1', cpe: 'jeoigfjeogi', purl: 'eiwghjewoijg')
 
 # some tools
 tool1 = Tool.create(vendor: 'meta', name: 'cyclonedx', version: '2.3.4', metadatum: metadatum1)
@@ -33,20 +33,20 @@ component1 = metadatum1.components.create(group: 'software', name:'Duke', versio
 component2 = metadatum2.components.create(group: 'software', name:'Unc', version: '1.2.3', metadatum: metadatum2)
 
 # license
-license1 = License.create(iden: 'uncdown145', dependency: dependency1)
-license2 = License.create(iden: 'dukeup176', dependency: dependency2)
+license1 = License.create(iden: 'uncdown145', sbomComponent: sbomComponent1)
+license2 = License.create(iden: 'dukeup176', sbomComponent: sbomComponent2)
 
 # property
-property1 = Property.create(name: 'kk', value: '234', dependency: dependency1)
-property2 = Property.create(name: 'll', value: '432', dependency: dependency2)
+property1 = Property.create(name: 'kk', value: '234', sbomComponent: sbomComponent1)
+property2 = Property.create(name: 'll', value: '432', sbomComponent: sbomComponent2)
 
 # external reference
-externalReference1 = ExternalReference.create(group: 'ejowe', url: 'gregrhrehreher.com', dependency: dependency1)
-externalReference2 = ExternalReference.create(group: 'kppihup', url: 'externalReference2.com', dependency: dependency2)
+externalReference1 = ExternalReference.create(group: 'ejowe', url: 'gregrhrehreher.com', sbomComponent: sbomComponent1)
+externalReference2 = ExternalReference.create(group: 'kppihup', url: 'externalReference2.com', sbomComponent: sbomComponent2)
 
-# child
-child1 = Child.create(ref: 'sdgewpjgweig', dependsOn: ['first element', 'second element'], sbom: sbom1)
-child2 = Child.create(ref: 'pjipip[kl[]]', dependsOn: ['first element', 'second element'], sbom: sbom2)
+# dependency
+dependency1 = dependency.create(ref: 'sdgewpjgweig', dependsOn: ['first element', 'second element'], sbom: sbom1)
+dependency2 = dependency.create(ref: 'pjipip[kl[]]', dependsOn: ['first element', 'second element'], sbom: sbom2)
 
 # vulnerability
 vuln1 = Vulnerability.create(bom_ref: 'sdsdgsdf', vulnID: 'sdfsdgsd', description: 'egeg', detail: 'wgrer', recommendation: 'wegewg', created: 'sadf', published: 'sadfdsfd', updated: 'asdfsf', affected: ['first element', 'second element'], sbom: sbom1)

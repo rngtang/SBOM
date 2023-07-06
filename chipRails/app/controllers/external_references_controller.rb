@@ -4,13 +4,13 @@ class ExternalReferencesController < ApplicationController
     end
 
     def index
-        @dependency = Dependency.find(params[:dependency_id])
-        render json: @dependency.externalReferences, status: :ok
+        @sbomComponent = sbomComponent.find(params[:sbomComponent_id])
+        render json: @sbomComponent.externalReferences, status: :ok
     end
 
     def create
-        @dependency = Dependency.find(params[:dependency_id])
-        @externalReference = @dependency.externalReferences.new(externalReference_params)
+        @sbomComponent = sbomComponent.find(params[:sbomComponent_id])
+        @externalReference = @sbomComponent.externalReferences.new(externalReference_params)
     end
 
     def externalReference_params

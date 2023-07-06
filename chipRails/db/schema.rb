@@ -6,18 +6,18 @@
 # db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
-# migrations use external dependencies or application code.
+# migrations use external sbomComponents or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
-  create_table "children", charset: "latin1", force: :cascade do |t|
+  create_table "dependencies", charset: "latin1", force: :cascade do |t|
     t.string "ref"
     t.text "dependsOn"
     t.bigint "sbom_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["sbom_id"], name: "index_children_on_sbom_id"
+    t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
   end
 
   create_table "components", charset: "latin1", force: :cascade do |t|
@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["metadatum_id"], name: "index_components_on_metadatum_id"
   end
 
-  create_table "dependencies", charset: "latin1", force: :cascade do |t|
+  create_table "sbomComponents", charset: "latin1", force: :cascade do |t|
     t.string "bom_ref"
     t.string "group"
     t.string "publisher"
@@ -41,24 +41,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.bigint "sbom_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
+    t.index ["sbom_id"], name: "index_sbomComponents_on_sbom_id"
   end
 
   create_table "external_references", charset: "latin1", force: :cascade do |t|
     t.string "group"
     t.string "url"
-    t.bigint "dependency_id", null: false
+    t.bigint "sbomComponent_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["dependency_id"], name: "index_external_references_on_dependency_id"
+    t.index ["sbomComponent_id"], name: "index_external_references_on_sbomComponent_id"
   end
 
   create_table "licenses", charset: "latin1", force: :cascade do |t|
     t.string "iden"
-    t.bigint "dependency_id", null: false
+    t.bigint "sbomComponent_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["dependency_id"], name: "index_licenses_on_dependency_id"
+    t.index ["sbomComponent_id"], name: "index_licenses_on_sbomComponent_id"
   end
 
   create_table "metadata", charset: "latin1", force: :cascade do |t|
@@ -72,10 +72,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
   create_table "properties", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.string "value"
-    t.bigint "dependency_id", null: false
+    t.bigint "sbomComponent_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["dependency_id"], name: "index_properties_on_dependency_id"
+    t.index ["sbomComponent_id"], name: "index_properties_on_sbomComponent_id"
   end
 
   create_table "ratings", charset: "latin1", force: :cascade do |t|
@@ -143,13 +143,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["sbom_id"], name: "index_vulnerabilities_on_sbom_id"
   end
 
-  add_foreign_key "children", "sboms"
-  add_foreign_key "components", "metadata"
   add_foreign_key "dependencies", "sboms"
-  add_foreign_key "external_references", "dependencies"
-  add_foreign_key "licenses", "dependencies"
+  add_foreign_key "components", "metadata"
+  add_foreign_key "sbomComponents", "sboms"
+  add_foreign_key "external_references", "sbomComponents"
+  add_foreign_key "licenses", "sbomComponents"
   add_foreign_key "metadata", "sboms"
-  add_foreign_key "properties", "dependencies"
+  add_foreign_key "properties", "sbomComponents"
   add_foreign_key "ratings", "vulnerabilities"
   add_foreign_key "sboms", "users"
   add_foreign_key "sources", "ratings"

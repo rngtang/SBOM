@@ -3,7 +3,7 @@ class CreateProperties < ActiveRecord::Migration[7.0]
     create_table :properties do |t|
       t.string :name
       t.string :value
-      t.references :dependency, null: false, foreign_key: true
+      t.references :sbomComponent, null: false, foreign_key: true
 
       t.timestamps
     end

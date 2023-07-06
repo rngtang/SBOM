@@ -1,6 +1,6 @@
 require "test_helper"
 
-class DependencyTest < ActiveSupport::TestCase
+class sbomComponentTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

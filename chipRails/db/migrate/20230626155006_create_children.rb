@@ -1,6 +1,6 @@
-class CreateChildren < ActiveRecord::Migration[7.0]
+class Createdependencyren < ActiveRecord::Migration[7.0]
   def change
-    create_table :children do |t|
+    create_table :dependencyren do |t|
       t.string :ref
       t.text :dependsOn
       t.references :sbom, null: false, foreign_key: true

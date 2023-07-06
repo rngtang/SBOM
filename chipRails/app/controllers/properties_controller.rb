@@ -4,13 +4,13 @@ class PropertiesController < ApplicationController
     end
 
     def index
-        @dependency = Dependency.find(params[:dependency_id])
-        render json: @dependency.properties, status: :ok
+        @sbomComponent = sbomComponent.find(params[:sbomComponent_id])
+        render json: @sbomComponent.properties, status: :ok
     end
 
     def create
-        @dependency = Dependency.find(params[:dependency_id])
-        @property = @dependency.components.new(property_params)
+        @sbomComponent = sbomComponent.find(params[:sbomComponent_id])
+        @property = @sbomComponent.components.new(property_params)
     end
 
     def property_params

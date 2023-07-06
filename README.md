@@ -8,8 +8,8 @@ for the creation, visualization, and use of Software Bills of Materials (SBOMs).
 For reference, a SBOM is a formal record of all software packages and components used by
 a software project or machine. These components can be commercial or open-source, and in
 turn rely on other components themselves. This creates a series of reliances, or a chain
-of dependencies, that is not easily visible to the creator or user of the main project.
-An SBOM helps to solve this issue by finding all the dependencies of a project and
+of sbomComponents, that is not easily visible to the creator or user of the main project.
+An SBOM helps to solve this issue by finding all the sbomComponents of a project and
 listing them out (in our case) as a JSON file.
 
 Due to the heirarchical nature of SBOMs, most SBOM JSON files are at or over tens of

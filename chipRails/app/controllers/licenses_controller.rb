@@ -1,7 +1,7 @@
 class LicensesController < ApplicationController
     def index
-        @dependency = Dependency.find(params[:dependency_id])
-        render json: @dependency.licenses, status: :ok
+        @sbomComponent = sbomComponent.find(params[:sbomComponent_id])
+        render json: @sbomComponent.licenses, status: :ok
     end
     
     def new
@@ -9,8 +9,8 @@ class LicensesController < ApplicationController
     end
 
     def create
-        @dependency = Dependency.find(params[:dependency_id])
-        @license = @dependency.components.new(license_params)
+        @sbomComponent = sbomComponent.find(params[:sbomComponent_id])
+        @license = @sbomComponent.components.new(license_params)
     end
 
     def license_params

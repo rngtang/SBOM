@@ -1,37 +1,46 @@
 class DependenciesController < ApplicationController
     protect_from_forgery with: :null_session
-    def index
-        @sbom = Sbom.find(params[:sbom_id])
-        render json: @sbom.dependencies, status: :ok
-    end
 
-    def all
-        @dependencies = Dependency.all
-        render json: @dependencies, status: :ok
-    end
-
-    def show
-        @dependency = Dependency.find(params[:id])
-        render json: @dependency, status: :ok
-    end
-    
     def new
-        @dependency = Dependency.new
-    end
-
-    def destroy
-        @dependency = Dependency.find(params[:id])
-        if @dependency.present?
-            @dependency.destroy
-        end
+        @dependency = dependency.new
     end
 
     def create
         @sbom = Sbom.find(params[:sbom_id])
         @dependency = @sbom.dependencies.new(dependency_params)
+        # respond_to do |format|
+        #     if @dependency.save
+        #         format.json { render json: @dependency}
+        #     else
+        #         format.json { head :no_content}
+        #     end
+        # end
+    end
+
+    # def all 
+    #     @dependencyren = dependency.all
+    #     render json: @dependencyren, status: :ok
+    # end
+
+    def index
+        @sbom = Sbom.find(params[:sbom_id])
+        @dependencies = @sbom.dependencies
+        render json: @dependencies, status: :ok
+    end
+
+    def show
+        @dependency = dependency.find(params[:id])
+        render json: @dependencies, status: :ok
+    end
+
+    def tree
+        @dependency = dependency.find(params[:id])
+        dependenciesArray = @dependency.dependsOn
+        @newdependency = dependency.where(ref: dependenciesArray, sbom_id: @dependency.sbom_id)
+        render json: @newdependency, status: :ok
     end
 
     def dependency_params
-        params.permit(:bom_ref, :group, :publisher, :name, :version, :cpe, :purl)
+        params.permit(:ref, dependsOn: [])
     end
 end

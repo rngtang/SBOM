@@ -1,2 +1,2 @@
-module DependenciesHelper
+module sbomComponentsHelper
 end

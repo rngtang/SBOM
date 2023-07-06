@@ -1,6 +1,6 @@
-class CreateDependencies < ActiveRecord::Migration[7.0]
+class CreatesbomComponents < ActiveRecord::Migration[7.0]
   def change
-    create_table :dependencies do |t|
+    create_table :sbomComponents do |t|
       t.string :bom_ref
       t.string :type
       t.string :publisher

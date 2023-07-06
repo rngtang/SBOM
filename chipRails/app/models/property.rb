@@ -1,3 +1,3 @@
 class Property < ApplicationRecord
-    belongs_to :dependency
+    belongs_to :sbomComponent
 end

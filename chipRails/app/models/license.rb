@@ -1,3 +1,3 @@
 class License < ApplicationRecord
-    belongs_to :dependency
+    belongs_to :sbomComponent
 end
