@@ -34,20 +34,18 @@ class SbomsController < ApplicationController
     def create
         @user = User.find(params[:user_id])
         @sbom = @user.sboms.new(sbom_params)
-        @sbom.save
-        respond_to do |format|
-            if @sbom.save
-                render json: @sbom, status: :ok
-            else
-                format.json { head :no_content}
-            end
+        p sbom_params
+        if @sbom.save
+            render json: @sbom, status: :created
+        else
+            #do something to acknowledge that it didn't work, include returning a useful status code
+            render json: @sbom.errors, status: :unprocessable_entity
         end
-
     end
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :name, :description)
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :name, :description, :packages, :dependencies, :vulnerabilities, :user_id)
         end
 
         def set_sboms
