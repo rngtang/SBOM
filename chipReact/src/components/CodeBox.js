@@ -24,26 +24,29 @@ const CodeBox = ({ text }) => {
 
 const styles = {
     box: {
-        backgroundColor: 'rgb(238, 238, 238)',
-        borderRadius: '10px',
+        borderRadius: '8px',
         width: '100%',
         height: 'auto',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        color: 'black',
+        border: 'none',
+        outline: 'none',
+        backgroundColor: '#E5E5E5',
         fontSize: '18px',
-        fontFamily: 'Consolas, monospace',
+        fontFamily: 'Consolas',
         padding: '16px',
         border: '1px solid gray',
         position: 'relative',
+        boxShadow: '0 3px 5px 0 rgba(0, 0, 0, 0.1) inset, 0 3px 5px 0 rgba(0, 0, 0, 0.1) inset'
     },
     code: {
         whiteSpace: 'pre-wrap',
         margin: '0',
         textAlign: 'left',
         marginRight: '15px',
+        color: '#012169'
     },
     button: {
         backgroundColor: 'transparent',

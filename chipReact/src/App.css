@@ -31,12 +31,12 @@
 } */
 
 .intro-section {
-  background-color: #f0f0f0;
+  background-color: var(--limestone);
   padding: 20px;
 }
 
 .what-sboms-section {
-  background-color: #d0d0d0;
+  background-color: var(--limestone);
   padding: 20px;
 }
 
