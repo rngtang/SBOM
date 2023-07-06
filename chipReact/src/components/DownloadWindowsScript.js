@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from '../pages/GenerateSBOMs.module.css'; // import CSS file
 
 export default function DownloadWindowsScript() {
   const [error, setError] = useState(null);
@@ -37,7 +38,7 @@ export default function DownloadWindowsScript() {
         // target="_blank" // if target set to blank, opens download in new tab
         rel="noreferrer" // security 
       >
-        <button onClick={handleDownload}>Download Windows Script</button>
+        <button onClick={handleDownload} className={styles.button}>DOWNLOAD WINDOWS SCRIPT</button>
       </a>
       {error && <p>Error: {error}</p>}
     </div>

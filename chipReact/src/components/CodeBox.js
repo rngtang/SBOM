@@ -7,8 +7,8 @@ const CodeBox = ({ text }) => {
         await navigator.clipboard.writeText(text);
         setIsCopied(true);
 
-        // Reset the isCopied state after one second
-        setTimeout(() => setIsCopied(false), 1000);
+        // Reset the isCopied state after two seconds
+        setTimeout(() => setIsCopied(false), 2000);
     };
 
 
@@ -33,7 +33,7 @@ const styles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         color: 'black',
-        fontSize: '14px',
+        fontSize: '18px',
         fontFamily: 'Consolas, monospace',
         padding: '16px',
         border: '1px solid gray',
@@ -50,7 +50,6 @@ const styles = {
         border: 'none',
         cursor: 'pointer',
         top: '50%',
-        transform: 'translateY(-50%)',
         marginRight: '10px',
     },
     icon: {
