@@ -1,12 +1,13 @@
 import React from 'react';
-import styles from './GenerateSBOMs.module.css';
+import styles from './Profile.module.css';
+import boxStyles from './GenerateSBOMs.module.css';
 import user1 from '../data/user.json';
 
 const Profile = () => {
   const { username, netid, platformSettings, profileInformation } = user1;
 
   return (
-    <div className={styles.section}>
+    <div className={boxStyles.section}>
       <div className={styles.profileContainer}>
         <div className={styles.leftHeader}>
           <h2>{username}</h2>
@@ -20,15 +21,15 @@ const Profile = () => {
             <div className={styles.toggleContainer}>
               <label>
                 Email Updates
-                <input type="checkbox" checked={platformSettings.emailUpdates} readOnly />
+                <input type="checkbox" />
               </label>
               <label>
                 Text Updates
-                <input type="checkbox" checked={platformSettings.textUpdates} readOnly />
+                <input type="checkbox" />
               </label>
               <label>
                 Monthly Newsletter
-                <input type="checkbox" checked={platformSettings.monthlyNewsletter} readOnly />
+                <input type="checkbox" />
               </label>
             </div>
           </div>
