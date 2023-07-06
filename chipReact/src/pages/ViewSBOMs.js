@@ -22,7 +22,6 @@ function ViewSBOMs() {
     <>
     <div className='page'>
       <div className='header'>
-        <p>Home</p>
         <div className='headerRight'>
           <Button variant="primary" id='uploadButton' className={styles.top} onClick={handleButtonClick}>Upload New SBOM +</Button>
           <input 
@@ -56,7 +55,7 @@ function ViewSBOMs() {
             <p>ACTION</p>
           </div>
         </div>
-        <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'this was imported from idk'}/>
+        <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'this was imported from idk'} vulnNum={5}/>
         <MyAccordian name={'SBOM #2'} meta={'bruh i dont even know'}/>
       </div>
     </div>

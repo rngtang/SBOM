@@ -3,8 +3,14 @@
     flex-direction: row;
     justify-content: space-between;
     width: 50%;
+    /* height: 20px; */
     font-size: small;
-    align-items: center;
+    margin-top: 9px;
+    margin-bottom: 0px;
+}
+
+#name {
+    margin-bottom: 0px;
 }
 
 .accordion-item {
@@ -22,4 +28,30 @@
 }
 .accordion-header p{
     width: 50%;
+}
+
+.accordion-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #EEF3FC;
+}
+
+#bodyRight {
+    width:50%;
+    height: 21px;
+    padding-left: 3px;
+    background-color: red;
+    border-radius: 3px;
+    color: white;
+}
+
+#meta {
+    font-size: 14px;
+}
+
+.accordion-button {
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
 }
