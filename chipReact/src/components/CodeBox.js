@@ -37,7 +37,6 @@ const styles = {
         fontSize: '18px',
         fontFamily: 'Consolas',
         padding: '16px',
-        border: '1px solid gray',
         position: 'relative',
         boxShadow: '0 3px 5px 0 rgba(0, 0, 0, 0.1) inset, 0 3px 5px 0 rgba(0, 0, 0, 0.1) inset'
     },
