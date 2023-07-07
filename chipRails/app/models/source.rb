@@ -1,3 +1,3 @@
 class Source < ApplicationRecord
-    belongs_to :rating
+    belongs_to :vulnerability
 end

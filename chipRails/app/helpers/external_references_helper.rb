@@ -1,2 +1,0 @@
-module ExternalReferencesHelper
-end

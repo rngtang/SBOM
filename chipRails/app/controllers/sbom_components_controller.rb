@@ -32,6 +32,6 @@ class SbomComponentsController < ApplicationController
     end
 
     def sbom_component_params
-        params.permit(:bom_ref, :group, :publisher, :name, :version, :cpe, :purl)
+        params.permit(:bom_ref, :group, :name, :version, :purl)
     end
 end

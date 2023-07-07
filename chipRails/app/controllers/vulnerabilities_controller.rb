@@ -24,6 +24,6 @@ class VulnerabilitiesController < ApplicationController
     end
 
     def vulnerability_params
-        params.permit(:bom_ref, :vulnID, :description, :detail, :recommendation, :created, :published, :updated, affected: [])
+        params.permit(:bom_ref, :vulnID, :description, :recommendation, affected: [])
     end
 end

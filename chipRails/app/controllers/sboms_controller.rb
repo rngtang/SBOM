@@ -57,22 +57,10 @@ class SbomsController < ApplicationController
             @sc.each do |subC|
                 @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], publisher: subC["publisher"], name: subC["name"], version: subC["version"], cpe:subC["cpe"], purl:subC["purl"])
                 @props = subC["properties"]
-                @exRefs = subC["externalReferences"]
-                @lic = subC["licenses"]
-                # creates sbom_component properties, externalReferences, and licenses for array of object input
+                # creates sbom_component properties for array of object input
                 if @props
                     @props.each do |p|
                         @m = @c.properties.create(name: p["name"], value: p["value"])
-                    end
-                end
-                if @ex
-                    @exRefs.each do |e|
-                        @c.externalReferences.create(group: e["group"], url: e["url"])
-                    end
-                end
-                if @lic
-                    @lic.each do |l|
-                        @c.licenses.create(iden: l["id"])
                     end
                 end
             end
