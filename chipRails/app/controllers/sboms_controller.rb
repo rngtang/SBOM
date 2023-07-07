@@ -32,11 +32,16 @@ class SbomsController < ApplicationController
 
     def createSbomComponent (sbomComp)
         # sbom.sbomComponent = sbomComp
-        sbomComp.properties.each do |prop|
-            @property = @component.properties
-            @property.name = prop["name"]
-            @property.value = prop["value"]
-        end
+        # sbomComp.properties.each do |prop|
+        #     @property = @component.properties
+        #     @property.name = prop["name"]
+        #     @property.value = prop["value"]
+        # end
+
+        # for prop in sbomComp
+        #     @property = Property.new(name: prop["name"], value: prop["value"]);
+        # end
+        
     end
 
     def create
@@ -48,9 +53,11 @@ class SbomsController < ApplicationController
         @user = User.find(params[:user_id])
         @sbom = @user.sboms.new(sbom_params)
         # p sbom_params
-        sbom_params["components"].each do |sbomComp|
-            @sbom.sbom_component =createSbomComponent(sbomComp:sbomComp)
-        end
+        
+        # sbom_params["components"].each do |sbomComp|
+        #     @sbom.sbom_component = createSbomComponent(sbomComp: sbomComp)
+        # end
+
         # @sbom.sbomComponent = createSbomComponent
         # @sbom.sbomComponents = params["sbomComponents"]
 
@@ -64,7 +71,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities)
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, sbom_componentents: [])
         end
 
         def set_sboms

@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
   create_table "components", charset: "latin1", force: :cascade do |t|
-    t.string "group"
+    t.string "type"
     t.string "name"
     t.string "version"
     t.bigint "metadatum_id", null: false
