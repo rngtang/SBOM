@@ -30,56 +30,66 @@ class SbomsController < ApplicationController
         end
     end
 
-    def createSbomComponent (sbomComp)
-        # sbom.sbomComponent = sbomComp
-        # sbomComp.properties.each do |prop|
-        #     @property = @component.properties
-        #     @property.name = prop["name"]
-        #     @property.value = prop["value"]
-        # end
+    # def createSbomComponent (sbomComp)
+    #     # sbom.sbomComponent = sbomComp
+    #     # sbomComp.properties.each do |prop|
+    #     #     @property = @component.properties
+    #     #     @property.name = prop["name"]
+    #     #     @property.value = prop["value"]
+    #     # end
 
-        # for prop in sbomComp
-        #     @property = Property.new(name: prop["name"], value: prop["value"]);
-        # end
-        
-    end
+    #     # for prop in sbomComp
+    #     #     @property = Property.new(name: prop["name"], value: prop["value"]);
+    #     # end
+        # byebug
+    # end
 
     def create
-        # byebug
-        # puts "==" *30
-        # puts sbom_params.keys
-        # puts "++" *30
-        # blowup
         @user = User.find(params[:user_id])
         @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
+        # create sbom_components, nested loop for array of objects input
         @sc = params["components"]
-        @sc.each do |subC|
-            @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], publisher: subC["publisher"], name: subC["name"], version: subC["version"], cpe:subC["cpe"], purl:subC["purl"])
-            @props = subC["properties"]
-            @exRefs = subC["externalReferences"]
-            @lic = subC["licenses"]
-            if @props
-                @props.each do |p|
-                    @m = @c.properties.create(name: p["name"], value: p["value"])
+        if @sc
+            @sc.each do |subC|
+                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], publisher: subC["publisher"], name: subC["name"], version: subC["version"], cpe:subC["cpe"], purl:subC["purl"])
+                @props = subC["properties"]
+                @exRefs = subC["externalReferences"]
+                @lic = subC["licenses"]
+                # creates sbom_component properties, externalReferences, and licenses for array of object input
+                if @props
+                    @props.each do |p|
+                        @m = @c.properties.create(name: p["name"], value: p["value"])
+                    end
                 end
-            end
-            if @ex
-                @exRefs.each do |e|
-                    @c.externalReferences.create(group: e["group"], url: e["url"])
+                if @ex
+                    @exRefs.each do |e|
+                        @c.externalReferences.create(group: e["group"], url: e["url"])
+                    end
                 end
-            end
-            if @lic
-                @lic.each do |l|
-                    @c.licenses.create(iden: l["id"])
+                if @lic
+                    @lic.each do |l|
+                        @c.licenses.create(iden: l["id"])
+                    end
                 end
             end
         end
+        # create dependencies for array of objects input
         @dpd = params["dependencies"]
-        @dpd.each do |d|
-            @dep = @sbom.dependencies.create(ref: d["ref"], dependsOn: d["dependsOn"])
+        if @dpd
+            @dpd.each do |d|
+                @dep = @sbom.dependencies.create(ref: d["ref"], dependsOn: d["dependsOn"])
+            end
         end
-        # @sbom.sbomComponent = createSbomComponent
-        # @sbom.sbomComponents = params["sbomComponents"]
+        # creates metadata, why is it an array? idk has_many
+        @mtd = params["metadata"]
+        @m = @sbom.metadata.create(timestamp: @mtd["timestamp"])
+        # creates tools for metadata for array of object input
+        @t = @mtd["tools"]
+        if @t
+            @t.each do |tools|
+                @m.tools.create(vendor: tools["vendor"], name: tools["name"], version: tools["version"])
+            end
+        end
 
         if @sbom.save
             render json: @sbom, status: :created

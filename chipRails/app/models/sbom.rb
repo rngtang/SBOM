@@ -2,6 +2,8 @@ class Sbom < ApplicationRecord
     # you might need things like these next two lines to deal with your arrays inside the sbom jsons
     # you'll have to do some testing/experimentation/research here
     include ActiveModel::Serializers::JSON
+    serialize :metadata, Object
+
     serialize :vulnerabilities, Array
 
     belongs_to :user, optional: true
