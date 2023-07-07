@@ -45,8 +45,12 @@ class SbomsController < ApplicationController
     # end
 
     def create
+        # Finds user by id
         @user = User.find(params[:user_id])
+
+        # Creates the sbom object with the parameters
         @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
+        
         # create sbom_components, nested loop for array of objects input
         @sc = params["components"]
         if @sc
