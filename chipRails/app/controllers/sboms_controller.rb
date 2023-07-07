@@ -51,7 +51,10 @@ class SbomsController < ApplicationController
         # puts "++" *30
         # blowup
         @user = User.find(params[:user_id])
-        @sbom = @user.sboms.new(sbom_params)
+        @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
+        # comp = SbomComponent.create(bom_ref: "reference", sbom: @sbom)
+        comp = @sbom.sbom_components.create(bom_ref: params["components"][0]["bom-ref"])
+        comp2 = @sbom.sbom_components.create(bom_ref: params["components"][1]["bom-ref"])
         # p sbom_params
         
         # sbom_params["components"].each do |sbomComp|
@@ -71,7 +74,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, sbom_componentents: [])
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, sbom_component: [])
         end
 
         def set_sboms
