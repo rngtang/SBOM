@@ -74,10 +74,10 @@ class SbomsController < ApplicationController
                 end
             end
         end
-        # @dpd = params["dependencies"]
-        # @dpd.each do |d|
-
-        # end
+        @dpd = params["dependencies"]
+        @dpd.each do |d|
+            @dep = @sbom.dependencies.create(ref: d["ref"], dependsOn: d["dependsOn"])
+        end
         # @sbom.sbomComponent = createSbomComponent
         # @sbom.sbomComponents = params["sbomComponents"]
 
