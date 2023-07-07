@@ -52,15 +52,32 @@ class SbomsController < ApplicationController
         # blowup
         @user = User.find(params[:user_id])
         @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
-        # comp = SbomComponent.create(bom_ref: "reference", sbom: @sbom)
-        comp = @sbom.sbom_components.create(bom_ref: params["components"][0]["bom-ref"])
-        comp2 = @sbom.sbom_components.create(bom_ref: params["components"][1]["bom-ref"])
-        # p sbom_params
-        
-        # sbom_params["components"].each do |sbomComp|
-        #     @sbom.sbom_component = createSbomComponent(sbomComp: sbomComp)
-        # end
+        @sc = params["components"]
+        @sc.each do |subC|
+            @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], publisher: subC["publisher"], name: subC["name"], version: subC["version"], cpe:subC["cpe"], purl:subC["purl"])
+            @props = subC["properties"]
+            @exRefs = subC["externalReferences"]
+            @lic = subC["licenses"]
+            if @props
+                @props.each do |p|
+                    @m = @c.properties.create(name: p["name"], value: p["value"])
+                end
+            end
+            if @ex
+                @exRefs.each do |e|
+                    @c.externalReferences.create(group: e["group"], url: e["url"])
+                end
+            end
+            if @lic
+                @lic.each do |l|
+                    @c.licenses.create(iden: l["id"])
+                end
+            end
+        end
+        # @dpd = params["dependencies"]
+        # @dpd.each do |d|
 
+        # end
         # @sbom.sbomComponent = createSbomComponent
         # @sbom.sbomComponents = params["sbomComponents"]
 
