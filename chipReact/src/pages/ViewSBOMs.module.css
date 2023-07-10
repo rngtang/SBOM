@@ -1,0 +1,74 @@
+.section {
+    padding: 0;
+    padding-top: 20px;
+    border-radius: 10px;
+    margin:35px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(79px, 0px);
+    width: 1000px;
+    background-color: white;
+}
+
+.section div {
+    position: relative;
+}
+
+
+.top {
+    order: -1; 
+    margin-top: 20px;  /* optional - use it if you want some space between button and accordions */
+}
+
+.downloadSection {
+    /* Add your CSS properties here */
+    margin: -20px;
+  }
+  
+
+  
+
+/* things from profile.css */
+
+/* .section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+} */
+
+.profileContainer {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profileSection {
+    display: flex;
+}
+
+.leftSection {
+    flex: 1;
+}
+
+.rightSection {
+    flex: 1;
+}
+
+.toggleContainer {
+    margin-top: 10px;
+}
+
+.toggleContainer label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.toggleContainer input {
+    margin-left: 5px;
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ViewSBOMs from './pages/ViewSBOMs';
 import GenerateSBOMs from './pages/GenerateSBOMs';
@@ -11,51 +11,40 @@ import { Button } from 'react-bootstrap';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     checkLoginStatus();
   }, []);
 
   const checkLoginStatus = () => {
-    fetch('/current_user')
-      .then((response) => {
-        if (response.ok) {
-          setLoggedIn(true);
-        } else {
-          throw new Error('Not logged in');
-        }
-      })
-      .catch((error) => {
-        setLoggedIn(false);
-        navigate('/home');
-      });
-  };
+    //TODO: need to replace with actual logic to check if user is logged in @Caleb
+    //setLogedIn(true) if user is logged in
+  }
 
   const handleLoginClick = () => {
-    const acsUrl = process.env.REACT_APP_ACS_URL;
-    const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
-    window.location.href = `${samlEndpoint}${acsUrl}`;
+    //TODO: add any login logic here @Caleb
     setLoggedIn(true);
   }
+
+  const [loggingOut, setLoggingOut] = useState(false);
 
   return (
     <Router>
       <div className="container-fluid">
         <div className="row">
-          <MySideNav loggedIn={loggedIn} />
+          {!loggingOut && <MySideNav loggedIn={loggedIn} />}
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4 main-content">
-            {!loggedIn && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
+            {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
             <Routes>
               <Route path="/home" element={<Home />} />
-              {loggedIn ? (
+              <Route path="/logout" element={<div className="logout"><Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} /></div>} />
+              {loggedIn && (
                 <>
                   <Route path="/viewsboms" element={<ViewSBOMs />} />
                   <Route path="/generatesboms" element={<GenerateSBOMs />} />
                   <Route path="/profile" element={<Profile />} />
-                  <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} />} />
                 </>
-              ) : navigate('/home')}
+              )}
             </Routes>
           </main>
         </div>

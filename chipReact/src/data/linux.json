@@ -1,5 +1,13 @@
 {
-    "title": "For linux/mac",
-    "text": "Use the button below to download the .sh script. From there, open your terminal and find your script. Run the script using the following command. Make sure to replace '/absolute/path/use/command/pwd' with the actual absolute path to the file/project that you want to create an SBOM for. Alternatively, you can move the .sh script from your Downloads into the same directory as your project, and in that case you can replace '/absolute/path/use/command/pwd' with just the name of the file/project. This name must be the exact name as shown in your files.",
+    "title": "For MacOS/Linux",
+    "text": [
+      "Use the button below to download the shell script. This will go into your downloads (user/downloads).", 
+      "From here, move the shell script into the same directory as the project you want to create an SBOM for.", 
+      [
+        "Open your terminal and go to the directory your project is stored inside (not the actual project directory itself).",
+        "Run the following bash command with your EXACT project name, making sure to replace '/absolute/path/use/command/pwd' with the EXACT name of your project."
+      ], 
+      "Check to see that your SBOM was created properly. If you used option one, it will be stored in the directory right outside your project. If you used option two, it will be stored (????????)"
+    ],
     "code": "bash linux_install '/absolute/path/use/command/pwd'"
   }

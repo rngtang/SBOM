@@ -5,8 +5,10 @@ import './MySideNav.css';
 
 const MySideNav = ({loggedIn}) => {
     return (
-        <nav className="col-md-2 d-none d-md-block bg-royalblue rounded sidebar">
       <div className="sidebar-sticky">
+      <nav className="col-md-2 d-md-block bg-navblue sidebar">
+        
+      
         <div className="navbar-logo">
           <NavLink to="/home">
             <img src={chipImage} alt="Logo" className="logo-image" />
@@ -14,37 +16,38 @@ const MySideNav = ({loggedIn}) => {
         </div>
         <ul className="nav flex-column">
           <li className="nav-item">
-            <NavLink to="/home" className="nav-link" activeClassName="active">
+            <NavLink to="/home" className="nav-link">
               Home
             </NavLink>
           </li>
           {loggedIn && (
             <>
               <li className="nav-item">
-                <NavLink to="/viewsboms" className="nav-link" activeClassName="active">
+                <NavLink to="/viewsboms" className="nav-link">
                   View SBOMs
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/generatesboms" className="nav-link" activeClassName="active">
+                <NavLink to="/generatesboms" className="nav-link">
                   Generate SBOMs
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/profile" className="nav-link" activeClassName="active">
+                <NavLink to="/profile" className="nav-link">
                   Profile
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/logout" className="nav-link" activeClassName="active">
+                <NavLink to="/logout" className="nav-link">
                   Logout
                 </NavLink>
               </li>
               </>
           )}
         </ul>
-      </div>
+        
     </nav>
+    </div>
     );
 };
 

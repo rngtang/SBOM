@@ -30,6 +30,7 @@ services:
       DB_NAME: db_development
       DB_PASSWORD: password
       DB_HOST: db
+      
   react_app:
     build: ./chipReact
     volumes:
