@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :references
   root "articles#index"
 
-  resource :sessions, only: [:new, :create, :destroy]
+  resource :sessions, only: [:create, :destroy]
   post '/saml/acs', to: 'saml#acs'
   # post '/Shibboleth.sso/saml/consume', to: 'sessions#create'
   post '/saml/consume', to: 'sessions#create'

@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
   protect_from_forgery except: :create
-  def new
-    redirect_to "https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu"
-  end
+  # def new
+  #   redirect_to "https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu"
+  # end
 
   def create
     saml_response = params[:SAMLResponse] 
