@@ -34,7 +34,7 @@ const App = () => {
         <div className="row">
           {!loggingOut && <MySideNav loggedIn={loggedIn} />}
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4 main-content">
-            {!loggedIn && !loggingOut &&<Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
+            {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} />} />

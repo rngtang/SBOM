@@ -28,8 +28,7 @@ const Home = () => {
         <div className='page'>
             <Intro />
             <WhatAreSBOMs />
-            <Button> Route SAML2 Post </Button>
-
+            {/* <Button> Route SAML2 Post </Button> */}
         </div>
     );
 };

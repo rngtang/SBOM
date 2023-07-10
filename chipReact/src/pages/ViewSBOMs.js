@@ -55,8 +55,8 @@ function ViewSBOMs() {
             <p>ACTION</p>
           </div>
         </div>
-        <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'this was imported from idk'} vulnNum={5}/>
-        <MyAccordian name={'SBOM #2'} meta={'bruh i dont even know'}/>
+        <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={5}/>
+        <MyAccordian name={'SBOM #2'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={2}/>
       </div>
     </div>
     

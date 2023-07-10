@@ -11,13 +11,13 @@ const Profile = () => {
       <div className={styles.profileContainer}>
         <div className={styles.leftHeader}>
           <h2>{username}</h2>
-          <p>{netid}</p>
+          {/* <p>{netid}</p> */}
           
         </div>
 
         <div className={styles.profileSection}>
           <div className={styles.leftSection}>
-            <h4>Platform Settings</h4>
+            <h5>Platform Settings</h5>
             <div className={styles.toggleContainer}>
               <label>
                 Email Updates
@@ -35,7 +35,7 @@ const Profile = () => {
           </div>
 
           <div className={styles.rightSection}>
-            <h4>Profile Information</h4>
+            <h5>Profile Information</h5>
             <p>
               <strong>Full Name: </strong>
               {profileInformation.fullName}

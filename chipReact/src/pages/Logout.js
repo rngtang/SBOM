@@ -2,7 +2,7 @@ import React from 'react';
 
 const LogoutMessage = () => {
     return (
-        <div className='page'>
+        <div>
             <a href='/home'>you have logged out. press here to go home.</a>
         </div>
     );
