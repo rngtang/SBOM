@@ -55,7 +55,7 @@ class SbomsController < ApplicationController
         @sc = params["components"]
         if @sc
             @sc.each do |subC|
-                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], publisher: subC["publisher"], name: subC["name"], version: subC["version"], cpe:subC["cpe"], purl:subC["purl"])
+                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], publisher: subC["publisher"], name: subC["name"], version: subC["version"], purl:subC["purl"])
                 @props = subC["properties"]
                 # creates sbom_component properties for array of object input
                 if @props
@@ -81,6 +81,27 @@ class SbomsController < ApplicationController
             @t.each do |tools|
                 @m.tools.create(vendor: tools["vendor"], name: tools["name"], version: tools["version"])
             end
+        end
+
+        # creates vulnerabilities assoc with sboms
+        @vulns = params["vulnerabilities"]
+        if @vulns
+            @vulns.each do |v|
+                @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"]["url"], affects: v["affects"])
+                @ratings = v["ratings"]
+                if @ratings
+                    @ratings.each do |r|
+                        @vuln.ratings.create(score: r["score"], severity: r["severity"])
+                    end
+                end
+                @source = v["source"]
+                if @source
+                    @source.each do |s|
+                        @vuln.source.create(name: s["name"], url: s["url"])
+                    end
+                end
+            end
+        end
         end
 
         if @sbom.save
