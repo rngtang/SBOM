@@ -1,0 +1,10 @@
+{
+    "title": "For Windows",
+    "text": [
+      "Use the button below to download the powershell script. This will go into your Downloads (user/downloads).", 
+      "Move the script into the directory where your project is stored inside.", 
+      "Open your powershell terminal and navigate to the directory where your project is stored inside.", 
+      "Execute the powershell script from inside that directory with the following command. Please note that the script is meant to open an admin powershell."
+    ],
+    "code": "./windows_install.ps1"
+  }
