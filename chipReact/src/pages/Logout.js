@@ -2,7 +2,7 @@ import React from 'react';
 
 const LogoutMessage = () => {
     return (
-        <div>
+        <div style={styles.background}>
             <section className='text' style={styles.text}>
                 <h1>You have successfully logged out!</h1>
                 <a href='/home'>Back to home page.</a>
@@ -24,15 +24,17 @@ const Logout = ({ setLoggedIn, setLoggingOut }) => {
 
 const styles = {
     background: {
+        backgroundColor: '#404041'
     }, 
     text: {
         margin: 'auto',
+        backgroundColor: '#E5E5E5',
         textAlign: 'center',
-        border: '4px black solid',
-        padding: '16px',
+        padding: '40px 24px',
+        borderRadius: '8px',
         position: 'absolute',
         top: '50%',
-        transform: 'translate(35%, -50%)'
+        transform: 'translate(31%, -50%)'
     }
 };
 
