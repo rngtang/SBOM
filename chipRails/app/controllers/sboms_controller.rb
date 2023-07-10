@@ -30,20 +30,6 @@ class SbomsController < ApplicationController
         end
     end
 
-    # def createSbomComponent (sbomComp)
-    #     # sbom.sbomComponent = sbomComp
-    #     # sbomComp.properties.each do |prop|
-    #     #     @property = @component.properties
-    #     #     @property.name = prop["name"]
-    #     #     @property.value = prop["value"]
-    #     # end
-
-    #     # for prop in sbomComp
-    #     #     @property = Property.new(name: prop["name"], value: prop["value"]);
-    #     # end
-        # byebug
-    # end
-
     def create
         # Finds user by id
         @user = User.find(params[:user_id])
