@@ -37,7 +37,7 @@ const App = () => {
             {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
             <Routes>
               <Route path="/home" element={<Home />} />
-              <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} />} />
+              <Route path="/logout" element={<div className="logout"><Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} /></div>} />
               {loggedIn && (
                 <>
                   <Route path="/viewsboms" element={<ViewSBOMs />} />

@@ -54,6 +54,11 @@
   margin-left: 250px; /* adjust as needed */
 }
 
+/* .logout {
+  background-color: blue;
+  color: red;
+} */
+
 .login-button {
   background-color: #0577B1; /* your preferred color */
   color: white; /* your preferred text color */

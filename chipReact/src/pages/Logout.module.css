@@ -3,7 +3,7 @@
     --shaleblue: #0577B1;
     --limestone: #E5E5E5;
     --piedmont: #A1B70D;
-    --persimmon: #E89923;
+    --persimmon: #E89923;      
 }
 
 html, body {
@@ -13,16 +13,22 @@ html, body {
 }
 
 body {
-    background-color: blue; /* Replace 'blue' with the desired color value */
+    background-color: red;
 }
   
 .text {
     margin: auto;
-    background-color: var(--limestone);
+    background-color: #EEF3FC;
     text-align: center;
     padding: 120px 40px;
     border-radius: 16px;
     position: absolute;
     transform: translate(31%, -50%);   
     top: 50%;
+}
+
+.text a {
+    color: var(--shaleblue);
+    font-size: 24px;
+    font-weight: bold;
 }
