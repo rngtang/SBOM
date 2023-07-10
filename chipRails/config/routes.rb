@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :metadata, only: [:index]
     resources :sbom_components, only: [:index]
     resources :vulnerabilities, only: [:index]
-    resources :dependencyren, only: [:index]
+    resources :dependencies, only: [:index]
   end
   get 'vulnerabilities_all', to: 'vulnerabilities#all'
 
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get '/sbom_components', to: 'sbom_components#all'
 
   # get '/dependency_all', to: 'dependency#all'
-  get '/dependency/:id/tree', to: 'dependency#tree'
+  get '/dependencies/:id/tree', to: 'dependencies#tree'
   # opens up /sbom_components/:id/licenses (GET)
   # opens up /sbom_components/:id/sub_components
   resources :sbom_components, shallow: true do

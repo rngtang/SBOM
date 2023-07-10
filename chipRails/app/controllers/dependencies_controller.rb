@@ -2,7 +2,7 @@ class DependenciesController < ApplicationController
     protect_from_forgery with: :null_session
 
     def new
-        @dependency = dependency.new
+        @dependency = Dependency.new
     end
 
     def create
@@ -29,14 +29,14 @@ class DependenciesController < ApplicationController
     end
 
     def show
-        @dependency = dependency.find(params[:id])
+        @dependency = Dependency.find(params[:id])
         render json: @dependencies, status: :ok
     end
 
     def tree
-        @dependency = dependency.find(params[:id])
+        @dependency = Dependency.find(params[:id])
         dependenciesArray = @dependency.dependsOn
-        @newdependency = dependency.where(ref: dependenciesArray, sbom_id: @dependency.sbom_id)
+        @newdependency = Dependency.where(ref: dependenciesArray, sbom_id: @dependency.sbom_id)
         render json: @newdependency, status: :ok
     end
 
