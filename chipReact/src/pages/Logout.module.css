@@ -1,0 +1,28 @@
+:root {
+    --dukeblue: #404041; 
+    --shaleblue: #0577B1;
+    --limestone: #E5E5E5;
+    --piedmont: #A1B70D;
+    --persimmon: #E89923;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: blue; /* Replace 'blue' with the desired color value */
+}
+  
+.text {
+    margin: auto;
+    background-color: var(--limestone);
+    text-align: center;
+    padding: 120px 40px;
+    border-radius: 16px;
+    position: absolute;
+    transform: translate(31%, -50%);   
+    top: 50%;
+}
