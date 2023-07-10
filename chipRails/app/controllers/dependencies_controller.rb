@@ -17,11 +17,6 @@ class DependenciesController < ApplicationController
         # end
     end
 
-    # def all 
-    #     @dependencyren = dependency.all
-    #     render json: @dependencyren, status: :ok
-    # end
-
     def index
         @sbom = Sbom.find(params[:sbom_id])
         @dependencies = @sbom.dependencies

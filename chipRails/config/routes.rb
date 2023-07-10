@@ -13,17 +13,11 @@ Rails.application.routes.draw do
     resources :vulnerabilities, only: [:index]
     resources :dependencies, only: [:index]
   end
-  get 'vulnerabilities_all', to: 'vulnerabilities#all'
 
-  get '/sboms_all', to: 'sboms#all'
-  delete '/sboms_all', to: 'sboms#all'
+  delete '/sboms', to: 'sboms#index'
 
-  # opens up /sbom_components for all sbom_components
-  get '/sbom_components', to: 'sbom_components#all'
-
-  # get '/dependency_all', to: 'dependency#all'
   get '/dependencies/:id/tree', to: 'dependencies#tree'
-  # opens up /sbom_components/:id/licenses (GET)
+
   # opens up /sbom_components/:id/sub_components
   resources :sbom_components, shallow: true do
     resources :licenses, only: [:index]

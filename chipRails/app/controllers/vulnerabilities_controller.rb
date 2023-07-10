@@ -9,18 +9,17 @@ class VulnerabilitiesController < ApplicationController
     end
 
     def index
-        @sbom = Sbom.find(params[:sbom_id])
-        render json: @sbom.vulnerabilities, status: :ok
+        if params[:sbom_id]
+            @sbom = Sbom.find(params[:sbom_id])
+            render json: @sbom.vulnerabilities, status: :ok
+        else 
+            render json: Vulnerability.all, status: :ok
+        end
     end
 
     def show
         @vulnerability = Vulnerability.find(params[:id])
         render json: @vulnerability, status: :ok
-    end
-
-    def all
-        @vulnerabilities = Vulnerability.all
-        render json: @vulnerabilities, status: :ok
     end
 
     def vulnerability_params

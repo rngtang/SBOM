@@ -5,15 +5,15 @@ class SbomsController < ApplicationController
     def new
         @sbom = Sbom.new
     end
-    
-    def all
-        @sboms = Sbom.all
-        render json: @sboms, status: :ok
-    end
 
     def index
-        @user = User.find(params[:user_id])
-        render json: @user.sboms, status: :ok
+        if !params[:user_id]
+            render json: Sbom.all, status: :ok
+            
+        else 
+            @user = User.find(params[:user_id])
+            render json: @user.sboms, status: :ok
+        end
     end
 
 
@@ -25,7 +25,7 @@ class SbomsController < ApplicationController
     def destroy     
         @sbom.destroy
         respond_to do |format|
-            format.html { redirect_to '/sboms_all', notice: "SBOM was successfully destroyed." }
+            format.html { redirect_to '/sboms', notice: "SBOM was successfully destroyed." }
             format.json { head :no_content}
         end
     end

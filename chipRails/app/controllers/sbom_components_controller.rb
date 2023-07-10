@@ -1,13 +1,12 @@
 class SbomComponentsController < ApplicationController
     protect_from_forgery with: :null_session
     def index
-        @sbom = Sbom.find(params[:sbom_id])
-        render json: @sbom.sbom_components, status: :ok
-    end
-
-    def all
-        @sbom_components = SbomComponent.all
-        render json: @sbom_components, status: :ok
+        if params[:sbom_id]
+            @sbom = Sbom.find(params[:sbom_id])
+            render json: @sbom.sbom_components, status: :ok
+        else
+            render json: SbomComponent.all, status: :ok
+        end
     end
 
     def show
