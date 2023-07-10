@@ -7,35 +7,36 @@ import { Button } from 'react-bootstrap';
 import { useRef } from 'react';
 
 function ViewSBOMs() {
-  const [error, setError] = useState(null);
   const fileInput = useRef();
 
   const handleButtonClick = () => {
     fileInput.current.click();
   }
 
-  const handleFileUpload = event => {
+  const handleFileUpload = (event) => {
     const file = event.target.files[0];
     console.log(file);  // You can process the uploaded file here
+    console.log("hello?")
 
-    fetch("http://localhost:8080/user/1/sboms", { //dummy user 1 for now
+    const formData = new FormData();
+    formData.append('file', file);
+
+    fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
       method: 'POST',
-      headers: {
-        // 'Content-Type' : 'file'
-      },
+      body: formData
     })
     .then((response) => {
       if (!response.ok) {
         throw new Error('Failed to upload the SBOM.');
       }
-      // return response.blob();
-      console.log(response);
+      console.log("it POSTED ?")
+      return response.json();
     })
-    .then((blob) => {
-      console.log(blob);
+    .then((data) => {
+      console.log(data);
     })
     .catch((error) => {
-      setError(error.message);
+      console.log(error);
     });
   }
 
@@ -45,7 +46,6 @@ function ViewSBOMs() {
       <div className='header'>
         <div className='headerRight'>
           <Button variant="primary" id='uploadButton' className={styles.top} onClick={handleButtonClick}>Upload New SBOM +</Button>
-          {error && <p>Error: {error}</p>}
           <input 
             type="file" 
             style={{ display: 'none' }} 
