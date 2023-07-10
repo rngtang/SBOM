@@ -30,6 +30,11 @@ class SbomsController < ApplicationController
         end
     end
 
+    def import
+        file = params[:file].read
+        data = JSON.parse(file)
+    end
+
     def create
         # Finds user by id
         @user = User.find(params[:user_id])

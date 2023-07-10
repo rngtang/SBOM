@@ -16,7 +16,7 @@ function ViewSBOMs() {
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     console.log(file);  // You can process the uploaded file here
-    console.log("hello?")
+    console.log(" ready to fetch ")
 
     const formData = new FormData();
     formData.append('file', file);
@@ -29,7 +29,7 @@ function ViewSBOMs() {
       if (!response.ok) {
         throw new Error('Failed to upload the SBOM.');
       }
-      console.log("it POSTED ?")
+      console.log("it POSTED ????")
       return response.json();
     })
     .then((data) => {
