@@ -31,4 +31,10 @@ if [ -f $selected_file.1.xml ]; then
 fi
 sudo apt-get install jq
 jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.result.json
+if [ -f $selected_file.1.json ]; then
+    rm $selected_file.1.json
+fi
+if [ -f $selected_file.2.json ]; then
+    rm $selected_file.2.json
+fi
 echo -e "${COLOR}You have now created $selected_file.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"        
