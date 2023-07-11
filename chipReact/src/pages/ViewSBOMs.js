@@ -10,23 +10,27 @@ import GetSBOMs from '../components/GetSBOMs';
 
 function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
+  const [userName, setUserName] = useState(null);
+  const [userDesc, setUserDesc] = useState(null);
+
   const fileInput = useRef();
 
   const handleButtonClick = () => {
     fileInput.current.click();
   }
 
-  const handleViewClick = (sbomId) => {
+  const handleViewClick = (sbomId) => { //used for later, for when we actually know the sbomId
     setSelectedSbomId(sbomId);
   }
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
-    console.log(file);  // You can process the uploaded file here
     console.log(" ready to fetch ")
 
     const formData = new FormData();
     formData.append('file', file);
+    formData.append('name', userName);
+    formData.append('description', userDesc);
 
     fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
       method: 'POST',
@@ -63,11 +67,25 @@ function ViewSBOMs() {
             ref={fileInput} 
             onChange={handleFileUpload} 
           />
+          <input
+            type="text"
+            value={userName}
+            onChange={(event) => setUserName(event.target.value)}
+            placeholder="Enter Name"
+          />
+          <input
+            type="text"
+            value={userDesc}
+            onChange={(event) => setUserDesc(event.target.value)}
+            placeholder="Enter Description"
+          />
+
+
           <div className='searchBar'>
             <input id='searchInput'
               type="text"
               placeholder=' Search here'
-              />
+            />
           </div>
         </div>
         
