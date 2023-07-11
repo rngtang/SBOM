@@ -5,12 +5,18 @@ import MyAccordian from '../components/ViewSBOMsAccordian.js';
 import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
 import { useRef } from 'react';
+import SbomTree from './SbomTree';
 
 function ViewSBOMs() {
+  const [selectedSbomId, setSelectedSbomId] = useState(null);
   const fileInput = useRef();
 
   const handleButtonClick = () => {
     fileInput.current.click();
+  }
+
+  const handleViewClick = (sbomId) => {
+    setSelectedSbomId(sbomId);
   }
 
   const handleFileUpload = (event) => {
@@ -86,6 +92,14 @@ function ViewSBOMs() {
       </div>
     </div>
     
+    <>
+      <div id='sbomList' className={styles.section}>
+        {/* ...other code... */}
+        <button onClick={() => handleViewClick(1)}>View SBOM #1</button>
+        <button onClick={() => handleViewClick(2)}>View SBOM #2</button>
+      </div>
+      {selectedSbomId && <SbomTree sbomId={selectedSbomId} />}
+    </>
     </>
   );
 }
