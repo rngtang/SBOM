@@ -36,12 +36,10 @@ class SbomsController < ApplicationController
       
         # Use languages not included
         require 'json'
-        # require 'ostruct'
 
         file = params[:file].read
         data = JSON.parse(file)
         puts "CALLED ON CREATE"
-        # puts (data["bomFormat"])
 
         @sbom = Sbom.create(bomFormat: data['bomFormat'] , specVersion: data['specVersion'], serialNumber: data['serialNumber'], version: data['version'], user: @user)
 
