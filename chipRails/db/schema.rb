@@ -91,6 +91,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
+    # fix this raul pls im begging u
     t.string "username"
     t.string "email"
     t.string "password"

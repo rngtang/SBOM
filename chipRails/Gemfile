@@ -9,6 +9,8 @@ gem 'json'
 gem 'byebug'
 # gem 'pry'
 
+#shib stuff
+gem "rack_authenticator", source: "http://adsweb-ci.oit.duke.edu/gems/"
 
 # For HTTP requests
 gem 'rack-cors'

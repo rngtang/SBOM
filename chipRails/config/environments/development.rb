@@ -67,4 +67,14 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  ###### stuff from campus mail
+  config.middleware.use RackAuthenticator::Configurable, *[
+    "jsm121@duke.edu",["urn:mace:duke.edu:groups:group-manager:roles:fixit-admin"], #exact string might be changed
+    {
+      'HTTP_UID' => 'jsm121',
+      'HTTP_MAIL' => 'jsm121@duke.edu'
+    }
+  ]
+
 end
