@@ -7,11 +7,13 @@ Rails.application.routes.draw do
   # opens up /sboms (GET [all, :id], PUT, DELETE)
   # opens up /sboms/:id/metadata (GET)
   # opens up /sboms/:id/sbom_components (GET[all, ;id], DELETE)
-  resources :sboms, shallow: true do
+
+  resources :sboms, shallow: true do #resources: a shortcut for declaring all of the common routes (e.g. index, new, create,  update, destroy...)
     resources :metadata, only: [:index]
     resources :sbom_components, only: [:index]
     resources :vulnerabilities, only: [:index]
     resources :dependencies, only: [:index]
+    #the nested resources will generate routes like /sboms/:id/metadata for GET requests.
   end
 
   delete '/sboms', to: 'sboms#index'
@@ -42,5 +44,8 @@ Rails.application.routes.draw do
     resources :sboms
   end
   delete '/users', to: 'users#index'
+
+  #D3 Tree Conversion
+  get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
   
 end
