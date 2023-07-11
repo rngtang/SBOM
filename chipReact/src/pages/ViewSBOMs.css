@@ -84,7 +84,6 @@ body {
 #header {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
   height: 60px;
   margin-left: 5%;
@@ -97,12 +96,12 @@ body {
 }
 
 #buttonContainer {
+  justify-content: flex-start;
   border: 2px gray solid;
   border-radius: 8px;
   margin: 12px 32px 0px 32px;
   padding: 4px;
-  width: auto;
-  text-align: right;
+  width: fit-content;
 }
 
 .buttonInput {
@@ -122,7 +121,7 @@ body {
 }
 
 #searchBar {
-  align-items: right;
+  justify-content: flex-end;
   margin-left: 5px;
 }
 

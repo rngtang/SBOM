@@ -100,7 +100,7 @@ function ViewSBOMs() {
       <div id='sbomHeader'>
         <h5>Your SBOMs</h5>
       </div>
-      <div id='sbomList' className={styles.section}>
+      <div id='sbomList' className={styles.list}>
         <div id='sbomHeadRow'>
           <p>SBOM LIST</p>
           <div id='rowFunct'>
