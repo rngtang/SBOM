@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: E5E5E5;   limestone */
 }
 
 code {
@@ -13,6 +12,10 @@ code {
     monospace;
 }
 
-#background{
+#background {
   background-color: var(--limestone);
+}
+
+#logout {
+  background-color: var(--dukeblue);
 }
