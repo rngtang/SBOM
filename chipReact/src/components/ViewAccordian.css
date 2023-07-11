@@ -47,7 +47,19 @@
 }
 
 #meta {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: ; */
     font-size: 14px;
+}
+
+#metaHead {
+    margin-bottom: 0px;
+}
+#tab {
+    margin-top: 0;
+    margin-left: 18px;
+    margin-bottom: 0px;
 }
 
 .accordion-button {
