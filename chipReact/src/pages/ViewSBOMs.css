@@ -80,7 +80,8 @@ body {
   margin-right: 20px;
 }
 
-.header {
+
+#header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -88,37 +89,52 @@ body {
   height: 60px;
   margin-left: 5%;
   margin-right: 0;
-  width: 110%;
+  width: 100%;
 }
-.header p {
+
+#header p {
   color: gray;
 }
-.headerRight {
-  display: flex;
-  justify-content: right;
-  align-items: center;
+
+#buttonContainer {
+  border: 2px gray solid;
+  border-radius: 8px;
+  margin: 12px 32px 0px 32px;
+  padding: 4px;
+  width: auto;
+  text-align: right;
 }
 
-.searchBar {
-  margin-top: 4.7%;
-  margin-left: 5px;
-  width: 50%;
-}
-
-#searchInput {
-  /* border: 3px; */
+.buttonInput {
+  margin: 0px 8px;
   height: 40px;
-  border: 1px solid gray;
-  background-color: transparent;
-  border-radius: 7px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
 }
+
 #uploadButton {
-  width:50%;
+  margin: 8px;
   height: 40px;
   font-weight: 500;
   border: none;
   background-image: linear-gradient(to top right, var(--shaleblue) 40%, #6db7dc );
 }
+
+#searchBar {
+  align-items: right;
+  margin-left: 5px;
+}
+
+.searchInput {
+  height: 40px;
+  border: 1px solid gray;
+  background-color: transparent;
+  border-radius: 7px;
+}
+
+
+
 
 .mainBody {
   display: flex;

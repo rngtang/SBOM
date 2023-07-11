@@ -58,40 +58,44 @@ function ViewSBOMs() {
   return (
     <>
     <div className='page'>
-      <div className='header'>
-        <div className='headerRight'>
-          <Button variant="primary" id='uploadButton' className={styles.top} onClick={handleButtonClick}>Upload New SBOM +</Button>
-          <input 
-            type="file" 
-            style={{ display: 'none' }} 
-            ref={fileInput} 
-            onChange={handleFileUpload} 
-          />
-          <input
-            type="text"
-            value={userName}
-            onChange={(event) => setUserName(event.target.value)}
-            placeholder="Enter Name"
-          />
-          <input
-            type="text"
-            value={userDesc}
-            onChange={(event) => setUserDesc(event.target.value)}
-            placeholder="Enter Description"
-          />
+      <section id='header'>
 
+          <div id="buttonContainer">
+            <input
+              type="text"
+              value={userName}
+              className="buttonInput"
+              onChange={(event) => setUserName(event.target.value)}
+              placeholder="Enter SBOM Name"
+            />
+            <input
+              type="text"
+              value={userDesc}
+              className="buttonInput"
+              onChange={(event) => setUserDesc(event.target.value)}
+              placeholder="Enter SBOM Description"
+            />
+            <Button variant="primary" id='uploadButton' onClick={handleButtonClick}>Upload New SBOM +</Button>
+            <input 
+              type="file" 
+              style={{ display: 'none' }} 
+              ref={fileInput} 
+              onChange={handleFileUpload} 
+            />
+          </div>
 
-          <div className='searchBar'>
-            <input id='searchInput'
+        <div id='searchBar'>
+            <input 
+              className='searchInput'
               type="text"
               placeholder=' Search here'
             />
-          </div>
         </div>
         
-      </div>
+      </section>
       
     </div>
+
     <div className='mainBody'>
       <div id='sbomHeader'>
         <h5>Your SBOMs</h5>

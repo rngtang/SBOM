@@ -13,12 +13,6 @@
     position: relative;
 }
 
-
-.top {
-    order: -1; 
-    margin-top: 20px;  /* optional - use it if you want some space between button and accordions */
-}
-
 .downloadSection {
     /* Add your CSS properties here */
     margin: -20px;
