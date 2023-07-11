@@ -30,27 +30,29 @@ class SbomsController < ApplicationController
         end
     end
 
-    # def import
-    #     file = params[:file].read
-    #     data = JSON.parse(file)
-    # end
-
     def create
         # Finds user by id
         @user = User.find(params[:user_id])
-
+      
         # Use languages not included
         require 'json'
         # require 'ostruct'
-        puts JSON.parse(json)['bomFormat']
-        
-        @sbom = JSON.parse(bomFormat: JSON.parse(json)['bomFormat'] , specVersion: JSON.parse(json)['bomFormat'], serialNumber: JSON.parse(json)['bomFormat'], version: JSON.parse(json)['bomFormat'], user: @user)
+
+        file = params[:file].read
+        data = JSON.parse(file)
+        puts "CALLED ON CREATE"
+        # puts (data["bomFormat"])
+
+        @sbom = Sbom.create(bomFormat: data['bomFormat'] , specVersion: data['specVersion'], serialNumber: data['serialNumber'], version: data['version'], user: @user)
 
         # Creates the sbom object with the parameters
         # @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
         
         # create sbom_components, nested loop for array of objects input
-        @sc = params["components"]
+        # @sc = params["components"]
+        @sc = data["components"]
+        puts "GOING DOWN LEVELS"
+
         if @sc
             @sc.each do |subC|
                 @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], name: subC["name"], version: subC["version"], purl:subC["purl"])
@@ -64,14 +66,16 @@ class SbomsController < ApplicationController
             end
         end
         # create dependencies for array of objects input
-        @dpd = params["dependencies"]
+        # @dpd = params["dependencies"]
+        @dpd = data["dependencies"]
         if @dpd
             @dpd.each do |d|
                 @dep = @sbom.dependencies.create(ref: d["ref"], dependsOn: d["dependsOn"])
             end
         end
         # creates metadata, why is it an array? idk has_many
-        @mtd = params["metadata"]
+        # @mtd = params["metadata"]
+        @mtd = data["metadata"]
         @m = @sbom.metadata.create(timestamp: @mtd["timestamp"])
         # creates tools for metadata for array of object input
         @t = @mtd["tools"]
@@ -82,7 +86,8 @@ class SbomsController < ApplicationController
         end
 
         # creates vulnerabilities assoc with sboms
-        @vulns = params["vulnerabilities"]
+        # @vulns = params["vulnerabilities"]
+        @vulns = data["vulnerabilities"]
         if @vulns
             @vulns.each do |v|
                 @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"])

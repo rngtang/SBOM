@@ -25,14 +25,15 @@ function ViewSBOMs() {
       method: 'POST',
       body: formData,
       headers: {
-        ContentType: 'application/json'
+        // ContentType: 'application/json'
+        // ContentType: 'application/vnd.api+json'
       }
     })
     .then((response) => {
       if (!response.ok) {
         throw new Error('Failed to upload the SBOM.');
       }
-      console.log("it POSTED ????")
+      console.log("it POSTED ????");
       return response.json();
     })
     .then((data) => {
