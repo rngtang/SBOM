@@ -28,7 +28,7 @@ function ViewSBOMs() {
     const file = event.target.files[0];
     console.log(" ready to fetch ")
 
-    const formData = new FormData(event.target);
+    const formData = new FormData();
     formData.append('file', file);
     formData.append('name', userName);
     formData.append('description', userDesc);
