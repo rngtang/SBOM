@@ -1,19 +1,17 @@
 :root {
-    --dukeblue: #404041; 
+    --dukeblue: #012169; 
     --shaleblue: #0577B1;
     --limestone: #E5E5E5;
     --piedmont: #A1B70D;
     --persimmon: #E89923;      
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+/* html, body {
+    background-color: var(--piedmont);
+} */
 
-body {
-    background-color: red;
+#background {
+    color: var(--dukeblue) !important;
 }
   
 .text {

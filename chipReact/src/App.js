@@ -29,7 +29,9 @@ const App = () => {
   const [loggingOut, setLoggingOut] = useState(false);
 
   return (
+    
     <Router>
+      
       <div className="container-fluid">
         <div className="row">
           {!loggingOut && <MySideNav loggedIn={loggedIn} />}
@@ -49,6 +51,7 @@ const App = () => {
           </main>
         </div>
       </div>
+      
     </Router>
   );
 };
