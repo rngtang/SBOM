@@ -23,7 +23,10 @@ function ViewSBOMs() {
 
     fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
       method: 'POST',
-      body: formData
+      body: formData,
+      headers: {
+        ContentType: 'application/json'
+      }
     })
     .then((response) => {
       if (!response.ok) {

@@ -30,17 +30,24 @@ class SbomsController < ApplicationController
         end
     end
 
-    def import
-        file = params[:file].read
-        data = JSON.parse(file)
-    end
+    # def import
+    #     file = params[:file].read
+    #     data = JSON.parse(file)
+    # end
 
     def create
         # Finds user by id
         @user = User.find(params[:user_id])
 
+        # Use languages not included
+        require 'json'
+        # require 'ostruct'
+        puts JSON.parse(json)['bomFormat']
+        
+        @sbom = JSON.parse(bomFormat: JSON.parse(json)['bomFormat'] , specVersion: JSON.parse(json)['bomFormat'], serialNumber: JSON.parse(json)['bomFormat'], version: JSON.parse(json)['bomFormat'], user: @user)
+
         # Creates the sbom object with the parameters
-        @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
+        # @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
         
         # create sbom_components, nested loop for array of objects input
         @sc = params["components"]
