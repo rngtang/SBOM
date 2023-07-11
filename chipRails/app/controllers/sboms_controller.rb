@@ -41,7 +41,7 @@ class SbomsController < ApplicationController
         data = JSON.parse(file)
         puts "CALLED ON CREATE"
 
-        @sbom = Sbom.create(bomFormat: data['bomFormat'] , specVersion: data['specVersion'], serialNumber: data['serialNumber'], version: data['version'], user: @user)
+        @sbom = Sbom.create(bomFormat: data['bomFormat'] , specVersion: data['specVersion'], serialNumber: data['serialNumber'], version: data['version'], user: @user, name: :name, description: :description)
 
         # Creates the sbom object with the parameters
         # @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)

@@ -6,7 +6,7 @@ import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
 import { useRef } from 'react';
 import SbomTree from './SbomTree';
-import GetSBOMs from './GetSBOMs';
+import GetSBOMs from '../components/GetSBOMs';
 
 function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);

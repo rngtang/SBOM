@@ -2,26 +2,23 @@ import React from 'react';
 import './ViewAccordian.css';
 import Accordion from 'react-bootstrap/Accordion';
 
-const MyAccordion = ({ name, meta, type, stat, vulnNum, sbom }) => {
-    // const metaObj = meta[0]
-    const myHonda = {
-        color: "red",
-        wheels: 4,
-        engine: { cylinders: 4, size: 2.2 },
-      };
- 
-        
-        //   else {
-        //     console.log('null')
-        //     return ('null')
-        //   };
-    
-      
+const MyAccordion = ({ meta, stat, sbom }) => {
+
       if (meta != null){
         return (
             <Accordion alwaysOpen>
                 <Accordion.Item eventKey="0" flush>
-                    <Accordion.Header><p id='name'>{name}</p>              <div id='accordianRight'><p>{type}</p><p>{stat}</p><p>View</p><p>Update SBOM</p></div></Accordion.Header>
+                    <Accordion.Header><p id='name'>{sbom.id} {sbom.name}</p>              
+                    <div id='accordianRight'>
+                        <div id='type'>
+                            <p id='cyc'>{sbom.bomFormat}</p>
+                            <p>v.{sbom.specVersion}</p>
+                        </div>
+                        <p>{stat}</p>
+                        <p>View</p>
+                        <p>Update SBOM</p>
+                        </div>
+                    </Accordion.Header>
                     <Accordion.Body>
                         <div id='meta'> <p id='metaHead'>Metadata: </p> <p id='tab'>
                              Timestamp: {meta.timestamp}
@@ -29,7 +26,7 @@ const MyAccordion = ({ name, meta, type, stat, vulnNum, sbom }) => {
                             <br></br> Description: {sbom.description}
                             </p>   </div>
                        
-                            <div id='bodyRight'><p>{vulnNum} Vulnerabilities Found</p></div>
+                            <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p></div>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
