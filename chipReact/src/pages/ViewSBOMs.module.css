@@ -6,6 +6,7 @@
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
     transform: translate(79px, 0px);
     width: 1000px;
+    max-width: 75vw;
     background-color: white;
 }
 

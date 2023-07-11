@@ -89,6 +89,7 @@ body {
   margin-left: 5%;
   margin-right: 0;
   width: 110%;
+  max-width: 75vw;
 }
 .header p {
   color: gray;
@@ -126,6 +127,8 @@ body {
   justify-content: center;
   align-items: center;
   width:100%;
+  max-width: 80vw;
+  /* position: relative; */
 }
 #sbomHeader {
   margin-left: 14%;
