@@ -6,6 +6,7 @@ import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
 import { useRef } from 'react';
 import SbomTree from './SbomTree';
+import GetSBOMs from './GetSBOMs';
 
 function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
@@ -87,8 +88,9 @@ function ViewSBOMs() {
             <p>ACTION</p>
           </div>
         </div>
-        <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={5}/>
-        <MyAccordian name={'SBOM #2'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={2}/>
+        <GetSBOMs />
+        {/* <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={5}/>
+        <MyAccordian name={'SBOM #2'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={2}/> */}
       </div>
     </div>
     
