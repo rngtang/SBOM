@@ -24,10 +24,11 @@ function ViewSBOMs() {
   }
 
   const handleFileUpload = (event) => {
+    event.preventDefault();
     const file = event.target.files[0];
     console.log(" ready to fetch ")
 
-    const formData = new FormData();
+    const formData = new FormData(event.target);
     formData.append('file', file);
     formData.append('name', userName);
     formData.append('description', userDesc);
@@ -67,6 +68,7 @@ function ViewSBOMs() {
               className="buttonInput"
               onChange={(event) => setUserName(event.target.value)}
               placeholder="Enter SBOM Name"
+              required
             />
             <input
               type="text"
@@ -74,6 +76,7 @@ function ViewSBOMs() {
               className="buttonInput"
               onChange={(event) => setUserDesc(event.target.value)}
               placeholder="Enter SBOM Description"
+              required
             />
             <Button variant="primary" id='uploadButton' onClick={handleButtonClick}>Upload New SBOM +</Button>
             <input 
