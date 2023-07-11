@@ -2,8 +2,11 @@
 
 # sbomComponents
 node_modules/
+
 /.pnp
 .pnp.js
+.workbox-build
+.workbox-coverage
 
 # testing
 /coverage
