@@ -12,6 +12,7 @@ function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
+  const [sbomName, setSbomName] =useState(null)
 
   const fileInput = useRef();
 
@@ -89,6 +90,7 @@ function ViewSBOMs() {
               className='searchInput'
               type="text"
               placeholder=' Search here'
+              onChange={(event) => setSbomName(event.target.value)}
             />
         </div>
         
@@ -110,7 +112,7 @@ function ViewSBOMs() {
             <p>ACTION</p>
           </div>
         </div>
-        <GetSBOMs />
+        <GetSBOMs sbomName={sbomName}/>
         {/* <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={5}/>
         <MyAccordian name={'SBOM #2'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={2}/> */}
       </div>

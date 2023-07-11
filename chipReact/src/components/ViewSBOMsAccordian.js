@@ -8,7 +8,7 @@ const MyAccordion = ({ meta, stat, sbom }) => {
         return (
             <Accordion alwaysOpen>
                 <Accordion.Item eventKey="0" flush>
-                    <Accordion.Header><p id='name'>{sbom.id} {sbom.name}    </p>              
+                    <Accordion.Header><p id='name'>{sbom.name}    </p>              
                     <div id='accordianRight'>
                         <div id='type'>
                             <p id='cyc'>{sbom.bomFormat}</p>

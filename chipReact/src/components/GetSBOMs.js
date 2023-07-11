@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import * as React from 'react'
 import MyAccordion from './ViewSBOMsAccordian'
 
-export default function GetSBOMs () {
+export default function GetSBOMs (sbomName) {
     const [sboms, setSboms] = useState([])
     const sbomsUrl = "http://localhost:8080/users/1/sboms"
 
@@ -20,7 +20,11 @@ export default function GetSBOMs () {
     return(
         <div>
             {sboms.map((sbom => {
-                return (<MyAccordion meta={sbom.metadata[0]} sbom={sbom}/>)
+                console.log(sbomName)
+                console.log(sbom.id.toString() == sbomName.sbomName)
+                if (sbom.name.includes(sbomName.sbomName) || sbomName.sbomName == null){
+                    return (<MyAccordion meta={sbom.metadata[0]} sbom={sbom}/>)
+                }
             }))}
         </div>
     )

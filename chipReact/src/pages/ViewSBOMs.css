@@ -84,11 +84,13 @@ body {
 #header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   height: 60px;
   margin-left: 5%;
   margin-right: 0;
   width: 100%;
+  max-width: 80vw;
 }
 
 #header p {
@@ -96,7 +98,6 @@ body {
 }
 
 #buttonContainer {
-  justify-content: flex-start;
   border: 2px gray solid;
   border-radius: 8px;
   margin: 12px 32px 0px 32px;
@@ -121,7 +122,6 @@ body {
 }
 
 #searchBar {
-  justify-content: flex-end;
   margin-left: 5px;
 }
 
