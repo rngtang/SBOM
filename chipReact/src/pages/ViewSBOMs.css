@@ -94,11 +94,14 @@ body {
 }
 
 #header p {
-  color: gray;
+  color: black;
 }
 
 #buttonContainer {
-  border: 1px gray solid;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  color: black;
+  background-color: #EEF3FC;
+  border: none;
   display: flex;
   border-radius: 8px;
   margin: 12px 32px 0px 32px;
@@ -151,11 +154,6 @@ body {
   border-radius: 8px;
   background-color: transparent;
 }
-
-/* .spin {
-  position: relative;
-} */
-
 
 
 .mainBody {
