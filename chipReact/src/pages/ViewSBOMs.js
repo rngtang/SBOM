@@ -7,17 +7,26 @@ import { Button } from 'react-bootstrap';
 import { useRef } from 'react';
 import SbomTree from './SbomTree';
 import GetSBOMs from '../components/GetSBOMs';
+import Spinner from 'react-bootstrap/Spinner';
 
 function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
-  const [sbomName, setSbomName] =useState(null)
+  const [sbomName, setSbomName] = useState(null)
 
   const fileInput = useRef();
 
   const handleButtonClick = () => {
-    fileInput.current.click();
+    if (userName && userDesc) {
+      fileInput.current.click();
+      setFormSubmitted(true);
+    } else {
+      setFormSubmitted(true);
+      alert("Please enter both the SBOM name and description.");
+    }
   }
 
   const handleViewClick = (sbomId) => { //used for later, for when we actually know the sbomId
@@ -29,25 +38,13 @@ function ViewSBOMs() {
     const file = event.target.files[0];
     console.log(" ready to fetch ")
 
-    const formData = new FormData(event.target);
+    const formData = new FormData();
     formData.append('file', file);
     formData.append('name', userName);
     formData.append('description', userDesc);
 
-    let errors = {};
+    setLoading(true); // Set loading state to true before fetch request
 
-    // Perform validation
-    if (!userName.trim()) {
-      errors.name = 'Name is required';
-    }
-    if (!userDesc.trim()) {
-      errors.description = 'Description is required';
-    }
-
-    if (Object.keys(errors).length > 0) {
-      // If there are errors, display error messages or handle them accordingly
-      console.log('Validation errors:', errors);
-    } else { 
       fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
         method: 'POST',
         body: formData
@@ -57,6 +54,7 @@ function ViewSBOMs() {
           throw new Error('Failed to upload the SBOM.');
         }
         console.log("it POSTED ????");
+        setLoading(false);
         return response.json();
       })
       .then((data) => {
@@ -65,7 +63,8 @@ function ViewSBOMs() {
       .catch((error) => {
         console.log(error);
       });
-    }
+      
+    setFormSubmitted(false); //reset
   }
 
   return (
@@ -73,37 +72,57 @@ function ViewSBOMs() {
     {/* <div className='page'> */}
       <section id='header'>
 
-          <div id="buttonContainer">
-            <input
-              type="text"
-              value={userName}
-              className="buttonInput"
-              onChange={(event) => setUserName(event.target.value)}
-              placeholder="Enter SBOM Name"
-              required
-            />
-            <input
-              type="text"
-              value={userDesc}
-              className="buttonInput"
-              onChange={(event) => setUserDesc(event.target.value)}
-              placeholder="Enter SBOM Description"
-              required
-            />
-            <Button variant="primary" id='uploadButton' onClick={handleButtonClick}>Upload New SBOM +</Button>
+          <form id="buttonContainer" onSubmit = {(event) => event.preventDefault()} noValidate >
+            <div>
+              <input
+                type="text" required
+                value={userName}
+                className="buttonInput"
+                onChange={(event) => setUserName(event.target.value)}
+                placeholder="*Enter SBOM Name"
+                style={{
+                  borderColor: formSubmitted && !userName ? 'red' : '',
+                }}
+              />
+              {!userName && formSubmitted && (
+                <p> <span className="error">*Please enter name.</span></p>
+              )}
+            </div>
+
+            <div>
+              <input
+                type="text" required
+                value={userDesc}
+                className="buttonInput"
+                onChange={(event) => setUserDesc(event.target.value)}
+                placeholder="*Enter SBOM Description"
+                style={{
+                  borderColor: formSubmitted && !userDesc ? 'red' : '',
+                }}
+              />
+              {!userDesc && formSubmitted && (
+                <p> <span className="error">*Please enter description.</span></p>
+              )}
+            </div>
+            
+            <Button variant="primary" id='uploadButton' type='submit' onClick={handleButtonClick}>Upload New SBOM +</Button>
             <input 
               type="file" 
               style={{ display: 'none' }} 
               ref={fileInput} 
               onChange={handleFileUpload} 
             />
-          </div>
+          </form>
+
+        {loading && <Spinner animation="border" role="status" variant="info">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>}
 
         <div id='searchBar'>
             <input 
               className='searchInput'
               type="text"
-              placeholder=' Search here'
+              placeholder='Search SBOM by name'
               onChange={(event) => setSbomName(event.target.value)}
             />
         </div>
