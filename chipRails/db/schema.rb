@@ -110,6 +110,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.index ["sbom_id"], name: "index_vulnerabilities_on_sbom_id"
   end
 
+  add_foreign_key "dependencies", "sboms"
   add_foreign_key "metadata", "sboms"
   add_foreign_key "properties", "sbom_components"
   add_foreign_key "ratings", "vulnerabilities"
