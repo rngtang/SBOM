@@ -51,12 +51,27 @@
 }
 
 .main-content {
-  margin-left: 250px; /* adjust as needed */
+  display: flex;
+  flex-direction: row;
 }
 
 .login-button {
   background-color: #0577B1; /* your preferred color */
   color: white; /* your preferred text color */
   /* other styles as needed */
-  margin-left: 560px;
+  /* margin-left: 560px; */
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.pages {
+  width: calc(100vw - 240px);
+  padding-top: 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
