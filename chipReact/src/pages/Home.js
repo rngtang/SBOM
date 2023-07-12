@@ -42,7 +42,7 @@ const CyberSecurityRealWorld = () => {
             <p>
                 In today's interconnected world, cybersecurity is more important than ever. SBOMs play a crucial role in maintaining the security of software projects by providing a clear record of all software packages and components used. This allows security teams to quickly identify and address vulnerabilities, thereby enhancing the overall security of the software.
             </p>
-            <image src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png" alt="Cybersecurity Image" />
+            {/* <img src="https://stock.adobe.com/search?k=cat" alt="Cybersecurity Image" /> */}
         </div>
     );
 };
@@ -54,7 +54,7 @@ const Home = () => {
             <CyberSecurityRealWorld />
             <WhatAreSBOMs />
             <OurProject />
-            <image src={headerImage} alt="Intro Image" />
+            <img src={headerImage} alt="Intro Image" />
             {/* <Button> Route SAML2 Post </Button> */}
         </div>
     );
