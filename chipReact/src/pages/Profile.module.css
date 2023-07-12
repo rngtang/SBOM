@@ -1,21 +1,36 @@
 .sectionProf {
-    padding: 16px;
     border-radius: 10px;
-    margin: 0px 40px 32px 40px;
+    margin-top: 60px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     /* transform: translate(40px, 0px); */
     width: 95%;
-    max-width: 75vw;
+    max-width: 80vw;
     display: block;
     min-height: fit-content;
-    padding: 30px;
+    padding: 30px 45px;
+    /* height: 60%; */
     max-height: none;
     background-color: white;
 }
 
+#profbg {
+    width:95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(1, 33, 105, 1), rgba(1, 33, 105, 0) 93%);
+    margin: 0 50px;
+    border-radius: 10px;
+}
+
 .profileContainer {
-    margin: 0 auto;
-    max-width: 500px;
+    /* margin: 0 auto; */
+    /* max-width: 500px; */
+}
+
+.leftHeader {
+
 }
 
 .header {
@@ -27,24 +42,44 @@
 
 .profileSection {
     display: flex;
-    margin-top: 15px;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.profileSection h5 {
+    margin-bottom: 20px;
 }
 
 .leftSection {
     flex: 1;
+    margin: 0px 10px;
+    border-right: solid gainsboro;
 }
 
 .rightSection {
     flex: 1;
+    margin-left:5px;
+    padding-left: 20px;
+
+}
+
+.rightSection h5 {
+    margin-bottom: 25px;
+}
+.rightSection p {
+    margin-bottom: 25px;
+    margin-left: 12px;
 }
 
 .toggleContainer {
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-left: 12px;
 }
 
 .toggleContainer label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 40px;
 }
 
 .toggleContainer input {
