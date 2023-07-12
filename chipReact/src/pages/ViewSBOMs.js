@@ -69,7 +69,7 @@ function ViewSBOMs() {
 
   return (
     <>
-    <div className='page'>
+    {/* <div className='page'> */}
       <section id='header'>
 
           <form id="buttonContainer" onSubmit = {(event) => event.preventDefault()} noValidate >
@@ -129,7 +129,7 @@ function ViewSBOMs() {
         
       </section>
       
-    </div>
+    {/* </div> */}
 
     <div className='mainBody'>
       <div id='sbomHeader'>
@@ -146,13 +146,11 @@ function ViewSBOMs() {
           </div>
         </div>
         <GetSBOMs sbomName={sbomName}/>
-        {/* <MyAccordian name={'SBOM #1'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={5}/>
-        <MyAccordian name={'SBOM #2'} type={'CycloneDX'} stat={'HIGH RISK'} meta={'insert data here'} vulnNum={2}/> */}
       </div>
     </div>
     
     <>
-      <div id='sbomList' className={styles.section}>
+      <div id='sbomView' className={styles.section}>
         {/* ...other code... */}
         <button onClick={() => handleViewClick(1)}>View SBOM #1</button>
         <button onClick={() => handleViewClick(2)}>View SBOM #2</button>

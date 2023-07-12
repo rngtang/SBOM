@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from './Profile.module.css';
-import boxStyles from './GenerateSBOMs.module.css';
 import user1 from '../data/user.json';
 
 const Profile = () => {
   const { username, netid, platformSettings, profileInformation } = user1;
 
   return (
-    <div className={boxStyles.section}>
+    <div className={styles.sectionProf}>
       <div className={styles.profileContainer}>
         <div className={styles.leftHeader}>
           <h2>{username}</h2>

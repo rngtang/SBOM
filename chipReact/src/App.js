@@ -34,20 +34,25 @@ const App = () => {
       
       <div className="container-fluid">
         <div className="row">
-          {!loggingOut && <MySideNav loggedIn={loggedIn} />}
-          <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4 main-content">
-            {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
-            <Routes>
-              <Route path="/home" element={<Home />} />
-              <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut}/>}/>
-              {loggedIn && (
-                <>
-                  <Route path="/viewsboms" element={<ViewSBOMs />} />
-                  <Route path="/generatesboms" element={<GenerateSBOMs />} />
-                  <Route path="/profile" element={<Profile />} />
-                </>
-              )}
-            </Routes>
+          <main role="main" className="main-content">
+            {/* col-md-9 ml-sm-auto col-lg-10 px-4 */}
+            {!loggingOut && <MySideNav loggedIn={loggedIn} />}
+
+            <div className='pages'>
+              {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
+              <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut}/>}/>
+                {loggedIn && (
+                  <>
+                    <Route path="/viewsboms" element={<ViewSBOMs />} />
+                    <Route path="/generatesboms" element={<GenerateSBOMs />} />
+                    <Route path="/profile" element={<Profile />} />
+                  </>
+                )}
+              </Routes>
+            </div>
+            
           </main>
         </div>
       </div>
