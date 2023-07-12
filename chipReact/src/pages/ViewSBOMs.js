@@ -12,12 +12,16 @@ function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
-  const [sbomName, setSbomName] =useState(null)
+  const [sbomName, setSbomName] = useState(null)
 
   const fileInput = useRef();
 
   const handleButtonClick = () => {
-    fileInput.current.click();
+    if (userName && userDesc) {
+      fileInput.current.click();
+    } else {
+      alert("Please enter both the SBOM name and description.");
+    }
   }
 
   const handleViewClick = (sbomId) => { //used for later, for when we actually know the sbomId
@@ -34,20 +38,6 @@ function ViewSBOMs() {
     formData.append('name', userName);
     formData.append('description', userDesc);
 
-    let errors = {};
-
-    // Perform validation
-    if (!userName.trim()) {
-      errors.name = 'Name is required';
-    }
-    if (!userDesc.trim()) {
-      errors.description = 'Description is required';
-    }
-
-    if (Object.keys(errors).length > 0) {
-      // If there are errors, display error messages or handle them accordingly
-      console.log('Validation errors:', errors);
-    } else { 
       fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
         method: 'POST',
         body: formData
@@ -65,7 +55,7 @@ function ViewSBOMs() {
       .catch((error) => {
         console.log(error);
       });
-    }
+    
   }
 
   return (
@@ -73,37 +63,49 @@ function ViewSBOMs() {
     <div className='page'>
       <section id='header'>
 
-          <div id="buttonContainer">
-            <input
-              type="text"
-              value={userName}
-              className="buttonInput"
-              onChange={(event) => setUserName(event.target.value)}
-              placeholder="Enter SBOM Name"
-              required
-            />
-            <input
-              type="text"
-              value={userDesc}
-              className="buttonInput"
-              onChange={(event) => setUserDesc(event.target.value)}
-              placeholder="Enter SBOM Description"
-              required
-            />
-            <Button variant="primary" id='uploadButton' onClick={handleButtonClick}>Upload New SBOM +</Button>
+          <form id="buttonContainer" onSubmit={(event) => event.preventDefault()}>
+            <div>
+              <input
+                type="text" required
+                value={userName}
+                className="buttonInput"
+                onChange={(event) => setUserName(event.target.value)}
+                placeholder="Enter SBOM Name"
+                style={{
+                  borderColor: userName ? '' : 'red',
+                }}
+              />
+              {!userName && <p><span className={styles.error}>Please enter the SBOM name.</span></p>}
+            </div>
+
+            <div>
+              <input
+                type="text" required
+                value={userDesc}
+                className="buttonInput"
+                onChange={(event) => setUserDesc(event.target.value)}
+                placeholder="Enter SBOM Description"
+                style={{
+                  borderColor: userName ? '' : 'red',
+                }}
+              />
+              {!userDesc && <p><span className={styles.error}>Please enter the SBOM description.</span></p>}
+            </div>
+            
+            <Button variant="primary" id='uploadButton' type='submit' onClick={handleButtonClick}>Upload New SBOM +</Button>
             <input 
               type="file" 
               style={{ display: 'none' }} 
               ref={fileInput} 
               onChange={handleFileUpload} 
             />
-          </div>
+          </form>
 
         <div id='searchBar'>
             <input 
               className='searchInput'
               type="text"
-              placeholder=' Search here'
+              placeholder='Search SBOM by name'
               onChange={(event) => setSbomName(event.target.value)}
             />
         </div>

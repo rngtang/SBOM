@@ -99,6 +99,7 @@ body {
 
 #buttonContainer {
   border: 2px gray solid;
+  display: flex;
   border-radius: 8px;
   margin: 12px 32px 0px 32px;
   padding: 4px;
@@ -122,18 +123,22 @@ body {
 }
 
 #searchBar {
-  margin-left: 5px;
+  margin-top: 36px;
+  width: 30%;
+  float: right;
+  text-align: left;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid gray;
 }
 
 .searchInput {
+  padding: 0px 8px;
   height: 40px;
-  border: 1px solid gray;
+  border: none;
+  border-radius: 8px;
   background-color: transparent;
-  border-radius: 7px;
 }
-
-
-
 
 .mainBody {
   display: flex;
