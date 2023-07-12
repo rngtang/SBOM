@@ -6,7 +6,8 @@ const Profile = () => {
   const { username, netid, platformSettings, profileInformation } = user1;
 
   return (
-    <div className={styles.sectionProf}>
+    <div id={styles.profbg}>
+<div className={styles.sectionProf}>
       <div className={styles.profileContainer}>
         <div className={styles.leftHeader}>
           <h2>{username}</h2>
@@ -59,6 +60,8 @@ const Profile = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 
