@@ -98,20 +98,32 @@ body {
 }
 
 #buttonContainer {
-  border: 2px gray solid;
+  border: 1px gray solid;
   display: flex;
   border-radius: 8px;
   margin: 12px 32px 0px 32px;
-  padding: 4px;
+  padding: 8px;
   width: fit-content;
+  height: auto;
+  align-items: center;
+  position: relative;
+  bottom: 0px;
 }
 
 .buttonInput {
+  border: 1px solid;
   margin: 0px 8px;
   height: 40px;
   padding: 8px;
   border-radius: 8px;
-  border: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-left: 12px;
+  position: absolute;
+  bottom: 0px;
 }
 
 #uploadButton {

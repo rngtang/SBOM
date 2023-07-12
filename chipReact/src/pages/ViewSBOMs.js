@@ -10,6 +10,7 @@ import GetSBOMs from '../components/GetSBOMs';
 
 function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
   const [sbomName, setSbomName] = useState(null)
@@ -19,7 +20,9 @@ function ViewSBOMs() {
   const handleButtonClick = () => {
     if (userName && userDesc) {
       fileInput.current.click();
+      setFormSubmitted(true);
     } else {
+      setFormSubmitted(true);
       alert("Please enter both the SBOM name and description.");
     }
   }
@@ -56,6 +59,7 @@ function ViewSBOMs() {
         console.log(error);
       });
     
+    setFormSubmitted(false); //reset
   }
 
   return (
@@ -63,19 +67,21 @@ function ViewSBOMs() {
     <div className='page'>
       <section id='header'>
 
-          <form id="buttonContainer" onSubmit={(event) => event.preventDefault()}>
+          <form id="buttonContainer" onSubmit = {(event) => event.preventDefault()} noValidate >
             <div>
               <input
                 type="text" required
                 value={userName}
                 className="buttonInput"
                 onChange={(event) => setUserName(event.target.value)}
-                placeholder="Enter SBOM Name"
+                placeholder="*Enter SBOM Name"
                 style={{
-                  borderColor: userName ? '' : 'red',
+                  borderColor: formSubmitted && !userName ? 'red' : '',
                 }}
               />
-              {!userName && <p><span className={styles.error}>Please enter the SBOM name.</span></p>}
+              {!userName && formSubmitted && (
+                <p> <span className="error">*Please enter name.</span></p>
+              )}
             </div>
 
             <div>
@@ -84,12 +90,14 @@ function ViewSBOMs() {
                 value={userDesc}
                 className="buttonInput"
                 onChange={(event) => setUserDesc(event.target.value)}
-                placeholder="Enter SBOM Description"
+                placeholder="*Enter SBOM Description"
                 style={{
-                  borderColor: userName ? '' : 'red',
+                  borderColor: formSubmitted && !userDesc ? 'red' : '',
                 }}
               />
-              {!userDesc && <p><span className={styles.error}>Please enter the SBOM description.</span></p>}
+              {!userDesc && formSubmitted && (
+                <p> <span className="error">*Please enter description.</span></p>
+              )}
             </div>
             
             <Button variant="primary" id='uploadButton' type='submit' onClick={handleButtonClick}>Upload New SBOM +</Button>
