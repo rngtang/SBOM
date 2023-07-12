@@ -40,7 +40,7 @@ export default function DownloadWindowsScript() {
       >
         <button onClick={handleDownload} className={styles.button}>DOWNLOAD WINDOWS SCRIPT</button>
       </a>
-      {error && <p>Error: {error}</p>}
+      {error && <p style={{color: 'red'}}>ERROR: {error}</p>}
     </div>
   );
 };
