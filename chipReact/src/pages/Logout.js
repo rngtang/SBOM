@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Logout.module.css';
 
 const LogoutMessage = () => {
@@ -12,12 +12,19 @@ const LogoutMessage = () => {
     );
 };
 
-const Logout = ({ setLoggedIn, setLoggingOut }) => {
-    setLoggedIn(false);
-    setLoggingOut(true);
+const Logout = ({ setLoggedIn }) => {
+    const [showMessage, setShowMessage] = useState(false);
+
+    useEffect(() => {
+        if(window.confirm('Are you sure you want to log out?')){
+            setLoggedIn(false);
+            setShowMessage(true);
+        }
+    }, [setLoggedIn])
+    
     return (
         <div>
-            <LogoutMessage />
+            {showMessage && <LogoutMessage />}
         </div>
     );
 };
