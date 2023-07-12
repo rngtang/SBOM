@@ -46,7 +46,7 @@ const Section = ({ title, text, code, downloadComponent }) => {
         <div className={styles.section}>
             <div>
                 <h2 className={styles.h2}>{title}</h2>
-                <ol className={styles.mainList}>
+                <ol>
                     {renderSteps(steps)}
                 </ol>
                 {downloadComponent && downloadComponent}
@@ -68,9 +68,3 @@ const AnotherPage = () => {
 
 
 export default AnotherPage;
-
-      // "Another option is to keep the shell script in your downloads, and instead replace '/absolute/path/use/command/pwd' with the absolute path of your project.", 
-      // [
-      //   "Run this command in your terminal from any directory. In this case, keep in mind the name of your generated SBOM will be '/your/absolute/path'.json.", 
-      //   "To find the absolute path of your project, you can use pwd from inside the directory your project is in, and make sure your absolute path ends with the project you want to create an SBOM for."
-      // ], 

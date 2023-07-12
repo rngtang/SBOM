@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyAccordian from '../components/ViewSBOMsAccordian.js';
 import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
-import { useRef } from 'react';
 import SbomTree from './SbomTree';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
@@ -15,7 +14,9 @@ function ViewSBOMs() {
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
-  const [sbomName, setSbomName] = useState(null)
+  const [sbomName, setSbomName] = useState(null);
+
+  const [trigger, setTrigger] = useState(false);
 
   const fileInput = useRef();
 
@@ -55,13 +56,14 @@ function ViewSBOMs() {
         }
         console.log("it POSTED ????");
         setLoading(false);
+        setTrigger(prevTrigger => !prevTrigger);
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
       
     setFormSubmitted(false); //reset
@@ -145,7 +147,9 @@ function ViewSBOMs() {
             <p>ACTION</p>
           </div>
         </div>
-        <GetSBOMs sbomName={sbomName}/>
+
+        <GetSBOMs sbomName={sbomName} trigger={trigger}/>
+
       </div>
     </div>
     

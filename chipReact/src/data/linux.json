@@ -1,13 +1,11 @@
 {
     "title": "For MacOS/Linux",
     "text": [
-      "Use the button below to download the shell script. This will go into your downloads (user/downloads).", 
-      "From here, move the shell script into the same directory as the project you want to create an SBOM for.", 
-      [
-        "Open your terminal and go to the directory your project is stored inside (not the actual project directory itself).",
-        "Run the following bash command with your EXACT project name, making sure to replace '/absolute/path/use/command/pwd' with the EXACT name of your project."
-      ], 
-      "Check to see that your SBOM was created properly. If you used option one, it will be stored in the directory right outside your project. If you used option two, it will be stored (????????)"
+      "Use the button below to download the shell script. This will go into your Downloads (user/downloads).", 
+      "Move the script into the directory where your project is contained. Do not move your script inside your project.", 
+      "Open your linux terminal and navigate to the directory where your project is stored inside. This should be the same directory as step 2.", 
+      "Execute the shell script from inside that directory with the following command, replacing PROJECT_NAME with the EXACT name of your project. It is extremely important that you replace the command with the exact name, otherwise your SBOM will not be generated correctly.", 
+      "Check to see that your SBOM was created properly. Your SBOM should be titled PROJECT_NAME.json"
     ],
-    "code": "bash linux_install '/absolute/path/use/command/pwd'"
+    "code": "bash linux_install PROJECT_NAME"
   }
