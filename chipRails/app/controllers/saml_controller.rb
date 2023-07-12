@@ -3,22 +3,45 @@ class SamlController < ApplicationController
   protect_from_forgery except: :acs
   def acs
     response = OneLogin::RubySaml::Response.new(params[:SAMLResponse], settings: saml_settings)
-    # response.settings = saml_settings
-
+  
     if response.is_valid?
       Rails.logger.info "SAML response: #{response.inspect}"
-      decoded_nameid = Base64.decode64(response.nameid)
-      Rails.logger.info "Decoded nameid: #{decoded_nameid}"
-      session[:user_id] = User.find_or_create_by(netid: response.nameid).id #universal resource number
-      # Redirecting to the frontend
+      Rails.logger.info "SAML response #{response.attributes.inspect}"
+      
+      attributes_hash = convert_to_hash(response.attributes)
+      
+      netid = fetch_netid(attributes_hash)
+      email= fetch_email(attributes_hash)
+      Rails.logger.info "NetID: #{netid}"
+      Rails.logger.info "Email: #{email}"
+      
+      session[:user_id] = User.find_or_create_by(netid: netid, email: email).id
+      user.email= email
+      user.netid= netid 
+  
       redirect_to "http://localhost:3000"
     else
-      # Invalid response
       render plain: "Invalid SAML response", status: :unauthorized
     end
   end
   
   private
+  
+  def convert_to_hash(attributes)
+    hash = {}
+    attributes.each do |key, value|
+      hash[key] = value
+    end
+    hash
+  end
+  
+  def fetch_netid(attributes_hash)
+    attributes_hash.dig("urn:oid:0.9.2342.19200300.100.1.1", 0)
+  end
+
+  def fetch_email(attributes_hash)
+    attributes_hash.dig("urn:oid:0.9.2342.19200300.100.1.3",0)
+  end
   
   def saml_settings
     settings = OneLogin::RubySaml::Settings.new
