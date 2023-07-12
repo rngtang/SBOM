@@ -1,10 +1,14 @@
 
 class SamlController < ApplicationController
+  protect_from_forgery except: :acs
   def acs
-    response = OneLogin::RubySaml::Response.new(params[:SAMLResponse])
-    response.settings = saml_settings
+    response = OneLogin::RubySaml::Response.new(params[:SAMLResponse], settings: saml_settings)
+    # response.settings = saml_settings
 
     if response.is_valid?
+      Rails.logger.info "SAML response: #{response.inspect}"
+      decoded_nameid = Base64.decode64(response.nameid)
+      Rails.logger.info "Decoded nameid: #{decoded_nameid}"
       session[:user_id] = User.find_or_create_by(netid: response.nameid).id #universal resource number
       # Redirecting to the frontend
       redirect_to "http://localhost:3000"
