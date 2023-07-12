@@ -7,10 +7,12 @@ import { Button } from 'react-bootstrap';
 import { useRef } from 'react';
 import SbomTree from './SbomTree';
 import GetSBOMs from '../components/GetSBOMs';
+import Spinner from 'react-bootstrap/Spinner';
 
 function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
   const [sbomName, setSbomName] = useState(null)
@@ -41,6 +43,8 @@ function ViewSBOMs() {
     formData.append('name', userName);
     formData.append('description', userDesc);
 
+    setLoading(true); // Set loading state to true before fetch request
+
       fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
         method: 'POST',
         body: formData
@@ -50,6 +54,7 @@ function ViewSBOMs() {
           throw new Error('Failed to upload the SBOM.');
         }
         console.log("it POSTED ????");
+        setLoading(false);
         return response.json();
       })
       .then((data) => {
@@ -58,7 +63,7 @@ function ViewSBOMs() {
       .catch((error) => {
         console.log(error);
       });
-    
+      
     setFormSubmitted(false); //reset
   }
 
@@ -108,6 +113,10 @@ function ViewSBOMs() {
               onChange={handleFileUpload} 
             />
           </form>
+
+        {loading && <Spinner animation="border" role="status" variant="info">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>}
 
         <div id='searchBar'>
             <input 

@@ -80,7 +80,6 @@ body {
   margin-right: 20px;
 }
 
-
 #header {
   display: flex;
   flex-direction: row;
@@ -91,6 +90,7 @@ body {
   margin-right: 0;
   width: 100%;
   max-width: 80vw;
+  position: relative;
 }
 
 #header p {
@@ -151,6 +151,12 @@ body {
   border-radius: 8px;
   background-color: transparent;
 }
+
+/* .spin {
+  position: relative;
+} */
+
+
 
 .mainBody {
   display: flex;
