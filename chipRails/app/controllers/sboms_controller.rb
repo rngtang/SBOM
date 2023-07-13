@@ -26,7 +26,8 @@ class SbomsController < ApplicationController
     end
 
     def archive
-        
+        @sbom = Sbom.find(params[:id])
+        @sbom.update(archive: true)
     end
 
     def destroy     
@@ -127,7 +128,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, sbom_component: [], :archive)
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, :archive, sbom_component: [])
         end
 
         def set_sboms
