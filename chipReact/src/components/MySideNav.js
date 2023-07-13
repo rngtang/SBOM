@@ -14,6 +14,7 @@ const MySideNav = ({loggedIn}) => {
             <img src={chipImage} alt="Logo" className="logo-image" />
           </NavLink>
         </div>
+        
         <ul className="nav flex-column">
           <li className="nav-item">
             <NavLink to="/home" className="nav-link">
