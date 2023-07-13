@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap';
 import SbomTree from './SbomTree';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
+import { useNavigate } from 'react-router-dom';
 
 function ViewSBOMs() {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
@@ -31,8 +32,9 @@ function ViewSBOMs() {
     }
   }
 
-  const handleViewClick = (sbomId) => { //used for later, for when we actually know the sbomId
-    setSelectedSbomId(sbomId);
+  const navigate = useNavigate();
+  const handleViewClick = (sbomId) => {
+    navigate(`/sbom/${sbomId}`);
   }
 
   const fetchNames = () => {

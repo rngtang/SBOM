@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
 import { Button } from 'react-bootstrap';
+import SbomTree from './pages/SbomTree';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -46,6 +47,7 @@ const App = () => {
                 {loggedIn && (
                   <>
                     <Route path="/viewsboms" element={<ViewSBOMs />} />
+                    <Route path="/sbom/:sbomId" element={<SbomTree />} />
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
                     <Route path="/profile" element={<Profile />} />
                   </>
