@@ -26,9 +26,12 @@ export default function GetSBOMs ({sbomName, trigger}) {
             {sboms.map((sbom => {
                 // console.log(sbomName)
                 // console.log(sbom.id.toString() == sbomName.sbomName)
-                if (sbom.name.includes(sbomName) || sbomName == null){
-                    return (<MyAccordion meta={sbom.metadata[0]} sbom={sbom}/>)
+                if (sbom.name) {
+                    if (sbom.name.includes(sbomName) || sbomName == null){
+                        return (<MyAccordion meta={sbom.metadata[0]} sbom={sbom}/>)
+                    }
                 }
+                
             }))}
         </div>
     )

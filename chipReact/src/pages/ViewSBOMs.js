@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyAccordian from '../components/ViewSBOMsAccordian.js';
@@ -15,7 +15,7 @@ function ViewSBOMs() {
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
   const [sbomName, setSbomName] = useState(null);
-  const [nameMatch, setNameMatch] = useState(null);
+  const [nameMatch, setNameMatch] = useState(false);
 
   const [trigger, setTrigger] = useState(false);
 
@@ -35,28 +35,39 @@ function ViewSBOMs() {
     setSelectedSbomId(sbomId);
   }
 
-
-  const fetchName = () => {
-    fetch("http://localhost:8080/users/1/sboms")
+  const fetchNames = () => {
+    fetch("http://localhost:8080/sbom_names")
         .then((response) => response.json())
         .then((data) => {
-            // console.log(data)
+          const match = data.some((n) => n === userName);
+          if (match) {
+            console.log("helloooooooooooooo");
+            setNameMatch(true);
+          } else {
+            setNameMatch(false);
+          }
+          console.log(data);
         })
   }
-  useEffect(() => {
-      fetchName()
-      console.log("getting names")
-  }, [])
-
 
   const handleFileUpload = (event) => {
     event.preventDefault();
+    fetchNames();
+    console.log("getting names");
     const file = event.target.files[0];
-    console.log(" ready to fetch ")
+    console.log(" ready to fetch ");
 
     const formData = new FormData();
     formData.append('file', file);
-    formData.append('name', userName);
+    // formData.append('name', userName);
+
+
+    if (nameMatch) {
+      alert("You need a unique name for your SBOM.");
+    } else {
+      formData.append('name', userName);
+    }
+    
     formData.append('description', userDesc);
 
     setLoading(true); // Set loading state to true before fetch request
@@ -75,12 +86,7 @@ function ViewSBOMs() {
         return response.json();
       })
       .then((data) => {
-        if (data.errors) {
-          setError(data.errors)
-          console.log(error);
-        } else {
-           console.log("this is data", data);
-        }
+        //console.log(data)
       })
       .catch((error) => {
         // console.log(error);
@@ -107,9 +113,9 @@ function ViewSBOMs() {
                   borderColor: formSubmitted && !userName ? 'red' : '',
                 }}
               />
-              {nameMatch && (
+              {/* {nameMatch && (
                 <p> <span className="error">*Your name must be unique.</span></p>
-              )}
+              )} */}
               {!userName && formSubmitted && (
                 <p> <span className="error">*Please enter name.</span></p>
               )}
