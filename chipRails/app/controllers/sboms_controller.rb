@@ -123,7 +123,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, sbom_component: [])
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, sbom_component: [], :archive)
         end
 
         def set_sboms
