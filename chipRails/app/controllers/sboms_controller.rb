@@ -16,6 +16,9 @@ class SbomsController < ApplicationController
         end
     end
 
+    def sbomNames
+        render json: Sbom.pluck(:name), status: :ok
+    end
 
     def show
         @sbom = Sbom.find(params[:id])

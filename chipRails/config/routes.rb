@@ -46,4 +46,5 @@ Rails.application.routes.draw do
 
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
   
+  get '/sbom_names', to: 'sboms#sbomNames'
 end
