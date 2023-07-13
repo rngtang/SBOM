@@ -41,7 +41,8 @@ function ViewSBOMs() {
         .then((data) => {
           const match = data.some((n) => n === userName);
           if (match) {
-            console.log("helloooooooooooooo");
+            console.log("matched a name");
+            // alert("You need a unique name for your SBOM.");
             setNameMatch(true);
           } else {
             setNameMatch(false);
@@ -53,24 +54,22 @@ function ViewSBOMs() {
   const handleFileUpload = (event) => {
     event.preventDefault();
     fetchNames();
-    console.log("getting names");
-    const file = event.target.files[0];
-    console.log(" ready to fetch ");
-
-    const formData = new FormData();
-    formData.append('file', file);
-    // formData.append('name', userName);
-
-
-    if (nameMatch) {
-      alert("You need a unique name for your SBOM.");
-    } else {
-      formData.append('name', userName);
-    }
-    
-    formData.append('description', userDesc);
-
     setLoading(true); // Set loading state to true before fetch request
+    const formData = new FormData();
+    console.log("preparing to get names");
+
+    setTimeout(() => {
+      const file = event.target.files[0];
+      formData.append('file', file);
+
+      if (nameMatch) {
+        alert("Your SBOM name must be unique.");
+        setLoading(false);
+        return;
+      } else {
+        formData.append('name', userName); // Continue with the file upload or further processing
+      }
+      formData.append('description', userDesc);
 
       fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
         method: 'POST',
@@ -86,13 +85,10 @@ function ViewSBOMs() {
         return response.json();
       })
       .then((data) => {
-        //console.log(data)
-      })
-      .catch((error) => {
-        // console.log(error);
       });
       
     setFormSubmitted(false); //reset
+    }, 500); // Adjust the delay if needed
   }
 
 
@@ -103,6 +99,7 @@ function ViewSBOMs() {
 
           <form id="buttonContainer" onSubmit = {(event) => event.preventDefault()} noValidate >
             <div>
+              {fetchNames()}
               <input
                 type="text" required
                 value={userName}
