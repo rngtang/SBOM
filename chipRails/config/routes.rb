@@ -41,8 +41,10 @@ Rails.application.routes.draw do
   resources :users, shallow: true do
     resources :sboms
   end
+  
   delete '/users', to: 'users#index'
 
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
   
+  get '/sbom_names', to: 'sboms#sbomNames'
 end
