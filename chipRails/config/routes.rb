@@ -44,6 +44,8 @@ Rails.application.routes.draw do
   
   delete '/users', to: 'users#index'
 
+  get '/sboms/:id/archive', to: 'sboms#archive'
+
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
   
   get '/sbom_names', to: 'sboms#sbomNames'
