@@ -3,4 +3,52 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  
+  # opens up /sboms (GET [all, :id], PUT, DELETE)
+  # opens up /sboms/:id/metadata (GET)
+  # opens up /sboms/:id/sbom_components (GET[all, ;id], DELETE)
+  resources :sboms, shallow: true do
+    resources :metadata, only: [:index]
+    resources :sbom_components, only: [:index]
+    resources :vulnerabilities, only: [:index]
+    resources :dependencies, only: [:index]
+  end
+
+  delete '/sboms', to: 'sboms#index'
+
+  get '/dependencies/:id/tree', to: 'dependencies#tree'
+
+  # opens up /sbom_components/:id/sub_components
+  resources :sbom_components, shallow: true do
+    resources :licenses, only: [:index]
+    resources :properties, only: [:index]
+    # resources :externalReferences, only: [:index]
+  end
+
+  resources :metadata, shallow: true do
+    resources :tools, only: [:index]
+    resources :components, only: [:index]
+  end
+
+  resources :vulnerabilities, shallow: true do
+    resources :ratings, only: [:index]
+  end
+
+  resources :ratings, shallow: true do
+    resources :sources, only: [:index]
+  end
+
+  resources :users, shallow: true do
+    resources :sboms
+  end
+  
+  delete '/users', to: 'users#index'
+
+  get '/sboms/:id/archive', to: 'sboms#archive'
+
+  get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
+  
+  get '/sbom_names', to: 'sboms#sbomNames'
+  get '/scripts/download', to: 'scripts#download'
+
 end

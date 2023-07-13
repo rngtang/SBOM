@@ -15,6 +15,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
+# For parsing JSON files -- added 
+gem 'json'
+
+# gem 'byebug'
+# gem 'pry'
+
+
 # For HTTP requests
 gem 'rack-cors'
 
@@ -57,6 +64,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# add SAML capabilities
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -85,3 +94,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# gem "devise", "~> 4.9"
