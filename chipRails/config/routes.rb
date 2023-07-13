@@ -52,4 +52,10 @@ Rails.application.routes.draw do
   get '/scripts/linux', to: 'scripts#linux'
   get '/scripts/windows', to: 'scripts#windows'
 
+  #authentication routes
+  resources :sessions, only: [:new, :create, :destroy]
+  post '/saml/consume', to: 'sessions#create'
+  get '/current_user', to: 'sessions#index' 
+  delete '/logout',  to: 'sessions#destroy'
+
 end

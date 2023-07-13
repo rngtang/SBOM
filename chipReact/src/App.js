@@ -22,8 +22,9 @@ const App = () => {
   }
 
   const handleLoginClick = () => {
-    //TODO: add any login logic here @Caleb
-    setLoggedIn(true);
+    const acsUrl = process.env.REACT_APP_ACS_URL;
+    const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
+    window.location.href = `${samlEndpoint}${acsUrl}`;
   }
 
   const [loggingOut, setLoggingOut] = useState(false);
