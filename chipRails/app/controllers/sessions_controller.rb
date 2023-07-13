@@ -40,7 +40,7 @@ class SessionsController < ActionController::Base
   
         session[:user_id] = user.id
         @current_user=user
-        redirect_to "http://localhost:3000"
+        redirect_to "http://localhost:3000/home"
       else
         flash.now.alert = 'Could not log in'
         render 'new'
@@ -54,7 +54,9 @@ class SessionsController < ActionController::Base
   
   def destroy
     session[:user_id] = nil
-    redirect_to root_path, notice: 'Logged out!'
+    # redirect_to root_path, notice: 'Logged out!'
+    # blowup
+    redirect_to "http://localhost:3000/logout"
   end
 
   private

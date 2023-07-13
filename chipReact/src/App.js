@@ -36,12 +36,15 @@ const App = () => {
       .catch((error) => {
         setLoggedIn(false);
       });
+    // debugger lines below
+    // console.log("1setloggedin: " + loggedIn);
+    // console.log("1setloggingout: " + loggingOut);
   };
-  
+
   const handleLoginClick = () => {
     const acsUrl = process.env.REACT_APP_ACS_URL;
     const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
-    window.location.href = `${samlEndpoint}${acsUrl}`;  
+    window.location.href = `${samlEndpoint}${acsUrl}`;
   }
 
   return (
@@ -53,7 +56,7 @@ const App = () => {
             {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
             <Routes>
               <Route path="/home" element={<Home />} />
-              <Route path="/logout" element={<div className="logout"><Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} /></div>} />
+              <Route path="/logout" element={<div className="logout"><Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} loggedIn={loggedIn} loggingOut={loggingOut} /></div>} />
               {loggedIn && (
                 <>
                   <Route path="/viewsboms" element={<ViewSBOMs />} />

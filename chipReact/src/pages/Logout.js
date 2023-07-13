@@ -10,13 +10,16 @@ const LogoutMessage = () => {
                     <a href='/home' style={{ textDecoration: 'none' }}>&#8592; Back to home page</a>
                 </div>
             </div>
-        </body>   
+        </body>
     );
 };
 
-const Logout = ({ setLoggedIn, setLoggingOut }) => {
+const Logout = ({ setLoggedIn, setLoggingOut, loggedIn, loggingOut, destroyCookies }) => {
     setLoggedIn(false);
     setLoggingOut(true);
+    // debugger lines below
+    // console.log("2setloggedin: " + loggedIn);
+    // console.log("2setloggingout: " + loggingOut);
     return (
         <div>
             <LogoutMessage />

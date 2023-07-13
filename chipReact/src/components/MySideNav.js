@@ -38,7 +38,7 @@ const MySideNav = ({loggedIn}) => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/logout" className="nav-link">
+                <NavLink to="http://localhost:8080/destroy" className="nav-link">
                   Logout
                 </NavLink>
               </li>
