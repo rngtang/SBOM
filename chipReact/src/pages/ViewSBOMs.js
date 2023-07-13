@@ -130,8 +130,6 @@ function ViewSBOMs() {
         </div>
         
       </section>
-      
-    {/* </div> */}
 
     <div className='mainBody'>
       <div id='sbomHeader'>
