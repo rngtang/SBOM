@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+## It should have information about our project and how to use/install the code/app
+
+Okay hello this is judy
+
+=======
 Version 1. 6/20/2023 ------------------------------------------------------------------
 
 -- BACKGROUND --
@@ -26,3 +32,4 @@ To use our application, you will need the following:
         1. Docker Desktop.
         2. A SBOM JSON file in the CycloneDX format. You can either upload your own if
         it already exists, or you can create one using Syft (full instructions below).
+>>>>>>> 799a4067e56c9b2d242aa69e8a7f2f1bbf6327e3

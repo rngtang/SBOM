@@ -56,7 +56,6 @@ const App = () => {
           </main>
         </div>
       </div>
-      
     </Router>
   );
 };
