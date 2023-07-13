@@ -19,7 +19,7 @@ const App = () => {
   }, []);
 
   const checkLoginStatus = () => {
-    fetch('/current_user', {
+    fetch('http://localhost:8080/current_user', {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -38,9 +38,6 @@ const App = () => {
       });
   };
   
-
-  
-
   const handleLoginClick = () => {
     const acsUrl = process.env.REACT_APP_ACS_URL;
     const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
