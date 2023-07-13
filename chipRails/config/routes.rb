@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
   post '/saml/consume', to: 'sessions#create'
-  get '/current_user', to: 'current_user#index'
+  get '/current_user', to: 'sessions#index' 
 end

@@ -1,5 +1,23 @@
-class SessionsController < ApplicationController
-  protect_from_forgery except: :create
+class SessionsController < ActionController::Base
+  protect_from_forgery with: :exception, except: :create
+
+  def current_user
+    @current_user ||= User.find_by(id: session[:user_id])
+  end
+
+  def authenticate_user!
+    unless current_user
+      redirect_to "http://localhost:3000", allow_other_host: true
+    end
+  end
+  
+  def index
+    if current_user
+      render json: current_user
+    else
+      render json: {}, status: 404
+    end
+  end
 
   def create
     saml_response = params[:SAMLResponse]
@@ -21,6 +39,7 @@ class SessionsController < ApplicationController
         end
   
         session[:user_id] = user.id
+        @current_user=user
         redirect_to "http://localhost:3000"
       else
         flash.now.alert = 'Could not log in'

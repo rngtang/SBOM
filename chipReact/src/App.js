@@ -19,20 +19,26 @@ const App = () => {
   }, []);
 
   const checkLoginStatus = () => {
-    fetch('/current_user')
-      .then(response => {
-        if (response.status === 404) {
-          throw new Error('User not logged in');
+    fetch('/current_user', {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          setLoggedIn(true);
+        } else {
+          throw new Error('Not logged in');
         }
-        return response.json();
-      })
-      .then(user => {
-        setLoggedIn(true);
       })
       .catch((error) => {
         setLoggedIn(false);
       });
   };
+  
+
   
 
   const handleLoginClick = () => {
