@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       # dummy fields for testing
       t.string :username
       t.string :email
-      t.string :password
 
       t.timestamps
     end

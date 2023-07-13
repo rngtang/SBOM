@@ -65,6 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.integer "version"
     t.string "name"
     t.string "description"
+    t.boolean "archive"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
