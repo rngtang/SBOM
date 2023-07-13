@@ -16,8 +16,8 @@ class SamlController < ApplicationController
       Rails.logger.info "Email: #{email}"
       
       session[:user_id] = User.find_or_create_by(netid: netid, email: email).id
-      user.email= email
-      user.netid= netid 
+      # user.email= email
+      # user.netid= netid 
   
       redirect_to "http://localhost:3000"
     else
