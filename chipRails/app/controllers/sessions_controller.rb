@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def create
     saml_response = params[:SAMLResponse]
     response = OneLogin::RubySaml::Response.new(saml_response, settings: saml_settings)
-  
+
     if response.is_valid?
       attributes_hash = convert_to_hash(response.attributes)
   
@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       email = fetch_email(attributes_hash)
         
       user = User.find_or_create_by(netid: netid)
-        
+
       if user.persisted?
         begin
           user.update!(email: email)
