@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import chipImage from './images/chip.png';
 import './MySideNav.css';
+import ProfileComp from './ProfileComp';
 
 const MySideNav = ({loggedIn}) => {
     return (
@@ -42,15 +43,12 @@ const MySideNav = ({loggedIn}) => {
                     Logout
                   </NavLink>
                 </li>
+
+                <ProfileComp />
                 </>
             )}
           </ul>
       </div>
-        
-        <div id='profile'>
-              <p>Welcome User!</p>
-              <p>You are logged in as User</p>
-        </div>
     </nav>
     
     </div>

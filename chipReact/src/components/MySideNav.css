@@ -64,20 +64,18 @@ html, body {
     box-shadow: 1px 1px black;
 }
 
+.navbar-logo {
+    width: auto;
+    margin: 0 8px;
+    box-shadow: 0 4px 4px -4px rgba(255, 255, 255, 1);
+}
+
 .logo-image {
     width: 128px;
     height: auto;
     display: block;
     margin: 8px auto;
     margin-top: 20px;
-    padding: 16px 0;
+    padding: 16px 0 8px 0;
 }
 
-#profile {
-    color: white;
-    font-weight: 300;
-    position: absolute;
-    bottom: 0;
-    margin-left: 14px;
-    box-shadow: 0 0 15px 10px #141414;
-}
