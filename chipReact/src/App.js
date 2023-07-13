@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+//import axios from 'axios';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -11,25 +12,34 @@ import { Button } from 'react-bootstrap';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
 
   useEffect(() => {
     checkLoginStatus();
   }, []);
 
   const checkLoginStatus = () => {
-    //TODO: need to replace with actual logic to check if user is logged in @Caleb
-    //setLogedIn(true) if user is logged in
-  }
+    fetch('/current_user')
+      .then(response => {
+        if (response.status === 404) {
+          throw new Error('User not logged in');
+        }
+        return response.json();
+      })
+      .then(user => {
+        setLoggedIn(true);
+      })
+      .catch((error) => {
+        setLoggedIn(false);
+      });
+  };
+  
 
   const handleLoginClick = () => {
-    //TODO: add any login logic here @Caleb
     const acsUrl = process.env.REACT_APP_ACS_URL;
     const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
     window.location.href = `${samlEndpoint}${acsUrl}`;  
-    setLoggedIn(true);
   }
-
-  const [loggingOut, setLoggingOut] = useState(false);
 
   return (
     <Router>
