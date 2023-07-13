@@ -8,9 +8,10 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user!
-    # unless current_user
-    #   redirect_to "https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu", allow_other_host: true
-    # end
+    blowup
+    unless current_user
+      redirect_to "https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu", allow_other_host: true
+    end
   end
   
 end
