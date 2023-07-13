@@ -129,8 +129,12 @@ body {
 }
 
 #uploadButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 8px;
-  height: 40px;
+  height: auto;
+  width: auto;
   font-weight: 500;
   border: none;
   background-image: linear-gradient(to top right, var(--shaleblue) 40%, #6db7dc );
@@ -201,7 +205,7 @@ body {
 
 #sbomHeadRow p{
   font-size: small;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 #rowFunct {
