@@ -15,6 +15,7 @@ function ViewSBOMs() {
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
   const [sbomName, setSbomName] = useState(null);
+  const [nameMatch, setNameMatch] = useState(null);
 
   const [trigger, setTrigger] = useState(false);
 
@@ -33,6 +34,20 @@ function ViewSBOMs() {
   const handleViewClick = (sbomId) => { //used for later, for when we actually know the sbomId
     setSelectedSbomId(sbomId);
   }
+
+
+  const fetchName = () => {
+    fetch("http://localhost:8080/users/1/sboms")
+        .then((response) => response.json())
+        .then((data) => {
+            // console.log(data)
+        })
+  }
+  useEffect(() => {
+      fetchName()
+      console.log("getting names")
+  }, [])
+
 
   const handleFileUpload = (event) => {
     event.preventDefault();
@@ -56,11 +71,16 @@ function ViewSBOMs() {
         }
         console.log("it POSTED ????");
         setLoading(false);
-        setTrigger(prevTrigger => !prevTrigger);
+        setTrigger(prevTrigger => !prevTrigger); // will toggle getSBOMs useEffect
         return response.json();
       })
       .then((data) => {
-        // console.log(data);
+        if (data.errors) {
+          setError(data.errors)
+          console.log(error);
+        } else {
+           console.log("this is data", data);
+        }
       })
       .catch((error) => {
         // console.log(error);
@@ -68,6 +88,7 @@ function ViewSBOMs() {
       
     setFormSubmitted(false); //reset
   }
+
 
   return (
     <>
@@ -86,6 +107,9 @@ function ViewSBOMs() {
                   borderColor: formSubmitted && !userName ? 'red' : '',
                 }}
               />
+              {nameMatch && (
+                <p> <span className="error">*Your name must be unique.</span></p>
+              )}
               {!userName && formSubmitted && (
                 <p> <span className="error">*Please enter name.</span></p>
               )}

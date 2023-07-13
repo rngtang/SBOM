@@ -31,6 +31,9 @@ class SbomsController < ApplicationController
     end
 
     def create
+        # error = MyError.new
+        # p error
+
         # Finds user by id
         @user = User.find(params[:user_id])
       
@@ -38,6 +41,7 @@ class SbomsController < ApplicationController
         require 'json'
 
         file = params[:file].read
+
         data = JSON.parse(file)
         puts "CALLED ON CREATE"
 
@@ -123,4 +127,9 @@ class SbomsController < ApplicationController
             @sbom = Sbom.find(params[:id])
         end
 
+        def invalid(e)
+            render json: { errors: e.record.errors.full_messages }, 
+            status: :unprocessable_entity
+        end
+        
 end

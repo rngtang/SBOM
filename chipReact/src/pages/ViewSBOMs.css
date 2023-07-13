@@ -201,7 +201,7 @@ body {
 
 #sbomHeadRow p{
   font-size: small;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 #rowFunct {
