@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import * as React from 'react'
 import MyAccordion from './ViewSBOMsAccordian'
 
-export default function GetSBOMs ({sbomName, trigger}) {
+export default function GetSBOMs ({sbomName, trigger, setTrigger}) {
     const [sboms, setSboms] = useState([])
     const sbomsUrl = "http://localhost:8080/users/1/sboms"
 
@@ -27,8 +27,8 @@ export default function GetSBOMs ({sbomName, trigger}) {
                 // console.log(sbomName)
                 // console.log(sbom.id.toString() == sbomName.sbomName)
                 if (sbom.name) {
-                    if (sbom.name.includes(sbomName) || sbomName == null){
-                        return (<MyAccordion meta={sbom.metadata[0]} sbom={sbom}/>)
+                    if ((sbom.name.includes(sbomName) || sbomName == null) && (sbom.archive == false)){
+                        return (<MyAccordion meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger}/>)
                     }
                 }
                 
