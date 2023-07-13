@@ -16,7 +16,8 @@ html, body {
     /* position: fixed; */
     /* min-height: 95vh; */
     border-radius: 16px;  
-    display: inline-block;
+    display: flex;    
+    position: relative;
 }
 
 .sidebar-sticky {    
@@ -25,8 +26,8 @@ html, body {
     /* display: flex; */
     width: 208px;
     display: inline-block;
-    flex-direction: column;
-    justify-content: space-between;
+    /* flex-direction: column;
+    justify-content: space-between; */
 }
 
 .nav {
@@ -70,4 +71,13 @@ html, body {
     margin: 8px auto;
     margin-top: 20px;
     padding: 16px 0;
+}
+
+#profile {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+    margin-left: 14px;
+    box-shadow: 0 0 15px 10px #141414;
 }

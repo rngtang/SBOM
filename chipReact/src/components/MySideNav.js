@@ -8,45 +8,51 @@ const MySideNav = ({loggedIn}) => {
       <div className="sidebar-sticky">
       <nav className="col-md-2 d-md-block bg-navblue sidebar">
         
-      
+      <div>
         <div className="navbar-logo">
-          <NavLink to="/home">
-            <img src={chipImage} alt="Logo" className="logo-image" />
-          </NavLink>
-        </div>
-        <ul className="nav flex-column">
-          <li className="nav-item">
-            <NavLink to="/home" className="nav-link">
-              Home
+            <NavLink to="/home">
+              <img src={chipImage} alt="Logo" className="logo-image" />
             </NavLink>
-          </li>
-          {loggedIn && (
-            <>
-              <li className="nav-item">
-                <NavLink to="/viewsboms" className="nav-link">
-                  View SBOMs
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/generatesboms" className="nav-link">
-                  Generate SBOMs
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/profile" className="nav-link">
-                  Profile
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/logout" className="nav-link">
-                  Logout
-                </NavLink>
-              </li>
-              </>
-          )}
-        </ul>
+          </div>
+          <ul className="nav flex-column">
+            <li className="nav-item">
+              <NavLink to="/home" className="nav-link">
+                Home
+              </NavLink>
+            </li>
+            {loggedIn && (
+              <>
+                <li className="nav-item">
+                  <NavLink to="/viewsboms" className="nav-link">
+                    View SBOMs
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink to="/generatesboms" className="nav-link">
+                    Generate SBOMs
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink to="/profile" className="nav-link">
+                    Profile
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink to="/logout" className="nav-link">
+                    Logout
+                  </NavLink>
+                </li>
+                </>
+            )}
+          </ul>
+      </div>
         
+        <div id='profile'>
+              <p>Welcome User!</p>
+              <p>You are logged in as User</p>
+        </div>
     </nav>
+    
     </div>
     );
 };
