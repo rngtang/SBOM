@@ -25,6 +25,10 @@ class SbomsController < ApplicationController
         render json: @sbom, status: :ok
     end
 
+    def archive
+        
+    end
+
     def destroy     
         @sbom.destroy
         respond_to do |format|
