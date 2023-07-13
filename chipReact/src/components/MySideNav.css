@@ -13,17 +13,12 @@ html, body {
 .sidebar {
     height: 95vh;
     width: 208px;
-    /* position: fixed; */
-    /* min-height: 95vh; */
     border-radius: 16px;  
     display: flex;    
     position: relative;
 }
 
 .sidebar-sticky {    
-    /* padding-top: 16px; */
-    /* padding-bottom: 16px; */
-    /* display: flex; */
     width: 208px;
     display: inline-block;
     flex-direction: column;
@@ -36,12 +31,8 @@ html, body {
     width: 208px;
     position: sticky; 
     top: 20px;
-    /* position: fixed; */
-    /* min-height: 95vh; */
     border-radius: 16px;  
     display: inline-block;
-    /* flex-direction: column;
-    justify-content: space-between; */
 }
 
 .nav {
@@ -77,7 +68,6 @@ html, body {
     background-image: linear-gradient(to top right, #0577B1, #0672A9);
     box-shadow: 1px 1px black;
 }
-
 
 .navbar-logo {
     width: auto;
