@@ -56,10 +56,11 @@ const Home = () => {
         <>
             <div className="homeBG">
                 <div className='top'>
+                    <div className="topin">
                     <Intro />
+                    </div>
                 </div>
                 <div className='page'>
-
                     <CyberSecurityRealWorld />
                     <WhatAreSBOMs />
                     <OurProject /> 

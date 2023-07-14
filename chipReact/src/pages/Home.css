@@ -13,23 +13,22 @@ html, body {
     border-radius: 8px;
 }
 
-/* .page {
-    padding-top: 24px;
-} */
-
 .top {
     position: relative;
     width: 100%;
 }
 
 .top:before {
+    bottom: 40px;
     content: "";
     border-radius: 8px;
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
-    height: calc(100% + 32px);
+    bottom: 50%;
+    height: 50%;
+    /* height: calc(100% - 40px); */
     background-color: var(--shaleblue); 
     transform: skewY(35deg);
     transform-origin: top left;
@@ -59,6 +58,13 @@ html, body {
     font-size: 24px;
 }
 
+.page {
+    position: relative;
+    color: var(--piedment);
+    z-index: 1;
+    background-image: linear-gradient(rgba(1, 33, 105, 1), rgba(1, 33, 105, 0) 93%);
+}
+
 .section {
     padding: 24px;
     border-radius: 8px;
@@ -72,9 +78,9 @@ html, body {
     background-color: white;
 }
 
-.section div {
+/* .section div {
     position: relative;
-}
+} */
 
 .section h3 {
     color: var(--dukeblue);
