@@ -108,7 +108,11 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+<<<<<<< HEAD
     json (2.6.3)
+=======
+    jwt (2.7.1)
+>>>>>>> authentication
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -182,6 +186,12 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rouge (4.1.2)
+<<<<<<< HEAD
+=======
+    ruby-saml (1.15.0)
+      nokogiri (>= 1.13.10)
+      rexml
+>>>>>>> authentication
     rubyzip (2.3.2)
     selenium-webdriver (4.10.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -234,11 +244,16 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+<<<<<<< HEAD
   json
+=======
+  jwt
+>>>>>>> authentication
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.5)
+  ruby-saml (~> 1.13)
   selenium-webdriver
   sprockets-rails
   stimulus-rails

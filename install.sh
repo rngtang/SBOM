@@ -2,7 +2,11 @@
 # note: we require errors to propagate (don't set -e)
 set -u
 
+<<<<<<< HEAD
 PROJECT_NAME="grype"
+=======
+PROJECT_NAME="syft"
+>>>>>>> authentication
 OWNER=anchore
 REPO="${PROJECT_NAME}"
 GITHUB_DOWNLOAD_PREFIX=https://github.com/${OWNER}/${REPO}/releases/download
@@ -637,10 +641,17 @@ main() (
   tag=$1
 
   if [ -z "${tag}" ]; then
+<<<<<<< HEAD
     log_info "checking github for the current release tag"
     tag=""
   else
     log_info "checking github for release tag='${tag}'"
+=======
+    log_debug "checking github for the current release tag"
+    tag=""
+  else
+    log_debug "checking github for release tag='${tag}'"
+>>>>>>> authentication
   fi
   set -u
 

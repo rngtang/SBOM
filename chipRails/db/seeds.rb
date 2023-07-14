@@ -7,10 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Creating some users
-puts 'seeding'
-
-user1 = User.create(username: 'user1')
-user2 = User.create(username: 'user2')
+user1 = User.create!(email: 'user1@duke.edu', netid: 'id123')
+user2 = User.create!(email: 'user2@duke.edu', netid: 'id234')
 
 # Creating some sboms associated with the users
 # sbom1 = user1.sboms.create(bomFormat: 'CycloneDX', specVersion: '1.4', serialNumber: 'serial number 1', version: 1, name: 'sbom 1', description: 'description sbom1') #we could add more fields to match all the attributes of sboms
@@ -59,5 +57,3 @@ user2 = User.create(username: 'user2')
 # # source
 # source1 = Source.create(name: 'google', url: 'fdasdfds.com', rating: rating1)
 # source2 = Source.create(name: 'baidu', url: 'kopok.com', rating: rating2)
-
-puts 'seed complete'

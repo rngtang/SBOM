@@ -27,5 +27,6 @@
 
 # chipRails/public/assets
 
-# # Ignore master key for decrypting credentials and more.
 # chipRails/config/master.key
+# Ignore master key for decrypting credentials and more.
+*.key
