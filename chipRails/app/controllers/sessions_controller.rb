@@ -22,7 +22,6 @@ class SessionsController < ActionController::Base
     def create
       saml_response = params[:SAMLResponse]
       response = OneLogin::RubySaml::Response.new(saml_response, settings: saml_settings)
-  
       if response.is_valid?
         attributes_hash = convert_to_hash(response.attributes)
     
@@ -55,7 +54,6 @@ class SessionsController < ActionController::Base
     def destroy
       session[:user_id] = nil
       # redirect_to root_path, notice: 'Logged out!'
-      # blowup
       redirect_to "http://localhost:3000/logout"
     end
   

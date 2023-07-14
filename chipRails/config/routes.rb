@@ -52,10 +52,12 @@ Rails.application.routes.draw do
   get '/scripts/linux', to: 'scripts#linux'
   get '/scripts/windows', to: 'scripts#windows'
 
+  resources :references
+  root "articles#index"
+
   resources :sessions, only: [:new, :create, :destroy]
   post '/saml/consume', to: 'sessions#create'
   get '/current_user', to: 'sessions#index' 
   get '/destroy', to: 'sessions#destroy'
-
 
 end
