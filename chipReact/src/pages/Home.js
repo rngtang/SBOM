@@ -4,7 +4,7 @@ import headerImage from '../images/header-1.png';
 
 const Intro = () => {
     return (
-        <div className="section">
+        <div>
             <div id="title">
                 <h1>Centralized Hub for Inventories Platform</h1>
                 <p>A simple way to create and consume SBOMs</p>
