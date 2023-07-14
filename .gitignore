@@ -55,5 +55,7 @@ chipRails/public/assets
 # Ignore master key for decrypting credentials and more.
 chipRails/config/master.key
 
+node_modules
+
 *.key
 *.DS_Store
