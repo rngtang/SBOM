@@ -12,18 +12,28 @@ function SbomTree() {
   const [data, setData] = useState(null);
   const { sbomId } = useParams();
 
+  const generateNodeProps = () => {
+    return {
+      circleProps: { 
+        r: 10, 
+        fill: 'blue'
+      }
+    };
+  };
+  
+
   useEffect(() => {
     const fetchTreeData = async () => {
       const result = await axios(`http://localhost:8080/sboms/${sbomId}/dependencies_tree`);
       setData(result.data);
-      console.log(data)
     };
     fetchTreeData();
   }, [sbomId]);
 
   return (
     <div style={containerStyles}>
-      {data && <Tree data={data} />}
+      {data && <Tree data={data} translate={{ x: 400, y: 200 }} generateNodeProps={generateNodeProps} /> }
+      
     </div>
   );
 }
