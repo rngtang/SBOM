@@ -1,39 +1,16 @@
 import React from 'react';
 import './Home.css';
-import headerImage from '../images/header-1.png';
+// import headerImage from '../images/header-1.png';
+import chip2 from '../images/chip2.png';
 
 const Intro = () => {
     return (
-        <div>
+
             <div id="title">
                 <h1>Centralized Hub for Inventories Platform</h1>
-                <p>A simple way to create and consume SBOMs</p>
+                <p>A simple way to create and consume SBOMs.</p>
             </div>
-        </div>
-    );
-};
 
-const WhatAreSBOMs = () => {
-    return (
-        <div className="section">
-            <h3>What are SBOMs?</h3>
-            <p>
-                A Software Bill of Materials (SBOM) is a formal record of all software packages and components used by a software project or machine.
-                These components can be commercial or open-source, and in turn rely on other components themselves. This creates a series of reliances, or a chain of dependencies, that is not easily visible to the creator or user of the main project.
-            </p>
-        </div>
-    );
-};
-
-const OurProject = () => {
-    return (
-        <div className="section">
-            <h3>Our Project</h3>
-            <p>
-                Our team, composed of students from Duke University, is working in collaboration with Duke's Information Technology Security Office (ITSO) to explore the most active open-source projects in the SBOM and supply chain security space. We aim to develop a user-friendly interface that makes it easy for development teams at Duke to gather and share this information.
-            </p>
-            
-        </div>
     );
 };
 
@@ -49,22 +26,48 @@ const CyberSecurityRealWorld = () => {
     );
 };
 
+const WhatAreSBOMs = () => {
+    return (
+        <div className="section">
+            <h3>What are SBOMs?</h3>
+            <p>
+                A Software Bill of Materials (SBOM) is a formal record of all software packages and components used by a software project or machine.
+                These components can be commercial or open-source, and in turn rely on other components themselves. This creates a series of reliances, or a chain of dependencies, that is not easily visible to the creator or user of the main project.
+            </p>
+            
+        </div>
+    );
+};
+
+const OurProject = () => {
+    return (
+        <div className="section">
+            <h3>Our Project</h3>
+            <p>
+                Our team, composed of students from Duke University, is working in collaboration with Duke's Information Technology Security Office (ITSO) to explore the most active open-source projects in the SBOM and supply chain security space. We aim to develop a user-friendly interface that makes it easy for development teams at Duke to gather and share this information.
+            </p>
+            <img src={chip2} alt="chip logo 2" className="logo" />
+        </div>
+    );
+};
+
+
 const Home = () => {
     return (
         <>
-            <div id="background">
-            <div className="sectionBG">
+            <div className="homeBG">
                 <div className='page'>
                     
                     <Intro />
                     <CyberSecurityRealWorld />
                     <WhatAreSBOMs />
+                    
                     <OurProject />
-                    <img src={headerImage} alt="Intro Image" />
+                    {/* <img src={headerImage} alt="Intro Image" /> */}
                     {/* <Button> Route SAML2 Post </Button> */}
                 </div>
             </div>
-        </div>
+
         </>
 
     );
