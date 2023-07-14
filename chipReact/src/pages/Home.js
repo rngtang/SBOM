@@ -7,10 +7,8 @@ const Intro = () => {
     return (
 
             <div id="title">
-                <div id="slant">
                     <h1>Centralized Hub for Inventories Platform</h1>
                     <p>A simple way to create and consume SBOMs.</p>
-                </div>
             </div>
 
     );
