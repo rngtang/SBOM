@@ -16,6 +16,7 @@ html, body {
 .top {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .top:before {
@@ -26,9 +27,7 @@ html, body {
     width: 100%;
     top: 0;
     left: 0;
-    bottom: 50%;
-    height: 50%;
-    /* height: calc(100% - 40px); */
+    height: calc(100% + 32px);
     background-color: var(--shaleblue); 
     transform: skewY(35deg);
     transform-origin: top left;
@@ -62,7 +61,7 @@ html, body {
     position: relative;
     color: var(--piedment);
     z-index: 1;
-    background-image: linear-gradient(rgba(1, 33, 105, 1), rgba(1, 33, 105, 0) 93%);
+    /* background-image: linear-gradient(rgba(1, 33, 105, 1), rgba(1, 33, 105, 0) 93%); */
 }
 
 .section {
