@@ -57,6 +57,7 @@ Rails.application.routes.draw do
   root "articles#index"
 
   resources :sessions, only: [:new, :create, :destroy]
+  get '/saml/consume', to: 'sessions#create'
   post '/saml/consume', to: 'sessions#create'
   get '/current_user', to: 'sessions#index' 
   get '/destroy', to: 'sessions#destroy'
