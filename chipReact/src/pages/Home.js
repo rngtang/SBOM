@@ -5,7 +5,6 @@ import chip2 from '../images/chip2.png';
 
 const Intro = () => {
     return (
-
             <div id="title">
                     <h1>Centralized Hub for Inventories Platform</h1>
                     <p>A simple way to create and consume SBOMs.</p>
@@ -56,16 +55,17 @@ const Home = () => {
     return (
         <>
             <div className="homeBG">
-                <div className='page'>
-                    
+                <div className='top'>
                     <Intro />
+                </div>
+                <div className='page'>
+
                     <CyberSecurityRealWorld />
                     <WhatAreSBOMs />
-                    
-                    <OurProject />
-                    {/* <img src={headerImage} alt="Intro Image" /> */}
-                    {/* <Button> Route SAML2 Post </Button> */}
+                    <OurProject /> 
+
                 </div>
+                {/* <Button> Route SAML2 Post </Button> */}
             </div>
 
         </>
