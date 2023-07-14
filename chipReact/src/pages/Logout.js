@@ -13,23 +13,26 @@ const LogoutMessage = () => {
 };
 
 const Logout = ({ setLoggedIn, setLoggingOut, loggedIn, loggingOut }) => {
-    const [showMessage, setShowMessage] = useState(false);
+    // const [showMessage, setShowMessage] = useState(false);
     // console.log("2setloggedin: " + loggedIn);
     // console.log("2setloggingout: " + loggingOut);
-    setLoggingOut(true);
 
-    useEffect(() => {
-        if (window.confirm('Are you sure you want to log out?')) {
-            setLoggedIn(false);
-            setShowMessage(true);
-            // console.log("3setloggedin: " + loggedIn);
-            // console.log("3setloggingout: " + loggingOut);
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (window.confirm('Are you sure you want to log out?')) {
+    //         setLoggedIn(false);
+    //         setLoggingOut(true);
+    //         setShowMessage(true);
+    //         // console.log("3setloggedin: " + loggedIn);
+    //         // console.log("3setloggingout: " + loggingOut);
+    //     }
+    // }, [])
+    setLoggedIn(false);
+    setLoggingOut(true);
 
     return (
         <div>
-            {showMessage && <LogoutMessage />}
+            {/* {showMessage && <LogoutMessage />} */}
+            {<LogoutMessage />}
         </div>
     );
 };
