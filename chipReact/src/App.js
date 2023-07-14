@@ -18,12 +18,34 @@ const App = () => {
 
   const checkLoginStatus = () => {
     //TODO: need to replace with actual logic to check if user is logged in @Caleb
+    fetch('http://localhost:8080/current_user', {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          setLoggedIn(true);
+        } else {
+          throw new Error('Not logged in');
+        }
+      })
+      .catch((error) => {
+        setLoggedIn(false);
+      });
+
     //setLogedIn(true) if user is logged in
   }
 
   const handleLoginClick = () => {
     //TODO: add any login logic here @Caleb
-    setLoggedIn(true);
+    const acsUrl = process.env.REACT_APP_ACS_URL;
+    const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
+    window.location.href = `${samlEndpoint}${acsUrl}`;
+
+    // setLoggedIn(true);
   }
 
   const [loggingOut, setLoggingOut] = useState(false);
