@@ -6,7 +6,7 @@ import LogoSlider from './LogoSlider';
 
 const Intro = () => {
     return (
-            <div id="title">
+            <div className="title">
                     <h1>Centralized Hub for Inventories Platform</h1>
                     <p>A simple way to create and consume SBOMs.</p>
             </div>

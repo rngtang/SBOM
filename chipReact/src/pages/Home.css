@@ -18,7 +18,8 @@ html, body {
     width: 100%;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -37,38 +38,45 @@ html, body {
     z-index: -1;
 }
 
-#title {
+.title {
     display: flex;
+    align-self: flex-start;  
+    flex: 2;
     flex-direction: column;
     justify-content: flex-end;
     margin-left: 16px;
     text-align: left;
     padding: 24px 8px 40px 8px;
     color: white;
-    width: 60%;
+    width: 50%;
     height: 90vh;
 }
 
-#title h1 {
+.title h1 {
     font-size: 64px;
     margin-bottom: 8px;
     word-wrap: normal;
 }
 
-#title p {
+.title p {
     padding-top: 16px;
     font-size: 24px;
 }
 
 .imgContainer {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;  
+    /* flex-direction: row; */
+    justify-content: flex-end;
+    flex: 1;
+    height: 10%;
+    float: right;
+    width: 30%;
+    height: auto;
 }
 
 .logo {
     width: 15%;
-    height: auto;
+    /* height: auto; */
     margin: 8px;
     border-radius: 8px;
     margin-right: 16px; 
@@ -76,7 +84,7 @@ html, body {
 }
 .slider {
     width: 15%;
-    height: auto;
+    /* height: auto; */
     margin: 8px;
     border-radius: 8px;
     background-color: var(--limestone);
