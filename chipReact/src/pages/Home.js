@@ -6,11 +6,10 @@ import LogoSlider from './LogoSlider';
 
 const Intro = () => {
     return (
-            <div className="title">
-                    <h1>Centralized Hub for Inventories Platform</h1>
-                    <p>A simple way to create and consume SBOMs.</p>
-            </div>
-
+        <>
+            <h1>Centralized Hub for Inventories Platform</h1>
+            <p>A simple way to create and consume SBOMs.</p>
+        </>
     );
 };
 
@@ -57,7 +56,9 @@ const Home = () => {
         <>
             <div className="homeBG">
                 <div className='top'>
-                    <Intro />
+                    <div className="title">
+                        <Intro />
+                    </div>
                     <div className="imgContainer">
                         <img src={chip2} alt="chip logo 2" className="logo" />
                         <div className="slider">

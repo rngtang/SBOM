@@ -39,6 +39,8 @@ html, body {
 
 .title {
     display: flex;
+    position: absolute;
+    top: 0;
     align-self: flex-start;  
     flex: 2;
     flex-direction: column;
@@ -63,12 +65,13 @@ html, body {
 }
 
 .imgContainer {
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: flex-end;
-    bottom: 0;
     flex: 1;
     float: right;
-    width: 30%;
+    /* width: 30%; */
 }
 
 .logo {
