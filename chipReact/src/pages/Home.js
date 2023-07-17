@@ -1,7 +1,8 @@
 import React from 'react';
 import './Home.css';
 // import headerImage from '../images/header-1.png';
-import chip2 from '../images/chip2.png';
+import chip2 from './images/chip2.png';
+import LogoSlider from './LogoSlider';
 
 const Intro = () => {
     return (
@@ -56,8 +57,12 @@ const Home = () => {
         <>
             <div className="homeBG">
                 <div className='top'>
-                    <div className="topin">
                     <Intro />
+                    <div className="imgContainer">
+                        <img src={chip2} alt="chip logo 2" className="logo" />
+                        <div className="slider">
+                            <LogoSlider />
+                        </div>
                     </div>
                 </div>
                 <div className='page'>

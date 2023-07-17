@@ -57,6 +57,28 @@ html, body {
     font-size: 24px;
 }
 
+.imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+    margin: 8px;
+    border-radius: 8px;
+    margin-right: 16px; 
+    background-color: var(--limestone);
+}
+.slider {
+    width: 15%;
+    height: auto;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: var(--limestone);
+}
+
 .page {
     position: relative;
     color: var(--piedment);
