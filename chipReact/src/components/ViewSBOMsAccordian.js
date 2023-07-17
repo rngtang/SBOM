@@ -2,6 +2,7 @@ import React from 'react';
 import './ViewAccordian.css';
 import Accordion from 'react-bootstrap/Accordion';
 import DeleteButton from './DeleteButton';
+import UpdateButton from './UpdateButton';
 
 const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
 
@@ -17,7 +18,7 @@ const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
                         </div>
                         <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
                         <p className='rightTxt'>View</p>
-                        <p className='rightTxt'>Update SBOM</p>
+                        <UpdateButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
                         </div>
                     </Accordion.Header>
                     <Accordion.Body>
