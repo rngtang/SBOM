@@ -35,6 +35,7 @@ function ViewSBOMs() {
     setSelectedSbomId(sbomId);
   }
 
+  // fix this fetch
   const fetchNames = () => {
     fetch("http://localhost:8080/sbom_names")
         .then((response) => response.json())
