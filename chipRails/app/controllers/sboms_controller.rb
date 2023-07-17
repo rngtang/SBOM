@@ -25,6 +25,11 @@ class SbomsController < ApplicationController
         render json: @sbom, status: :ok
     end
 
+    def archive
+        @sbom = Sbom.find(params[:id])
+        @sbom.update(archive: true)
+    end
+
     def destroy     
         @sbom.destroy
         respond_to do |format|
@@ -123,7 +128,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, sbom_component: [], :archive)
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, :archive, sbom_component: [])
         end
 
         def set_sboms

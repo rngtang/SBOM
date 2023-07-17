@@ -6,15 +6,18 @@
     width: 44%;
     /* height: 20px; */
     font-size: small;
-    margin-top: 9px;
+    /* margin-top: 9px; */
     margin-bottom: 0px;
     margin-right: 6%;
+    /* vertical-align: center; */
 }
 
 #accordianRight p {
     width: auto;
 }
-
+.rightTxt {
+    margin:0;
+}
 #name {
     margin-bottom: 0px;
 }

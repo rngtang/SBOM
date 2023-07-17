@@ -33,7 +33,8 @@ const Logout = ({ setLoggedIn}) => {
     
     return (
         <div>
-            {showMessage && <LogoutMessage />}
+            {/* {showMessage && <LogoutMessage />} */}
+            {<LogoutMessage />}
         </div>
     );
 };
