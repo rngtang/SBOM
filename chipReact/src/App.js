@@ -8,10 +8,12 @@ import Profile from './pages/Profile';
 import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
 import { Button } from 'react-bootstrap';
+import Vulnerability from './pages/Vulnerability';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
+  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     checkLoginStatus();
@@ -28,9 +30,17 @@ const App = () => {
       .then((response) => {
         if (response.ok) {
           setLoggedIn(true);
+          return response.json();
         } else {
           throw new Error('Not logged in');
         }
+      })
+      .then((data) => {
+        console.log(data);
+        if (data) {
+          setUserId(data.id);
+        }
+        console.log("current user", data.id);
       })
       .catch((error) => {
         setLoggedIn(false);
@@ -61,11 +71,12 @@ const App = () => {
               <Routes>
                 <Route path="/home" element={<Home />} />
                 <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} loggedIn={loggedIn} loggingOut={loggingOut} />}/>
-                {loggedIn && (
+                {loggedIn && userId && (
                   <>
-                    <Route path="/viewsboms" element={<ViewSBOMs />} />
+                    <Route path="/viewsboms" element={<ViewSBOMs userId={userId}/>} />
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/vulnerability" element={<Vulnerability />} />
                   </>
                 )}
               </Routes>

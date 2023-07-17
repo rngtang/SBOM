@@ -2,11 +2,9 @@ import {useState, useEffect} from 'react'
 import * as React from 'react'
 import MyAccordion from './ViewSBOMsAccordian'
 
-export default function GetSBOMs ({sbomName, trigger, setTrigger}) {
+export default function GetSBOMs ({sbomName, trigger, setTrigger, userId}) {
     const [sboms, setSboms] = useState([])
-    const sbomsUrl = "http://localhost:8080/users/1/sboms"
-
-    // console.log("the CHILD trigger is currently: ", trigger)
+    const sbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
 
     const fetchSboms = () => {
         fetch(sbomsUrl)
@@ -18,7 +16,8 @@ export default function GetSBOMs ({sbomName, trigger, setTrigger}) {
     }
     useEffect(() => {
         fetchSboms()
-        console.log("was triggered")
+        console.log("was triggered");
+        console.log("CURRENT USER, from get: ", userId);
     }, [trigger])
 
     return(
