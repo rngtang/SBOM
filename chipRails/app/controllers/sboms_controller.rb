@@ -17,7 +17,8 @@ class SbomsController < ApplicationController
     end
 
     def sbomNames
-        render json: Sbom.pluck(:name), status: :ok
+        @user = User.find(params[:user_id])
+        render json: @user.sboms.pluck(:name), status: :ok
     end
 
     def show
