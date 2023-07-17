@@ -27,7 +27,7 @@ class SessionsController < ActionController::Base
     
         netid = fetch_netid(attributes_hash)
         email = fetch_email(attributes_hash)
-          
+          # blowup
         user = User.find_or_create_by(netid: netid)
   
         if user.persisted?
