@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ViewSBOMs from './pages/ViewSBOMs';
 import GenerateSBOMs from './pages/GenerateSBOMs';
-import Profile from './pages/Profile';
 import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
 import { Button } from 'react-bootstrap';
@@ -75,7 +74,6 @@ const App = () => {
                   <>
                     <Route path="/viewsboms" element={<ViewSBOMs userId={userId}/>} />
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
-                    <Route path="/profile" element={<Profile />} />
                     <Route path="/vulnerability" element={<Vulnerability />} />
                   </>
                 )}
