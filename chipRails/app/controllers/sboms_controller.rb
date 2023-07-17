@@ -2,6 +2,12 @@ class SbomsController < ApplicationController
     protect_from_forgery with: :null_session
     before_action :set_sboms, only: %i[ show edit update destroy ]
 
+    def update 
+        @sbom = Sbom.find(params[:id])
+        @sbom.update(update_sbom_params)
+        render json: @sbom, status: :ok
+    end
+
     def new
         @sbom = Sbom.new
     end
@@ -139,6 +145,10 @@ class SbomsController < ApplicationController
         def invalid(e)
             render json: { errors: e.record.errors.full_messages }, 
             status: :unprocessable_entity
+        end
+
+        def update_sbom_params
+            params.require(:sbom).permit(:name, :description)
         end
         
 end
