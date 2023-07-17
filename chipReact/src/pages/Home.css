@@ -18,8 +18,7 @@ html, body {
     width: 100%;
     overflow: hidden;
     display: flex;
-    /* flex-wrap: wrap;
-    flex-direction: row; */
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -65,17 +64,18 @@ html, body {
 
 .imgContainer {
     display: flex;
-    /* flex-direction: row; */
+    position: absolute;
+    bottom: 0;
     justify-content: flex-end;
     flex: 1;
-    /* height: 10%; */
     float: right;
     width: 30%;
 }
 
 .logo {
     width: 15%;
-    /* height: auto; */
+    bottom: 0px;
+    height: 100px;
     margin: 8px;
     border-radius: 8px;
     margin-right: 16px; 
@@ -83,7 +83,8 @@ html, body {
 }
 .slider {
     width: 15%;
-    /* height: auto; */
+    bottom: 0px;
+    height: 100px;
     margin: 8px;
     border-radius: 8px;
     background-color: var(--limestone);
