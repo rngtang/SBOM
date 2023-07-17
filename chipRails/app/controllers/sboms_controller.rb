@@ -65,7 +65,7 @@ class SbomsController < ApplicationController
 
         if @sc
             @sc.each do |subC|
-                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], name: subC["name"], version: subC["version"], purl:subC["purl"])
+                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
                 @props = subC["properties"]
                 # creates sbom_component properties for array of object input
                 if @props
