@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
 import { Button } from 'react-bootstrap';
+import Vulnerability from './pages/Vulnerability';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -75,6 +76,7 @@ const App = () => {
                     <Route path="/viewsboms" element={<ViewSBOMs userId={userId}/>} />
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/vulnerability" element={<Vulnerability />} />
                   </>
                 )}
               </Routes>

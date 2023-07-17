@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_17_144139) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
   create_table "dependencies", charset: "utf8mb4", force: :cascade do |t|
     t.string "ref"
     t.text "dependsOn"
@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_17_144139) do
 
   create_table "sbom_components", charset: "utf8mb4", force: :cascade do |t|
     t.string "bom_ref"
-    t.string "type"
+    t.string "group"
     t.string "name"
     t.string "version"
     t.string "purl"
@@ -92,11 +92,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_17_144139) do
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
-    t.string "username"
     t.string "email"
+    t.string "netid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "netid"
   end
 
   create_table "vulnerabilities", charset: "utf8mb4", force: :cascade do |t|
