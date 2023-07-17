@@ -64,9 +64,8 @@ html, body {
 
 .imgContainer {
     display: flex;
-    position: absolute;
-    bottom: 0;
     justify-content: flex-end;
+    bottom: 0;
     flex: 1;
     float: right;
     width: 30%;
@@ -74,8 +73,8 @@ html, body {
 
 .logo {
     width: 15%;
-    bottom: 0px;
-    height: 100px;
+    bottom: 0;
+    height: auto;
     margin: 8px;
     border-radius: 8px;
     margin-right: 16px; 
@@ -83,8 +82,8 @@ html, body {
 }
 .slider {
     width: 15%;
-    bottom: 0px;
-    height: 100px;
+    bottom: 0;
+    height: auto;
     margin: 8px;
     border-radius: 8px;
     background-color: var(--limestone);
