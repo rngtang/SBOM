@@ -3,8 +3,13 @@ import './ViewAccordian.css';
 import Accordion from 'react-bootstrap/Accordion';
 import DeleteButton from './DeleteButton';
 import UpdateButton from './UpdateButton';
+import EditButton from './EditButton';
+import { useState } from 'react';
 
 const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
+
+    const [showForm, setShowForm] = useState(false);
+
 
       if (meta != null){
         return (
@@ -28,7 +33,9 @@ const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
                             <br></br> Description: {sbom.description}
                             </p>   </div>
                        
-                            <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p></div>
+                            <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p>
+                            <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger}/>
+                            </div>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>

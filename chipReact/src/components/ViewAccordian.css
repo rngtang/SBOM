@@ -63,6 +63,8 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: #EEF3FC;
+    min-height: fit-content;
+    height: 200px;
 }
 
 #bodyRight {
