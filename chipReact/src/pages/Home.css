@@ -18,8 +18,8 @@ html, body {
     width: 100%;
     overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    /* flex-wrap: wrap;
+    flex-direction: row; */
     justify-content: space-between;
 }
 
@@ -68,10 +68,9 @@ html, body {
     /* flex-direction: row; */
     justify-content: flex-end;
     flex: 1;
-    height: 10%;
+    /* height: 10%; */
     float: right;
     width: 30%;
-    height: auto;
 }
 
 .logo {
