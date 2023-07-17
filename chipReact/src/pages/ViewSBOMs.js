@@ -36,7 +36,7 @@ function ViewSBOMs({userId}) {
   }
 
   const fetchNames = () => {
-    fetch("http://localhost:8080/sbom_names")
+    fetch(`http://localhost:8080/users/${userId}/sbom_names`)
         .then((response) => response.json())
         .then((data) => {
           const match = data.some((n) => n === userName);
@@ -71,8 +71,7 @@ function ViewSBOMs({userId}) {
       }
       formData.append('description', userDesc);
 
-      const postUrl = `http://localhost:8080/users/${userId}/sboms`
-      fetch((postUrl), { 
+      fetch((`http://localhost:8080/users/${userId}/sboms`), { 
         method: 'POST',
         body: formData
       })
