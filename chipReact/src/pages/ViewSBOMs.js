@@ -173,7 +173,7 @@ function ViewSBOMs() {
           </div>
         </div>
 
-        <GetSBOMs sbomName={sbomName} trigger={trigger}/>
+        <GetSBOMs sbomName={sbomName} trigger={trigger} setTrigger={setTrigger}/>
 
       </div>
     </div>

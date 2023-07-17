@@ -11,22 +11,40 @@ import { Button } from 'react-bootstrap';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
 
   useEffect(() => {
     checkLoginStatus();
   }, []);
 
   const checkLoginStatus = () => {
-    //TODO: need to replace with actual logic to check if user is logged in @Caleb
-    //setLogedIn(true) if user is logged in
-  }
+    fetch('http://localhost:8080/current_user', {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          setLoggedIn(true);
+        } else {
+          throw new Error('Not logged in');
+        }
+      })
+      .catch((error) => {
+        setLoggedIn(false);
+      });
+    // debugger lines below
+    // console.log("1setloggedin: " + loggedIn);
+    // console.log("1setloggingout: " + loggingOut);
+  };
 
   const handleLoginClick = () => {
-    //TODO: add any login logic here @Caleb
-    setLoggedIn(true);
+    const acsUrl = process.env.REACT_APP_ACS_URL;
+    const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
+    window.location.href = `${samlEndpoint}${acsUrl}`;
   }
-
-  const [loggingOut, setLoggingOut] = useState(false);
 
   return (
     
@@ -42,7 +60,7 @@ const App = () => {
               {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
               <Routes>
                 <Route path="/home" element={<Home />} />
-                <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut}/>}/>
+                <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} loggedIn={loggedIn} loggingOut={loggingOut} />}/>
                 {loggedIn && (
                   <>
                     <Route path="/viewsboms" element={<ViewSBOMs />} />
@@ -58,6 +76,7 @@ const App = () => {
       </div>
     </Router>
   );
+
 };
 
 export default App;
