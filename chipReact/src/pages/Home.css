@@ -64,14 +64,16 @@ html, body {
     font-size: 24px;
 }
 
-.imgContainer {
-    position: absolute;
-    bottom: 0;
+.subtitle {
     display: flex;
-    justify-content: flex-end;
-    flex: 1;
-    float: right;
-    /* width: 30%; */
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;    
+}
+
+#image-container {
+    display: flex;
+    flex-direction: row;
 }
 
 .logo {
