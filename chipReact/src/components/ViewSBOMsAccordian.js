@@ -18,7 +18,6 @@ const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
                             <p>v.{sbom.specVersion}</p>
                         </div>
                         <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
-                        {/* <p className='rightTxt'>View</p> */}
                         <ViewButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
                         <UpdateButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
                         </div>
