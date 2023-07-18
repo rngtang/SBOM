@@ -7,7 +7,7 @@ import UpdateButton from './UpdateButton';
 import EditButton from './EditButton';
 import { useState } from 'react';
 
-const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
+const MyAccordion = ({ userId, meta, trigger, sbom, setTrigger }) => {
 
     const [showForm, setShowForm] = useState(false);
 
@@ -24,7 +24,7 @@ const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
                         </div>
                         <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
                         
-                        <UpdateButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
+                        <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
                         </div>
                     </Accordion.Header>
                     <Accordion.Body>

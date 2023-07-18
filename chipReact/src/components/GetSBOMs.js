@@ -27,7 +27,7 @@ export default function GetSBOMs ({sbomName, trigger, setTrigger, userId}) {
                 // console.log(sbom.id.toString() == sbomName.sbomName)
                 if (sbom.name) {
                     if ((sbom.name.includes(sbomName) || sbomName == null) && (sbom.archive == false)){
-                        return (<MyAccordion meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger}/>)
+                        return (<MyAccordion userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger}/>)
                     }
                 }
                 

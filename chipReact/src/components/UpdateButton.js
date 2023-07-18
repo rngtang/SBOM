@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 import React, { useState, useRef, useEffect } from 'react';
 
 
-export default function UpdateButton({sbomId, trigger, setTrigger, name, description}) {
+export default function UpdateButton({userId, sbomId, trigger, setTrigger, name, description}) {
     console.log({sbomId})
     const fileInput = useRef();
     const archiveUrl=`http://localhost:8080/sboms/${sbomId}/archive`
@@ -19,7 +19,7 @@ export default function UpdateButton({sbomId, trigger, setTrigger, name, descrip
           formData.append('name', name); // Continue with the file upload or further processing
           formData.append('description', description);
     
-          fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
+          fetch(`http://localhost:8080/users/${userId}sboms`, { //dummy user 1 for now
             method: 'POST',
             body: formData
           })
