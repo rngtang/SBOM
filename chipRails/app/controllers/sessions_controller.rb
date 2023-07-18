@@ -22,17 +22,18 @@ class SessionsController < ActionController::Base
     def create
       saml_response = params[:SAMLResponse]
       response = OneLogin::RubySaml::Response.new(saml_response, settings: saml_settings)
+      # Rails.logger.info "attrs: #{response.attributes.inspect}"
       if response.is_valid?
         attributes_hash = convert_to_hash(response.attributes)
     
         netid = fetch_netid(attributes_hash)
         email = fetch_email(attributes_hash)
-          # blowup
+        username = fetch_username(attributes_hash)
         user = User.find_or_create_by(netid: netid)
   
         if user.persisted?
           begin
-            user.update!(email: email)
+            user.update!(email: email, username: username)
           rescue => e
             Rails.logger.error "Failed to update user email: #{e.message}"
           end
@@ -73,6 +74,10 @@ class SessionsController < ActionController::Base
   
     def fetch_email(attributes_hash)
       attributes_hash.dig("urn:oid:0.9.2342.19200300.100.1.3", 0)
+    end
+
+    def fetch_username(attributes_hash)
+      attributes_hash.dig("urn:oid:2.16.840.1.113730.3.1.241", 0)
     end
   
     def saml_settings
