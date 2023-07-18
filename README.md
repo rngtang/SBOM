@@ -29,15 +29,16 @@ To use our application, you will need the following:
 
 -- API ROUTES --
 Here is a comprehensive list of our API routes and what they can be used for:
-
-1. GET     /users/{userId}/sboms
+`
+        1. GET     /users/{userId}/sboms
         Finds all sboms associated with a user with id of {userId}.
-2. GET     /sboms/{sbomId}
+        2. GET     /sboms/{sbomId}
         Finds sbom by id.
-3. GET     /sboms
+        3. GET     /sboms
         Finds all sboms.
-4. GET     /vulnerabilities
+        4. GET     /vulnerabilities
         Finds all vulnerabilities.
-5. GET     /sboms/{sbomId}/vulnerabilities
+        5. GET     /sboms/{sbomId}/vulnerabilities
         Finds all vulnerabilities of sbom with id of {sbomId}.
-6.
+        6.
+`
