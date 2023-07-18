@@ -49,7 +49,6 @@ const App = () => {
         // console.log("current user", data.id);
         // console.log("current netid", data.netid);
         // console.log("current netid from state", netId);
-        
       })
       .catch((error) => {
         setLoggedIn(false);
@@ -66,20 +65,20 @@ const App = () => {
   }
 
   return (
-
     <Router>
-
       <div className="container-fluid">
         <div className="row">
           <main role="main" className="main-content">
-            {/* col-md-9 ml-sm-auto col-lg-10 px-4 */}
+            {/* load navbar */}
             {!loggingOut && netId && userName && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} />}
-
             <div className='pages'>
+              {/* login button */}
               {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
               <Routes>
+                {/* routes that are always open */}
                 <Route path="/home" element={<Home />} />
                 <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} loggedIn={loggedIn} loggingOut={loggingOut} />} />
+                {/* create routes after logged in */}
                 {loggedIn && userId && (
                   <>
                     <Route path="/viewsboms" element={<ViewSBOMs userId={userId} />} />
@@ -89,13 +88,11 @@ const App = () => {
                 )}
               </Routes>
             </div>
-
           </main>
         </div>
       </div>
     </Router>
   );
-
 };
 
 export default App;
