@@ -13,9 +13,10 @@ const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
   const [userId, setUserId] = useState(null);
+  const [netId, setNetId] = useState(null);
   //somehow update these later idk
   const username = "this cow";
-  const netid = "cow123";
+  // const netid = "cow123";
 
   useEffect(() => {
     checkLoginStatus();
@@ -41,8 +42,12 @@ const App = () => {
         console.log(data);
         if (data) {
           setUserId(data.id);
+          setNetId(data.netid);
         }
         console.log("current user", data.id);
+        console.log("current netid", data.netid);
+        console.log("current netid from state", netId);
+        
       })
       .catch((error) => {
         setLoggedIn(false);
@@ -66,7 +71,7 @@ const App = () => {
         <div className="row">
           <main role="main" className="main-content">
             {/* col-md-9 ml-sm-auto col-lg-10 px-4 */}
-            {!loggingOut && <MySideNav loggedIn={loggedIn} username={username} netid={netid} />}
+            {!loggingOut && netId && <MySideNav loggedIn={loggedIn} username={username} netid={netId} />}
 
             <div className='pages'>
               {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
