@@ -10,8 +10,11 @@
 puts 'seeding'
 
 # Creates two users
-user1 = User.create(netid: 'netid1', email: 'netid1@duke.edu')
-user2 = User.create(netid: 'netid2', email: 'netid2@duke.edu')
+user1 = User.create(netid: 'net12', email: 'net12@duke.edu')
+user2 = User.create(netid: 'net34', email: 'net34@duke.edu')
+user3 = User.create(netid: 'net56', email: 'net56@duke.edu')
+user4 = User.create(netid: 'net78', email: 'net78@duke.edu')
+user5 = User.create(netid: 'net90', email: 'net90@duke.edu')
 
 # Creates sboms associated and not associated to a user
 sbom1 = Sbom.create(bomFormat: 'CycloneDX', specVersion: '1.4', serialNumber: 'serial number 1', version: 1, name: 'sbom 1', description: 'description sbom1', archive: true)

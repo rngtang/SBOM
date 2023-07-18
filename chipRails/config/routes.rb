@@ -52,6 +52,7 @@ Rails.application.routes.draw do
   get '/scripts/linux', to: 'scripts#linux'
   get '/scripts/windows', to: 'scripts#windows'
 
+  # comment out below? 
   resources :references
   root "articles#index"
 

@@ -12,10 +12,14 @@ class SessionsController < ActionController::Base
     end
     
     def index
+      # @tester = User.new(id: 1)
+      # puts "PRINTING"
+      # @current_user = User.find_by(id: @tester[:id])
+
       if current_user
         render json: current_user
       else
-        render json: {}, status: 404
+        render json: {"hello":"from index in sessions"}, status: 404
       end
     end
   
