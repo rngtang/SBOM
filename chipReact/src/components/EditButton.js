@@ -1,5 +1,6 @@
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';
+import './ViewAccordian.css';
 
 export default function EditButton ({showForm, setShowForm, sbom, trigger, setTrigger}) {
     const [userName, setUserName] = useState("");
@@ -55,6 +56,7 @@ export default function EditButton ({showForm, setShowForm, sbom, trigger, setTr
                 })
                 .then((response)=>{
                     setTrigger(!trigger)
+                    setShowForm(!showForm);
                 })
             }            
             
@@ -62,12 +64,12 @@ export default function EditButton ({showForm, setShowForm, sbom, trigger, setTr
         
     }
     return (
-        <div>
-            <Button variant="outline-primary" id='editButton' type='submit' size="sm" onClick={handleButtonClick}>
+        <div id="edits">
+            <Button variant="outline-secondary" id='editButton' type='submit' size="sm" onClick={handleButtonClick}>
                 Edit SBOM Name/Description
             </Button>
             {showForm && (
-                <form>
+                <form id="editForm">
                     <input
                     type="text" required
                     value={userName}
@@ -88,7 +90,7 @@ export default function EditButton ({showForm, setShowForm, sbom, trigger, setTr
                     // borderColor: formSubmitted && !userName ? 'red' : '',
                     // }}
                     />
-                    <Button variant="outline-primary" id='editSubmit' type='submit' size="sm" onClick={handleSubmitClick}>Upload New SBOM +</Button>
+                    <Button variant="outline-primary" id='editSubmit' type='submit' size="sm" onClick={handleSubmitClick}>Submit Edits</Button>
                 </form>
             )
 
