@@ -15,9 +15,6 @@ const App = () => {
   const [userId, setUserId] = useState(null);
   const [userName, setUserName] = useState(null);
   const [netId, setNetId] = useState(null);
-  //somehow update these later idk
-  // const username = "this cow";
-  // const netid = "cow123";
 
   useEffect(() => {
     checkLoginStatus();

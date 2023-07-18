@@ -102,8 +102,6 @@
     display: flex;
     align-items: center;
     /* background-color: yellow; */
-<<<<<<< HEAD
-=======
 }
 
 #editForm {
@@ -129,5 +127,4 @@
     flex-direction: column;
     align-items: end;
     min-height: 100%;
->>>>>>> development
 }
