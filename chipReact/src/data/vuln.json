@@ -1,0 +1,10 @@
+{
+    "title": "big scary vulnerabilty woah",
+    "vulnerabilityID": "abcd-1234-abcd-1234",
+    "affectedPackage": ["package 1", "package2"],
+    "source": "grype",
+    "sourceLink": "https://github.com/anchore/grype",
+    "vulnerabilitySeverity": "HIGH",
+    "score": 9.99,
+    "visitLink": "https://github.com/anchore/grype"
+}

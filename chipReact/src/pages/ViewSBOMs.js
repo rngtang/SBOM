@@ -8,7 +8,8 @@ import SbomTree from './SbomTree';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
 
-function ViewSBOMs() {
+function ViewSBOMs({userId}) {
+  console.log("CURRENT USER, from view: ", userId);
   const [selectedSbomId, setSelectedSbomId] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -16,7 +17,6 @@ function ViewSBOMs() {
   const [userDesc, setUserDesc] = useState(null);
   const [sbomName, setSbomName] = useState(null);
   const [nameMatch, setNameMatch] = useState(false);
-
   const [trigger, setTrigger] = useState(false);
 
   const fileInput = useRef();
@@ -31,12 +31,13 @@ function ViewSBOMs() {
     }
   }
 
-  const handleViewClick = (sbomId) => { //used for later, for when we actually know the sbomId
+  const handleViewClick = (sbomId) => { 
     setSelectedSbomId(sbomId);
   }
 
+  // fix this fetch
   const fetchNames = () => {
-    fetch("http://localhost:8080/sbom_names")
+    fetch(`http://localhost:8080/users/${userId}/sbom_names`)
         .then((response) => response.json())
         .then((data) => {
           const match = data.some((n) => n === userName);
@@ -71,7 +72,7 @@ function ViewSBOMs() {
       }
       formData.append('description', userDesc);
 
-      fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
+      fetch((`http://localhost:8080/users/${userId}/sboms`), { 
         method: 'POST',
         body: formData
       })
@@ -173,7 +174,7 @@ function ViewSBOMs() {
           </div>
         </div>
 
-        <GetSBOMs sbomName={sbomName} trigger={trigger} setTrigger={setTrigger}/>
+        <GetSBOMs sbomName={sbomName} trigger={trigger} setTrigger={setTrigger} userId={userId}/>
 
       </div>
     </div>

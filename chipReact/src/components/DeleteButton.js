@@ -8,6 +8,7 @@ export default function DeleteButton({sbomId, trigger, setTrigger}) {
         e.stopPropagation()
             // e.preventDefault()
         console.log(trigger)
+        console.log({sbomId})
         if(window.confirm("Are you sure you want to delete this SBOM forever?")){
             fetch(archiveUrl)
             .then(console.log({sbomId}))
