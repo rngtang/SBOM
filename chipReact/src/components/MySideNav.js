@@ -4,13 +4,13 @@ import chipImage from './images/chip.png';
 import './MySideNav.css';
 import ProfileComp from './ProfileComp';
 
-const MySideNav = ({loggedIn}) => {
-    return (
-      <div className="sidebar-sticky">
+const MySideNav = ({ loggedIn, username, netid }) => {
+  return (
+    <div className="sidebar-sticky">
       <nav className="col-md-2 d-md-block bg-navblue sidebar">
-        
-      <div>
-        <div className="navbar-logo">
+
+        <div>
+          <div className="navbar-logo">
             <NavLink to="/home">
               <img src={chipImage} alt="Logo" className="logo-image" />
             </NavLink>
@@ -39,15 +39,15 @@ const MySideNav = ({loggedIn}) => {
                   </NavLink>
                 </li>
 
-                <ProfileComp />
-                </>
+                <ProfileComp username={username} netid={netid} />
+              </>
             )}
           </ul>
-      </div>
-    </nav>
-    
+        </div>
+      </nav>
+
     </div>
-    );
+  );
 };
 
 export default MySideNav;
