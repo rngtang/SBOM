@@ -4,8 +4,9 @@
       "Use the button below to download the powershell script. This will go into your Downloads (user/downloads).", 
       "Move the script into the directory where your project is contained. Do not move your script inside your project.",
       "Open your linux terminal and navigate to the directory where your project is stored inside. This should be the same directory as step 2.", 
-      "Execute the powershell script from inside that directory with the following command. Please note that the script is meant to open an admin powershell.", 
-      "Check to see that your SBOM was created properly. Your SBOM should be titled PROJECT_NAME.json"
+      "Execute the powershell script from inside that directory with the following command. If executed correctly, the script will have to open an admin powershell.", 
+      "Check to see that your SBOM was created properly. Your SBOM should be titled PROJECT_NAME.json",
+      "Please note that these steps will only create an SBOM with components and dependencies, and will NOT be able to find the vulnerabilities of your project. If you wish to have a file with both SBOM and vulnerabilities, you must use Docker and the linux script above."
     ],
     "code": "./windows_install.ps1"
   }

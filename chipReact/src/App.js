@@ -4,30 +4,60 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ViewSBOMs from './pages/ViewSBOMs';
 import GenerateSBOMs from './pages/GenerateSBOMs';
-import Profile from './pages/Profile';
 import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
 import { Button } from 'react-bootstrap';
+<<<<<<< HEAD
 import SbomTree from './pages/SbomTree';
+=======
+import Vulnerability from './pages/Vulnerability';
+>>>>>>> development
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
+  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     checkLoginStatus();
   }, []);
 
   const checkLoginStatus = () => {
-    //TODO: need to replace with actual logic to check if user is logged in @Caleb
-    //setLogedIn(true) if user is logged in
-  }
+    fetch('http://localhost:8080/current_user', {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          setLoggedIn(true);
+          return response.json();
+        } else {
+          throw new Error('Not logged in');
+        }
+      })
+      .then((data) => {
+        console.log(data);
+        if (data) {
+          setUserId(data.id);
+        }
+        console.log("current user", data.id);
+      })
+      .catch((error) => {
+        setLoggedIn(false);
+      });
+    // debugger lines below
+    // console.log("1setloggedin: " + loggedIn);
+    // console.log("1setloggingout: " + loggingOut);
+  };
 
   const handleLoginClick = () => {
-    //TODO: add any login logic here @Caleb
-    setLoggedIn(true);
+    const acsUrl = process.env.REACT_APP_ACS_URL;
+    const samlEndpoint = 'https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu&RelayState=';
+    window.location.href = `${samlEndpoint}${acsUrl}`;
   }
-
-  const [loggingOut, setLoggingOut] = useState(false);
 
   return (
     
@@ -43,13 +73,17 @@ const App = () => {
               {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
               <Routes>
                 <Route path="/home" element={<Home />} />
-                <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut}/>}/>
-                {loggedIn && (
+                <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} loggedIn={loggedIn} loggingOut={loggingOut} />}/>
+                {loggedIn && userId && (
                   <>
+<<<<<<< HEAD
                     <Route path="/viewsboms" element={<ViewSBOMs />} />
                     <Route path="/sbom/:sbomId" element={<SbomTree />} />
+=======
+                    <Route path="/viewsboms" element={<ViewSBOMs userId={userId}/>} />
+>>>>>>> development
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
-                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/vulnerability" element={<Vulnerability />} />
                   </>
                 )}
               </Routes>
@@ -60,6 +94,7 @@ const App = () => {
       </div>
     </Router>
   );
+
 };
 
 export default App;

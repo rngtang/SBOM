@@ -17,12 +17,18 @@ class SbomsController < ApplicationController
     end
 
     def sbomNames
-        render json: Sbom.pluck(:name), status: :ok
+        @user = User.find(params[:user_id])
+        render json: @user.sboms.pluck(:name), status: :ok
     end
 
     def show
         @sbom = Sbom.find(params[:id])
         render json: @sbom, status: :ok
+    end
+
+    def archive
+        @sbom = Sbom.find(params[:id])
+        @sbom.update(archive: true)
     end
 
     def destroy     
@@ -60,7 +66,7 @@ class SbomsController < ApplicationController
 
         if @sc
             @sc.each do |subC|
-                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], name: subC["name"], version: subC["version"], purl:subC["purl"])
+                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
                 @props = subC["properties"]
                 # creates sbom_component properties for array of object input
                 if @props
@@ -123,7 +129,7 @@ class SbomsController < ApplicationController
 
     private
         def sbom_params
-            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, sbom_component: [])
+            params.require(:sbom).permit(:bomFormat, :specVersion, :serialNumber, :version, :user_id, :vulnerabilities, :archive, sbom_component: [])
         end
 
         def set_sboms

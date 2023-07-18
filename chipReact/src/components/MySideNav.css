@@ -16,7 +16,8 @@ html, body {
     /* position: fixed; */
     /* min-height: 95vh; */
     border-radius: 16px;  
-    display: inline-block;
+    display: flex;    
+    position: relative;
 }
 
 .sidebar-sticky {    
@@ -27,6 +28,20 @@ html, body {
     display: inline-block;
     flex-direction: column;
     justify-content: space-between;
+    
+}
+
+.sidebar {
+    height: 95vh;
+    width: 208px;
+    position: sticky; 
+    top: 20px;
+    /* position: fixed; */
+    /* min-height: 95vh; */
+    border-radius: 16px;  
+    display: inline-block;
+    /* flex-direction: column;
+    justify-content: space-between; */
 }
 
 .nav {
@@ -63,11 +78,18 @@ html, body {
     box-shadow: 1px 1px black;
 }
 
+.navbar-logo {
+    width: auto;
+    margin: 0 8px;
+    box-shadow: 0 4px 4px -4px rgba(255, 255, 255, 1);
+}
+
 .logo-image {
     width: 128px;
     height: auto;
     display: block;
     margin: 8px auto;
     margin-top: 20px;
-    padding: 16px 0;
+    padding: 16px 0 8px 0;
 }
+

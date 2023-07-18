@@ -9,7 +9,8 @@ import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
 import { useNavigate } from 'react-router-dom';
 
-function ViewSBOMs() {
+function ViewSBOMs({userId}) {
+  console.log("CURRENT USER, from view: ", userId);
   const [selectedSbomId, setSelectedSbomId] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -17,7 +18,6 @@ function ViewSBOMs() {
   const [userDesc, setUserDesc] = useState(null);
   const [sbomName, setSbomName] = useState(null);
   const [nameMatch, setNameMatch] = useState(false);
-
   const [trigger, setTrigger] = useState(false);
 
   const fileInput = useRef();
@@ -32,18 +32,19 @@ function ViewSBOMs() {
     }
   }
 
-  const navigate = useNavigate();
-  const handleViewClick = (sbomId) => {
-    navigate(`/sbom/${sbomId}`);
+  const handleViewClick = (sbomId) => { 
+    setSelectedSbomId(sbomId);
   }
 
+  // fix this fetch
   const fetchNames = () => {
-    fetch("http://localhost:8080/sbom_names")
+    fetch(`http://localhost:8080/users/${userId}/sbom_names`)
         .then((response) => response.json())
         .then((data) => {
           const match = data.some((n) => n === userName);
           if (match) {
-            console.log("helloooooooooooooo");
+            console.log("matched a name");
+            // alert("You need a unique name for your SBOM.");
             setNameMatch(true);
           } else {
             setNameMatch(false);
@@ -55,26 +56,24 @@ function ViewSBOMs() {
   const handleFileUpload = (event) => {
     event.preventDefault();
     fetchNames();
-    console.log("getting names");
-    const file = event.target.files[0];
-    console.log(" ready to fetch ");
-
-    const formData = new FormData();
-    formData.append('file', file);
-    // formData.append('name', userName);
-
-
-    if (nameMatch) {
-      alert("You need a unique name for your SBOM.");
-    } else {
-      formData.append('name', userName);
-    }
-    
-    formData.append('description', userDesc);
-
     setLoading(true); // Set loading state to true before fetch request
+    const formData = new FormData();
+    console.log("preparing to get names");
 
-      fetch("http://localhost:8080/users/1/sboms", { //dummy user 1 for now
+    setTimeout(() => {
+      const file = event.target.files[0];
+      formData.append('file', file);
+
+      if (nameMatch) {
+        alert("Your SBOM name must be unique.");
+        setLoading(false);
+        return;
+      } else {
+        formData.append('name', userName); // Continue with the file upload or further processing
+      }
+      formData.append('description', userDesc);
+
+      fetch((`http://localhost:8080/users/${userId}/sboms`), { 
         method: 'POST',
         body: formData
       })
@@ -88,13 +87,10 @@ function ViewSBOMs() {
         return response.json();
       })
       .then((data) => {
-        //console.log(data)
-      })
-      .catch((error) => {
-        // console.log(error);
       });
       
     setFormSubmitted(false); //reset
+    }, 500); // Adjust the delay if needed
   }
 
 
@@ -105,6 +101,7 @@ function ViewSBOMs() {
 
           <form id="buttonContainer" onSubmit = {(event) => event.preventDefault()} noValidate >
             <div>
+              {fetchNames()}
               <input
                 type="text" required
                 value={userName}
@@ -178,7 +175,7 @@ function ViewSBOMs() {
           </div>
         </div>
 
-        <GetSBOMs sbomName={sbomName} trigger={trigger}/>
+        <GetSBOMs sbomName={sbomName} trigger={trigger} setTrigger={setTrigger} userId={userId}/>
 
       </div>
     </div>

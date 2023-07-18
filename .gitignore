@@ -1,6 +1,6 @@
 chipReact/node_modules/
 chip_react
-
+chip_react/*
 # chipReact ignores
 chipReact/.pnp
 chipReact/.pnp.js

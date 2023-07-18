@@ -1,8 +1,10 @@
 import React from 'react';
 import './ViewAccordian.css';
 import Accordion from 'react-bootstrap/Accordion';
+import DeleteButton from './DeleteButton';
+import UpdateButton from './UpdateButton';
 
-const MyAccordion = ({ meta, stat, sbom }) => {
+const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
 
       if (meta != null){
         return (
@@ -14,9 +16,9 @@ const MyAccordion = ({ meta, stat, sbom }) => {
                             <p id='cyc'>{sbom.bomFormat}</p>
                             <p>v.{sbom.specVersion}</p>
                         </div>
-                        <p>{stat}</p>
-                        <p>View</p>
-                        <p>Update SBOM</p>
+                        <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
+                        <p className='rightTxt'>View</p>
+                        <UpdateButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
                         </div>
                     </Accordion.Header>
                     <Accordion.Body>

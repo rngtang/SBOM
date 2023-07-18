@@ -54,7 +54,7 @@ const Home = () => {
             <CyberSecurityRealWorld />
             <WhatAreSBOMs />
             <OurProject />
-            <img src={headerImage} alt="Intro Image" />
+            {/* <img src={headerImage} alt="Intro Image" /> */}
             {/* <Button> Route SAML2 Post </Button> */}
         </div>
     );

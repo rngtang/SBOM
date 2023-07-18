@@ -3,18 +3,21 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 44%;
+    width: 45%;
     /* height: 20px; */
     font-size: small;
-    margin-top: 9px;
+    /* margin-top: 9px; */
     margin-bottom: 0px;
-    margin-right: 6%;
+    margin-right: 5%;
+    /* vertical-align: center; */
 }
 
 #accordianRight p {
     width: auto;
 }
-
+.rightTxt {
+    margin:0;
+}
 #name {
     margin-bottom: 0px;
 }

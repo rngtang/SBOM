@@ -48,7 +48,16 @@ Rails.application.routes.draw do
 
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
   
-  get '/sbom_names', to: 'sboms#sbomNames'
-  get '/scripts/download', to: 'scripts#download'
+  get '/users/:user_id/sbom_names', to: 'sboms#sbomNames'
+  get '/scripts/linux', to: 'scripts#linux'
+  get '/scripts/windows', to: 'scripts#windows'
+
+  resources :references
+  root "articles#index"
+
+  resources :sessions, only: [:new, :create, :destroy]
+  post '/saml/consume', to: 'sessions#create'
+  get '/current_user', to: 'sessions#index' 
+  get '/destroy', to: 'sessions#destroy'
 
 end
