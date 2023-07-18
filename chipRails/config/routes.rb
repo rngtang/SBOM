@@ -53,7 +53,7 @@ Rails.application.routes.draw do
   get '/scripts/windows', to: 'scripts#windows'
 
   resources :references
-  root "articles#index"
+  # root "articles#index"
 
   resources :sessions, only: [:new, :create, :destroy]
   post '/saml/consume', to: 'sessions#create'

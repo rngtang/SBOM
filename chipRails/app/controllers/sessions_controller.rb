@@ -1,6 +1,5 @@
 class SessionsController < ActionController::Base
     protect_from_forgery with: :exception, except: :create
-  
     def current_user
       @current_user ||= User.find_by(id: session[:user_id])
     end
@@ -22,7 +21,6 @@ class SessionsController < ActionController::Base
     def create
       saml_response = params[:SAMLResponse]
       response = OneLogin::RubySaml::Response.new(saml_response, settings: saml_settings)
-      # Rails.logger.info "attrs: #{response.attributes.inspect}"
       if response.is_valid?
         attributes_hash = convert_to_hash(response.attributes)
     
