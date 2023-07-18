@@ -10,7 +10,7 @@ class Sbom < ApplicationRecord
     has_many :metadata, dependent: :destroy
     has_many :sbom_components, dependent: :destroy
     has_many :dependencies, dependent: :destroy
-    has_many :vulnerabilities, dependent: :destroy
+    has_and_belongs_to_many :vulnerabilities, dependent: :destroy
     serialize :sbom_components, Array #Added the serialize
     serialize :dependencies, Array
 end
