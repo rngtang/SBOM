@@ -1,5 +1,6 @@
 # !/bin/bash
 # make sure you're running script from your test branch (NOT development)
+branch=$(git symbolic-ref --short HEAD)
 
 # commit local changes 
 echo "commit local changes"
@@ -14,7 +15,6 @@ git pull
 
 # go back to local branch
 echo "go back to local branch"
-branch=$(git symbolic-ref --short HEAD)
 git checkout $branch
 
 # merge development into local branch 
