@@ -2,7 +2,7 @@ import React from 'react';
 import './ViewAccordian.css';
 import Accordion from 'react-bootstrap/Accordion';
 import DeleteButton from './DeleteButton';
-import ViewButton from './ViewButton';
+import ViewVulnsButton from './ViewVulnsButton';
 import UpdateButton from './UpdateButton';
 import EditButton from './EditButton';
 import { useState } from 'react';
@@ -23,7 +23,7 @@ const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
                             <p>v.{sbom.specVersion}</p>
                         </div>
                         <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
-                        <ViewButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
+                        
                         <UpdateButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
                         </div>
                     </Accordion.Header>
@@ -35,6 +35,7 @@ const MyAccordion = ({ meta, trigger, sbom, setTrigger }) => {
                             </p>   </div>
                        
                             <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p>
+                            <ViewVulnsButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger}/>
                             <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger}/>
                             </div>
                     </Accordion.Body>
