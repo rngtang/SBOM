@@ -8,7 +8,6 @@ const MySideNav = ({ loggedIn, username, netid }) => {
   return (
     <div className="sidebar-sticky">
       <nav className="col-md-2 d-md-block bg-navblue sidebar">
-
         <div>
           <div className="navbar-logo">
             <NavLink to="/home">
@@ -38,14 +37,12 @@ const MySideNav = ({ loggedIn, username, netid }) => {
                     Logout
                   </NavLink>
                 </li>
-
                 <ProfileComp username={username} netid={netid} />
               </>
             )}
           </ul>
         </div>
       </nav>
-
     </div>
   );
 };

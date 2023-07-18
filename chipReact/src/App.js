@@ -70,7 +70,7 @@ const App = () => {
         <div className="row">
           <main role="main" className="main-content">
             {/* load navbar */}
-            {!loggingOut && netId && userName && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} />}
+            {!loggingOut && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} />}
             <div className='pages'>
               {/* login button */}
               {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
