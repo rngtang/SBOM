@@ -44,7 +44,7 @@ const App = () => {
         if (data) {
           setUserId(data.id);
           setNetId(data.netid);
-          setUserName(data.email);//change this later to username
+          setUserName(data.username);//change this later to username
         }
         // console.log("current user", data.id);
         // console.log("current netid", data.netid);
