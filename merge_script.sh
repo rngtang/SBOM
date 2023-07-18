@@ -42,6 +42,9 @@ echo "update dev"
 git add .
 git commit -m "merged branch $branch" 
 git push
+<<<<<<< HEAD
 
 
 # HELLO PLEASE 
+=======
+>>>>>>> development
