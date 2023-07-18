@@ -73,7 +73,8 @@ const App = () => {
                 <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} loggedIn={loggedIn} loggingOut={loggingOut} />}/>
                 {loggedIn && userId && (
                   <>
-                    <Route path="/vulnerability" element={<Vulnerability userId={userId}/>} />
+                    <Route path="/vulnerability" element={<Vulnerability/>} /> 
+                    {/* vulnerability route needs to take in sbomId */}
                     <Route path="/viewsboms" element={<ViewSBOMs userId={userId}/>} />
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
                     <Route path="/profile" element={<Profile />} />
