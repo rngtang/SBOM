@@ -11,7 +11,7 @@ const Intro = () => {
             <div className="subtitle">
                 <p>A simple way to create and consume SBOMs.</p>
                 <div id="image-container">
-                    <img src={chip2} alt="chip logo 2" className="logo" />
+                    <img src={chip2} alt="chip logo 2" id="logoTitle" />
                     <div className="slider">
                         <LogoSlider />
                     </div>
