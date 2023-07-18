@@ -26,6 +26,7 @@ metadatum2 = sbom2.metadata.create(timestamp: '2023-06-22 7:22:00')
 # Creates some sbomComponents associated with the sboms
 sbomComponent1 = sbom1.sbom_components.create(bom_ref: 'reference depency 1', group: 'library', name: 'sbomComponent NAME 1', version: '1.1', purl: 'eiwghjewoijg')
 sbomComponent2 = sbom2.sbom_components.create(bom_ref: 'reference depency 1', group: 'library', name: 'sbomComponent NAME 2', version: '1.1', purl: 'eiwghjewoijg')
+sbomComponent2.sboms.create(bomFormat: 'CycloneDX', specVersion: '1.4', serialNumber: 'serial number 6', version: 1, name: 'sbom 6', description: 'description sbom6', archive: true)
 
 # Creates tools associated to metadata
 tool1 = metadatum1.tools.create(vendor: 'meta', name: 'cyclonedx', version: '2.3.4')
@@ -42,6 +43,7 @@ dependency2 = sbom2.dependencies.create(ref: 'pjipip[kl[]]', dependsOn: ['first 
 # Creates vulnerabilities
 vuln1 = sbom1.vulnerabilities.create(bom_ref: 'sdsdgsdf', vulnID: 'sdfsdgsd', description: 'egeg', recommendation: 'wegewg', affected: ['first element', 'second element'])
 vuln2 = sbom2.vulnerabilities.create(bom_ref: 'sdsdgsdf', vulnID: 'sdfsdgsd', description: 'egeg', recommendation: 'wegewg', affected: ['first element', 'second element'])
+vuln1.sboms.create(bomFormat: 'CycloneDX', specVersion: '1.4', serialNumber: 'serial number 5', version: 1, name: 'sbom 5', description: 'description sbom5', archive: true)
 
 # Creates ratings
 rating1 = vuln1.ratings.create(score: 4.5, severity: 'high')
