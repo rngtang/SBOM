@@ -13,9 +13,10 @@ const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
   const [userId, setUserId] = useState(null);
+  const [userName, setUserName] = useState(null);
   const [netId, setNetId] = useState(null);
   //somehow update these later idk
-  const username = "this cow";
+  // const username = "this cow";
   // const netid = "cow123";
 
   useEffect(() => {
@@ -43,10 +44,11 @@ const App = () => {
         if (data) {
           setUserId(data.id);
           setNetId(data.netid);
+          setUserName(data.email);//change this later to username
         }
-        console.log("current user", data.id);
-        console.log("current netid", data.netid);
-        console.log("current netid from state", netId);
+        // console.log("current user", data.id);
+        // console.log("current netid", data.netid);
+        // console.log("current netid from state", netId);
         
       })
       .catch((error) => {
@@ -71,7 +73,7 @@ const App = () => {
         <div className="row">
           <main role="main" className="main-content">
             {/* col-md-9 ml-sm-auto col-lg-10 px-4 */}
-            {!loggingOut && netId && <MySideNav loggedIn={loggedIn} username={username} netid={netId} />}
+            {!loggingOut && netId && userName && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} />}
 
             <div className='pages'>
               {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
