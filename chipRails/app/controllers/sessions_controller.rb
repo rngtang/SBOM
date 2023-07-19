@@ -21,6 +21,7 @@ class SessionsController < ActionController::Base
   
     def create
       saml_response = params[:SAMLResponse]
+      
       response = OneLogin::RubySaml::Response.new(saml_response, settings: saml_settings)
       # Rails.logger.info "attrs: #{response.attributes.inspect}"
       if response.is_valid?
@@ -30,7 +31,7 @@ class SessionsController < ActionController::Base
         email = fetch_email(attributes_hash)
         username = fetch_username(attributes_hash)
         user = User.find_or_create_by(netid: netid)
-  
+        
         if user.persisted?
           begin
             user.update!(email: email, username: username)
