@@ -36,8 +36,7 @@ Here is a comprehensive list of our API routes and what they can be used for:
         Finds sbom by id.
         3. GET          /sboms
         Finds all sboms.
-        4. GET          /vulnerabilities
-        Finds all vulnerabilities.
+        
         5. GET          /sboms/{sbomId}/vulnerabilities
         Finds all vulnerabilities of sbom with id of {sbomId}.
         6. GET          /sboms/{sbomId}/metadata
@@ -48,40 +47,51 @@ Here is a comprehensive list of our API routes and what they can be used for:
         Add a new sbom to a user's sbom list.
         9. PUT          /sboms/{sbomId}
         Edit a sbom's name and description.
+
         10. GET         /sbom_components/{sbom_componentId}/licenses
         Finds the licenses of an sbom component.
         11. GET         /sbom_components/{sbom_componentId}
         Finds a specific sbom component.
+        
         12. GET         /metadata/{metadatumId}/tools
         Finds the tools used to create the sbom.
         13. GET         /metadata/{metadatumId}/components
-        Finds the component of the metadata./
-        14. GET         /sboms/{sbomId}/metadata
-        Finds the metadata of a specific sbom.
+        Finds the component of the metadata.
         15. GET         /metadata/{metadatumId}
         Finds a specific metadatum.
+        
+        4. GET          /vulnerabilities
+        Finds all vulnerabilities.
         16. GET         /vulnerabilities/{vulnerabilityId}/ratings
         Finds the rating of a specific vulnerability.
         17. GET         /vulnerabilities/{vulnerabilityId}
         Finds a specific vulnerability.
         18. GET         /ratings/{ratingId}/sources
         Finds the source of a specific rating.
-        19. GET         /users
-        Finds all users.
-        20. POST        /users
-        Creates a new user.
-        21. GET         /users/{userId}
-        Finds a specific user.
-        22. GET         /scripts/linux
-        Finds a Linux script for downloading and creating an SBOM
-        23. GET         /scripts/windows
-        Finds a Windows script for downloading and creating an sbom.
-        24.?????????? REFERENCES??????
-        25. POST        /sessions
-        Creates a new session for the current user.
+
         26. GET         /sboms/{sbomId}/dependencies
         Finds all dependencies of specific sbom.
         27. GET         /dependencies/{dependencyId}/tree
         Finds all direct children of specific dependency.
         28. GET         /sboms/{sbomId}/dependencies_tree
         Finds a dependency tree for a specific SBOM.
+
+
+        19. GET         /users
+        Finds all users.
+        20. POST        /users
+        Creates a new user.
+        21. GET         /users/{userId}
+        Finds a specific user.
+
+        22. GET         /scripts/linux
+        Finds a Linux script for downloading and creating an SBOM
+        23. GET         /scripts/windows
+        Finds a Windows script for downloading and creating an sbom.
+
+        24.?????????? REFERENCES??????
+
+        25. POST        /sessions
+        Creates a new session for the current user.
+
+        
