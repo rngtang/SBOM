@@ -23,11 +23,19 @@ git merge development
 
 # resolve any merge conflicts 
 # echo "resolve any merge conflicts"
-okay='yes'
-read -p "Have you resolved ALL merge conflicts? Answer 'yes' to continue. `echo $'\n> '`" 
-if [ "$REPLY:u" != "$okay:u" ]; then
-   exit
-fi
+while true; do
+    read -p "Have you resolved ALL merge conflicts? Answer 'yes' to continue. Press Enter to keep prompting. `echo $'\n> '`" -r input
+    if [[ "$input" == "yes" ]]; then
+        break
+    elif [[ -z "$input" ]]; then
+        continue
+    else
+        echo "Invalid input. Please enter 'yes' or press Enter to continue."
+    fi
+done
+
+# The script will continue here if the user entered "yes"
+echo "Continuing to merge into development..."
 
 # then commit merge conflict resolution
 # echo "then commit merge conflict resolution"
