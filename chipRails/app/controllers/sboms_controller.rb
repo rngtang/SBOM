@@ -101,6 +101,15 @@ class SbomsController < ApplicationController
         @vulns = data["vulnerabilities"]
         if @vulns
             @vulns.each do |v|
+                # Find existing vulnerability or create new one
+                @vuln = Vulnerability.find_or_create_by(vulnID: v["id"]) do |vuln|
+                    vuln.bom_ref = v["bom-ref"]
+                    vuln.description = v["description"]
+                    vuln.recommendation = v["advisories"][0]["url"]
+                end
+                # Associate vulnerability with SBoM
+                @sbom.vulnerabilities << @vuln unless @sbom.vulnerabilities.include?(@vuln)
+
                 @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"])
                 @affected = v["affects"]
                 if @affected
