@@ -16,8 +16,9 @@ const Intro = () => {
                 </div>
                 
                 <div className="outside-img">
-                    <div id="image-container">
+                    <div className="image-container">
                         <img src={chip2} alt="chip logo 2" id="logoTitle" />
+
                         <div className="slider">
                             <LogoSlider />
                         </div>

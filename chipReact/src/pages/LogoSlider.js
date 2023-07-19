@@ -7,18 +7,20 @@ import ciscoLogo from './images/cisco.png';
 
 
 const images = [
-    itoLogo,
-    ciscoLogo
+  ciscoLogo,  
+  itoLogo,
 ];
 
 export default function LogoSlider () {
     return (
-      <Carousel showStatus={false} showThumbs={false}>
-        {images.map((imageUrl, index) => (
-          <div key={index}>
-            <img src={imageUrl} alt={`Image ${index}`} />
-          </div>
-        ))}
+      <Carousel showStatus={false} showThumbs={false} showIndicators={false}>
+        <div>
+          <img src={ciscoLogo} alt="cicso logo"/>
+        </div>
+        <div>
+          <img src={itoLogo} alt="ito logo"/>
+        </div>
+
       </Carousel>
     );
 };
