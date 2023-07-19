@@ -152,6 +152,7 @@ body {
 }
 
 .searchInput {
+  width: 100%;
   padding: 0px 8px;
   height: 40px;
   border: none;
