@@ -32,8 +32,8 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
                                 <p id='cyc'>{sbom.bomFormat}</p>
                                 <p>v.{sbom.specVersion}</p>
                             </div>
-                            <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
                             <TreeButton sbomId={sbom.id}/>
+                            <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
                             <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
                         </div>
                     </Accordion.Header>

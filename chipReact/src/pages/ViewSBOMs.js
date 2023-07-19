@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 // userId is the ID of the user, not the netid
 function ViewSBOMs({ userId }) {
-  // debugger linegit
+  // debugger line
   // console.log("CURRENT USER, from view: ", userId);
 
   // create states for a lot of things [someone please update this]
@@ -182,9 +182,9 @@ function ViewSBOMs({ userId }) {
             <p>SBOM LIST</p>
             <div id='rowFunct'>
               <p>SBOM TYPE</p>
-              <p>STATUS</p>
-              <p>VISUALIZATION</p>
-              <p>ACTION</p>
+              <p id='vizhead'>VISUALIZATION</p>
+              <p id='delete'>DELETE</p>
+              <p id='update'>UPDATE</p>
             </div>
           </div>
 

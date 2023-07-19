@@ -218,3 +218,15 @@ body {
   width: 42%;
   margin-right: 9.5%;
 }
+
+#vizhead {
+  margin-left: -64px;
+  overflow:hidden;
+}
+#delete {
+  margin-left: -30px
+}
+
+#update {
+  margin-right: 9px;
+}

@@ -11,7 +11,7 @@ export default function TreeButton ({sbomId}) {
     return (
         <div>
             <Button variant="outline-primary" id='treeButton' type='submit' size="sm" onClick={handleButtonClick}>
-                View
+                View SBOM
             </Button>
         </div>
     )
