@@ -39,6 +39,9 @@ const App = () => {
       .then((data) => {
         console.log(data);
         if (data) {
+          console.log(data.id);
+          console.log(data.netid);
+          console.log(data.username);
           setUserId(data.id);
           setNetId(data.netid);
           setUserName(data.username);//change this later to username

@@ -29,7 +29,7 @@ class SessionsController < ActionController::Base
       # Rails.logger.info "attrs: #{response.attributes.inspect}"
       if response.is_valid?
         attributes_hash = convert_to_hash(response.attributes)
-    
+
         netid = fetch_netid(attributes_hash)
         email = fetch_email(attributes_hash)
         username = fetch_username(attributes_hash)
