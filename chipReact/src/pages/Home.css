@@ -17,9 +17,9 @@ html, body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    justify-content: space-between;
 }
 
 .top:before {
@@ -39,10 +39,7 @@ html, body {
 
 .title {
     display: flex;
-    /* position: absolute;
-    top: 0; */
-    /* align-self: flex-start;   */
-    flex: 2;
+    /* flex: 2; */
     flex-direction: column;
     justify-content: flex-end;
     text-align: left;
@@ -58,12 +55,9 @@ html, body {
     word-wrap: normal;
 }
 
-.title p {
+.subtitle {
     padding-top: 16px;
     font-size: 24px;
-}
-
-.subtitle {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -73,39 +67,33 @@ html, body {
     width: fit-content;
 }
 
+.outside-img {
+    display: flex;
+    direction: rtl;
+    height: 90vh;
+    flex-direction: column;
+}
+
 #image-container {
     display: flex;
     flex-direction: row;
-    /* min-width: fit-content; */
-    /* height: 10vw; */
-    /* margin-left: 20vw; */
-    width: 23vw;
-    margin-right: 50px;
+    margin-top: auto;
+    margin-bottom: 24px;
+    margin-right: 8px;
+    width: 100%;
 }
 
 #logoTitle {
     width: 50%;
-    bottom: 0;
-    height: auto;
+    height: 70%;
     margin: 8px;
     border-radius: 8px;
-    margin-right: 16px; 
     background-color: var(--limestone);
 }
 
-.logo {
-    width: 15%;
-    bottom: 0;
-    height: auto;
-    margin: 8px;
-    border-radius: 8px;
-    margin-right: 16px; 
-    background-color: var(--limestone);
-}
 .slider {
     width: 50%;
-    bottom: 0;
-    height: auto;
+    height: 50%;
     margin: 8px;
     border-radius: 8px;
     background-color: var(--limestone);
@@ -115,7 +103,6 @@ html, body {
     position: relative;
     color: var(--piedment);
     z-index: 1;
-    /* background-image: linear-gradient(rgba(1, 33, 105, 1), rgba(1, 33, 105, 0) 93%); */
 }
 
 .section {
@@ -130,6 +117,15 @@ html, body {
     max-height: none;
     background-color: white;
 }
+
+/* .logo {
+    bottom: 0;
+    height: auto;
+    margin: 8px;
+    border-radius: 8px;
+    margin-right: 16px; 
+    background-color: var(--limestone);
+} */
 
 /* .section div {
     position: relative;

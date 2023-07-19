@@ -7,13 +7,20 @@ import LogoSlider from './LogoSlider';
 const Intro = () => {
     return (
         <>
-            <h1>Centralized Hub for Inventories Platform</h1>
-            <div className="subtitle">
-                <p>A simple way to create and consume SBOMs.</p>
-                <div id="image-container">
-                    <img src={chip2} alt="chip logo 2" id="logoTitle" />
-                    <div className="slider">
-                        <LogoSlider />
+            <div className="top">
+                <div className="title">
+                    <h1>Centralized Hub for Inventories Platform</h1>
+                    <div className="subtitle">
+                        <p>A simple way to create and consume SBOMs.</p>
+                    </div>
+                </div>
+                
+                <div className="outside-img">
+                    <div id="image-container">
+                        <img src={chip2} alt="chip logo 2" id="logoTitle" />
+                        <div className="slider">
+                            <LogoSlider />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,7 +60,7 @@ const OurProject = () => {
             <p>
                 Our team, composed of students from Duke University, is working in collaboration with Duke's Information Technology Security Office (ITSO) to explore the most active open-source projects in the SBOM and supply chain security space. We aim to develop a user-friendly interface that makes it easy for development teams at Duke to gather and share this information.
             </p>
-            <img src={chip2} alt="chip logo 2" className="logo" />
+            {/* <img src={chip2} alt="chip logo 2" className="logo" /> */}
         </div>
     );
 };
@@ -63,12 +70,8 @@ const Home = () => {
     return (
         <>
             <div className="homeBG">
-                <div className='top'>
-                    <div className="title">
-                        <Intro />
-                    </div>
-                    
-                </div>
+                <Intro />
+
                 <div className='page'>
                     <CyberSecurityRealWorld />
                     <WhatAreSBOMs />
