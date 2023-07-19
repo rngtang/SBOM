@@ -23,8 +23,11 @@ git merge development
 
 # resolve any merge conflicts 
 # echo "resolve any merge conflicts"
-
-
+okay='yes'
+read -p "Have you resolved ALL merge conflicts? Answer 'yes' to continue. `echo $'\n> '`" 
+if [ "$REPLY:u" != "$okay:u" ]; then
+   exit
+fi
 
 # then commit merge conflict resolution
 # echo "then commit merge conflict resolution"
