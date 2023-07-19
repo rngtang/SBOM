@@ -51,9 +51,10 @@ Rails.application.routes.draw do
   get '/users/:user_id/sbom_names', to: 'sboms#sbomNames'
   get '/scripts/linux', to: 'scripts#linux'
   get '/scripts/windows', to: 'scripts#windows'
+  get '/scripts/mac', to: 'scripts#mac'
 
   resources :references
-  root "articles#index"
+  # root "articles#index"
 
   resources :sessions, only: [:new, :create, :destroy]
   post '/saml/consume', to: 'sessions#create'
