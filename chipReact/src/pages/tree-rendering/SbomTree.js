@@ -1,9 +1,50 @@
+<<<<<<< HEAD
 
 
 
 
 
 // Axios functional code below:
+=======
+import React from 'react';
+import Tree from 'react-d3-tree';
+import { useParams } from 'react-router-dom';
+import testTree from './testing.json'; // make sure the path to your JSON file is correct
+import './custom-tree.css';
+
+const containerStyles = {
+  width: '80%',
+  height: '800px',
+};
+
+function calculateDepth(node, depth = 0) {
+  node.depth = depth;
+  if (node.children) {
+    node.children.forEach((child) => calculateDepth(child, depth + 1));
+  }
+}
+
+function SbomTree() {
+  const { id } = useParams();
+  
+  calculateDepth(testTree);
+  return (
+    <div style={containerStyles}>
+      <Tree
+        data={testTree}
+        translate={{ x: 50, y: 400 }}
+        rootNodeClassName="node__root"
+        branchNodeClassName="node__branch-2"
+        leafNodeClassName="node__leaf"
+      />
+    </div>
+  );
+}
+
+export default SbomTree;
+
+/*Axios functional code below:
+>>>>>>> de960b2eefcee4fb4dcf23209e8c18806a009223
 
 import React, { useState, useEffect } from 'react';
 import Tree from 'react-d3-tree';

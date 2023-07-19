@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './ViewAccordian.css';
 
 // sbomId is the ID of the SBOM
-export default function ViewVulnsButton({ sbomId }) {
+export default function ViewVulnsButton({ sbomId, sbomName, sbomDesc }) {
 
     // create a state for navigation route
     const navigate = useNavigate();
@@ -12,7 +12,7 @@ export default function ViewVulnsButton({ sbomId }) {
     // create a handle for button click
     const handleButtonClick = () => {
         // set navigate target route
-        navigate('/vulnerability');
+        navigate('/vulnerability', { state: { sbomId, sbomName, sbomDesc } });
     }
 
     return (
