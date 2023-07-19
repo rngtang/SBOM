@@ -39,13 +39,13 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
                     <Accordion.Body>
                         <div id='meta'> <p id='metaHead'>Metadata: </p> <p id='tab'>
                             Timestamp: {meta.timestamp}
-                            <br></br>   Tools: {meta.tools[0].vendor} - {meta.tools[0].name} - v.{meta.tools[0].version}
+                            <br></br> Tools: {meta.tools[0].vendor} - {meta.tools[0].name} - v.{meta.tools[0].version}
                             <br></br> Description: {sbom.description}
                         </p>
                         </div>
 
                         <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p>
-                            <ViewVulnsButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
+                            <ViewVulnsButton sbomId={sbom.id} sbomName={sbom.name} sbomDesc={sbom.description} trigger={trigger} setTrigger={setTrigger} />
                             <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger} />
                         </div>
                     </Accordion.Body>

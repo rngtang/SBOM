@@ -93,7 +93,7 @@ const App = () => {
                     <Route path="/viewsboms" element={<ViewSBOMs userId={userId} />} />
                     <Route path="/sbom/:sbomId" element={<SbomTree />} />
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
-                    <Route path="/vulnerability" element={<Vulnerability />} />
+                    <Route path="/vulnerability" element={<Vulnerability/>} />
                   </>
                 )}
               </Routes>
