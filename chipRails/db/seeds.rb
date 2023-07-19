@@ -25,8 +25,8 @@ metadatum2 = sbom2.metadata.create(timestamp: '2023-06-22 7:22:00')
 
 # Creates some sbomComponents associated with the sboms
 sbomComponent1 = sbom1.sbom_components.create(bom_ref: 'reference depency 1', group: 'library', name: 'sbomComponent NAME 1', version: '1.1', purl: 'eiwghjewoijg')
-sbomComponent2 = sbom2.sbom_components.create(bom_ref: 'reference depency 1', group: 'library', name: 'sbomComponent NAME 2', version: '1.1', purl: 'eiwghjewoijg')
-SbomComponent.
+sbomComponent2 = sbom2.sbom_components.create(bom_ref: 'reference depency 2', group: 'library', name: 'sbomComponent NAME 2', version: '1.1', purl: 'eiwghjewoijg')
+sbomComponent3 = SbomComponent.create(bom_ref: 'reference depency 3', group: 'library', name: 'sbomComponent NAME 3', version: '1.1', purl: 'eiwghjewoijg')
 
 # Creates tools associated to metadata
 tool1 = metadatum1.tools.create(vendor: 'meta', name: 'cyclonedx', version: '2.3.4')
