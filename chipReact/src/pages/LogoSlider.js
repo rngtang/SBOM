@@ -13,15 +13,15 @@ const images = [
 
 export default function LogoSlider () {
     return (
-      <Carousel showStatus={false} showThumbs={false} showIndicators={false}>
-        <div>
-          <img src={ciscoLogo} alt="cicso logo"/>
-        </div>
-        <div>
-          <img src={itoLogo} alt="ito logo"/>
-        </div>
-
-      </Carousel>
+      <div>
+        <Carousel showStatus={false} showThumbs={false} showIndicators={false} >
+          {images.map((imageSrc, index) => (
+            <div key={index}>
+              <img src={imageSrc} alt={`Image ${index + 1}`} />
+            </div>
+          ))}
+        </Carousel>
+      </div>
     );
 };
   
