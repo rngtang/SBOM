@@ -6,6 +6,7 @@ import ViewVulnsButton from './ViewVulnsButton';
 import UpdateButton from './UpdateButton';
 import EditButton from './EditButton';
 import { useState } from 'react';
+import TreeButton from './TreeButton';
 
 // comments in the actual accordion is spotty, please add stuff -james
 
@@ -32,6 +33,7 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
                                 <p>v.{sbom.specVersion}</p>
                             </div>
                             <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
+                            <TreeButton sbomId={sbom.id}/>
                             <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
                         </div>
                     </Accordion.Header>
