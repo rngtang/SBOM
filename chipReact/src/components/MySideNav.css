@@ -1,12 +1,13 @@
 :root {
-    --dukeblue: #012169; 
+    --dukeblue: #012169;
     --shaleblue: #0577B1;
     --limestone: #E5E5E5;
     --piedmont: #A1B70D;
     --persimmon: #E89923;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -15,12 +16,12 @@ html, body {
     width: 208px;
     /* position: fixed; */
     /* min-height: 95vh; */
-    border-radius: 16px;  
-    display: flex;    
+    border-radius: 16px;
+    display: flex;
     position: relative;
 }
 
-.sidebar-sticky {    
+.sidebar-sticky {
     /* padding-top: 16px; */
     /* padding-bottom: 16px; */
     /* display: flex; */
@@ -28,17 +29,17 @@ html, body {
     display: inline-block;
     flex-direction: column;
     justify-content: space-between;
-    
+
 }
 
 .sidebar {
     height: 95vh;
     width: 208px;
-    position: sticky; 
+    position: sticky;
     top: 20px;
     /* position: fixed; */
     /* min-height: 95vh; */
-    border-radius: 16px;  
+    border-radius: 16px;
     display: inline-block;
     /* flex-direction: column;
     justify-content: space-between; */
@@ -66,7 +67,7 @@ html, body {
     border-radius: 8px;
     font-weight: 400;
     transition: background-color 0.3s;
-} 
+}
 
 .nav-item .active {
     color: var(--limestone);
@@ -92,4 +93,3 @@ html, body {
     margin-top: 20px;
     padding: 16px 0 8px 0;
 }
-

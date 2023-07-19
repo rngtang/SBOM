@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
 const CodeBox = ({ text }) => {
+    // create a state for clicking on the clipboard
     const [isCopied, setIsCopied] = useState(false);
-    
+
+    // handling clicking on the clipboard
     const handleCopyClick = async () => {
         await navigator.clipboard.writeText(text);
         setIsCopied(true);
 
-        // Reset the isCopied state after two seconds
+        // reset the isCopied state after two seconds
         setTimeout(() => setIsCopied(false), 2000);
     };
-
 
     return (
         <div style={styles.box}>
@@ -22,6 +23,7 @@ const CodeBox = ({ text }) => {
     );
 };
 
+// codebox styles
 const styles = {
     box: {
         borderRadius: '8px',
