@@ -1,6 +1,8 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
+// name is the name of the SBOM
+// meta is the metadata of the SBOM
 const MyAccordion = ({ name, meta }) => {
     return (
         <Accordion alwaysOpen>
@@ -12,6 +14,6 @@ const MyAccordion = ({ name, meta }) => {
             </Accordion.Item>
         </Accordion>
     );
-}
+};
 
 export default MyAccordion;
