@@ -4,6 +4,9 @@ import chipImage from './images/chip.png';
 import './MySideNav.css';
 import ProfileComp from './ProfileComp';
 
+// loggedIn is the state of being logged in or not
+// username is the Display Name of the user, fetched from SHIB
+// netid is the Net ID of the user, fetched from SHIB
 const MySideNav = ({ loggedIn, username, netid }) => {
   return (
     <div className="sidebar-sticky">
@@ -37,6 +40,8 @@ const MySideNav = ({ loggedIn, username, netid }) => {
                     Logout
                   </NavLink>
                 </li>
+
+                {/* profile information in the bottom left corner */}
                 <ProfileComp username={username} netid={netid} />
               </>
             )}

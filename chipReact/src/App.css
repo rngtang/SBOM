@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap');
 
 :root {
-  --dukeblue: #012169; 
+  --dukeblue: #012169;
   --shaleblue: #0577B1;
   --limestone: #E5E5E5;
   --piedmont: #A1B70D;
@@ -18,7 +18,7 @@
 }
 
 .mysidenav {
-  background-color: var(--shaleblue) !important; 
+  background-color: var(--shaleblue) !important;
   font-family: Roboto, 'Open Sans', sans-serif;
 }
 
@@ -40,7 +40,7 @@
   padding: 20px;
 }
 
-.generatesboms-1{
+.generatesboms-1 {
   background-color: var(--limestone);
   padding: 20px;
 }
@@ -56,9 +56,8 @@
 }
 
 .login-button {
-  background-color: #0577B1; /* your preferred color */
-  color: white; /* your preferred text color */
-  /* other styles as needed */
+  background-color: #0577B1;
+  color: white;
   /* margin-left: 560px; */
 }
 

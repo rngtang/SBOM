@@ -2,7 +2,7 @@
     padding: 0;
     padding-top: 20px;
     border-radius: 10px;
-    margin:35px;
+    margin: 35px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
     /* transform: translate(79px, 0px); */
     width: auto;
@@ -18,7 +18,6 @@
     /* Add your CSS properties here */
     margin: -20px;
 }
-  
 
 /* things from profile.css */
 

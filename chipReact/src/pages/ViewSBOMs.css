@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap');
+
 :root {
-  --dukeblue: #012169; 
+  --dukeblue: #012169;
   --shaleblue: #0577B1;
   --limestone: #E5E5E5;
   --piedmont: #A1B70D;
@@ -137,7 +138,7 @@ body {
   width: auto;
   font-weight: 500;
   border: none;
-  background-image: linear-gradient(to top right, var(--shaleblue) 40%, #6db7dc );
+  background-image: linear-gradient(to top right, var(--shaleblue) 40%, #6db7dc);
 }
 
 #searchBar {
@@ -151,6 +152,7 @@ body {
 }
 
 .searchInput {
+  width: 100%;
   padding: 0px 8px;
   height: 40px;
   border: none;
@@ -164,12 +166,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:100%;
+  width: 100%;
   max-width: 80vw;
   /* position: relative; */
 }
+
 #sbomHeader {
-  width: 92.5%  ;
+  width: 92.5%;
   height: 60px;
   background-image: linear-gradient(to left, #49A3F1, #1668d5);
   background-color: var(--shaleblue);
@@ -203,7 +206,7 @@ body {
   justify-content: space-between;
 }
 
-#sbomHeadRow p{
+#sbomHeadRow p {
   font-size: small;
   /* font-weight: bold; */
 }

@@ -29,6 +29,10 @@ chipReact/yarn-error.log*
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore unused controllers
+chipRails/app/controllers/saml_controller.rb
+chipRails/app/controllers/current_user_controller.rb
+
 # Ignore bundler config.
 chipRails/.bundle
 

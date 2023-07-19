@@ -30,7 +30,6 @@ const OurProject = () => {
             <p>
                 Our team, composed of students from Duke University, is working in collaboration with Duke's Information Technology Security Office (ITSO) to explore the most active open-source projects in the SBOM and supply chain security space. We aim to develop a user-friendly interface that makes it easy for development teams at Duke to gather and share this information.
             </p>
-            
         </div>
     );
 };
@@ -55,11 +54,8 @@ const Home = () => {
             <WhatAreSBOMs />
             <OurProject />
             {/* <img src={headerImage} alt="Intro Image" /> */}
-            {/* <Button> Route SAML2 Post </Button> */}
         </div>
     );
 };
-
-
 
 export default Home;
