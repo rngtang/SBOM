@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:ec2b15a0-6cbd-4c97-b77c-413956d8e27f",
+  "serialNumber": "urn:uuid:77e62331-a9c3-4795-b26f-06779d72dd8d",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-07-06T14:48:35.487Z",
+    "timestamp": "2023-07-19T18:33:05.893Z",
     "tools": [
       {
         "vendor": "cyclonedx",
@@ -19,16 +19,10 @@
       }
     ],
     "component": {
-      "author": "",
-      "publisher": "",
       "group": "",
-      "name": "chip_react",
-      "version": "0.1.0",
-      "description": "",
-      "licenses": [],
-      "purl": "pkg:application/chip_react@0.1.0",
+      "name": "sbom",
       "type": "application",
-      "bom-ref": "pkg:application/chip_react@0.1.0"
+      "bom-ref": "pkg:application/sbom"
     }
   },
   "components": [
@@ -3610,6 +3604,56 @@
     {
       "author": "",
       "publisher": "",
+      "group": "bkrem",
+      "name": "react-transition-group",
+      "version": "1.3.3",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9d465aba61eefcc3289442eff8c844110cd0b4ab277e96ca047b5a9bf34ae77b46202c14d7db6e7df1175bc04b866f478507cdd47dfe0b46ec26ff19eefcf010"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/bkrem/react-transition-group@1.3.3",
+      "type": "library",
+      "bom-ref": "pkg:npm/bkrem/react-transition-group@1.3.3",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "bkrem",
+      "name": "react-transition-group/node_modules/dom-helpers",
+      "version": "3.4.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2e7b8f27e770a8a0c8ca8b56d55ce6399e5338d50dec2c24091e61ae06b04d46e404661d7a834b668ea735f1a40ab8ed1359d75da8fb88c3290daf3f77d5a820"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/bkrem/react-transition-group/node_modules/dom-helpers@3.4.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/bkrem/react-transition-group/node_modules/dom-helpers@3.4.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
       "group": "csstools",
       "name": "normalize.css",
       "version": "12.0.0",
@@ -4000,6 +4044,381 @@
       "purl": "pkg:npm/csstools/selector-specificity@2.2.0",
       "type": "library",
       "bom-ref": "pkg:npm/csstools/selector-specificity@2.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "babel-plugin",
+      "version": "11.11.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9b81c40d995e69a087f978030ec3c5d791edeb04cbb200d3791dd6623f50fe4efa26d5a1ac98dc3f8fbf5e51bc2c64ff46897da947ce233b57780f38013a6a3d"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/babel-plugin@11.11.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/babel-plugin@11.11.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "babel-plugin/node_modules/escape-string-regexp",
+      "version": "4.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4eda5c349dd7033c771aaf2c591cc96956a346cd2e57103660091d6f58e6d9890fcf81ba7a05050320379f9bed10865e7cf93959ae145db2ae4b97ca90959d80"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/babel-plugin/node_modules/escape-string-regexp@4.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/babel-plugin/node_modules/escape-string-regexp@4.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "babel-plugin/node_modules/source-map",
+      "version": "0.5.7",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2dbae624e31449d115c482af75c273402fa74217bc1546504d7432ebe23be6c90d827dcea10d03640f189c56bb829f2daad2f728f7f5926a344790e802979219"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/babel-plugin/node_modules/source-map@0.5.7",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/babel-plugin/node_modules/source-map@0.5.7",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "cache",
+      "version": "11.11.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3f7e33f6cb130818b77bd108d59b16a4d1dc7d8d6bd3d64ed2b65b44eda86f7650327148df98c1e77eaaa176e475eb2be44521622db66a7b8426ecb189f6aa01"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/cache@11.11.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/cache@11.11.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "hash",
+      "version": "0.9.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "80907a1cb9b9ad8c122c8e8f41af97d6de42146aefd49d53586fac3b230278acf6a236a3e859e5feb644b29a201be72fa9bb78004ff6788c83d907cb29304d95"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/hash@0.9.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/hash@0.9.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "is-prop-valid",
+      "version": "1.2.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "eb531fed47f1e1a0f1c75c650de3a6f1a1458a0187138cfed2c2826be20709e64a8b23fd44b0f4326c7b9bc6fdfc27f7edfecd02f40e38901b410195af9b8447"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/is-prop-valid@1.2.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/is-prop-valid@1.2.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "memoize",
+      "version": "0.8.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5b63f673f5515b5ff5b4ba31d265546a5be7597c5abe6bff3ae9b668fb117280c9ba86fbe450b763c15ba5f2f051e81173120db4650c3ead2d142bd835305734"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/memoize@0.8.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/memoize@0.8.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "react",
+      "version": "11.11.1",
+      "description": "",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e66956d43aae5391dac632e47e418dd4603f7ef5467721d4451897ff414797671f21f47148e7e6c441f9612e3779da743a5759ad9f9d90129b9e0c5c342759bc"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/react@11.11.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/react@11.11.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "serialize",
+      "version": "1.1.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "cd1e9afdf9053f8100702310b4b3a1220a69ad93b03660a576da5a212a6fcf7e3cf833f8333f19a0a6861824296f37a93485166eae30ea13599300f22a84be1c"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/serialize@1.1.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/serialize@1.1.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "sheet",
+      "version": "1.2.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d1006d1af6aab568be9f1e9da11c0374123384d759ad7529a6f4cce1db596561064d72ff5c4ff22712cc1a50d3d46b7e5071f9217d67fa3917cb2b44fdabfb38"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/sheet@1.2.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/sheet@1.2.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "styled",
+      "version": "11.11.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "84ce4d9efbbd3f79a276ae5a6978f823e96749f362ecf99de045a4d5f399de9c68a246904cd7b0e9ba7825a08160ce07545645f60ed48c99ac5260b6265c4e9e"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/styled@11.11.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/styled@11.11.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "unitless",
+      "version": "0.8.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "28e10632ee9d98966da5a75be3be88b1905c94abc82e3a298d48a2dd5fbb3275c8402621f16dcd80d720c28db59fd2d7657e840c82afa9f8d8c5779b0f0c4a99"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/unitless@0.8.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/unitless@0.8.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "use-insertion-effect-with-fallbacks",
+      "version": "1.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8d3feac8a67daf32c4aedae31a07643019f638ff309741b7b109416f760faf2bca1ec8ef20d52155a3c57cff9fa4170e926ad53951041d0149ee76e3d931f683"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/use-insertion-effect-with-fallbacks@1.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/use-insertion-effect-with-fallbacks@1.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "utils",
+      "version": "1.2.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "636b467f723e5d59da8dd22db245029fa2d7f9550398fea54cbe1f72ab1702fe3776795b662b96e0c5905b7f2b5bf05559213b43fefe5d0a1c9a99d16082d49a"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/utils@1.2.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/utils@1.2.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "emotion",
+      "name": "weak-memoize",
+      "version": "0.3.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "12c070a5cee105425602c34f066272e21c56c75dafe9bb2142c95dad59a3c49a1cde2b1bc613ab17621c0a9697c5fbead37370908eec6ec38b5db62ea85ffc5b"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/emotion/weak-memoize@0.3.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/emotion/weak-memoize@0.3.1",
       "properties": [
         {
           "name": "SrcFile",
@@ -6010,6 +6429,181 @@
     {
       "author": "",
       "publisher": "",
+      "group": "popperjs",
+      "name": "core",
+      "version": "2.11.8",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3f5b2dd1a92c0ab9fdb06661a7c18c63006742c6ef016b19017e38a1734dbcb1c6a8039ca15c668d98a886cb7043b4aa2a76d1e3b6a474d8beba57960fcfa0e8"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/popperjs/core@2.11.8",
+      "type": "library",
+      "bom-ref": "pkg:npm/popperjs/core@2.11.8",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "react-aria",
+      "name": "ssr",
+      "version": "3.7.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6dfb9f8e0e04484e6088df85c63d572334b97ff60886a70673e55efaf514294f3167cb7f5ed8e5bfc177923a83050764fff9f79a5b8563bc46d7041507dacc2d"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-aria/ssr@3.7.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-aria/ssr@3.7.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "remix-run",
+      "name": "router",
+      "version": "1.7.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "12ed55de4cf7995d305295538851ee693f140f5823ff4567a051d0617df9c65b25414a5ef02b98a0a167f5de166451e6df20f2c33e802d9b8676750f2ab35e03"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/remix-run/router@1.7.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/remix-run/router@1.7.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "restart",
+      "name": "hooks",
+      "version": "0.4.9",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "dc17a4a9cc01e9499ec9afb5e973e8a00467e2a10f5babcdbf06279687c861eea1f6a1b5fd5783ed4bd28425b1d75785cf910b626c0812c873f8c90f5f7c2371"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/restart/hooks@0.4.9",
+      "type": "library",
+      "bom-ref": "pkg:npm/restart/hooks@0.4.9",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "restart",
+      "name": "ui",
+      "version": "1.6.6",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "782de9b8ab9613549161ba235875e7bc23471a07f7bb31c26fa24e8671783973e26ce20f124475b2a0d290beb8df2762831c21fabb826b50a660797393b8a428"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/restart/ui@1.6.6",
+      "type": "library",
+      "bom-ref": "pkg:npm/restart/ui@1.6.6",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "restart",
+      "name": "ui/node_modules/uncontrollable",
+      "version": "8.0.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fc60f1f8ad524c6b69813b23e438f7279d5868ac590db95b0901d31f5cc72eea01116a1d8fa323b5156fdd35228e3d4960b44b485b05ccdf0d578337415e1df7"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/restart/ui/node_modules/uncontrollable@8.0.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/restart/ui/node_modules/uncontrollable@8.0.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "restart",
+      "name": "ui/node_modules/warning",
+      "version": "4.0.3",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ae9272376db629622f1c9fc5e775d266fd1997f69c72a1d1f1eb7592968c4c3fdf2c2471b55f225fc73333363bb1566ea53237cdc51383c7b2712da4345f65eb"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/restart/ui/node_modules/warning@4.0.3",
+      "type": "library",
+      "bom-ref": "pkg:npm/restart/ui/node_modules/warning@4.0.3",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
       "group": "rollup",
       "name": "plugin-babel",
       "version": "5.3.1",
@@ -6600,6 +7194,31 @@
       "purl": "pkg:npm/svgr/webpack@5.5.0",
       "type": "library",
       "bom-ref": "pkg:npm/svgr/webpack@5.5.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "swc",
+      "name": "helpers",
+      "version": "0.5.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b09f74d847c8ce7d456bea989a3750aa1f2d3eca31c81cfef3204a0b61ca531c9ecca245c0f18e9fba6fe1663a42e416fffc92422e6526303f653f6c35658d4e"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/swc/helpers@0.5.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/swc/helpers@0.5.1",
       "properties": [
         {
           "name": "SrcFile",
@@ -7225,6 +7844,31 @@
       "purl": "pkg:npm/tootallnate/once@1.1.2",
       "type": "library",
       "bom-ref": "pkg:npm/tootallnate/once@1.1.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "trendmicro",
+      "name": "react-sidenav",
+      "version": "0.5.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3418ad5d3b4175aefade0714dbb850bbacd39eae1dab59e0a01dd4d61f282b65a8c1d4e5ef9ee6a8c3a7b836b5754d5d80d0fe60b63943deace4da143a37efa8"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/trendmicro/react-sidenav@0.5.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/trendmicro/react-sidenav@0.5.0",
       "properties": [
         {
           "name": "SrcFile",
@@ -8986,6 +9630,56 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "axios",
+      "version": "1.4.0",
+      "description": "",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4b85c258c126cefa3ae13f467ef40339781844327fc2c49973b26f760c79bb5b1dd09c2cb8f2ea6f74989aeb1a83e79d17ace2c8c7a7b0f56a2d349cd4f89210"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/axios@1.4.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/axios@1.4.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "axios/node_modules/form-data",
+      "version": "4.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1131249521a2e6dd10319ba25e803f43abdc9f170b40fe6f76e812a6e0328ba4951a2d9c94f3e9fb180486e31a1c2fb31a09f7d4a776df95b7e5fec7ca491ac3"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/axios/node_modules/form-data@4.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/axios/node_modules/form-data@4.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "axobject-query",
       "version": "3.2.1",
       "description": "",
@@ -9861,6 +10555,31 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "bootstrap",
+      "version": "5.3.0",
+      "description": "",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "527055dc4defe124d5350766b3a8d218ed82bce92350c743015476579378b8231d68891a4236dc10032a4629831c8b38baa058cc300a090c0207ef7bb4980743"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/bootstrap@5.3.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/bootstrap@5.3.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "brace-expansion",
       "version": "1.1.11",
       "description": "",
@@ -10261,6 +10980,56 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "chain-function",
+      "version": "1.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4b196d80cc0bf6e0a4a39fd908b8b21b607b47d7d8e290d9530ee12783218ab76304ba2ca03aa4580062dd732e71d74774b88524c6fb3c3d8c6627d9ae2b8c4e"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/chain-function@1.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/chain-function@1.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "chained-function",
+      "version": "0.5.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0aad672c574afddc4764d2e3980f8ba47e00048e249e2819a024040f366de80006d0697295c4654d2bb6a9bc2adcee5f27c4e8b04270074623b691ec6f614818"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/chained-function@0.5.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/chained-function@0.5.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "chalk",
       "version": "2.4.2",
       "description": "",
@@ -10461,6 +11230,31 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "classnames",
+      "version": "2.3.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0926e163870510945eebf190cc8939a9767825e839a5cb0fedbe69785483a5f7e97b572a8c0487fe7f544e30703a9e97a4c493c10f196b62b9574dae780ed39b"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/classnames@2.3.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/classnames@2.3.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "clean-css",
       "version": "5.3.2",
       "description": "",
@@ -10525,6 +11319,31 @@
       "purl": "pkg:npm/cliui@7.0.4",
       "type": "library",
       "bom-ref": "pkg:npm/cliui@7.0.4",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "clone",
+      "version": "2.1.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "dcf7bf085d4d9fde21ca1218a63b622e1742a04a33d03a90fbdf3c13d826784750665a23c6739bef8c1cb45caec16407ceac9ff57ec2ecc1bc8ee529a81253f3"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/clone@2.1.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/clone@2.1.2",
       "properties": [
         {
           "name": "SrcFile",
@@ -12086,6 +12905,906 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "d3",
+      "version": "7.8.5",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "260a1a8431b9d677147c9bbac17ff5bd6404a8e7e5817ca5e0c687aa5712aee4decfbca1691291f62f158e371019e4b67a7fe39c58af5ee688327b1e30cb745c"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3@7.8.5",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3@7.8.5",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-array",
+      "version": "3.2.4",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b5d4009b2035f22e09ef0a6ba58abc0a5731672dd20b7d5031e072c8217246dec1547751110679969ce87b998511865459efa8abc1c1be4f498e989bc8457826"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-array@3.2.4",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-array@3.2.4",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "207e6d8235788c4fc68479115741e25583c3b6f7e31d09507c91ecd2eb2aeccdf45dc481bcea2da661f522091c5ec3bfe60110643e3707ffdf73b4914f94bec7"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-axis@3.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-axis@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "00b9e35a5558917b1520694eb2e587d7edee764605238f0b8e285f9e1f0564f176412f68f8fcc62c1b253b43e3cd5a072d9d8a09580033c3559173c907668d9d"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-brush@3.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-brush@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "544e52e9335afa3f26b24b25ec7c23c4c1c3336c8d2b75c292eb089695f99306ae05f5eec8b02d360f630a9fe21c7eb5b60238b1be91fc420c582a8421d8d3fe"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-chord@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-chord@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-color",
+      "version": "3.1.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ce0fdc85b5f2781b4c4352db0ff592a16d83a42dc8d26a663dd5beca74538ffc760c0598ac863ba9e6481e2768cf0576e26e226afaf5e653702302f14663b184"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-color@3.1.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-color@3.1.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e04cc54d1222933b38ed11a67716de52f2d6b4679d0d43644dc9b3a1eca0e2c3ff76f09ec4ee3b01a40bed52b2fe0ba5f394cec70f8806003c512db1c1b4e834"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-contour@4.0.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-contour@4.0.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "99d8ed219d572c033c6e6fe1c775b08df1ede928207a4eea1f4e373bc2848c35cde34c62defc7fea9612553c0b8c48225d04dbbdaa2e58aca72c189467a48ae8"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-delaunay@6.0.4",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-delaunay@6.0.4",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "af35323d4fd2eebc147e53322dcd444c37818f4351b8728a01cbee928cf086c86bea0e9ce5df338787368108d8d9b6747577862d67353c5d7be0fdad56f2a17e"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-dispatch@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-dispatch@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a566d424b7444d503c95034979c331a177c7eb1fa63b6510a3cad2999f90ab171bc80de17dea6b160213fff1d6da79470a159e2083304b616afa010046485392"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-drag@3.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-drag@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "506e8ebdd23969f0c814ff70e06d2636ae747523ac5c725a444f1aac04b9a3d0295a7204969f06670d43ba7f2f3fc3b21ce67f40950a509c318a20829d4c26f9"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-dsv@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-dsv@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-dsv/node_modules/commander",
+      "version": "7.2.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "42b59707e6504953e6216221b443bd1fe8301da3066221790a1be827e2bd6461c6fec56c6baca27ac003d460bfc78eac113d345e5c28d6ee3d455555cef71293"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-dsv/node_modules/commander@7.2.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-dsv/node_modules/commander@7.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c11fd72b70f75dc2c8670a5bbd0c10e5f2bef1891db358a9ec0d93c5ed32c6771749dab52fdb24706edb95c79d90e5fe65c83118098b5f516b4466c00f0ce2d3"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-ease@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-ease@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "92991020cdb49f7a0b54128683aa07ad47211ccdf1383913ce33288fb696405ab940433e47a1385a4cd3e7eb688c363bca37b3f0a802051a23e1a12bf7d15dab"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-fetch@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-fetch@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-force",
+      "version": "3.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "cf157f4ac03e538cad7bcd39d4fe040b27630ff4bea9e62d9da23202cf6d8070aa7e0ba66bf6804038e8f3903d67a10a8418ab1d12475c88095257df4f8c1d2e"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-force@3.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-force@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-format",
+      "version": "3.1.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "632508e8012e63f5a9b7c2962e0647b0853ce9ab668a4ba83a609fa269add0b60789048f8ef5f601c15cdfc3d7d02069af6442c998637b1f8d4bf2cf3afe98a8"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-format@3.1.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-format@3.1.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-geo",
+      "version": "3.1.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "244a391f15c374361709a59dc0b46defdcbb8222bc49b85925b1565ea6d14e89421c52398d1aad78bcc2b2ae7534a6d4a17d0f8c1552a21c6bc7e368394ba360"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-geo@3.1.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-geo@3.1.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-hierarchy",
+      "version": "1.1.9",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8fcb4fc65aa1d6cac91c0b717ef394c0a35826442e04574cd7e24051fabac6a1f9780a9ff772fba06d4d56a0dae02a4564dbe734ab42604502f0a63dc849fd95"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-hierarchy@1.1.9",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-hierarchy@1.1.9",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ddb62cd6b383df7ba8f1aa897ca3f72563c089b830f199b6f8bf6f04a107276460faf89347ba39326bf999972278df854586803965f94890135fa9353d6cfbda"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-interpolate@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-interpolate@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-path",
+      "version": "1.0.9",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "54b698727f3576d1d54e310777c07ea5b7bdc875a95ca6540bcecfce8166b05ac9aa01700defeac5fa793257ec7ccd55e44fe256dd0c9846d643b15521787f6e"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-path@1.0.9",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-path@1.0.9",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "def6c0eef5d8c1f7b54988440fef9f3d44255926134c698599089a9f2fe075b896814fe2132433cb29b02fd4a4263145b824b8f74d814b37b0546b071e61ed5e"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-polygon@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-polygon@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d38c43af14130d3085c0fe47ea1461b1171bf71c6fd91ce472cca01739a4488389cb73de4493fbb0d93755121b297728839eb53fda14d3fad51fabc344e02053"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-quadtree@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-quadtree@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-random",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "15731ef467f14f1a9de43ea316c43e0c9f01252e04fdf4f99aaa9d8e8bf2904076a056d330355d8353061717d05be141386a01fbe93cb3006b8304874f57145d"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-random@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-random@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1995b8eb8835487eda83763b8578dff11a14b80148aa494e02adcc465e0e69669b4c5258f4f37f1356249615cb87e390ddf33dc92da73a40a84be58b67a92fc5"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-scale@4.0.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-scale@4.0.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-scale-chromatic",
+      "version": "3.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2f1f6d86dc402ab3b63eae8e3b651ae3be28a5ece22abdbbf4ffd3299b0c0216323430f712709f7dd6e079260de4eee6d81c90b31b6e3f60920dcccd508676da"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-scale-chromatic@3.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-scale-chromatic@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7e64d159b34c9ac996abac4957c0f5f54fe0c3f6f0ac77cd5f1ac837e1df6609f3a931e9f633a628c86c4d48d73899d939d658f50dbccb8c9e6cacea0ca97195"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-selection@3.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-selection@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "11492f2a3a8f154019c8e9616398330b109e23401ea74e0bc08469b19fe62c57a526251f9cae7a8e8e49303484ef2c8fda42d26fa2ed17e4b9721324eeea8fab"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-shape@1.3.7",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-shape@1.3.7",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-time",
+      "version": "3.1.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "56a2a3cc12de8db48c4f82206e65600e3a6462b3565182676c21a8f3be2eecc30a216b082d15fe3a95ff81393c32a8e94f503f73a1d8d9d080efb64dd25910d9"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-time@3.1.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-time@3.1.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "749c4f065cc2ecdba00763c32f0a3d43c2624d1dccddee3f5c0364ade29253117cbef5caaa6d587eae10e5d97c6ee765ba745595451a0d4805b7b780f03e8d2e"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-time-format@4.1.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-time-format@4.1.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9dd7c9fc9c7131dde7c37d6ec8aa18da76a2bc5fabdbd57e2dcd2cbd9c5ed49bef2119a2f2152caccbdd3b0812d68eae0479a2cfdd60790d3294f3f46a3d5550"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-timer@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-timer@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0292af7e3b1247ab60d3ac6b2f8df80b45b274bafb25ec0107757eff7f51307b1a5d3386d339adfce0177a78393392c19b4a239b126ba68990559d5a3ef04be3"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-transition@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-transition@3.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6fc02657791f41aa9602e69c6cfb8d6cbeaf6a19ce25f94e85ec4bccc30d2e06badbefe7874273bc9d1a3bfe5ae4c560505192ec7bb53fd3f4de8ddf2640c2cb"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3-zoom@3.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3-zoom@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3/node_modules/d3-hierarchy",
+      "version": "3.1.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "157ffd7eb72e6f9e1b78176e8078c309d8a4c53844aa39d1f7742decfbd04ce1f1ca2342025bccac785c964ddc0f955e01aabd7f199f469f829d6c3dac4301b8"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3/node_modules/d3-hierarchy@3.1.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3/node_modules/d3-hierarchy@3.1.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3/node_modules/d3-path",
+      "version": "3.1.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a7728fe4709ffdbbe305248ab9789de99aa28f1ef021f356f89fe668fb3e8b0477e5ab792426cb513d0bcc5d5c9e36c21d686acd04c83762697bca5179b20415"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3/node_modules/d3-path@3.1.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3/node_modules/d3-path@3.1.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d3/node_modules/d3-shape",
+      "version": "3.2.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "49a2c1bb01a6dcc395891ab600193778ba31c1910ba47eb3865dc56c0a09ed59b58287cac7a125d486f9cf6dcd504845f40b0697bcbe7732dee42c36000ac64c"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d3/node_modules/d3-shape@3.2.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/d3/node_modules/d3-shape@3.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "d33",
+      "version": "3.5.17",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c8593fda275bf0e1cf2a46c02fc41a39aa8434da0c8486921d97ab937a10b040b090e6e40a92728d8c027be3878aae9411d85ed66f1918045144ede58c58e52a"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/d33@3.5.17",
+      "type": "library",
+      "bom-ref": "pkg:npm/d33@3.5.17",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "damerau-levenshtein",
       "version": "1.0.8",
       "description": "",
@@ -12350,6 +14069,31 @@
       "purl": "pkg:npm/define-properties@1.2.0",
       "type": "library",
       "bom-ref": "pkg:npm/define-properties@1.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "delaunator",
+      "version": "5.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0322efb7225d6effd4d469224ba814533725468018e06b3be6a90cca0249854ef92d6e0336e485d91333a71b3d8f0f4ecf50686c78d37641b7cdd3f9e55c40ab"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/delaunator@5.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/delaunator@5.0.0",
       "properties": [
         {
           "name": "SrcFile",
@@ -12800,6 +14544,31 @@
       "purl": "pkg:npm/dom-converter@0.2.0",
       "type": "library",
       "bom-ref": "pkg:npm/dom-converter@0.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "dom-helpers",
+      "version": "5.2.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9d109aec22b7553accd8d986908cb871b2bb219960044fcf60c9f9e6bad779faf9c570cfd0b76d7cf9db9450e855d7007ec949ee8afa8aa0149f1d0208621640"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/dom-helpers@5.2.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/dom-helpers@5.2.1",
       "properties": [
         {
           "name": "SrcFile",
@@ -15661,6 +17430,31 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "find-root",
+      "version": "1.1.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "34a7d6e9b79ce867ca734486c757b4ed0658f4f13df6ed017edff4af3483e64dec3bfbf09155290d42959b91a9a7951edd87d284f1535f6d3bd2d0ece6407d36"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/find-root@1.1.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/find-root@1.1.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "find-up",
       "version": "5.0.0",
       "description": "",
@@ -17111,6 +18905,56 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "hoist-non-react-statics",
+      "version": "3.3.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fe01a2bf18bc24f296366fd6d234a6cdc30fa5fa4f2dcddd63fe86c615f6850f621a3dda0df925578113ecd8caa528a72e9279bda7daf62886204660d7449f07"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/hoist-non-react-statics@3.3.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/hoist-non-react-statics@3.3.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "hoist-non-react-statics/node_modules/react-is",
+      "version": "16.13.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "db87baca71361fe38ab7892ab0ebcd77c901a55eb9ce8c5b038055b04381dc0455590922fc31f3694a02e4ab8e37f06271c0da0824d906e39c7d9b3bd2447c6d"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/hoist-non-react-statics/node_modules/react-is@16.13.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/hoist-non-react-statics/node_modules/react-is@16.13.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "hoopy",
       "version": "0.1.4",
       "description": "",
@@ -17975,6 +19819,56 @@
       "purl": "pkg:npm/internal-slot@1.0.5",
       "type": "library",
       "bom-ref": "pkg:npm/internal-slot@1.0.5",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "internmap",
+      "version": "2.0.3",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e4787b635c106ef639a281a03db0da2f98982c03f331352b8ccba5b241cb1fac27bff03ed6ae6b8046a2baa12307ea3119721566cd4517e47f28f37765241862"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/internmap@2.0.3",
+      "type": "library",
+      "bom-ref": "pkg:npm/internmap@2.0.3",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "invariant",
+      "version": "2.2.4",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a6125f41506e689339ada3a926349f9220fa0696c213836cfff2da5e5eb0198b54058f379d64ba45ff6d5e6d9ef1568aeb42448d895d6cf89ffc0d81d42da034"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/invariant@2.2.4",
+      "type": "library",
+      "bom-ref": "pkg:npm/invariant@2.2.4",
       "properties": [
         {
           "name": "SrcFile",
@@ -28511,6 +30405,81 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "prop-types-extra",
+      "version": "1.1.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e7df801cd9c76027620bebccc18e765a6bcfe5d33740b7a8ba662e13271e4038bd68486dc0df73210d99368db9b0cc979db877da1f8fd5ecc3b14a541f72407b"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/prop-types-extra@1.1.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/prop-types-extra@1.1.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "prop-types-extra/node_modules/react-is",
+      "version": "16.13.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "db87baca71361fe38ab7892ab0ebcd77c901a55eb9ce8c5b038055b04381dc0455590922fc31f3694a02e4ab8e37f06271c0da0824d906e39c7d9b3bd2447c6d"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/prop-types-extra/node_modules/react-is@16.13.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/prop-types-extra/node_modules/react-is@16.13.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "prop-types-extra/node_modules/warning",
+      "version": "4.0.3",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ae9272376db629622f1c9fc5e775d266fd1997f69c72a1d1f1eb7592968c4c3fdf2c2471b55f225fc73333363bb1566ea53237cdc51383c7b2712da4345f65eb"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/prop-types-extra/node_modules/warning@4.0.3",
+      "type": "library",
+      "bom-ref": "pkg:npm/prop-types-extra/node_modules/warning@4.0.3",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "prop-types/node_modules/react-is",
       "version": "16.13.1",
       "description": "",
@@ -28575,6 +30544,31 @@
       "purl": "pkg:npm/proxy-addr/node_modules/ipaddr.js@1.9.1",
       "type": "library",
       "bom-ref": "pkg:npm/proxy-addr/node_modules/ipaddr.js@1.9.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "proxy-from-env",
+      "version": "1.1.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0fece439109b03d7f5b5d5912b445a091dc63efe7470cc5caf3e17f24e4b4d2503d43930e3b98a24465036e9c8b514e45b082d6944a8d515454481bd65788562"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/proxy-from-env@1.1.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/proxy-from-env@1.1.0",
       "properties": [
         {
           "name": "SrcFile",
@@ -28936,6 +30930,81 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "react-bootstrap",
+      "version": "2.8.0",
+      "description": "",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7bf68db71974676a33ac8691f368ebe99cfbb2cf464a8697a506b19afb4352c4d922afd76a591db91fd95cfeaf6d01f3d93e2ccaf8c0fb815bb7010bc719a9c3"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-bootstrap@2.8.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-bootstrap@2.8.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "react-bootstrap/node_modules/warning",
+      "version": "4.0.3",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ae9272376db629622f1c9fc5e775d266fd1997f69c72a1d1f1eb7592968c4c3fdf2c2471b55f225fc73333363bb1566ea53237cdc51383c7b2712da4345f65eb"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-bootstrap/node_modules/warning@4.0.3",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-bootstrap/node_modules/warning@4.0.3",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "react-d3-tree",
+      "version": "3.6.1",
+      "description": "",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b65ecfdd6839abf7a9e9cef3eb03e07f7be9a9ac59d72422feba6f21e3e3defb7b5c6c1d3f755dafd1812195f0ecad82acc927a32a0321b3d235a66d659e8c22"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-d3-tree@3.6.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-d3-tree@3.6.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "react-dev-utils",
       "version": "12.0.1",
       "description": "",
@@ -29236,6 +31305,56 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "react-lifecycles-compat",
+      "version": "3.0.4",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7c10126c0e8b9ce53d74e536796eda43cc666014975085abf94985f5bd5e7d905acc634efab7174ff89c74a9d89b6a53c1c472955518c16ec7d4f1df2de915cc"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-lifecycles-compat@3.0.4",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-lifecycles-compat@3.0.4",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "react-pro-sidebar",
+      "version": "1.1.0-alpha.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "908a38a7780721dc6a00d1b6297bfb57c2970e60c5b11864db70062db5ec89c095dfd937d843f73acd835f23a3f52e94083601fb81b75a87891623089241ded3"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-pro-sidebar@1.1.0-alpha.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-pro-sidebar@1.1.0-alpha.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "react-refresh",
       "version": "0.11.0",
       "description": "",
@@ -29261,6 +31380,56 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "react-router",
+      "version": "6.14.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "383faf92b7066ef97092ca5414380ccecbb5457c1d8cd87cdd8806ff6f250670f382c9610a0c48aa81312e5c6c7d3a48ca0a7b7dcf877777ac968370ce49b6c4"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-router@6.14.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-router@6.14.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "react-router-dom",
+      "version": "6.14.0",
+      "description": "",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "604c250292b0ccc30c6c66e187e43b32c9684e575cc0c807c5463fd60d2e03adbe075859a368ecc9b09620308bf33bc80c1d45034a41298f5c8476d91edfb675"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-router-dom@6.14.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-router-dom@6.14.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "react-scripts",
       "version": "5.0.1",
       "description": "",
@@ -29275,6 +31444,31 @@
       "purl": "pkg:npm/react-scripts@5.0.1",
       "type": "library",
       "bom-ref": "pkg:npm/react-scripts@5.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "react-transition-group",
+      "version": "4.4.5",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a5971dd4c089a222a2051d8d471782460d77b825dbc9d3e7981e0439e46b63be3cd2a3563bc2088101bace50e49bab9132c5115cfb8aab4196b62339f5ae50ea"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-transition-group@4.4.5",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-transition-group@4.4.5",
       "properties": [
         {
           "name": "SrcFile",
@@ -30036,6 +32230,31 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "robust-predicates",
+      "version": "3.0.2",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "217833056bd643013a3eb0c8d393af997508aee413728303cd1b0e779083bc70952dc2c7313498bce2b90a6e3a916aa5577c806ee4a9059749e683f9394a12b6"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/robust-predicates@3.0.2",
+      "type": "library",
+      "bom-ref": "pkg:npm/robust-predicates@3.0.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "rollup",
       "version": "2.79.1",
       "description": "",
@@ -30200,6 +32419,31 @@
       "purl": "pkg:npm/run-parallel@1.2.0",
       "type": "library",
       "bom-ref": "pkg:npm/run-parallel@1.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "rw",
+      "version": "1.3.3",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3dd85d5b2f3d4a26688012dac38db375eaad449fffcc57763e041abdc2020d48094f9a16d7440244a6c9e9b838af4fd463633a056779b64c6e18546f0a481f1d"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/rw@1.3.3",
+      "type": "library",
+      "bom-ref": "pkg:npm/rw@1.3.3",
       "properties": [
         {
           "name": "SrcFile",
@@ -32011,6 +34255,31 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "stylis",
+      "version": "4.2.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3aba2fea0e81075b037d883359f4c70cec5a9ad5f56c4ff3a35d380e1f5ee9fa89dcfa288a96327c9d29526ad93b6c00bcef186c4c9e16b915f755d3b06312af"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/stylis@4.2.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/stylis@4.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "sucrase",
       "version": "3.32.0",
       "description": "",
@@ -33386,6 +35655,31 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "uncontrollable",
+      "version": "7.2.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b2fb5c7e84c00c80749d3f6796d823ba34e2ec1cd59b08d90a53a6b242aefc4f055bd057ce0f68b3c38baf87fc0e59e4d2b6162485abe30bfd78a517890bd0c1"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/uncontrollable@7.2.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/uncontrollable@7.2.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "unicode-canonical-property-names-ecmascript",
       "version": "2.0.0",
       "description": "",
@@ -33925,6 +36219,31 @@
       "purl": "pkg:npm/walker@1.0.8",
       "type": "library",
       "bom-ref": "pkg:npm/walker@1.0.8",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/chipReact/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "warning",
+      "version": "3.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8cc06dea952b2a7e48f8e1a0b50e1864b76121e26639b75d87a0ac89b3f1c90e723d99b55c4c52cb30b52c2357ec1ce1c568221e68b30562531c92233234d061"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/warning@3.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/warning@3.0.0",
       "properties": [
         {
           "name": "SrcFile",
@@ -35835,6 +38154,181 @@
     {
       "author": "",
       "publisher": "",
+      "group": "babel",
+      "name": "runtime",
+      "version": "7.22.6",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c036f9a569b8583745e8b15475edc997c5b33c0fb765bc58aa40bac405ee0f78ab7441cdd64d0d7d346b243f190f7efc489eb59a230b0aa20e5d885df31f8025"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/babel/runtime@7.22.6",
+      "type": "library",
+      "bom-ref": "pkg:npm/babel/runtime@7.22.6",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "commander",
+      "version": "7.2.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "42b59707e6504953e6216221b443bd1fe8301da3066221790a1be827e2bd6461c6fec56c6baca27ac003d460bfc78eac113d345e5c28d6ee3d455555cef71293"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/commander@7.2.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/commander@7.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "dom-helpers",
+      "version": "3.4.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2e7b8f27e770a8a0c8ca8b56d55ce6399e5338d50dec2c24091e61ae06b04d46e404661d7a834b668ea735f1a40ab8ed1359d75da8fb88c3290daf3f77d5a820"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/dom-helpers@3.4.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/dom-helpers@3.4.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "form-data",
+      "version": "4.0.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1131249521a2e6dd10319ba25e803f43abdc9f170b40fe6f76e812a6e0328ba4951a2d9c94f3e9fb180486e31a1c2fb31a09f7d4a776df95b7e5fec7ca491ac3"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/form-data@4.0.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/form-data@4.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "react-d3",
+      "version": "0.4.0",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fe1095acc97200ad761c6345cd55ae8c5e44625be65bcd9aceeedd87e4ebfe95988af80593b2598ac636f9c396b52fc9fe98d3a088271d615766788a80d436aa"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-d3@0.4.0",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-d3@0.4.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "react-d3/node_modules/d3",
+      "version": "3.5.17",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c8593fda275bf0e1cf2a46c02fc41a39aa8434da0c8486921d97ab937a10b040b090e6e40a92728d8c027be3878aae9411d85ed66f1918045144ede58c58e52a"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-d3/node_modules/d3@3.5.17",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-d3/node_modules/d3@3.5.17",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "react-is",
+      "version": "16.13.1",
+      "description": "",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "db87baca71361fe38ab7892ab0ebcd77c901a55eb9ce8c5b038055b04381dc0455590922fc31f3694a02e4ab8e37f06271c0da0824d906e39c7d9b3bd2447c6d"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:npm/react-is@16.13.1",
+      "type": "library",
+      "bom-ref": "pkg:npm/react-is@16.13.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/home/ren11/project/sbom/package-lock.json"
+        }
+      ]
+    },
+    {
+      "author": "",
+      "publisher": "",
       "group": "",
       "name": "actioncable",
       "version": "7.0.5",
@@ -35980,6 +38474,18 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "better_errors",
+      "version": "2.10.1",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:gem/better_errors@2.10.1",
+      "type": "library",
+      "bom-ref": "pkg:gem/better_errors@2.10.1"
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "bindex",
       "version": "0.8.1",
       "description": "",
@@ -35987,6 +38493,18 @@
       "purl": "pkg:gem/bindex@0.8.1",
       "type": "library",
       "bom-ref": "pkg:gem/bindex@0.8.1"
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "binding_of_caller",
+      "version": "1.0.0",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:gem/binding_of_caller@1.0.0",
+      "type": "library",
+      "bom-ref": "pkg:gem/binding_of_caller@1.0.0"
     },
     {
       "author": "",
@@ -36076,6 +38594,18 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "debug_inspector",
+      "version": "1.1.0",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:gem/debug_inspector@1.1.0",
+      "type": "library",
+      "bom-ref": "pkg:gem/debug_inspector@1.1.0"
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "erubi",
       "version": "1.12.0",
       "description": "",
@@ -36155,6 +38685,18 @@
       "purl": "pkg:gem/jbuilder@2.11.5",
       "type": "library",
       "bom-ref": "pkg:gem/jbuilder@2.11.5"
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "json",
+      "version": "2.6.3",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:gem/json@2.6.3",
+      "type": "library",
+      "bom-ref": "pkg:gem/json@2.6.3"
     },
     {
       "author": "",
@@ -36508,6 +39050,30 @@
       "author": "",
       "publisher": "",
       "group": "",
+      "name": "rouge",
+      "version": "4.1.2",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:gem/rouge@4.1.2",
+      "type": "library",
+      "bom-ref": "pkg:gem/rouge@4.1.2"
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "ruby-saml",
+      "version": "1.15.0",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:gem/ruby-saml@1.15.0",
+      "type": "library",
+      "bom-ref": "pkg:gem/ruby-saml@1.15.0"
+    },
+    {
+      "author": "",
+      "publisher": "",
+      "group": "",
       "name": "rubyzip",
       "version": "2.3.2",
       "description": "",
@@ -36705,8 +39271,17 @@
         "pkg:npm/@testing-library/jest-dom@5.16.5",
         "pkg:npm/@testing-library/react@13.4.0",
         "pkg:npm/@testing-library/user-event@13.5.0",
+        "pkg:npm/@trendmicro/react-sidenav@0.5.0",
+        "pkg:npm/axios@1.4.0",
+        "pkg:npm/bootstrap@5.3.0",
+        "pkg:npm/d3@7.8.5",
+        "pkg:npm/d33@3.5.17",
         "pkg:npm/react@18.2.0",
+        "pkg:npm/react-bootstrap@2.8.0",
+        "pkg:npm/react-d3-tree@3.6.1",
         "pkg:npm/react-dom@18.2.0",
+        "pkg:npm/react-pro-sidebar@1.1.0-alpha.1",
+        "pkg:npm/react-router-dom@6.14.0",
         "pkg:npm/react-scripts@5.0.1",
         "pkg:npm/web-vitals@2.1.4"
       ]
@@ -37778,6 +40353,23 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/@bkrem/react-transition-group@1.3.3",
+      "dependsOn": [
+        "pkg:npm/chain-function",
+        "pkg:npm/dom-helpers",
+        "pkg:npm/loose-envify",
+        "pkg:npm/prop-types",
+        "pkg:npm/react-lifecycles-compat",
+        "pkg:npm/warning"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@bkrem/react-transition-group/node_modules/dom-helpers@3.4.0",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime"
+      ]
+    },
+    {
       "ref": "pkg:npm/@csstools/normalize.css@12.0.0",
       "dependsOn": []
     },
@@ -37870,6 +40462,108 @@
     },
     {
       "ref": "pkg:npm/@csstools/selector-specificity@2.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/babel-plugin@11.11.0",
+      "dependsOn": [
+        "pkg:npm/@babel/helper-module-imports",
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@emotion/hash",
+        "pkg:npm/@emotion/memoize",
+        "pkg:npm/@emotion/serialize",
+        "pkg:npm/babel-plugin-macros",
+        "pkg:npm/convert-source-map",
+        "pkg:npm/escape-string-regexp",
+        "pkg:npm/find-root",
+        "pkg:npm/source-map",
+        "pkg:npm/stylis"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/babel-plugin/node_modules/escape-string-regexp@4.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/babel-plugin/node_modules/source-map@0.5.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/cache@11.11.0",
+      "dependsOn": [
+        "pkg:npm/@emotion/memoize",
+        "pkg:npm/@emotion/sheet",
+        "pkg:npm/@emotion/utils",
+        "pkg:npm/@emotion/weak-memoize",
+        "pkg:npm/stylis"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/hash@0.9.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/is-prop-valid@1.2.1",
+      "dependsOn": [
+        "pkg:npm/@emotion/memoize"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/memoize@0.8.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/react@11.11.1",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@emotion/babel-plugin",
+        "pkg:npm/@emotion/cache",
+        "pkg:npm/@emotion/serialize",
+        "pkg:npm/@emotion/use-insertion-effect-with-fallbacks",
+        "pkg:npm/@emotion/utils",
+        "pkg:npm/@emotion/weak-memoize",
+        "pkg:npm/hoist-non-react-statics"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/serialize@1.1.2",
+      "dependsOn": [
+        "pkg:npm/@emotion/hash",
+        "pkg:npm/@emotion/memoize",
+        "pkg:npm/@emotion/unitless",
+        "pkg:npm/@emotion/utils",
+        "pkg:npm/csstype"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/sheet@1.2.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/styled@11.11.0",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@emotion/babel-plugin",
+        "pkg:npm/@emotion/is-prop-valid",
+        "pkg:npm/@emotion/serialize",
+        "pkg:npm/@emotion/use-insertion-effect-with-fallbacks",
+        "pkg:npm/@emotion/utils"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/unitless@0.8.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/use-insertion-effect-with-fallbacks@1.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/utils@1.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/weak-memoize@0.3.1",
       "dependsOn": []
     },
     {
@@ -38422,6 +41116,50 @@
       ]
     },
     {
+      "ref": "pkg:npm/@popperjs/core@2.11.8",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@react-aria/ssr@3.7.0",
+      "dependsOn": [
+        "pkg:npm/@swc/helpers"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@remix-run/router@1.7.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@restart/hooks@0.4.9",
+      "dependsOn": [
+        "pkg:npm/dequal"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@restart/ui@1.6.6",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@popperjs/core",
+        "pkg:npm/@react-aria/ssr",
+        "pkg:npm/@restart/hooks",
+        "pkg:npm/@types/warning",
+        "pkg:npm/dequal",
+        "pkg:npm/dom-helpers",
+        "pkg:npm/uncontrollable",
+        "pkg:npm/warning"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@restart/ui/node_modules/uncontrollable@8.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@restart/ui/node_modules/warning@4.0.3",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
+      ]
+    },
+    {
       "ref": "pkg:npm/@rollup/plugin-babel@5.3.1",
       "dependsOn": [
         "pkg:npm/@babel/helper-module-imports",
@@ -38574,6 +41312,12 @@
         "pkg:npm/@svgr/plugin-jsx",
         "pkg:npm/@svgr/plugin-svgo",
         "pkg:npm/loader-utils"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@swc/helpers@0.5.1",
+      "dependsOn": [
+        "pkg:npm/tslib"
       ]
     },
     {
@@ -38740,6 +41484,16 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/@trendmicro/react-sidenav@0.5.0",
+      "dependsOn": [
+        "pkg:npm/chained-function",
+        "pkg:npm/classnames",
+        "pkg:npm/prop-types",
+        "pkg:npm/uncontrollable",
+        "pkg:npm/warning"
+      ]
+    },
+    {
       "ref": "pkg:npm/@trysound/sax@0.2.0",
       "dependsOn": []
     },
@@ -38801,6 +41555,10 @@
         "pkg:npm/@types/express-serve-static-core",
         "pkg:npm/@types/node"
       ]
+    },
+    {
+      "ref": "pkg:npm/@types/d3-hierarchy@1.1.8",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/@types/eslint@8.40.2",
@@ -39055,7 +41813,7 @@
       "dependsOn": []
     },
     {
-      "ref": "pkg:npm/@types/react@18.2.12",
+      "ref": "pkg:npm/@types/react@17.0.62",
       "dependsOn": [
         "pkg:npm/@types/prop-types",
         "pkg:npm/@types/scheduler",
@@ -39064,6 +41822,12 @@
     },
     {
       "ref": "pkg:npm/@types/react-dom@18.2.5",
+      "dependsOn": [
+        "pkg:npm/@types/react"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@types/react-transition-group@4.4.6",
       "dependsOn": [
         "pkg:npm/@types/react"
       ]
@@ -39124,6 +41888,10 @@
     },
     {
       "ref": "pkg:npm/@types/trusted-types@2.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@types/warning@3.0.0",
       "dependsOn": []
     },
     {
@@ -39586,6 +42354,22 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/axios@1.4.0",
+      "dependsOn": [
+        "pkg:npm/follow-redirects",
+        "pkg:npm/form-data",
+        "pkg:npm/proxy-from-env"
+      ]
+    },
+    {
+      "ref": "pkg:npm/axios/node_modules/form-data@4.0.0",
+      "dependsOn": [
+        "pkg:npm/asynckit",
+        "pkg:npm/combined-stream",
+        "pkg:npm/mime-types"
+      ]
+    },
+    {
       "ref": "pkg:npm/axobject-query@3.2.1",
       "dependsOn": [
         "pkg:npm/dequal"
@@ -39839,6 +42623,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/bootstrap@5.3.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/brace-expansion@1.1.11",
       "dependsOn": [
         "pkg:npm/balanced-match",
@@ -39926,6 +42714,14 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/chain-function@1.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/chained-function@0.5.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/chalk@2.4.2",
       "dependsOn": [
         "pkg:npm/ansi-styles",
@@ -39972,6 +42768,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/classnames@2.3.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/clean-css@5.3.2",
       "dependsOn": [
         "pkg:npm/source-map"
@@ -39988,6 +42788,10 @@
         "pkg:npm/strip-ansi",
         "pkg:npm/wrap-ansi"
       ]
+    },
+    {
+      "ref": "pkg:npm/clone@2.1.2",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/co@4.6.0",
@@ -40354,6 +43158,241 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/d3@7.8.5",
+      "dependsOn": [
+        "pkg:npm/d3-array",
+        "pkg:npm/d3-axis",
+        "pkg:npm/d3-brush",
+        "pkg:npm/d3-chord",
+        "pkg:npm/d3-color",
+        "pkg:npm/d3-contour",
+        "pkg:npm/d3-delaunay",
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-drag",
+        "pkg:npm/d3-dsv",
+        "pkg:npm/d3-ease",
+        "pkg:npm/d3-fetch",
+        "pkg:npm/d3-force",
+        "pkg:npm/d3-format",
+        "pkg:npm/d3-geo",
+        "pkg:npm/d3-hierarchy",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-path",
+        "pkg:npm/d3-polygon",
+        "pkg:npm/d3-quadtree",
+        "pkg:npm/d3-random",
+        "pkg:npm/d3-scale",
+        "pkg:npm/d3-scale-chromatic",
+        "pkg:npm/d3-selection",
+        "pkg:npm/d3-shape",
+        "pkg:npm/d3-time",
+        "pkg:npm/d3-time-format",
+        "pkg:npm/d3-timer",
+        "pkg:npm/d3-transition",
+        "pkg:npm/d3-zoom"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-array@3.2.4",
+      "dependsOn": [
+        "pkg:npm/internmap"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-axis@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-brush@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-drag",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-selection",
+        "pkg:npm/d3-transition"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-chord@3.0.1",
+      "dependsOn": [
+        "pkg:npm/d3-path"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-color@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-contour@4.0.2",
+      "dependsOn": [
+        "pkg:npm/d3-array"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-delaunay@6.0.4",
+      "dependsOn": [
+        "pkg:npm/delaunator"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-dispatch@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-drag@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-selection"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-dsv@3.0.1",
+      "dependsOn": [
+        "pkg:npm/commander",
+        "pkg:npm/iconv-lite",
+        "pkg:npm/rw"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-dsv/node_modules/commander@7.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-ease@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-fetch@3.0.1",
+      "dependsOn": [
+        "pkg:npm/d3-dsv"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-force@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-quadtree",
+        "pkg:npm/d3-timer"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-format@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-geo@3.1.0",
+      "dependsOn": [
+        "pkg:npm/d3-array"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-hierarchy@1.1.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-interpolate@3.0.1",
+      "dependsOn": [
+        "pkg:npm/d3-color"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-path@1.0.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-polygon@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-quadtree@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-random@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-scale@4.0.2",
+      "dependsOn": [
+        "pkg:npm/d3-array",
+        "pkg:npm/d3-format",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-time",
+        "pkg:npm/d3-time-format"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-scale-chromatic@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-color",
+        "pkg:npm/d3-interpolate"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-selection@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-shape@1.3.7",
+      "dependsOn": [
+        "pkg:npm/d3-path"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-time@3.1.0",
+      "dependsOn": [
+        "pkg:npm/d3-array"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-time-format@4.1.0",
+      "dependsOn": [
+        "pkg:npm/d3-time"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-timer@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-transition@3.0.1",
+      "dependsOn": [
+        "pkg:npm/d3-color",
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-ease",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-timer"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-zoom@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-drag",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-selection",
+        "pkg:npm/d3-transition"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3/node_modules/d3-hierarchy@3.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3/node_modules/d3-path@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3/node_modules/d3-shape@3.2.0",
+      "dependsOn": [
+        "pkg:npm/d3-path"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d33@3.5.17",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/damerau-levenshtein@1.0.8",
       "dependsOn": []
     },
@@ -40425,6 +43464,12 @@
       "dependsOn": [
         "pkg:npm/has-property-descriptors",
         "pkg:npm/object-keys"
+      ]
+    },
+    {
+      "ref": "pkg:npm/delaunator@5.0.0",
+      "dependsOn": [
+        "pkg:npm/robust-predicates"
       ]
     },
     {
@@ -40510,6 +43555,13 @@
       "ref": "pkg:npm/dom-converter@0.2.0",
       "dependsOn": [
         "pkg:npm/utila"
+      ]
+    },
+    {
+      "ref": "pkg:npm/dom-helpers@5.2.1",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/csstype"
       ]
     },
     {
@@ -41334,6 +44386,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/find-root@1.1.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/find-up@5.0.0",
       "dependsOn": [
         "pkg:npm/locate-path",
@@ -41669,6 +44725,16 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/hoist-non-react-statics@3.3.2",
+      "dependsOn": [
+        "pkg:npm/react-is"
+      ]
+    },
+    {
+      "ref": "pkg:npm/hoist-non-react-statics/node_modules/react-is@16.13.1",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/hoopy@0.1.4",
       "dependsOn": []
     },
@@ -41882,6 +44948,16 @@
         "pkg:npm/get-intrinsic",
         "pkg:npm/has",
         "pkg:npm/side-channel"
+      ]
+    },
+    {
+      "ref": "pkg:npm/internmap@2.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/invariant@2.2.4",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
       ]
     },
     {
@@ -44525,6 +47601,23 @@
       ]
     },
     {
+      "ref": "pkg:npm/prop-types-extra@1.1.1",
+      "dependsOn": [
+        "pkg:npm/react-is",
+        "pkg:npm/warning"
+      ]
+    },
+    {
+      "ref": "pkg:npm/prop-types-extra/node_modules/react-is@16.13.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/prop-types-extra/node_modules/warning@4.0.3",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
+      ]
+    },
+    {
       "ref": "pkg:npm/prop-types/node_modules/react-is@16.13.1",
       "dependsOn": []
     },
@@ -44537,6 +47630,10 @@
     },
     {
       "ref": "pkg:npm/proxy-addr/node_modules/ipaddr.js@1.9.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/proxy-from-env@1.1.0",
       "dependsOn": []
     },
     {
@@ -44615,6 +47712,43 @@
         "pkg:npm/raf",
         "pkg:npm/regenerator-runtime",
         "pkg:npm/whatwg-fetch"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-bootstrap@2.8.0",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@restart/hooks",
+        "pkg:npm/@restart/ui",
+        "pkg:npm/@types/react-transition-group",
+        "pkg:npm/classnames",
+        "pkg:npm/dom-helpers",
+        "pkg:npm/invariant",
+        "pkg:npm/prop-types",
+        "pkg:npm/prop-types-extra",
+        "pkg:npm/react-transition-group",
+        "pkg:npm/uncontrollable",
+        "pkg:npm/warning"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-bootstrap/node_modules/warning@4.0.3",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-d3-tree@3.6.1",
+      "dependsOn": [
+        "pkg:npm/@bkrem/react-transition-group",
+        "pkg:npm/@types/d3-hierarchy",
+        "pkg:npm/clone",
+        "pkg:npm/d3-hierarchy",
+        "pkg:npm/d3-selection",
+        "pkg:npm/d3-shape",
+        "pkg:npm/d3-zoom",
+        "pkg:npm/dequal",
+        "pkg:npm/uuid"
       ]
     },
     {
@@ -44703,8 +47837,34 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/react-lifecycles-compat@3.0.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/react-pro-sidebar@1.1.0-alpha.1",
+      "dependsOn": [
+        "pkg:npm/@emotion/react",
+        "pkg:npm/@emotion/styled",
+        "pkg:npm/@popperjs/core",
+        "pkg:npm/classnames"
+      ]
+    },
+    {
       "ref": "pkg:npm/react-refresh@0.11.0",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/react-router@6.14.0",
+      "dependsOn": [
+        "pkg:npm/@remix-run/router"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-router-dom@6.14.0",
+      "dependsOn": [
+        "pkg:npm/@remix-run/router",
+        "pkg:npm/react-router"
+      ]
     },
     {
       "ref": "pkg:npm/react-scripts@5.0.1",
@@ -44756,6 +47916,15 @@
         "pkg:npm/webpack-dev-server",
         "pkg:npm/webpack-manifest-plugin",
         "pkg:npm/workbox-webpack-plugin"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-transition-group@4.4.5",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/dom-helpers",
+        "pkg:npm/loose-envify",
+        "pkg:npm/prop-types"
       ]
     },
     {
@@ -44932,6 +48101,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/robust-predicates@3.0.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/rollup@2.79.1",
       "dependsOn": []
     },
@@ -44973,6 +48146,10 @@
       "dependsOn": [
         "pkg:npm/queue-microtask"
       ]
+    },
+    {
+      "ref": "pkg:npm/rw@1.3.3",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/safe-array-concat@1.0.0",
@@ -45402,6 +48579,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/stylis@4.2.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/sucrase@3.32.0",
       "dependsOn": [
         "pkg:npm/@jridgewell/gen-mapping",
@@ -45756,6 +48937,15 @@
       ]
     },
     {
+      "ref": "pkg:npm/uncontrollable@7.2.1",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@types/react",
+        "pkg:npm/invariant",
+        "pkg:npm/react-lifecycles-compat"
+      ]
+    },
+    {
       "ref": "pkg:npm/unicode-canonical-property-names-ecmascript@2.0.0",
       "dependsOn": []
     },
@@ -45869,6 +49059,12 @@
       "ref": "pkg:npm/walker@1.0.8",
       "dependsOn": [
         "pkg:npm/makeerror"
+      ]
+    },
+    {
+      "ref": "pkg:npm/warning@3.0.0",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
       ]
     },
     {
@@ -46435,6 +49631,54 @@
     },
     {
       "ref": "pkg:npm/yocto-queue@0.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:application/sbom",
+      "dependsOn": [
+        "pkg:npm/axios@1.4.0",
+        "pkg:npm/d3@7.8.5",
+        "pkg:npm/react-d3@0.4.0",
+        "pkg:npm/react-d3-tree@3.6.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@babel/runtime@7.22.6",
+      "dependsOn": [
+        "pkg:npm/regenerator-runtime"
+      ]
+    },
+    {
+      "ref": "pkg:npm/commander@7.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/dom-helpers@3.4.0",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime"
+      ]
+    },
+    {
+      "ref": "pkg:npm/form-data@4.0.0",
+      "dependsOn": [
+        "pkg:npm/asynckit",
+        "pkg:npm/combined-stream",
+        "pkg:npm/mime-types"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-d3@0.4.0",
+      "dependsOn": [
+        "pkg:npm/d3",
+        "pkg:npm/react"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-d3/node_modules/d3@3.5.17",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/react-is@16.13.1",
       "dependsOn": []
     }
   ]
