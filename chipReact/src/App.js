@@ -8,6 +8,7 @@ import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
 import { Button } from 'react-bootstrap';
 import Vulnerability from './pages/Vulnerability';
+import SbomTree from './pages/tree-rendering/SbomTree';
 
 const App = () => {
   // create states for being logged in, in the process of logging out, the ID of the user, the user's preferred name, the user's netid
@@ -90,6 +91,7 @@ const App = () => {
                 {loggedIn && userId && (
                   <>
                     <Route path="/viewsboms" element={<ViewSBOMs userId={userId} />} />
+                    <Route path="/sbom/:sbomId" element={<SbomTree />} />
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
                     <Route path="/vulnerability" element={<Vulnerability />} />
                   </>

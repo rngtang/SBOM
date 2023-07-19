@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MyAccordian from '../components/ViewSBOMsAccordian.js';
 import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
-import SbomTree from './SbomTree';
+import SbomTree from './tree-rendering/SbomTree';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
+import { useNavigate } from 'react-router-dom';
 
 // someone made great comments for this file already. please come back and finish, thanks! -james :)
 
@@ -25,6 +26,9 @@ function ViewSBOMs({ userId }) {
   const [nameMatch, setNameMatch] = useState(false);
   const [trigger, setTrigger] = useState(false);
 
+
+  
+
   // create a state for file input
   const fileInput = useRef();
 
@@ -40,9 +44,10 @@ function ViewSBOMs({ userId }) {
     }
   }
 
-  // create a handle for view click
-  const handleViewClick = (sbomId) => {
-    setSelectedSbomId(sbomId);
+  //useNavigate for redirecting to new page
+  const navigate = useNavigate();
+  const handleViewClick = (id) => {
+    navigate(`/sbom/${id}`);
   }
 
   // fix this fetch
