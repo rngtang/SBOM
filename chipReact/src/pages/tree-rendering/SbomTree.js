@@ -8,7 +8,7 @@ import VulnSidebar from './VulnSidebar';
 
 const containerStyles = {
   width: '80%',
-  height: '800px',
+  height: '750px',
 };
 
 function calculateDepth(node, depth = 0) {

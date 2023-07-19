@@ -21,6 +21,16 @@ body {
     position: relative;
 }
 
+.sidebar-fixed {
+    height: 95vh;
+    width: 208px;
+    /* position: fixed; */
+    /* min-height: 95vh; */
+    border-radius: 16px;
+    display: flex;
+    position: fixed;
+}
+
 .sidebar-sticky {
     /* padding-top: 16px; */
     /* padding-bottom: 16px; */
@@ -30,19 +40,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
-}
-
-.sidebar {
-    height: 95vh;
-    width: 208px;
-    position: sticky;
-    top: 20px;
-    /* position: fixed; */
-    /* min-height: 95vh; */
-    border-radius: 16px;
-    display: inline-block;
-    /* flex-direction: column;
-    justify-content: space-between; */
 }
 
 .nav {
