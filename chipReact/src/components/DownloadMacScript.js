@@ -38,7 +38,7 @@ export default function DownloadLinuxScript() {
         // target="_blank" // if target set to blank, opens download in new tab
         rel="noreferrer" // security 
       >
-        <button onClick={handleDownload} className={styles.button}>DOWNLOAD LINUX SCRIPT</button>
+        <button onClick={handleDownload} className={styles.button}>DOWNLOAD MAC SCRIPT</button>
       </a>
       {error && <p style={{color: 'red'}}>ERROR: {error}</p>}
     </div>

@@ -4,7 +4,9 @@ import CodeBox from '../components/CodeBox';
 import prereq1 from '../data/prereq.json';
 import data1 from '../data/linux.json';
 import data2 from '../data/windows.json';
+import data3 from '../data/mac.json';
 import DownloadLinuxScript from '../components/DownloadLinuxScript';
+import DownloadMacScript from '../components/DownloadMacScript';
 import DownloadWindowsScript from '../components/DownloadWindowsScript';
 
 // title is the title of the section
@@ -68,6 +70,7 @@ const AnotherPage = () => {
         <>
             <Prereq title={prereq1.title} para1={prereq1.para1} docker={prereq1.docker} />
             <Section title={data1.title} text={data1.text} code={data1.code} downloadComponent={<DownloadLinuxScript />} />
+            <Section title={data3.title} text={data3.text} code={data3.code} downloadComponent={<DownloadMacScript />} />
             <Section title={data2.title} text={data2.text} code={data2.code} downloadComponent={<DownloadWindowsScript />} />
         </>
     );
