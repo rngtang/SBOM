@@ -4,25 +4,21 @@ class SessionsController < ActionController::Base
     def current_user
       @current_user ||= User.find_by(id: session[:user_id])
     end
-  
+  #checks if user is authenticated
     def authenticate_user!
       unless current_user
         redirect_to "http://localhost:3000", allow_other_host: true
       end
     end
-    
+  #current_user controller
     def index
-      # @tester = User.new(id: 1)
-      # puts "PRINTING"
-      # @current_user = User.find_by(id: @tester[:id])
-
       if current_user
         render json: current_user
       else
         render json: {"hello":"from index in sessions"}, status: 404
       end
     end
-  
+  #creates the user by fetching saml response from shib, fetching necessary attributes and creating the cookie
     def create
       saml_response = params[:SAMLResponse]
       
@@ -42,7 +38,7 @@ class SessionsController < ActionController::Base
           rescue => e
             Rails.logger.error "Failed to update user email: #{e.message}"
           end
-    
+         #creates the cookie
           session[:user_id] = user.id
           @current_user=user
           redirect_to "http://localhost:3000/home"
@@ -56,7 +52,7 @@ class SessionsController < ActionController::Base
         render 'new'
       end
     end
-    
+    #destroys the cookie
     def destroy
       session[:user_id] = nil
       # redirect_to root_path, notice: 'Logged out!'
@@ -84,7 +80,7 @@ class SessionsController < ActionController::Base
     def fetch_username(attributes_hash)
       attributes_hash.dig("urn:oid:2.16.840.1.113730.3.1.241", 0)
     end
-  
+  #provides access to key components for the website, i.e private key, idp_cert and the acs used
     def saml_settings
       settings = OneLogin::RubySaml::Settings.new
   
