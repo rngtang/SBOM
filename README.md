@@ -79,4 +79,9 @@ Here is a comprehensive list of our API routes and what they can be used for:
         24.?????????? REFERENCES??????
         25. POST        /sessions
         Creates a new session for the current user.
-
+        26. GET         /sboms/{sbomId}/dependencies
+        Finds all dependencies of specific sbom.
+        27. GET         /dependencies/{dependencyId}/tree
+        Finds all direct children of specific dependency.
+        28. GET         /sboms/{sbomId}/dependencies_tree
+        Finds a dependency tree for a specific SBOM.
