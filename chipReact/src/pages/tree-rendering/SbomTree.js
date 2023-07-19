@@ -24,7 +24,7 @@ function SbomTree() {
     <div style={containerStyles}>
       <Tree
         data={testTree}
-        translate={{ x: 400, y: 200 }}
+        translate={{ x: 50, y: 400 }}
         rootNodeClassName="node__root"
         branchNodeClassName="node__branch-2"
         leafNodeClassName="node__leaf"
@@ -34,11 +34,6 @@ function SbomTree() {
 }
 
 export default SbomTree;
-
-
-
-
-
 
 /*Axios functional code below:
 
