@@ -3,6 +3,7 @@ import Tree from 'react-d3-tree';
 import { useParams } from 'react-router-dom';
 import testTree from './testing.json'; // make sure the path to your JSON file is correct
 import './custom-tree.css';
+import VulnSidebar from './VulnSidebar';
 
 const containerStyles = {
   width: '80%',
@@ -29,6 +30,7 @@ function SbomTree() {
         branchNodeClassName="node__branch-2"
         leafNodeClassName="node__leaf"
       />
+      <VulnSidebar />
     </div>
   );
 }
