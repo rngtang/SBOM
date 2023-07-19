@@ -40,5 +40,25 @@ Here is a comprehensive list of our API routes and what they can be used for:
         Finds all vulnerabilities.
         5. GET     /sboms/{sbomId}/vulnerabilities
         Finds all vulnerabilities of sbom with id of {sbomId}.
-        6.
+        6. GET /sboms/{sbomId}/metadata
+        Finds the metadata of sbom with id of {sbomId}.
+        7. GET /sboms/{sbomId}/sbomComponents
+        Finds all components of sbom with id of {sbomId}
+        8. POST /users/{userId}/sboms
+        Add a new sbom to a user's sbom list
+        9. PUT /sboms/{sbomId}
+        Edit a sbom's name and description
+        10. GET /sbom_components/{sbom_componentId}/licenses
+        Finds the licenses of an sbom component.
+        11. GET /sbom_components/{sbom_componentId}
+        Finds a specific sbom component.
+        12. GET /metadata/{metadatumId}/tools
+        Finds the tools used to create the sbom
+        13. GET /metadata/{metadatumId}/components
+        Finds the component of the metadata
+        14. GET /sboms/{sbomId}/metadata
+        Finds the metadata of a specific sbom.
+        15. GET /metadata/{metadatumId}
+        Finds a specific metadatum
+        16. GET /
 
