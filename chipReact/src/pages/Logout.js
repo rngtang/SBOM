@@ -13,23 +13,24 @@ const LogoutMessage = () => {
     );
 };
 
-const Logout = ({ setLoggedIn}) => {
-    const [showMessage, setShowMessage] = useState(false);
-    const goHome = useNavigate();
+// const Logout = ({ setLoggedIn}) => {
+    // const [showMessage, setShowMessage] = useState(false);
+    // const goHome = useNavigate();
 
-    useEffect(() => {
-        const handleLogout = () => {
-            if(window.confirm('Are you sure you want to log out?')){
-                setLoggedIn(false);
-                setShowMessage(true);
-            } else {
-                goHome('/home');
-            }
-        };
+    // useEffect(() => {
+    //     const handleLogout = () => {
+    //         if(window.confirm('Are you sure you want to log out?')){
+    //             setLoggedIn(false);
+    //             setShowMessage(true);
+    //         } else {
+    //             goHome('/home');
+    //         }
+    //     };
 
-        handleLogout();
-    }, [goHome])
-const Logout = ({ setLoggedIn, setLoggingOut }) => {
+    //     handleLogout();
+    // }, [goHome])
+
+    const Logout = ({ setLoggedIn, setLoggingOut }) => {
     // set states for being logged out, and currently logging out
     setLoggedIn(false);
     setLoggingOut(true);
