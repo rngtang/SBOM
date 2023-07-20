@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MyAccordian from '../components/ViewSBOMsAccordian.js';
 import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
-import SbomTree from './SbomTree';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
+import SbomTree from './SbomTree';
 
 // someone made great comments for this file already. please come back and finish, thanks! -james :)
 
