@@ -8,6 +8,8 @@ import React, { useState, useRef, useEffect } from 'react';
 // trigger [i dont knowwww]
 // name is name of the SBOM
 // description is the description of the SBOM
+
+
 export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name, description }) {
   // debugger line
   console.log({ sbomId })
@@ -70,10 +72,14 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
       // setFormSubmitted(false); //reset
     }, 500); // Adjust the delay if needed
   }
-
+  
   // create a handle for clicking on button
   const handleButtonClick = (e) => {
+    console.log("pre")
     e.stopPropagation()
+    if (e.stopPropagation()){
+      console.log("grah")
+    }
     e.preventDefault()
 
     
@@ -103,6 +109,9 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
         type="file"
         style={{ display: 'none' }}
         onChange={handleFileUpload}
+        onClick={(e)=>{
+          e.stopPropagation();
+        }}
       />
     </div>
   );
