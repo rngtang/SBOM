@@ -15,8 +15,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_150555) do
     t.string "ref"
     t.text "dependsOn"
     t.bigint "sbom_id", null: false
+    t.bigint "sbom_component_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sbom_component_id"], name: "index_dependencies_on_sbom_component_id"
     t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
   end
 
@@ -114,11 +116,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_150555) do
     t.string "description"
     t.string "recommendation"
     t.text "affected"
+    t.bigint "sbom_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["vulnID"], name: "index_vulnerabilities_on_vulnID", unique: true
+    t.index ["sbom_id"], name: "index_vulnerabilities_on_sbom_id"
   end
 
+  add_foreign_key "dependencies", "sbom_components"
   add_foreign_key "dependencies", "sboms"
   add_foreign_key "metadata", "sboms"
   add_foreign_key "properties", "sbom_components"
@@ -127,4 +131,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_150555) do
   add_foreign_key "sboms", "users"
   add_foreign_key "sources", "vulnerabilities"
   add_foreign_key "tools", "metadata"
+  add_foreign_key "vulnerabilities", "sboms"
 end
