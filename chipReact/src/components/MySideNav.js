@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import chipImage from './images/chip.png';
-import './MySideNav.css';
-import ProfileComp from './ProfileComp';
+import { NavLink } from 'react-router-dom'; // redirect to other pages
+import './MySideNav.css'; // styles
+import chipImage from './images/chip.png'; // logo home button
+import ProfileComp from './ProfileComp'; // bottom left profile
 
 // loggedIn is the state of being logged in or not
 // username is the Display Name of the user, fetched from SHIB

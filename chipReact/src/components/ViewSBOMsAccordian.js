@@ -1,19 +1,21 @@
-import React from 'react';
-import './ViewAccordian.css';
-import Accordion from 'react-bootstrap/Accordion';
+import React, { useState } from 'react';
+import './ViewSBOMsAccordian.css'; // styles
+
+import Accordion from 'react-bootstrap/Accordion'; // accordion component
+
+// buttons in the accordion
 import DeleteButton from './DeleteButton';
 import ViewVulnsButton from './ViewVulnsButton';
 import UpdateButton from './UpdateButton';
 import EditButton from './EditButton';
-import { useState } from 'react';
 import TreeButton from './TreeButton';
 
 // comments in the actual accordion is spotty, please add stuff -james
 
 // userId is the ID of the user, not the netid
 // meta is the metadata of the SBOM
-// trigger [no clue bro]
-// setTrigger [pls help]
+// trigger to update if database gets updated
+// setTrigger controls the trigger
 // sbom is the actual SBOM json file
 const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
 

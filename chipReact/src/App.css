@@ -17,19 +17,9 @@
   font-family: Roboto, 'Merriweather', Georgia, 'Open Sans', sans-serif;
 }
 
-/* navbar color */
-.bg-navblue {
-  background-color: var(--dukeblue);
-}
-
 .main-content {
   display: flex;
   flex-direction: row;
-}
-
-.login-button {
-  background-color: #0577B1;
-  color: white;
 }
 
 .main {
