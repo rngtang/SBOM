@@ -1,14 +1,15 @@
-/* olly please update comments here */
-/* formats the accordion so that the buttons are all spread out on the same line */
 #accordianRight {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 45%;
+    /* height: 20px; */
     font-size: small;
+    /* margin-top: 9px; */
     margin-bottom: 0px;
     margin-right: 5%;
+    /* vertical-align: center; */
 }
 
 #accordianRight p {
@@ -19,7 +20,6 @@
     margin: 0;
 }
 
-/* formats the name of the sbom to be centered vertically in the accordion */
 #name {
     margin-bottom: 0px;
 }
@@ -27,6 +27,9 @@
 .accordion-item {
     width: 100%;
     align-items: center;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
 }
 
 .accordion-header {
@@ -42,6 +45,7 @@
     justify-content: center;
     margin-top: 0px;
     margin-bottom: 0px;
+    /* width: auto; */
     align-items: center;
 }
 
