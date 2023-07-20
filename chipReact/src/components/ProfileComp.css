@@ -1,3 +1,4 @@
+/* create a box for the profile section */
 #profile {
     background-color: var(--dukeblue);
     border: none;
@@ -9,14 +10,16 @@
     box-shadow: 0 -4px 4px -4px rgba(255, 255, 255, 1);
     padding: 16px;
     margin-left: 8px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
+/* format first line, the welcome [name] */
 #profile p:first-of-type {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 8px;
 }
 
+/* format the text for the profile box */
 #profile p {
     color: white;
     margin: 0;

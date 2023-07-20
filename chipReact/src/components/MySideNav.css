@@ -1,49 +1,30 @@
-:root {
-    --dukeblue: #012169; 
-    --shaleblue: #0577B1;
-    --limestone: #E5E5E5;
-    --piedmont: #A1B70D;
-    --persimmon: #E89923;
-}
-
-html, body {
+/* auto change height to match page height */
+body {
     height: 100%;
 }
 
+/* pick navbar background color */
+.bg-navblue {
+    background-color: var(--dukeblue);
+}
+
+/* format the sidebar */
 .sidebar {
     height: 95vh;
     width: 208px;
-    border-radius: 16px;  
-    display: flex;    
-    position: relative;
-}
-
-.sidebar-sticky {    
-    width: 208px;
-    display: inline-block;
-    flex-direction: column;
-    justify-content: space-between;
-    
-}
-
-.sidebar {
-    height: 95vh;
-    width: 208px;
-    position: sticky; 
     top: 20px;
-    border-radius: 16px;  
+    border-radius: 16px;
+    position: sticky;
     display: inline-block;
 }
 
-.nav {
-    flex-grow: 1;
-}
-
+/* color and spacing of the navbar hyperlinks */
 .nav-link {
     color: var(--limestone);
     padding-left: 24px;
 }
 
+/* create individual boxes for the navbar hyperlinks */
 .nav-item {
     text-align: left;
     font-weight: 300;
@@ -52,13 +33,15 @@ html, body {
     transition: background-color 0.3s;
 }
 
+/* change color of the individual boxes on hover */
 .nav-item:hover {
     background-color: var(--limestone);
     border-radius: 8px;
     font-weight: 400;
     transition: background-color 0.3s;
-} 
+}
 
+/* highlight the box of current page */
 .nav-item .active {
     color: var(--limestone);
     font-weight: 500;
@@ -69,12 +52,14 @@ html, body {
     box-shadow: 1px 1px black;
 }
 
+/* create a container for the logo home button */
 .navbar-logo {
     width: auto;
     margin: 0 8px;
     box-shadow: 0 4px 4px -4px rgba(255, 255, 255, 1);
 }
 
+/* format the logo home button */
 .logo-image {
     width: 128px;
     height: auto;
@@ -83,4 +68,3 @@ html, body {
     margin-top: 20px;
     padding: 16px 0 8px 0;
 }
-

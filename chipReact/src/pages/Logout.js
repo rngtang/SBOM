@@ -29,11 +29,14 @@ const Logout = ({ setLoggedIn}) => {
 
         handleLogout();
     }, [goHome])
+const Logout = ({ setLoggedIn, setLoggingOut }) => {
+    // set states for being logged out, and currently logging out
+    setLoggedIn(false);
+    setLoggingOut(true);
 
     
     return (
         <div>
-            {/* {showMessage && <LogoutMessage />} */}
             {<LogoutMessage />}
         </div>
     );
