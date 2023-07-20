@@ -46,10 +46,11 @@ const WhatAreSBOMs = () => {
         <div className="section">
             <h3>What are SBOMs?</h3>
             <p>
-                A Software Bill of Materials (SBOM) is a formal record of all software packages and components used by a software project or machine.
-                These components can be commercial or open-source, and in turn rely on other components themselves. This creates a series of reliances, or a chain of dependencies, that is not easily visible to the creator or user of the main project.
+                A Software Bill of Materials (SBOM) is a formal record of all software packages and components used by a software project or machine. 
             </p>
-            
+            <p>
+                These components can be commercial or open-source, and in turn rely on other components themselves. This creates a series of reliances, or a chain of dependencies, that is not easily visible to the creator or user of the main project.
+            </p> 
         </div>
     );
 };
