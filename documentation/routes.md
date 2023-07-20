@@ -4,7 +4,7 @@ Version 0.9 -------------- 7/19/23 -----------------
 Here is a comprehensive list of our API routes and what they can be used for:
 
 
-        SBOMs - Everything about sboms
+SBOMs - Everything about sboms
         2. GET          /sboms/{sbomId}
         Finds sbom by id.
                 Responses:
@@ -181,18 +181,54 @@ Here is a comprehensive list of our API routes and what they can be used for:
                                 ]
         6. GET          /sboms/{sbomId}/sbomComponents
         Finds all components of sbom with id of {sbomId}.
+                200 -   returns json
+                        "sbom_components": [
+                                        {
+                                                "id": 0,
+                                                "bom_ref": "string",
+                                                "group": "string",
+                                                "name": "string",
+                                                "version": "string",
+                                                "purl": "string",
+                                                "sbom_id": 0,
+                                                "created_at": "2023-07-19T18:29:46.041Z",
+                                                "updated_at": "2023-07-19T18:29:46.041Z",
+                                                "properties": [
+                                                        {
+                                                                "id": 0,
+                                                                "name": "string",
+                                                                "value": "string",
+                                                                "sbom_component_id": 0,
+                                                                "created_at": "2023-07-19T18:29:46.072Z",
+                                                                "updated_at": "2023-07-19T18:29:46.072Z"
+                                                        }
+                                                ]
+                                        }
+                                ]
         7. POST         /users/{userId}/sboms
         Add a new sbom to a user's sbom list.
+                input:
+                        requires json file submission
+                                "sbom": {}
+                        permits all other fields
         8. PUT          /sboms/{sbomId}
         Edit a sbom's name and description.
+                input:
+                        requires json format
+                                "sbom":{}
+                        permits name and description
+                                "sbom":{
+                                        "name": "string",
+                                        "description": "string
+                                }
 
-        SBOM COMPONENTS - Everything about sbom components
+SBOM COMPONENTS - Everything about sbom components
         9. GET         /sbom_components/{sbom_componentId}/licenses
         Finds the licenses of an sbom component.
         10. GET         /sbom_components/{sbom_componentId}
         Finds a specific sbom component.
         
-        METADATA - Everything about metadata
+METADATA - Everything about metadata
         11. GET         /metadata/{metadatumId}/tools
         Finds the tools used to create the sbom.
         12. GET         /metadata/{metadatumId}/components
@@ -200,7 +236,7 @@ Here is a comprehensive list of our API routes and what they can be used for:
         13. GET         /metadata/{metadatumId}
         Finds a specific metadatum.
         
-        VULNERABILITIES - Everything about vulnerabilities
+VULNERABILITIES - Everything about vulnerabilities
         14. GET          /vulnerabilities
         Finds all vulnerabilities.
         15. GET         /vulnerabilities/{vulnerabilityId}/ratings
@@ -210,7 +246,7 @@ Here is a comprehensive list of our API routes and what they can be used for:
         17. GET         /ratings/{ratingId}/sources
         Finds the source of a specific rating.
 
-        DEPENDENCIES - Everything about dependencies
+DEPENDENCIES - Everything about dependencies
         18. GET         /sboms/{sbomId}/dependencies
         Finds all dependencies of specific sbom.
         19. GET         /dependencies/{dependencyId}/tree
@@ -218,7 +254,7 @@ Here is a comprehensive list of our API routes and what they can be used for:
         20. GET         /sboms/{sbomId}/dependencies_tree
         Finds a dependency tree for a specific SBOM.
 
-        USERS - Everything about users
+USERS - Everything about users
         21. GET         /users
         Finds all users.
         22. POST        /users
@@ -228,12 +264,12 @@ Here is a comprehensive list of our API routes and what they can be used for:
         1. GET          /users/{userId}/sboms
         Finds all sboms associated with a user with id of {userId}.
 
-        SCRIPTS - All about sbom creation scripts
+SCRIPTS - All about sbom creation scripts
         24. GET         /scripts/linux
         Finds a Linux script for downloading and creating an SBOM
         25. GET         /scripts/windows
         Finds a Windows script for downloading and creating an sbom.
 
-        AUTHORIZATION - About user authorization
+AUTHORIZATION - About user authorization
         26. POST        /sessions
         Creates a new session for the current user.
