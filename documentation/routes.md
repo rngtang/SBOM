@@ -6,13 +6,179 @@ Here is a comprehensive list of our API routes and what they can be used for:
 
         SBOMs - Everything about sboms
         2. GET          /sboms/{sbomId}
-        Finds sbom by id.gi
+        Finds sbom by id.
+                Responses:
+                200 -   successful operation
+                        returns a json file
+                        {
+                                "id": 0,
+                                "bomFormat": "string",
+                                "specVersion": "string",
+                                "serialNumber": "string",
+                                "version": int,
+                                "name": "string",
+                                "description": "string",
+                                "archive": boolean,
+                                "user_id": 0,
+                                "created_at": "2023-07-19T18:29:45.992Z",
+                                "updated_at": "2023-07-19T19:37:42.519Z",
+                                "metadata": [
+                                        {
+                                                "id": 0,
+                                                "timestamp": "2023-07-06T10:48:36-04:00",
+                                                "sbom_id": 1,
+                                                "created_at": "2023-07-19T18:29:46.288Z",
+                                                "updated_at": "2023-07-19T18:29:46.288Z",
+                                                "tools": [
+                                                        {
+                                                                "id": 0,
+                                                                "vendor": "string",
+                                                                "name": "string",
+                                                                "version": "string",
+                                                                "metadatum_id": 0,
+                                                                "created_at": "2023-07-19T18:29:46.315Z",
+                                                                "updated_at": "2023-07-19T18:29:46.315Z"
+                                                        }
+                                                ]
+                                        }
+                                ],
+                                "vulnerabilities": [
+                                        {
+                                                "id": 0,
+                                                "bom_ref": "string",
+                                                "vulnID": "string",
+                                                "description": "string",
+                                                "recommendation": "string (link)",
+                                                "affected": [
+                                                        "string"
+                                                ],
+                                                "sbom_id": 0,
+                                                "created_at": "2023-07-19T18:29:46.348Z",
+                                                "updated_at": "2023-07-19T18:29:46.348Z",
+                                                "ratings": [
+                                                        {
+                                                                "id": 0,
+                                                                "score": "string,
+                                                                "severity": "string",
+                                                                "vulnerability_id": 0,
+                                                                "created_at": "2023-07-19T18:29:46.384Z",
+                                                                "updated_at": "2023-07-19T18:29:46.384Z"
+                                                        }
+                                                ],
+                                                "sources": [
+                                                        {
+                                                                "id": 0,
+                                                                "name": "string",
+                                                                "url": "string",
+                                                                "vulnerability_id": 0,
+                                                                "created_at": "2023-07-19T18:29:46.419Z",
+                                                                "updated_at": "2023-07-19T18:29:46.419Z"
+                                                        }
+                                                ]
+                                        }
+                                ],
+                                "sbom_components": [
+                                        {
+                                                "id": 0,
+                                                "bom_ref": "string",
+                                                "group": "string",
+                                                "name": "string",
+                                                "version": "string",
+                                                "purl": "string",
+                                                "sbom_id": 0,
+                                                "created_at": "2023-07-19T18:29:46.041Z",
+                                                "updated_at": "2023-07-19T18:29:46.041Z",
+                                                "properties": [
+                                                        {
+                                                                "id": 0,
+                                                                "name": "string",
+                                                                "value": "string",
+                                                                "sbom_component_id": 0,
+                                                                "created_at": "2023-07-19T18:29:46.072Z",
+                                                                "updated_at": "2023-07-19T18:29:46.072Z"
+                                                        }
+                                                ]
+                                        }
+                                ],
+                                "dependencies": [
+                                        {
+                                                "id": 0,
+                                                "ref": "string",
+                                                "dependsOn": [
+                                                        "string"
+                                                ],
+                                                "sbom_id": 0,
+                                                "created_at": "2023-07-19T18:29:46.228Z",
+                                                "updated_at": "2023-07-19T18:29:46.228Z"
+                                        }
+                                ]
+                        }
+                404 -   invalid {sbomId}
         3. GET          /sboms
         Finds all sboms.
+                200 -   returns json with list of all sboms
         4. GET          /sboms/{sbomId}/vulnerabilities
         Finds all vulnerabilities of sbom with id of {sbomId}.
+                200 -   returns json
+                        "vulnerabilities": [
+                                        {
+                                                "id": 0,
+                                                "bom_ref": "string",
+                                                "vulnID": "string",
+                                                "description": "string",
+                                                "recommendation": "string (link)",
+                                                "affected": [
+                                                        "string"
+                                                ],
+                                                "sbom_id": 0,
+                                                "created_at": "2023-07-19T18:29:46.348Z",
+                                                "updated_at": "2023-07-19T18:29:46.348Z",
+                                                "ratings": [
+                                                        {
+                                                                "id": 0,
+                                                                "score": "string,
+                                                                "severity": "string",
+                                                                "vulnerability_id": 0,
+                                                                "created_at": "2023-07-19T18:29:46.384Z",
+                                                                "updated_at": "2023-07-19T18:29:46.384Z"
+                                                        }
+                                                ],
+                                                "sources": [
+                                                        {
+                                                                "id": 0,
+                                                                "name": "string",
+                                                                "url": "string",
+                                                                "vulnerability_id": 0,
+                                                                "created_at": "2023-07-19T18:29:46.419Z",
+                                                                "updated_at": "2023-07-19T18:29:46.419Z"
+                                                        }
+                                                ]
+                                        }
+                                ]
+                        404 -   invalid {sbomId}
         5. GET          /sboms/{sbomId}/metadata
         Finds the metadata of sbom with id of {sbomId}.
+                200 -   returns json
+                        "metadata": [
+                                        {
+                                                "id": 0,
+                                                "timestamp": "2023-07-06T10:48:36-04:00",
+                                                "sbom_id": 1,
+                                                "created_at": "2023-07-19T18:29:46.288Z",
+                                                "updated_at": "2023-07-19T18:29:46.288Z",
+                                                "tools": [
+                                                        {
+                                                                "id": 0,
+                                                                "vendor": "string",
+                                                                "name": "string",
+                                                                "version": "string",
+                                                                "metadatum_id": 0,
+                                                                "created_at": "2023-07-19T18:29:46.315Z",
+                                                                "updated_at": "2023-07-19T18:29:46.315Z"
+                                                        }
+                                                ]
+                                        }
+                                ]
         6. GET          /sboms/{sbomId}/sbomComponents
         Finds all components of sbom with id of {sbomId}.
         7. POST         /users/{userId}/sboms
