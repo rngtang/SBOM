@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css'; // styles
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // router
+
+// pages
 import Home from './pages/Home';
 import ViewSBOMs from './pages/ViewSBOMs';
 import GenerateSBOMs from './pages/GenerateSBOMs';
 import Logout from './pages/Logout';
-import MySideNav from './components/MySideNav';
-import { Button } from 'react-bootstrap';
-import Vulnerability from './pages/Vulnerability';
+import Vulnerability from './pages/Vulnerability'; // specific to each SBOM
+
+import MySideNav from './components/MySideNav'; // navbar
+
+import { Button } from 'react-bootstrap'; // remove this after we move the login button to the navbar
 import SbomTree from './pages/tree-rendering/SbomTree';
 import TreeTest from './pages/tree-rendering/TreeTest';
 

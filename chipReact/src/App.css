@@ -17,48 +17,9 @@
   font-family: Roboto, 'Merriweather', Georgia, 'Open Sans', sans-serif;
 }
 
-.mysidenav {
-  background-color: var(--shaleblue) !important;
-  font-family: Roboto, 'Open Sans', sans-serif;
-}
-
-/* Where is .page being used?  */
-/* .page {
-  font: 5rem;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif ;
-  
-} */
-
-.intro-section {
-  background-color: var(--limestone);
-  padding: 20px;
-}
-
-.what-sboms-section {
-  background-color: var(--limestone);
-  padding: 20px;
-}
-
-.generatesboms-1 {
-  background-color: var(--limestone);
-  padding: 20px;
-}
-
-/* navbar color */
-.bg-navblue {
-  background-color: var(--dukeblue);
-}
-
 .main-content {
   display: flex;
   flex-direction: row;
-}
-
-.login-button {
-  background-color: #0577B1;
-  color: white;
-  /* margin-left: 560px; */
 }
 
 .main {
@@ -66,6 +27,7 @@
   flex-direction: row;
 }
 
+/* spacing for all pages with padding on top */
 .pages {
   width: calc(100vw - 240px);
   padding-top: 16px;
