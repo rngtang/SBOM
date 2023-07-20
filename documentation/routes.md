@@ -5,6 +5,7 @@ Here is a comprehensive list of our API routes and what they can be used for:
 
 
 SBOMs - Everything about sboms
+        -----------------------------------------------------------------------
         2. GET          /sboms/{sbomId}
         Finds sbom by id.
                 Responses:
@@ -223,6 +224,7 @@ SBOMs - Everything about sboms
                                 }
 
 SBOM COMPONENTS - Everything about sbom components
+        
         9. GET         /sbom_components/{sbom_componentId}/licenses
         Finds the licenses of an sbom component.
         10. GET         /sbom_components/{sbom_componentId}
