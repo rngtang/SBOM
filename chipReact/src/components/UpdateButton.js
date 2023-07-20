@@ -5,7 +5,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 // userId is the ID of the user, not the netid
 // sbomId is the [] ID of the SBOM
-// trigger [i dont knowwww]
+// trigger [rerenders components when boolean is changed]
 // name is name of the SBOM
 // description is the description of the SBOM
 
@@ -75,25 +75,12 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
   
   // create a handle for clicking on button
   const handleButtonClick = (e) => {
-    console.log("pre")
+    // prevents toggle of accordion on button click
     e.stopPropagation()
-    if (e.stopPropagation()){
-      console.log("grah")
-    }
     e.preventDefault()
-
     
+    //opens fileinput box
     fileInput.current?.click();
-
-    // safety net dialogue
-    // e.preventDefault()
-    // console.log(trigger)
-    // if(window.confirm("Are you sure you want to delete this SBOM forever?")){
-    //     fetch(archiveUrl)
-    //     .then(console.log({sbomId}))
-    //     .then(setTrigger(prevTrigger => !prevTrigger))
-    //     .then(console.log({trigger}))
-
   }
 
   return (
@@ -109,6 +96,7 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
         type="file"
         style={{ display: 'none' }}
         onChange={handleFileUpload}
+        // prevents toggle of accordion on button click
         onClick={(e)=>{
           e.stopPropagation();
         }}

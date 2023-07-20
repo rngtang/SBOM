@@ -19,19 +19,6 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
 
     // create a state for showing or hiding the form
     const [showForm, setShowForm] = useState(false);
-    // const updateB = document.getElementById('accordionRight')
-    // console.log(updateB)
-    // if(updateB){
-    //     updateB.addEventListener('mouseover', (e) => {
-    //     let accordionButton = updateB.parentElement;
-    //     accordionButton.setAttribute('data-bs-toggle', '');
-    //     });
-    //     updateB.addEventListener('mouseleave', (e) => {
-    //     let accordionButton = updateB.parentElement;
-    //     accordionButton.setAttribute('data-bs-toggle', 'collapse');
-    //     });
-    // }
-    
 
     // check if there is metadata in the SBOM, hence indicating that it has piped/imported correctly
     if (meta != null) {
