@@ -3,7 +3,7 @@ class SbomComponent < ApplicationRecord
 
     # One-to-one associations
     has_many :properties, dependent: :destroy
-    has_one :depedency, dependent: :destroy
+    has_many :dependencies, dependent: :destroy
 
     # Many-to-many associations
     has_and_belongs_to_many :sboms

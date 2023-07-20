@@ -39,6 +39,7 @@ property2 = sbomComponent2.properties.create(name: 'll', value: '432')
 # Creates dependencies
 dependency1 = sbom1.dependencies.create(ref: 'sdgewpjgweig', dependsOn: ['first element', 'second element'])
 dependency2 = sbom2.dependencies.create(ref: 'pjipip[kl[]]', dependsOn: ['first element', 'second element'])
+sbomComponent2.dependencies << dependency2
 
 # Creates vulnerabilities
 vuln1 = sbom1.vulnerabilities.create(bom_ref: 'sdsdgsdf', vulnID: 'sdfsdgsd', description: 'egeg', recommendation: 'wegewg', affected: ['first element', 'second element'])
