@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // Import the image files
@@ -13,7 +14,7 @@ const images = [
 
 export default function LogoSlider () {
     return (
-      <div>
+      <div id="force">
         <Carousel showStatus={false} showThumbs={false} showIndicators={false} >
           {images.map((imageSrc, index) => (
             <div key={index}>

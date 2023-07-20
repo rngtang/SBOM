@@ -17,7 +17,7 @@ const Intro = () => {
                 
                 <div className="outside-img">
                     <div className="image-container">
-                        <img src={chip2} alt="chip logo 2" id="logoTitle" />
+                        <img src={chip2} alt="chip logo 2" className="logoTitle" />
 
                         <div className="slider">
                             <LogoSlider />
