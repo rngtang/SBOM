@@ -32,7 +32,7 @@ if [ -f $selected_file.1.xml ]; then
 fi
 
 # combine cdxgen and grype outputs into one file 
-sudo apt-get install jq
+sudo apt-get install jq ./
 jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.FINAL.json
 
 # finished
