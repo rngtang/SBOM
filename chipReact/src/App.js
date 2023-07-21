@@ -82,6 +82,7 @@ const App = () => {
             {!loggingOut && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} handleLoginClick={handleLoginClick} />}
             <div className='pages'>
               <Routes>
+                <Route exact path="/" element={<Home />} />
                 {/* routes that are always open */}
                 <Route path="/home" element={<Home />} />
                 <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} loggedIn={loggedIn} loggingOut={loggingOut} />} />
