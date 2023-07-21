@@ -16,7 +16,7 @@ export default function LogoSlider () {
 
     return (
       <div className="slider">
-        <Carousel showStatus={false} showThumbs={false} showIndicators={false} width={170}>
+        <Carousel showStatus={false} showThumbs={false} showIndicators={false} width={205}>
           {images.map((imageSrc, index) => (
             <div key={index}>
               <img src={imageSrc} alt={`Image ${index + 1}`} id="force"/>

@@ -96,7 +96,6 @@ html, body {
     margin: 8px;
     border-radius: 8px;
     background-color: var(--limestone);
-    /* object-fit: contain; */
 }
 
 #force {
