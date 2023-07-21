@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-import styles from './GenerateSBOMs.module.css'; // styles
-
-import CodeBox from '../components/CodeBox'; // individual codebox component
-
-// import paragraphs, sections with information, and scripts
+import styles from './GenerateSBOMs.module.css';
+import CodeBox from '../components/CodeBox';
 import prereq1 from '../data/prereq.json';
 import data1 from '../data/linux.json';
 import data2 from '../data/windows.json';
 import data3 from '../data/mac.json';
-import DownloadLinuxScript from '../components/DownloadLinuxScript.js';
-import DownloadMacScript from '../components/DownloadMacScript.js';
-import DownloadWindowsScript from '../components/DownloadWindowsScript.js';
+import DownloadLinuxScript from '../components/DownloadLinuxScript';
+import DownloadMacScript from '../components/DownloadMacScript';
+import DownloadWindowsScript from '../components/DownloadWindowsScript';
 
 // title is the title of the section
 // para1 is the intro paragraph
