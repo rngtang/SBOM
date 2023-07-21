@@ -6,7 +6,6 @@ import ViewSBOMs from './pages/ViewSBOMs';
 import GenerateSBOMs from './pages/GenerateSBOMs';
 import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
-import { Button } from 'react-bootstrap';
 import Vulnerability from './pages/Vulnerability';
 import SbomTree from './pages/tree-rendering/SbomTree';
 import TreeTest from './pages/tree-rendering/TreeTest';
@@ -80,10 +79,8 @@ const App = () => {
         <div className="row">
           <main role="main" className="main-content">
             {/* load navbar */}
-            {!loggingOut && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} />}
+            {!loggingOut && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} handleLoginClick={handleLoginClick} />}
             <div className='pages'>
-              {/* login button */}
-              {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
               <Routes>
                 {/* routes that are always open */}
                 <Route path="/home" element={<Home />} />
