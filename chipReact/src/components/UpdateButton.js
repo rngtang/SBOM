@@ -25,6 +25,8 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
     // Set loading state to true before fetch request
     // setLoading(true);
 
+    console.log("file upload triggered")
+
     // prevent empty inputs
 
     e.preventDefault();
@@ -34,15 +36,15 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
 
     // create a state for form data
     const formData = new FormData();
-
     // 
+
     setTimeout(() => {
       const file = e.target.files[0];
       formData.append('file', file);
       formData.append('name', name); // Continue with the file upload or further processing
       formData.append('description', description);
 
-      fetch(`http://localhost:8080/users/${userId}sboms`, { //dummy user 1 for now
+      fetch(`http://localhost:8080/users/${userId}/sboms`, { //dummy user 1 for now
         method: 'POST',
         body: formData
       })
@@ -78,7 +80,7 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
     // prevents toggle of accordion on button click
     e.stopPropagation()
     e.preventDefault()
-    
+    console.log("button clicked")
     //opens fileinput box
     fileInput.current?.click();
   }
