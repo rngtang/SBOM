@@ -10,7 +10,7 @@ import ProfileComp from './ProfileComp';
 const MySideNav = ({ loggedIn, username, netid, handleLoginClick }) => {
   return (
     <div className="sidebar-sticky">
-      <nav className="col-md-2 d-md-block bg-navblue sidebar">
+      <nav className="col-md-2 d-block bg-navblue sidebar">
         <div>
           <div className="navbar-logo">
             <NavLink to="/home">
