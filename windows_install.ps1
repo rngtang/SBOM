@@ -13,7 +13,7 @@ Write-Host "Creating $selectedFile.json..." -ForegroundColor Green
 cdxgen -r -o "${selectedFile}.json"
 
 # Remove .xml file if it exists
-$xmlFile = "${selectedFile}.1.xml"
+$xmlFile = "${selectedFile}.xml"
 if (Test-Path $xmlFile -PathType Leaf) {
     Remove-Item $xmlFile
 }
@@ -22,5 +22,5 @@ if (Test-Path $xmlFile -PathType Leaf) {
 Write-Host "You have now created $selectedFile.json, which is your SBOM to upload." -ForegroundColor Green
 
 # exit the terminal 
-Read-Host -Prompt "Press Enter to exit script and terminal" 
+# Read-Host -Prompt "Press Enter to exit script and terminal" 
 Exit
