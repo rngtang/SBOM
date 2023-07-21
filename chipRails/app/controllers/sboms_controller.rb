@@ -54,19 +54,27 @@ class SbomsController < ApplicationController
         data = JSON.parse(file)
         puts "CALLED ON CREATE"
 
-        @sbom = Sbom.create(bomFormat: data['bomFormat'] , specVersion: data['specVersion'], serialNumber: data['serialNumber'], version: data['version'], user: @user, name: params[:name], description: params[:description])
-
         # Creates the sbom object with the parameters
-        # @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
+        @sbom = Sbom.create(bomFormat: data['bomFormat'] , specVersion: data['specVersion'], serialNumber: data['serialNumber'], version: data['version'], user: @user, name: params[:name], description: params[:description])
         
-        # create sbom_components, nested loop for array of objects input
-        # @sc = params["components"]
-        @sc = data["components"]
         puts "GOING DOWN LEVELS"
+        # create dependencies for array of objects input
+        @dpd = data["dependencies"]
+        if @dpd
+            @dpd.each do |d|
+                @dep = @sbom.dependencies.create(ref: d["ref"], dependsOn: d["dependsOn"])
+            end
+        end
 
+        # create sbom_components, nested loop for array of objects input
+        @sc = data["components"]
         if @sc
             @sc.each do |subC|
                 @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
+                # Links the dependency with the sbomComponent (looks for a match between purl and ref)
+                @d = Dependency.find_by(ref: subC["purl"])
+                @c.dependencies << @d
+
                 @props = subC["properties"]
                 # creates sbom_component properties for array of object input
                 if @props
@@ -76,18 +84,11 @@ class SbomsController < ApplicationController
                 end
             end
         end
-        # create dependencies for array of objects input
-        # @dpd = params["dependencies"]
-        @dpd = data["dependencies"]
-        if @dpd
-            @dpd.each do |d|
-                @dep = @sbom.dependencies.create(ref: d["ref"], dependsOn: d["dependsOn"])
-            end
-        end
+
         # creates metadata, why is it an array? idk has_many
-        # @mtd = params["metadata"]
         @mtd = data["metadata"]
         @m = @sbom.metadata.create(timestamp: @mtd["timestamp"])
+        
         # creates tools for metadata for array of object input
         @t = @mtd["tools"]
         if @t
@@ -97,7 +98,6 @@ class SbomsController < ApplicationController
         end
 
         # creates vulnerabilities assoc with sboms
-        # @vulns = params["vulnerabilities"]
         @vulns = data["vulnerabilities"]
         if @vulns
             @vulns.each do |v|
