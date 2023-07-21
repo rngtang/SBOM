@@ -193,13 +193,13 @@ function ViewSBOMs({ userId }) {
         </div>
       </div>
 
-      {/* <>
+      <>
         <div id='sbomView' className={styles.section}>
           <button onClick={() => handleViewClick(1)}>View SBOM #1</button>
           <button onClick={() => handleViewClick(2)}>View SBOM #2</button>
         </div>
         {selectedSbomId && <TreeTest sbomId={selectedSbomId} />}
-      </> */}
+      </>
     </>
   );
 }
