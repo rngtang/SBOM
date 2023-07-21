@@ -5,7 +5,7 @@ import './ViewAccordian.css';
 // showForm determines if the form is shown
 // sbom is the actual SBOM stored in the database
 // trigger [idk guys help me out what does this do]
-export default function EditButton({ showForm, setShowForm, sbom, trigger, setTrigger }) {
+export default function EditButton({ showForm, setShowForm, sbom, trigger, setTrigger, setLoading }) {
     // create states for user inputted SBOM name and user inputted SBOM description
     // initialize with empty string so that user can input new changes
     const [userName, setUserName] = useState("");
@@ -20,7 +20,7 @@ export default function EditButton({ showForm, setShowForm, sbom, trigger, setTr
     const handleSubmitClick = (e) => {
         // prevent empty inputs
         e.preventDefault()
-
+        setLoading(true)
         // if user only updates name and not description
         if (userName && !userDesc) {
             // fetch route for specific SBOM, uses PUT method
@@ -38,7 +38,8 @@ export default function EditButton({ showForm, setShowForm, sbom, trigger, setTr
                     // update name and description
                     setTrigger(!trigger)
                     // turn form off after submitting
-                    setShowForm(!showForm);
+                    setShowForm(!showForm)
+                    setLoading(false);
                 })
         }
 
@@ -59,7 +60,8 @@ export default function EditButton({ showForm, setShowForm, sbom, trigger, setTr
                     // update name and description
                     setTrigger(!trigger)
                     // turn form off after submitting
-                    setShowForm(!showForm);
+                    setShowForm(!showForm)
+                    setLoading(false);
                 })
         }
 
@@ -81,7 +83,8 @@ export default function EditButton({ showForm, setShowForm, sbom, trigger, setTr
                     // update name and description
                     setTrigger(!trigger)
                     // turn form off after submitting
-                    setShowForm(!showForm);
+                    setShowForm(!showForm)
+                    setLoading(false);
                 })
         }
     }

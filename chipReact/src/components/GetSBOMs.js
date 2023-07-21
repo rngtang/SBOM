@@ -5,7 +5,7 @@ import MyAccordion from './ViewSBOMsAccordian'
 // sbomName is the name of the SBOM
 // trigger [again idk what this does pls help]
 // userId is the ID of the user, not the netid
-export default function GetSBOMs ({sbomName, trigger, setTrigger, userId}) {
+export default function GetSBOMs ({sbomName, trigger, setTrigger, userId, setLoading}) {
     // create states for the SBOM and the route to access the SBOM
     const [sboms, setSboms] = useState([])
     const sbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
@@ -39,7 +39,7 @@ export default function GetSBOMs ({sbomName, trigger, setTrigger, userId}) {
                 // if SBOM data was fetched, show accoridon of SBOM
                 if (sbom.name) {
                     if ((sbom.name.includes(sbomName) || sbomName == null) && (sbom.archive == false)){
-                        return (<MyAccordion userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger}/>)
+                        return (<MyAccordion userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>)
                     }
                 }
                 

@@ -37,7 +37,7 @@ fi
 brew install jq
 
 # Combine the JSON files into one
-jq -s 'add' $selected_file.1.json $selected_file.2.json > result.json
+jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.FINAL.json
 
 # Output the results
 echo -e "${COLOR}You have now created $selected_file.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}" 

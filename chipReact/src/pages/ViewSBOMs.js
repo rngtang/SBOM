@@ -207,19 +207,18 @@ function ViewSBOMs({ userId }) {
             </div>
           </div>
 
-          <GetSBOMs sbomName={sbomName} trigger={trigger} setTrigger={setTrigger} userId={userId} />
+          <GetSBOMs sbomName={sbomName} trigger={trigger} setTrigger={setTrigger} userId={userId} setLoading={setLoading} />
 
         </div>
       </div>
 
-      <>
+      {/* <>
         <div id='sbomView' className={styles.section}>
-          {/* ...other code... */}
           <button onClick={() => handleViewClick(1)}>View SBOM #1</button>
           <button onClick={() => handleViewClick(2)}>View SBOM #2</button>
         </div>
         {selectedSbomId && <TreeTest sbomId={selectedSbomId} />}
-      </>
+      </> */}
     </>
   );
 }
