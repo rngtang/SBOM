@@ -7,7 +7,7 @@ import ProfileComp from './ProfileComp';
 // loggedIn is the state of being logged in or not
 // username is the Display Name of the user, fetched from SHIB
 // netid is the Net ID of the user, fetched from SHIB
-const MySideNav = ({ loggedIn, username, netid }) => {
+const MySideNav = ({ loggedIn, username, netid, handleLoginClick }) => {
   return (
     <div className="sidebar-sticky">
       <nav className="col-md-2 d-md-block bg-navblue sidebar">
@@ -23,6 +23,17 @@ const MySideNav = ({ loggedIn, username, netid }) => {
                 Home
               </NavLink>
             </li>
+
+            {!loggedIn && (
+              <>
+                <li className="nav-item">
+                  <NavLink to="/" onClick={handleLoginClick} className="nav-link">
+                    Login
+                  </NavLink>
+                </li>
+              </>
+            )}
+
             {loggedIn && (
               <>
                 <li className="nav-item">
