@@ -34,20 +34,9 @@ body {
     font-weight: 500;
 }
 
-.sublist {
-    list-style-type: none;
-    padding: 0px 4px 0px 20px;
-}
-
-.sublist li:before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #000;
-    margin-right: 5px;
-    vertical-align: middle;
+.warnings {
+    color: rgb(206, 5, 5);
+    margin: 0 0 12px 16px;
 }
 
 .step {

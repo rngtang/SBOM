@@ -1,9 +1,6 @@
 {
     "title": "For Windows",
-    "notice:": [
-      "To run this script, you must have node and npm installed.",
-      "This windows script can only create an SBOM with components and dependencies. Finding vulnerabilities requires Docker."
-    ],
+    "notice": "This windows script can only create an SBOM with components and dependencies. Finding vulnerabilities requires Docker.",
     "text": [
       "Use the button below to download the powershell script. This will go into your Downloads (user/downloads).", 
       "Move the script into your project directory. It should be on the highest level inside your project in order to scan everything.", 
