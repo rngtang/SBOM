@@ -33,7 +33,7 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom, setLoading }) =>
                                 <p>v.{sbom.specVersion}</p>
                             </div>
                             <TreeButton sbomId={sbom.id}/>
-                            <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
+                            <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading} />
                             <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} setLoading={setLoading}/>
                         </div>
                     </Accordion.Header>
@@ -48,7 +48,7 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom, setLoading }) =>
 
                         <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p>
                             <ViewVulnsButton sbomId={sbom.id} sbomName={sbom.name} sbomDesc={sbom.description} trigger={trigger} setTrigger={setTrigger} />
-                            <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger} />
+                            <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>
                         </div>
                     </Accordion.Body>
 

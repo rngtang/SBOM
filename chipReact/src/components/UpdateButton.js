@@ -10,7 +10,7 @@ import React, { useState, useRef, useEffect } from 'react';
 // description is the description of the SBOM
 
 
-export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name, description }) {
+export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name, description, setLoading }) {
   // debugger line
   console.log({ sbomId })
   // create states for user file upload and archive route
@@ -30,7 +30,7 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
     // prevent empty inputs
 
     e.preventDefault();
-
+    setLoading(true);
     //debugger line
     // console.log({ sbomId })
 
@@ -68,7 +68,8 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
           // console.log(archiveUrl)
 
           // return archive route
-          return fetch(archiveUrl)
+          return (fetch(archiveUrl)
+          .then(setLoading(false)))
         })
       // fetch(archiveUrl)          
       // setFormSubmitted(false); //reset
