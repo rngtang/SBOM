@@ -16,7 +16,7 @@ export default function GetSBOMs ({sbomName, trigger, setTrigger, userId}) {
             .then((response) => response.json())
             .then((data) => {
                 // debugger line
-                // console.log(data)
+                // console.log("sbom data", data)
                 setSboms(data)
             })
     }

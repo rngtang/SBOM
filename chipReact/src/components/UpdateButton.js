@@ -24,6 +24,7 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
     // setLoading(true);
 
     // prevent empty inputs
+
     e.preventDefault();
 
     //debugger line
@@ -73,6 +74,9 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
   // create a handle for clicking on button
   const handleButtonClick = (e) => {
     e.stopPropagation()
+    e.preventDefault()
+
+    
     fileInput.current?.click();
 
     // safety net dialogue

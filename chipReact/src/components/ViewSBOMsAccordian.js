@@ -6,6 +6,7 @@ import ViewVulnsButton from './ViewVulnsButton';
 import UpdateButton from './UpdateButton';
 import EditButton from './EditButton';
 import { useState } from 'react';
+import TreeButton from './TreeButton';
 
 // comments in the actual accordion is spotty, please add stuff -james
 
@@ -31,6 +32,7 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
                                 <p id='cyc'>{sbom.bomFormat}</p>
                                 <p>v.{sbom.specVersion}</p>
                             </div>
+                            <TreeButton sbomId={sbom.id}/>
                             <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
                             <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
                         </div>
@@ -39,13 +41,13 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
                     <Accordion.Body>
                         <div id='meta'> <p id='metaHead'>Metadata: </p> <p id='tab'>
                             Timestamp: {meta.timestamp}
-                            <br></br>   Tools: {meta.tools[0].vendor} - {meta.tools[0].name} - v.{meta.tools[0].version}
+                            <br></br> Tools: {meta.tools[0].vendor} - {meta.tools[0].name} - v.{meta.tools[0].version}
                             <br></br> Description: {sbom.description}
                         </p>
                         </div>
 
                         <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p>
-                            <ViewVulnsButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
+                            <ViewVulnsButton sbomId={sbom.id} sbomName={sbom.name} sbomDesc={sbom.description} trigger={trigger} setTrigger={setTrigger} />
                             <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger} />
                         </div>
                     </Accordion.Body>

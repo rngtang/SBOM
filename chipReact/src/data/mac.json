@@ -1,0 +1,11 @@
+{
+    "title": "For MacOS",
+    "text": [
+      "Use the button below to download the shell script. This will go into your Downloads (user/downloads).", 
+      "Move the script into the directory where your project is contained. Do not move your script inside your project.", 
+      "Open your linux terminal and navigate to the directory where your project is stored inside. This should be the same directory as step 2.", 
+      "Execute the shell script from inside that directory with the following command, replacing PROJECT_NAME with the EXACT name of your project. It is extremely important that you replace the command with the exact name, otherwise your SBOM will not be generated correctly.", 
+      "Check to see that your SBOM was created properly. Your SBOM should be titled PROJECT_NAME.json"
+    ],
+    "code": "bash mac_install PROJECT_NAME"
+  }

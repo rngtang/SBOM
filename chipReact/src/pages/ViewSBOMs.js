@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MyAccordian from '../components/ViewSBOMsAccordian.js';
 import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
-import SbomTree from './tree-rendering/SbomTree';
+import TreeTest from './tree-rendering/TreeTest';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
 import { useNavigate } from 'react-router-dom';
@@ -47,7 +47,7 @@ function ViewSBOMs({ userId }) {
   //useNavigate for redirecting to new page
   const navigate = useNavigate();
   const handleViewClick = (id) => {
-    navigate(`/sbom/${id}`);
+    navigate(`/treetest/${id}`);
   }
 
   // fix this fetch
@@ -182,9 +182,9 @@ function ViewSBOMs({ userId }) {
             <p>SBOM LIST</p>
             <div id='rowFunct'>
               <p>SBOM TYPE</p>
-              <p>STATUS</p>
-              <p>VISUALIZATION</p>
-              <p>ACTION</p>
+              <p id='vizhead'>VISUALIZATION</p>
+              <p id='delete'>DELETE</p>
+              <p id='update'>UPDATE</p>
             </div>
           </div>
 
@@ -199,7 +199,7 @@ function ViewSBOMs({ userId }) {
           <button onClick={() => handleViewClick(1)}>View SBOM #1</button>
           <button onClick={() => handleViewClick(2)}>View SBOM #2</button>
         </div>
-        {selectedSbomId && <SbomTree sbomId={selectedSbomId} />}
+        {selectedSbomId && <TreeTest sbomId={selectedSbomId} />}
       </>
     </>
   );
