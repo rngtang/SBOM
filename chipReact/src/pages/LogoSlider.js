@@ -13,12 +13,13 @@ const images = [
 ];
 
 export default function LogoSlider () {
+
     return (
-      <div id="force">
-        <Carousel showStatus={false} showThumbs={false} showIndicators={false} >
+      <div className="slider">
+        <Carousel showStatus={false} showThumbs={false} showIndicators={false} width={170}>
           {images.map((imageSrc, index) => (
             <div key={index}>
-              <img src={imageSrc} alt={`Image ${index + 1}`} />
+              <img src={imageSrc} alt={`Image ${index + 1}`} id="force"/>
             </div>
           ))}
         </Carousel>

@@ -15,13 +15,13 @@ const Intro = () => {
                     </div>
                 </div>
                 
-                <div className="outside-img">
+                {/* puts on bottom */}
+                <div className="outside-img"> 
+                    {/* puts side by side */}
                     <div className="image-container">
-                        <img src={chip2} alt="chip logo 2" className="logoTitle" />
 
-                        <div className="slider">
-                            <LogoSlider />
-                        </div>
+                        <img src={chip2} alt="chip logo 2" className="logoTitle" />
+                        <LogoSlider />
                     </div>
                 </div>
             </div>
