@@ -1,4 +1,5 @@
 import React from 'react';
+import './vuln-sidebar.css';
 import sbomTree from './testing.json';
 
 // order of pipe
@@ -10,11 +11,17 @@ import sbomTree from './testing.json';
 const VulnSidebar = () => {
     return (
         <>
-            {/* <div className="sidebar-sticky">
-                <nav className="bg-navblue sidebar-fixed">
-                    hiello
+            <div className="sidebar-sticky">
+                <nav className="col-md-2 d-block bg-navblue sidebar">
+                    <div>
+                        <ul className="nav flex-column">
+                            <li className="nav-item">
+                                bruh
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-            </div> */}
+            </div>
         </>
     );
 };

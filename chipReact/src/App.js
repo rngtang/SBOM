@@ -9,6 +9,7 @@ import MySideNav from './components/MySideNav';
 import Vulnerability from './pages/Vulnerability';
 import SbomTree from './pages/tree-rendering/SbomTree';
 import TreeTest from './pages/tree-rendering/TreeTest';
+import VulnSidebar from './pages/tree-rendering/VulnSidebar';
 
 const App = () => {
   // create states for being logged in, in the process of logging out, the ID of the user, the user's preferred name, the user's netid
@@ -17,6 +18,7 @@ const App = () => {
   const [userId, setUserId] = useState(null);
   const [userName, setUserName] = useState(null);
   const [netId, setNetId] = useState(null);
+  const [showVulnSidebar, setShowVulnSidebar] = useState(true);
 
   // create a handle for checking login status
   useEffect(() => {
@@ -80,6 +82,7 @@ const App = () => {
           <main role="main" className="main-content">
             {/* load navbar */}
             {!loggingOut && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} handleLoginClick={handleLoginClick} />}
+            
             <div className='pages'>
               <Routes>
                 {/* routes that are always open */}
@@ -97,6 +100,9 @@ const App = () => {
                 )}
               </Routes>
             </div>
+
+            {showVulnSidebar && <VulnSidebar  />}
+
           </main>
         </div>
       </div>
