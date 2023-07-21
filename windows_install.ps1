@@ -1,38 +1,26 @@
-Write-Host "Hello World" -ForegroundColor Green
+# automatically uses name of directory (Project name) as the name of SBOM
+param (
+    [Parameter(Mandatory=$false)]
+    [string]$selectedFile = (Get-Item $PSScriptRoot).BaseName
+)
 
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-# choco 
-choco install syft -y --force
+# install cdxgen. assume they have node/npm
+Write-Host "Installing cdxgen. This may take a while." -ForegroundColor Green
+npm install -g @cyclonedx/cdxgen@8.6.0
 
-Write-Host "Which file would you like to create an SBOM for?" -ForegroundColor Green
-$selectedFile= Read-Host 
-Write-Host "Creating $selectedFile.json ..." -ForegroundColor Green
+# run cdxgen to create sbom
+Write-Host "Creating $selectedFile.json..." -ForegroundColor Green 
+cdxgen -r -o "${selectedFile}.json"
 
-syft $selectedFile -o json=$selectedFile.json
+# Remove .xml file if it exists
+$xmlFile = "${selectedFile}.xml"
+if (Test-Path $xmlFile -PathType Leaf) {
+    Remove-Item $xmlFile
+}
 
-Write-Host "You have now created $selectedFile.sbom.json, which is your SBOM to upload." -ForegroundColor Green
+# finish
+Write-Host "You have now created $selectedFile.json, which is your SBOM to upload." -ForegroundColor Green
 
-Read-Host -Prompt "Press Enter to exit script and terminal" 
-
-Exit
-
-# # Start-Process PowerShell -Verb runAs -ArgumentList "-NoExit 'C:\Users\87jud\OneDrive - Duke University\Documents\Code+\windows_install.ps1'"
-
-# Write-Host "Hello World" -ForegroundColor Green
-
-# Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-# # choco 
-# choco install syft -y --force
-
-# Write-Host "Which file would you like to create an SBOM for?" -ForegroundColor Green
-# $selectedFile= Read-Host 
-# Write-Host "Creating $selectedFile.json ..." -ForegroundColor Green
-
-# syft $selectedFile -o json=$selectedFile.json
-
-# Write-Host "You have now created $selectedFile.sbom.json, which is your SBOM to upload." -ForegroundColor Green
-
+# exit the terminal 
 # Read-Host -Prompt "Press Enter to exit script and terminal" 
-
-# Exit
-
+Exit

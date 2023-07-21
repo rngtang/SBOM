@@ -1,15 +1,15 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:b4f5a8b2-b79a-4237-89f5-b625d32096e7",
+  "serialNumber": "urn:uuid:a078e66e-3d6d-4188-a37a-bd234aa5d2d2",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-07-19T15:02:59-04:00",
+    "timestamp": "2023-07-20T16:43:24-04:00",
     "tools": [
       {
         "vendor": "anchore",
         "name": "grype",
-        "version": "0.63.0"
+        "version": "0.64.2"
       }
     ]
   },
@@ -37807,7 +37807,7 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "vulnerabilities": [
     {
-      "bom-ref": "urn:uuid:daa881ca-0cdd-4569-82c6-5572e0ffec2d",
+      "bom-ref": "urn:uuid:602f21b9-3ba2-4dbc-a3bc-e1d3fbf4616c",
       "id": "GHSA-23gm-4mrr-r6pg",
       "source": {
         "name": "github-language-javascript",
@@ -37840,7 +37840,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c17a9a23-e7b4-4b73-8170-c6a1288c1b04",
+      "bom-ref": "urn:uuid:d770f610-e78a-4771-a84c-7e100eb743a5",
       "id": "GHSA-3rhh-9j6r-68h4",
       "source": {
         "name": "github-language-javascript",
@@ -37873,7 +37873,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:56eb9ab4-1925-486d-94b4-b7eb324b7a68",
+      "bom-ref": "urn:uuid:318cbdd9-04d3-437a-9f5d-8ac212241d54",
       "id": "GHSA-4g8v-vg43-wpgf",
       "source": {
         "name": "github-language-ruby",
@@ -37906,7 +37906,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:cb344d45-9c74-43eb-ac1b-f4de2a66e62e",
+      "bom-ref": "urn:uuid:204b0de3-b08a-4a17-a5b0-60d957580f67",
       "id": "GHSA-8rmg-jf7p-4p22",
       "source": {
         "name": "github-language-javascript",
@@ -37939,7 +37939,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b58a4af2-578d-40ad-b721-d9e4b511e096",
+      "bom-ref": "urn:uuid:054a8bee-9edf-4de8-b2ca-d631a0bb73aa",
       "id": "GHSA-g6vf-4cpv-p24v",
       "source": {
         "name": "github-language-javascript",
@@ -37972,7 +37972,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:24336018-e339-43b9-9dbf-21d32ba9fce1",
+      "bom-ref": "urn:uuid:a0056638-69d3-4d9c-a389-57394e02c010",
       "id": "GHSA-hc6q-2mpp-qw7j",
       "source": {
         "name": "github-language-javascript",
@@ -38008,7 +38008,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ca3383af-d6af-4743-afa4-cd84dd6b5aaa",
+      "bom-ref": "urn:uuid:607a347e-8a7e-4cff-8549-fcde767086f1",
       "id": "GHSA-j8xg-fqg3-53r7",
       "source": {
         "name": "github-language-javascript",
@@ -38044,7 +38044,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1dc8fb01-fdb9-4794-80ac-bcf647775053",
+      "bom-ref": "urn:uuid:df40b2ab-077c-4871-bce0-b105990077e8",
       "id": "GHSA-mjrf-wm8v-9r4q",
       "source": {
         "name": "github-language-javascript",
@@ -38077,7 +38077,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:061ec958-be07-47d9-8c84-1dc03db04be4",
+      "bom-ref": "urn:uuid:88072a87-c921-42df-ac6d-2af39e4671e0",
       "id": "GHSA-pp5q-5wmm-4hr2",
       "source": {
         "name": "github-language-javascript",
@@ -38110,7 +38110,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:461fb42f-34cb-4fbc-838b-7f7cce6c9acc",
+      "bom-ref": "urn:uuid:df464e2d-a234-42dd-9553-0362b5787cab",
       "id": "GHSA-wgw4-q5ph-839h",
       "source": {
         "name": "github-language-javascript",
@@ -38143,7 +38143,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:88da35a9-0f3c-4d51-9b28-e158a250d81a",
+      "bom-ref": "urn:uuid:8e0c7613-5937-472a-8e2e-9ff822acbe87",
       "id": "GHSA-x743-4v5w-frpj",
       "source": {
         "name": "github-language-javascript",
