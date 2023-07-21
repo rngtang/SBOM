@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import ViewSBOMs from './pages/ViewSBOMs';
 import GenerateSBOMs from './pages/GenerateSBOMs';
@@ -82,6 +82,7 @@ const App = () => {
             {!loggingOut && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} handleLoginClick={handleLoginClick} />}
             <div className='pages'>
               <Routes>
+                <Route exact path='/' element={<Navigate to ="/home" />}/>
                 <Route exact path="/" element={<Home />} />
                 {/* routes that are always open */}
                 <Route path="/home" element={<Home />} />
