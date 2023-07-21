@@ -55,7 +55,7 @@ class DependenciesController < ApplicationController
 
     def build_dependency_tree(dependencies, root_ref)
         tree = {"name" => root_ref, "children" => []}
-      
+    #if a dependency is in dependsOn, but doesn't have a matching Ref --> create an endNode
             
         dependencies.each do |dependency|
           if dependency["ref"] == root_ref  # Check if this dependency is the root_ref
