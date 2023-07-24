@@ -131,7 +131,7 @@ function ViewSBOMs({ userId }) {
       {/* <div className='page'> */}
       <section id='header'>
 
-        <form id="buttonContainer" onSubmit={(event) => event.preventDefault()} noValidate >
+        <form id="uploadForm" onSubmit={(event) => event.preventDefault()} noValidate >
           <div>
             {fetchNames()}
             <input
