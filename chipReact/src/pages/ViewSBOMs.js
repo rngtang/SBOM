@@ -93,25 +93,6 @@ function ViewSBOMs({ userId }) {
       })
       .then((data) => {
       });
-      
-    setFormSubmitted(false); //reset
-
-      fetch((`http://localhost:8080/users/${userId}/sboms`), {
-        method: 'POST',
-        body: formData
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Failed to upload the SBOM.');
-          }
-          console.log("it POSTED ????");
-          setLoading(false);
-          setTrigger(prevTrigger => !prevTrigger); // will toggle getSBOMs useEffect
-          return response.json();
-        })
-        .then((data) => {
-        });
-
       setFormSubmitted(false); //reset
     }, 500); // Adjust the delay if needed
   }

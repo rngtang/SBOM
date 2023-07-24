@@ -1,23 +1,10 @@
 #accordianRight {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 45%;
-    /* height: 20px; */
     font-size: small;
-    /* margin-top: 9px; */
-    margin-bottom: 0px;
     margin-right: 5%;
-    /* vertical-align: center; */
-}
-
-#accordianRight p {
-    width: auto;
-}
-
-.rightTxt {
-    margin: 0;
 }
 
 #name {
@@ -26,10 +13,6 @@
 
 .accordion-item {
     width: 100%;
-    align-items: center;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
 }
 
 .accordion-header {
@@ -72,6 +55,7 @@
     position: relative;
     height: 100%;
     min-height: fit-content;
+    border-radius: 0 0 6px 6px;
     /* overflow: auto; */
 }
 
