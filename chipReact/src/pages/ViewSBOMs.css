@@ -62,31 +62,24 @@
   background-color: transparent;
 }
 
-
 .mainBody {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 80vw;
-  /* position: relative; */
 }
 
 #sbomHeader {
   width: 92.5%;
   height: 60px;
   background-image: linear-gradient(to left, #49A3F1, #1668d5);
-  background-color: var(--shaleblue);
   color: white;
   border-radius: 7px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   margin-top: 33px;
   z-index: 1;
-  /* position: absolute; */
 }
 
 #sbomHeader h5 {
