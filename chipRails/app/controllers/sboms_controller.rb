@@ -77,16 +77,16 @@ class SbomsController < ApplicationController
         if @sc
             @sc.each do |subC|
                 # Finds or creates the components by purl
-                @c = SbomComponent.find_or_create_by(purl: subC["purl"]) do |sComp|
-                    @c.bom_ref = subC["bom-ref"]
-                    @c.group = subC["type"]
-                    @c.name = subC["name"]
-                    @c.version = subC["version"]
+                @c = SbomComponent.find_or_create_by(purl: subC["purl"]) do |c|
+                    c.bom_ref = subC["bom-ref"]
+                    c.group = subC["type"]
+                    c.name = subC["name"]
+                    c.version = subC["version"]
                 end
                 # Links the components to the sboms
-                @sbom.sbom_component << @c unless @sbom.sbom_components.include?(@c)
+                @sbom.sbom_components << @c unless @sbom.sbom_components.include?(@c)
 
-                # @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
+                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
                 # Links the dependency with the sbomComponent (looks for a match between purl and ref)
                 if @d = Dependency.find_by(ref: subC["purl"])
                     @c.dependencies << @d
