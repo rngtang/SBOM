@@ -1,3 +1,4 @@
+/* spacing and styling for buttons and text on the right of the accordion header */
 #accordianRight {
     display: flex;
     justify-content: space-between;
@@ -6,11 +7,16 @@
     font-size: small;
     margin-right: 5%;
 }
+.accordion-header p {
+    width: 50%;
+}
 
+/* center aligns accordionheader name */
 #name {
     margin-bottom: 0px;
 }
 
+/* styling and centering of sbom type column text on accordion header */
 #type {
     display: flex;
     flex-direction: column;
@@ -27,10 +33,7 @@
     font-weight: 600;
 }
 
-.accordion-header p {
-    width: 50%;
-}
-
+/* styling and spacing of open toggle accordion body */
 .accordion-body {
     display: flex;
     flex-direction: row;
@@ -43,9 +46,11 @@
     /* overflow: auto; */
 }
 
+/* sizing of the right side of accordion body */
 #bodyRight {
     width: 50%;
 }
+/* vulnerabilities number message styling/sizing */
 
 #bodyRight p {
     width: 100%;
@@ -56,6 +61,7 @@
     color: white;
 }
 
+/* sbom meta text display */
 #meta {
     display: flex;
     flex-direction: column;
@@ -65,16 +71,18 @@
 #metaHead {
     margin-bottom: 0px;
 }
-
+/* indented meta information */
 #tab {
     margin: 0 0 0 18px;
 }
 
+/* edit form spacing on display */
 #editForm {
     margin-top: 10px;
     min-height: 100%;
 }
 
+/* input for edits spacing and styling */
 #editForm input {
     margin: 2px 4px 2px 0;
     border-radius: 4px;
@@ -82,6 +90,7 @@
     border: solid gray 1px;
 }
 
+/* overall positioning of edit form fields and buttons */
 #edits {
     display: flex;
     flex-direction: column;
@@ -89,6 +98,7 @@
     min-height: 100%;
 }
 
+/* vulnerability button sizing and positioning */
 #viewVulns {
     display: flex;
     flex-direction: column;
