@@ -21,6 +21,7 @@ const Intro = () => {
                     <div className="image-container">
 
                         <img src={chip2} alt="chip logo 2" className="logoTitle" />
+                        {/* <p>x</p> */}
                         <LogoSlider />
                     </div>
                 </div>

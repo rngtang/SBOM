@@ -39,7 +39,6 @@ html, body {
 
 .title {
     display: flex;
-    /* flex: 2; */
     flex-direction: column;
     justify-content: flex-end;
     text-align: left;
@@ -85,15 +84,23 @@ html, body {
     width: 16vw;
     height: 10vw;
     margin: 8px;
-    margin-right: 24px;
+    /* margin-right: 24px; */
     border-radius: 8px;
     background-color: var(--limestone);
 }
 
+.image-container p {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin: auto 16px;
+}
+
 .slider {
-    width: 16vw;
+    width: 12.5vw;
     height: 10vw;
     margin: 8px;
+    margin-right: 24px;
     border-radius: 8px;
     background-color: var(--limestone);
 }
@@ -120,19 +127,6 @@ html, body {
     max-height: none;
     background-color: white;
 }
-
-/* .logo {
-    bottom: 0;
-    height: auto;
-    margin: 8px;
-    border-radius: 8px;
-    margin-right: 16px; 
-    background-color: var(--limestone);
-} */
-
-/* .section div {
-    position: relative;
-} */
 
 .section h3 {
     color: var(--dukeblue);
