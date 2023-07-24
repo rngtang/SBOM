@@ -45,6 +45,7 @@ Rails.application.routes.draw do
   delete '/users', to: 'users#index'
 
   get '/sboms/:id/archive', to: 'sboms#archive'
+  get 'vulnerabilities/by_vulnID/:vulnID', to: 'vulnerabilities#show_by_vulnID'
 
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
   

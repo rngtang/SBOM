@@ -13,14 +13,19 @@ class SbomsController < ApplicationController
     end
 
     def index
-        if !params[:user_id]
-            render json: Sbom.all, status: :ok
-            
-        else 
+        if params[:vulnID]
+            @sboms = Sbom.joins(:vulnerabilities).where('vulnerabilities.vulnID = ?', params[:vulnID])
+        elsif params[:compID]
+            @sboms = Sbom.joins(:sbom_components).where('sbom_components.id = ?', params[:compID])
+        elsif params[:user_id]
             @user = User.find(params[:user_id])
-            render json: @user.sboms, status: :ok
+            @sboms = @user.sboms
+        else
+            @sboms = Sbom.all
         end
+        render json: @sboms, status: :ok
     end
+    
 
     def sbomNames
         @user = User.find(params[:user_id])

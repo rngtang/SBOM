@@ -9,32 +9,22 @@ import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
 import { useNavigate } from 'react-router-dom';
 
-// someone made great comments for this file already. please come back and finish, thanks! -james :)
-
-// userId is the ID of the user, not the netid
 function ViewSBOMs({ userId }) {
-  // debugger line
-  // console.log("CURRENT USER, from view: ", userId);
-
-  // create states for a lot of things [someone please update this]
   const [selectedSbomId, setSelectedSbomId] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState(null);
   const [userDesc, setUserDesc] = useState(null);
   const [sbomName, setSbomName] = useState(null);
+  const [vulnID, setVulnID] = useState(null);
   const [nameMatch, setNameMatch] = useState(false);
   const [trigger, setTrigger] = useState(false);
 
-
-  
-
-  // create a state for file input
   const fileInput = useRef();
+  const navigate = useNavigate();
 
-  // create a handle for button click
+  // Handle upload button click
   const handleButtonClick = () => {
-    // logic to ensure that there is a name and description for the SBOM
     if (userName && userDesc) {
       fileInput.current.click();
       setFormSubmitted(true);
@@ -44,35 +34,30 @@ function ViewSBOMs({ userId }) {
     }
   }
 
-  //useNavigate for redirecting to new page
-  const navigate = useNavigate();
   const handleViewClick = (id) => {
     navigate(`/treetest/${id}`);
   }
 
-  // fix this fetch
+  // Fetch names
   const fetchNames = () => {
     fetch(`http://localhost:8080/users/${userId}/sbom_names`)
       .then((response) => response.json())
       .then((data) => {
         const match = data.some((n) => n === userName);
         if (match) {
-          console.log("matched a name");
-          // alert("You need a unique name for your SBOM.");
           setNameMatch(true);
         } else {
           setNameMatch(false);
         }
-        console.log(data);
       })
   }
 
+  // Handle file upload
   const handleFileUpload = (event) => {
     event.preventDefault();
     fetchNames();
-    setLoading(true); // Set loading state to true before fetch request
+    setLoading(true);
     const formData = new FormData();
-    console.log("preparing to get names");
 
     setTimeout(() => {
       const file = event.target.files[0];
@@ -83,7 +68,7 @@ function ViewSBOMs({ userId }) {
         setLoading(false);
         return;
       } else {
-        formData.append('name', userName); // Continue with the file upload or further processing
+        formData.append('name', userName);
       }
       formData.append('description', userDesc);
 
@@ -95,44 +80,32 @@ function ViewSBOMs({ userId }) {
           if (!response.ok) {
             throw new Error('Failed to upload the SBOM.');
           }
-          console.log("it POSTED ????");
           setLoading(false);
-          setTrigger(prevTrigger => !prevTrigger); // will toggle getSBOMs useEffect
+          setTrigger(prevTrigger => !prevTrigger);
           return response.json();
         })
-        .then((data) => {
-        });
 
-      setFormSubmitted(false); //reset
-    }, 500); // Adjust the delay if needed
+      setFormSubmitted(false);
+    }, 500);
   }
 
   return (
     <>
-      {/* <div className='page'> */}
       <section id='header'>
-
         <form id="buttonContainer" onSubmit={(event) => event.preventDefault()} noValidate >
           <div>
-            {fetchNames()}
             <input
               type="text" required
               value={userName}
               className="buttonInput"
               onChange={(event) => setUserName(event.target.value)}
               placeholder="*Enter SBOM Name"
-              style={{
-                borderColor: formSubmitted && !userName ? 'red' : '',
-              }}
+              style={{ borderColor: formSubmitted && !userName ? 'red' : '' }}
             />
-            {/* {nameMatch && (
-                <p> <span className="error">*Your name must be unique.</span></p>
-              )} */}
             {!userName && formSubmitted && (
               <p> <span className="error">*Please enter name.</span></p>
             )}
           </div>
-
           <div>
             <input
               type="text" required
@@ -140,15 +113,12 @@ function ViewSBOMs({ userId }) {
               className="buttonInput"
               onChange={(event) => setUserDesc(event.target.value)}
               placeholder="*Enter SBOM Description"
-              style={{
-                borderColor: formSubmitted && !userDesc ? 'red' : '',
-              }}
+              style={{ borderColor: formSubmitted && !userDesc ? 'red' : '' }}
             />
             {!userDesc && formSubmitted && (
               <p> <span className="error">*Please enter description.</span></p>
             )}
           </div>
-
           <Button variant="primary" id='uploadButton' type='submit' onClick={handleButtonClick}>Upload New SBOM +</Button>
           <input
             type="file"
@@ -157,22 +127,18 @@ function ViewSBOMs({ userId }) {
             onChange={handleFileUpload}
           />
         </form>
-
         {loading && <Spinner animation="border" role="status" variant="info">
           <span className="visually-hidden">Loading...</span>
         </Spinner>}
-
         <div id='searchBar'>
           <input
             className='searchInput'
             type="text"
-            placeholder='Search SBOM by name'
-            onChange={(event) => setSbomName(event.target.value)}
+            placeholder='Search SBOM by vulnerability ID'
+            onChange={(event) => setVulnID(event.target.value)}
           />
         </div>
-
       </section>
-
       <div className='mainBody'>
         <div id='sbomHeader'>
           <h5>Your SBOMs</h5>
@@ -187,20 +153,9 @@ function ViewSBOMs({ userId }) {
               <p id='update'>UPDATE</p>
             </div>
           </div>
-
-          <GetSBOMs sbomName={sbomName} trigger={trigger} setTrigger={setTrigger} userId={userId} />
-
+          <GetSBOMs sbomName={sbomName} vulnID={vulnID} trigger={trigger} setTrigger={setTrigger} userId={userId} setLoading={setLoading} />
         </div>
       </div>
-
-      <>
-        <div id='sbomView' className={styles.section}>
-          {/* ...other code... */}
-          <button onClick={() => handleViewClick(1)}>View SBOM #1</button>
-          <button onClick={() => handleViewClick(2)}>View SBOM #2</button>
-        </div>
-        {selectedSbomId && <TreeTest sbomId={selectedSbomId} />}
-      </>
     </>
   );
 }

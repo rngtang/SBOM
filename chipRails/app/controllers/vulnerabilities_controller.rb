@@ -21,9 +21,13 @@ class VulnerabilitiesController < ApplicationController
         end
     end
 
-    def show
-        @vulnerability = Vulnerability.find(params[:id])
-        render json: @vulnerability, status: :ok
+    def show_by_vulnID
+      @vulnerability = Vulnerability.find_by(vulnID: params[:vulnID])
+      if @vulnerability
+          render json: @vulnerability, status: :ok
+      else
+          render json: { error: 'Vulnerability not found' }, status: :not_found
+      end
     end
 
     def vulnerability_params

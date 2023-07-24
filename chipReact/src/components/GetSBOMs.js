@@ -2,48 +2,29 @@ import {useState, useEffect} from 'react'
 import * as React from 'react'
 import MyAccordion from './ViewSBOMsAccordian'
 
-// sbomName is the name of the SBOM
-// trigger [again idk what this does pls help]
-// userId is the ID of the user, not the netid
-export default function GetSBOMs ({sbomName, trigger, setTrigger, userId}) {
-    // create states for the SBOM and the route to access the SBOM
+export default function GetSBOMs ({sbomName, vulnID, trigger, setTrigger, userId, setLoading}) {
     const [sboms, setSboms] = useState([])
-    const sbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
+    const baseSbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
+    const sbomsUrl = vulnID ? `${baseSbomsUrl}?vulnID=${vulnID}` : baseSbomsUrl;
 
-    // create a handle to fetch SBOMs, turning it into a json file
     const fetchSboms = () => {
         fetch(sbomsUrl)
             .then((response) => response.json())
             .then((data) => {
-                // debugger line
-                // console.log("sbom data", data)
                 setSboms(data)
             })
     }
 
-    // set trigger for fetching SBOMs
     useEffect(() => {
-        fetchSboms()
-        // debugger lines
-        // console.log("was triggered");
-        // console.log("CURRENT USER, from get: ", userId);
-    }, [trigger])
-
+        fetchSboms();
+    }, [trigger, vulnID])
     return (
         <div>
-            {sboms.map((sbom => {
-                // debugger lines
-                // console.log(sbomName)
-                // console.log(sbom.id.toString() == sbomName.sbomName)
-
-                // if SBOM data was fetched, show accoridon of SBOM
-                if (sbom.name) {
-                    if ((sbom.name.includes(sbomName) || sbomName == null) && (sbom.archive == false)){
-                        return (<MyAccordion userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger}/>)
-                    }
-                }
-                
-            }))}
+          {sboms.map((sbom) => (
+            <MyAccordion key={sbom.id} sbom={sbom} setTrigger={setTrigger} setLoading={setLoading} />
+          ))}
         </div>
-    );
-};
+      );
+}
+      
+      
