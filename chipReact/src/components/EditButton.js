@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';
-import './ViewAccordian.css';
+import './ViewAccordion.css';
 
 // showForm determines if the form is shown
 // sbom is the actual SBOM stored in the database

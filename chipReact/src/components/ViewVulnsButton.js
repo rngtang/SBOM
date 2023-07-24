@@ -1,7 +1,7 @@
 import { Button } from 'react-bootstrap';
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ViewAccordian.css';
+import './ViewAccordion.css';
 
 // sbomId is the ID of the SBOM
 export default function ViewVulnsButton({ sbomId, sbomName, sbomDesc }) {

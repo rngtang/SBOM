@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import * as React from 'react'
-import MyAccordion from './ViewSBOMsAccordian'
+import MyAccordion from './ViewSBOMsAccordion'
 
 // sbomName is the name of the SBOM
 // trigger [again idk what this does pls help]
