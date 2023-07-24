@@ -137,7 +137,7 @@ function ViewSBOMs({ userId }) {
             <input
               type="text" required
               value={userName}
-              className="buttonInput"
+              className="formInput"
               onChange={(event) => setUserName(event.target.value)}
               placeholder="*Enter SBOM Name"
               style={{
@@ -156,7 +156,7 @@ function ViewSBOMs({ userId }) {
             <input
               type="text" required
               value={userDesc}
-              className="buttonInput"
+              className="formInput"
               onChange={(event) => setUserDesc(event.target.value)}
               placeholder="*Enter SBOM Description"
               style={{
