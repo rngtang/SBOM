@@ -1,7 +1,4 @@
-.App {
-  text-align: center;
-}
-
+/* header positioning (upload form and button) */
 #header {
   display: flex;
   flex-direction: row;
@@ -13,6 +10,7 @@
   max-width: 83vw;
 }
 
+/* upload form and input spacing and styling */
 #uploadForm {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   background-color: #EEF3FC;
@@ -31,6 +29,7 @@
   border-radius: 8px;
 }
 
+/* upload form error text when someone uploads with empty input fields */
 .error {
   color: red;
   font-size: 12px;
@@ -39,6 +38,7 @@
   bottom: 0px;
 }
 
+/* upload button styling */
 #uploadButton {
   margin: 8px;
   font-weight: 500;
@@ -46,6 +46,7 @@
   background-image: linear-gradient(to top right, var(--shaleblue) 40%, #6db7dc);
 }
 
+/* searchbar and input size and styling */
 #searchBar {
   margin-top: 16px;
   width: 30%;
@@ -62,6 +63,7 @@
   background-color: transparent;
 }
 
+/* sbom list (your sboms) positioning */
 .mainBody {
   display: flex;
   flex-direction: column;
@@ -70,6 +72,7 @@
   max-width: 80vw;
 }
 
+/* (Your SBOMs) sbom list header styling */
 #sbomHeader {
   width: 92.5%;
   height: 60px;
@@ -83,11 +86,13 @@
   padding: 7px 0 0 30px;
 }
 
+/* accordion list and header sizing and  positioning*/
 #sbomList {
   margin-top: -32px;
   width: 100%;
 }
 
+/* accordion headings and spacing */
 #sbomHeadRow {
   margin: 25px 0 0 1.5%;
   width: 98%;
@@ -97,6 +102,7 @@
   font-size: small;
 }
 
+/* accordion headings on the right spacing */
 #rowFunct {
   display: flex;
   flex-direction: row;
@@ -105,14 +111,18 @@
   margin-right: 9.5%;
 }
 
+/* (VIZUALIZATION) */
 #vizhead {
   margin-left: -64px;
   overflow:hidden;
 }
+
+/* (DELETE) */
 #delete {
   margin-left: -30px
 }
 
+/* (UPDATE) */
 #update {
   margin-right: 9px;
 }
