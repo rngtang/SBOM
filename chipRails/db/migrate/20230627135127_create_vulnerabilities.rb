@@ -6,8 +6,8 @@ class CreateVulnerabilities < ActiveRecord::Migration[7.0]
       t.string :description
       t.string :recommendation
       t.text :affected
-      t.references :sbom, null: false, foreign_key: true
-
+      t.references :sbom, null: false, foreign_key: true;
+      
       t.timestamps
     end
   end
