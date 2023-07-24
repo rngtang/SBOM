@@ -11,24 +11,9 @@
     margin-bottom: 0px;
 }
 
-.accordion-item {
-    width: 100%;
-}
-
-.accordion-header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 #type {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    /* width: auto; */
     align-items: center;
 }
 
@@ -40,7 +25,6 @@
 
 #cyc {
     font-weight: 600;
-    margin-top: -10px;
 }
 
 .accordion-header p {
