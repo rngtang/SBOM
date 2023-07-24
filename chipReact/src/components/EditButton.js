@@ -105,9 +105,6 @@ export default function EditButton({ showForm, setShowForm, sbom, trigger, setTr
                         className="buttonInput"
                         onChange={(event) => setUserName(event.target.value)}
                         placeholder={sbom.name}
-                    // style={{
-                    // borderColor: formSubmitted && !userName ? 'red' : '',
-                    // }}
                     />
 
                     {/* input field for description */}
@@ -117,9 +114,6 @@ export default function EditButton({ showForm, setShowForm, sbom, trigger, setTr
                         className="buttonInput"
                         onChange={(event) => setUserDesc(event.target.value)}
                         placeholder={sbom.description}
-                    // style={{
-                    // borderColor: formSubmitted && !userName ? 'red' : '',
-                    // }}
                     />
 
                     {/* submit button */}

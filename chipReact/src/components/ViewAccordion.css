@@ -59,7 +59,6 @@
 #meta {
     display: flex;
     flex-direction: column;
-    /* justify-content: ; */
     font-size: 13px;
 }
 
@@ -68,35 +67,19 @@
 }
 
 #tab {
-    margin-top: 0;
-    margin-left: 18px;
-    margin-bottom: 0px;
-}
-
-.accordion-button {
-    display: flex;
-    align-items: center;
-    /* background-color: yellow; */
+    margin: 0 0 0 18px;
 }
 
 #editForm {
     margin-top: 10px;
-    /* margin-left: 10%; */
     min-height: 100%;
 }
 
 #editForm input {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-#editForm button {
-    margin-top: 2px;
-}
-
-#editButton {
-    max-width: fit-content;
-
+    margin: 2px 4px 2px 0;
+    border-radius: 4px;
+    padding: 4px;
+    border: solid gray 1px;
 }
 
 #edits {
