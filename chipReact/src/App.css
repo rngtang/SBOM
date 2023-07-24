@@ -22,24 +22,6 @@
   font-family: Roboto, 'Open Sans', sans-serif;
 }
 
-/* Where is .page being used?  */
-/* .page {
-  font: 5rem;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif ;
-  
-} */
-
-.intro-section {
-  background-color: var(--limestone);
-  padding: 20px;
-}
-
-.what-sboms-section {
-  background-color: var(--limestone);
-  padding: 20px;
-}
-
 /* navbar color */
 .bg-navblue {
   background-color: var(--dukeblue);
