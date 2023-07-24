@@ -119,29 +119,31 @@ class SbomsController < ApplicationController
         if @vulns
             @vulns.each do |v|
                 # Find existing vulnerability or create new one
-                @vuln = Vulnerability.find_or_create_by(vulnID: v["id"]) do |vuln|
-                    vuln.bom_ref = v["bom-ref"]
-                    vuln.description = v["description"]
-                    vuln.recommendation = v["advisories"][0]["url"]
-                end
-                # Associate vulnerability with SBoM
-                @sbom.vulnerabilities << @vuln unless @sbom.vulnerabilities.include?(@vuln)
-
-                @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"])
-                @affected = v["affects"]
-                if @affected
-                    @affected.each do |a|
-                        @vuln.affected << a["ref"]
+                # @vuln = Vulnerability.find_or_create_by(vulnID: v["id"]) do |vuln|
+                #     vuln.bom_ref = v["bom-ref"]
+                #     vuln.description = v["description"]
+                #     vuln.recommendation = v["advisories"][0]["url"]
+                # end
+                if Vulnerability.find_by(vulnID: v["id"])
+                    @sbom.vulnerabilities << Vulnerability.find_by(vulnID: v["id"])
+                    next
+                else
+                    @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"])
+                    @affected = v["affects"]
+                    if @affected
+                        @affected.each do |a|
+                            @vuln.affected << a["ref"]
+                        end
                     end
-                end
-                @ratings = v["ratings"]
-                if @ratings
-                    @ratings.each do |r|
-                        @vuln.ratings.create(score: r["score"], severity: r["severity"])
+                    @ratings = v["ratings"]
+                    if @ratings
+                        @ratings.each do |r|
+                            @vuln.ratings.create(score: r["score"], severity: r["severity"])
+                        end
                     end
+                    @source = v["source"]
+                    @vuln.sources.create(name: @source["name"], url: @source["url"])
                 end
-                @source = v["source"]
-                @vuln.sources.create(name: @source["name"], url: @source["url"])
             end
         end
 
