@@ -17,12 +17,8 @@
   font-family: Roboto, 'Merriweather', Georgia, 'Open Sans', sans-serif;
 }
 
-.mysidenav {
-  background-color: var(--shaleblue) !important;
-  font-family: Roboto, 'Open Sans', sans-serif;
-}
-
 /* navbar color */
+/* move to navnbar component? */
 .bg-navblue {
   background-color: var(--dukeblue);
 }
@@ -35,12 +31,6 @@
 .login-button {
   background-color: #0577B1;
   color: white;
-  /* margin-left: 560px; */
-}
-
-.main {
-  display: flex;
-  flex-direction: row;
 }
 
 .pages {
