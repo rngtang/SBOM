@@ -1,13 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyAccordian from '../components/ViewSBOMsAccordian.js';
-import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
-import TreeTest from './tree-rendering/TreeTest';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
-import { useNavigate } from 'react-router-dom';
 
 // someone made great comments for this file already. please come back and finish, thanks! -james :)
 
@@ -43,7 +39,7 @@ function ViewSBOMs({ userId }) {
       alert("Please enter both the SBOM name and description.");
     }
   }
-  
+
   // fix this fetch
   const fetchNames = () => {
     fetch(`http://localhost:8080/users/${userId}/sbom_names`)
@@ -190,7 +186,7 @@ function ViewSBOMs({ userId }) {
         <div id='sbomHeader'>
           <h5>Your SBOMs</h5>
         </div>
-        <div id='sbomList' className={styles.list}>
+        <div id='sbomList' className="list">
           <div id='sbomHeadRow'>
             <p>SBOM LIST</p>
             <div id='rowFunct'>
