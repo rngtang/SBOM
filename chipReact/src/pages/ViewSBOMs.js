@@ -43,13 +43,7 @@ function ViewSBOMs({ userId }) {
       alert("Please enter both the SBOM name and description.");
     }
   }
-
-  //useNavigate for redirecting to new page
-  const navigate = useNavigate();
-  const handleViewClick = (id) => {
-    navigate(`/treetest/${id}`);
-  }
-
+  
   // fix this fetch
   const fetchNames = () => {
     fetch(`http://localhost:8080/users/${userId}/sbom_names`)
@@ -211,14 +205,6 @@ function ViewSBOMs({ userId }) {
 
         </div>
       </div>
-
-      {/* <>
-        <div id='sbomView' className={styles.section}>
-          <button onClick={() => handleViewClick(1)}>View SBOM #1</button>
-          <button onClick={() => handleViewClick(2)}>View SBOM #2</button>
-        </div>
-        {selectedSbomId && <TreeTest sbomId={selectedSbomId} />}
-      </> */}
     </>
   );
 }
