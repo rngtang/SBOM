@@ -129,6 +129,18 @@ class ScriptsController < ApplicationController
         SCRIPT
         send_data ps_code, filename: 'windows_install.ps1', type: 'text/plain'
     end 
+
+    def docker
+        docker_code = <<-DOCKERFILE
+        FROM node:14
+        WORKDIR /app
+        COPY . .
+        RUN npm install -g @cyclonedx/cdxgen@8.6.0
+        RUN wget https://raw.githubusercontent.com/anchore/grype/main/install.sh && chmod +x install.sh && ./install.sh
+        CMD ["./install_linux.sh"]
+        DOCKERFILE
+        send_data docker_code, filename: 'Dockerfile', type: 'text/plain'
+    end
     
   end
   
