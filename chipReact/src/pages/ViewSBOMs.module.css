@@ -4,7 +4,6 @@
     border-radius: 10px;
     margin: 35px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
-    /* transform: translate(79px, 0px); */
     width: auto;
     max-width: 75vw;
     background-color: white;
@@ -15,18 +14,8 @@
 }
 
 .downloadSection {
-    /* Add your CSS properties here */
     margin: -20px;
 }
-
-/* things from profile.css */
-
-/* .section {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 10px;
-} */
 
 .profileContainer {
     margin: 0 auto;
