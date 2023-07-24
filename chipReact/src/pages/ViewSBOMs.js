@@ -134,6 +134,12 @@ function ViewSBOMs({ userId }) {
           <input
             className='searchInput'
             type="text"
+            placeholder='Search SBOM by name'
+            onChange={(event) => setSbomName(event.target.value)}
+          />
+          <input
+            className='searchInput'
+            type="text"
             placeholder='Search SBOM by vulnerability ID'
             onChange={(event) => setVulnID(event.target.value)}
           />
@@ -161,3 +167,4 @@ function ViewSBOMs({ userId }) {
 }
 
 export default ViewSBOMs;
+
