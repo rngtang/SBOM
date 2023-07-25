@@ -7,15 +7,15 @@ export default function GetSBOMs ({sbomName, vulnID, trigger, setTrigger, userId
   // trigger is a parameter for the useEffect, when it changes accordian will "refresh"
   // userId is the ID of the user, not the netid
   const [sboms, setSboms] = useState([]);
-  const sbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
+  const baseSbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
   // const sbomsUrl = vulnID ? `${baseSbomsUrl}?vulnID=${vulnID}` : baseSbomsUrl;
 
   const fetchSboms = () => {
-    console.log("this is the url", sbomsUrl);
-    fetch(sbomsUrl)
+    // console.log("this is the url", sbomsUrl);
+    fetch(baseSbomsUrl)
         .then((response) => response.json())
         .then((data) => {
-            console.log("this is the data", data);
+            // console.log("this is the data", data);
             setSboms(data)
         });
   }
@@ -27,15 +27,36 @@ export default function GetSBOMs ({sbomName, vulnID, trigger, setTrigger, userId
     return (
         <div>
             {sboms.map((sbom => {
-                // debugger lines
-                // console.log(sbomName)
-                // console.log(sbom.id.toString() == sbomName.sbomName)
+              // console.log("This is all of sbom", sbom)
+              const displayed = new Set();
 
-                // if SBOM data was fetched, show accoridon of SBOM
-                if (sbom.name) {
+                if (sbomName) { // if searching for name
+                  if (sbom.name) { // the sbom needs to have a name
                     if ((sbom.name.includes(sbomName) || sbomName == null) && (sbom.archive == false)){
                         return (<MyAccordion userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>)
                     }
+                  }
+                }
+
+                else if (vulnID) { // if searching for vulnerability
+                  if (sbom.vulnerabilities) {
+                    // console.log("this is sbom.vulnerabilities", sbom.vulnerabilities)
+
+                    const filteredVulns = sbom.vulnerabilities.filter(v => (v.vulnID.includes(vulnID) && sbom.archive == false));
+                    console.log("this is filtered vulnerabilities:", filteredVulns);
+
+                    if (filteredVulns.length > 0 && !displayed.has(sbom.id)) {
+                      displayed.add(sbom.id);
+                
+                      return (
+                        <MyAccordion key={sbom.id} userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading} />
+                      );
+                    }
+                  }
+                }
+
+                else if (sbom.archive == false) {
+                  return (<MyAccordion userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>)
                 }
                 
             }))}

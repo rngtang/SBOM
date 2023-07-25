@@ -12,7 +12,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name, description, setLoading }) {
   // debugger line
-  console.log({ sbomId })
+  // console.log({ sbomId })
   // create states for user file upload and archive route
   const fileInput = useRef();
   const archiveUrl = `http://localhost:8080/sboms/${sbomId}/archive`
