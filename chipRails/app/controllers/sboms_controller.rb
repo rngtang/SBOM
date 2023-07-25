@@ -116,29 +116,36 @@ class SbomsController < ApplicationController
         @vulns = data["vulnerabilities"]
         if @vulns
             @vulns.each do |v|
-                # Find existing vulnerability or create new one
                 if Vulnerability.find_by(vulnID: v["id"])
+                    # If the vulnerability exists, the it is appended to the sbom
                     @v = Vulnerability.find_by(vulnID: v["id"])
                     @sbom.vulnerabilities << @v unless @sbom.vulnerabilities.include?(@v)
                     next
                 else
-                    # Creates new vulnerability if it does not exist
+                    # Creates the affected array and then pass it was a parameter to the Vulnerability
                     @affected = v["affects"]
                     if @affected
+                        # Creates array
                         aff = Array.new
+
+                        # Appends the affected elements to the array
                         @affected.each do |a|
                             aff.push(a["ref"])
                         end
                     end
 
+                    # Creates new vulnerability if it does not exist
                     @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"], affected: aff)
 
+                    # Creates the rating object fo the vulnerability
                     @ratings = v["ratings"]
                     if @ratings
                         @ratings.each do |r|
                             @vuln.ratings.create(score: r["score"], severity: r["severity"])
                         end
                     end
+                    
+                    # Creates the source of the vulnerability
                     @source = v["source"]
                     @vuln.sources.create(name: @source["name"], url: @source["url"])
                 end
