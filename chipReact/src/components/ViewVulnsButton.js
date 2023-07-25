@@ -12,6 +12,7 @@ export default function ViewVulnsButton({ sbomId, sbomName, sbomDesc }) {
     // create a handle for button click
     const handleButtonClick = () => {
         // set navigate target route
+        // console.log(sbomName);
         navigate('/vulnerability', { state: { sbomId, sbomName, sbomDesc } });
     }
 

@@ -60,40 +60,50 @@ class SbomsController < ApplicationController
         data = JSON.parse(file)
         puts "CALLED ON CREATE"
 
-        @sbom = Sbom.create(bomFormat: data['bomFormat'] , specVersion: data['specVersion'], serialNumber: data['serialNumber'], version: data['version'], user: @user, name: params[:name], description: params[:description])
-
         # Creates the sbom object with the parameters
-        # @sbom = Sbom.create(bomFormat: params["bomFormat"], specVersion: params["specVersion"], serialNumber: params["serialNumber"], version: params["version"], user: @user)
+        @sbom = Sbom.create(bomFormat: data['bomFormat'] , specVersion: data['specVersion'], serialNumber: data['serialNumber'], version: data['version'], user: @user, name: params[:name], description: params[:description])
         
-        # create sbom_components, nested loop for array of objects input
-        # @sc = params["components"]
-        @sc = data["components"]
         puts "GOING DOWN LEVELS"
-
-        if @sc
-            @sc.each do |subC|
-                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
-                @props = subC["properties"]
-                # creates sbom_component properties for array of object input
-                if @props
-                    @props.each do |p|
-                        @m = @c.properties.create(name: p["name"], value: p["value"])
-                    end
-                end
-            end
-        end
         # create dependencies for array of objects input
-        # @dpd = params["dependencies"]
         @dpd = data["dependencies"]
         if @dpd
             @dpd.each do |d|
                 @dep = @sbom.dependencies.create(ref: d["ref"], dependsOn: d["dependsOn"])
             end
         end
+
+        # create sbom_components, nested loop for array of objects input
+        @sc = data["components"]
+        if @sc
+            @sc.each do |subC|
+                # Finds or creates the components by purl
+                if SbomComponent.find_by(purl: subC["purl"])
+                    @c = SbomComponent.find_by(purl: subC["purl"])
+                    @sbom.sbom_components << @c unless @sbom.sbom_components.include?(@c)
+                else
+                    # If it does not exist, it creates the component
+                    @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
+                    
+                    # Links the dependency with the sbomComponent (looks for a match between purl and ref)
+                    if @d = Dependency.find_by(ref: subC["purl"])
+                        @c.dependencies << @d
+                    end
+
+                    @props = subC["properties"]
+                    # creates sbom_component properties for array of object input
+                    if @props
+                        @props.each do |p|
+                            @m = @c.properties.create(name: p["name"], value: p["value"])
+                        end
+                    end
+                end
+            end
+        end
+
         # creates metadata, why is it an array? idk has_many
-        # @mtd = params["metadata"]
         @mtd = data["metadata"]
         @m = @sbom.metadata.create(timestamp: @mtd["timestamp"])
+        
         # creates tools for metadata for array of object input
         @t = @mtd["tools"]
         if @t
@@ -103,25 +113,42 @@ class SbomsController < ApplicationController
         end
 
         # creates vulnerabilities assoc with sboms
-        # @vulns = params["vulnerabilities"]
         @vulns = data["vulnerabilities"]
         if @vulns
             @vulns.each do |v|
-                @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"])
-                @affected = v["affects"]
-                if @affected
-                    @affected.each do |a|
-                        @vuln.affected << a["ref"]
+                if Vulnerability.find_by(vulnID: v["id"])
+                    # If the vulnerability exists, the it is appended to the sbom
+                    @v = Vulnerability.find_by(vulnID: v["id"])
+                    @sbom.vulnerabilities << @v unless @sbom.vulnerabilities.include?(@v)
+                    next
+                else
+                    # Creates the affected array and then pass it was a parameter to the Vulnerability
+                    @affected = v["affects"]
+                    if @affected
+                        # Creates array
+                        aff = Array.new
+
+                        # Appends the affected elements to the array
+                        @affected.each do |a|
+                            aff.push(a["ref"])
+                        end
                     end
-                end
-                @ratings = v["ratings"]
-                if @ratings
-                    @ratings.each do |r|
-                        @vuln.ratings.create(score: r["score"], severity: r["severity"])
+
+                    # Creates new vulnerability if it does not exist
+                    @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"], affected: aff)
+
+                    # Creates the rating object fo the vulnerability
+                    @ratings = v["ratings"]
+                    if @ratings
+                        @ratings.each do |r|
+                            @vuln.ratings.create(score: r["score"], severity: r["severity"])
+                        end
                     end
+
+                    # Creates the source of the vulnerability
+                    @source = v["source"]
+                    @vuln.sources.create(name: @source["name"], url: @source["url"])
                 end
-                @source = v["source"]
-                @vuln.sources.create(name: @source["name"], url: @source["url"])
             end
         end
 
