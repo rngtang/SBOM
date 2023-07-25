@@ -129,6 +129,7 @@ class SbomsController < ApplicationController
                         aff = Array.new
 
                         # Appends the affected elements to the array
+                        # Helping Judy
                         @affected.each do |a|
                             aff.push(a["ref"])
                         end
@@ -144,7 +145,7 @@ class SbomsController < ApplicationController
                             @vuln.ratings.create(score: r["score"], severity: r["severity"])
                         end
                     end
-                    
+
                     # Creates the source of the vulnerability
                     @source = v["source"]
                     @vuln.sources.create(name: @source["name"], url: @source["url"])
