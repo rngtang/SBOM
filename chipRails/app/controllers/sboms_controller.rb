@@ -77,26 +77,24 @@ class SbomsController < ApplicationController
         if @sc
             @sc.each do |subC|
                 # Finds or creates the components by purl
-                @c = SbomComponent.find_or_create_by(purl: subC["purl"]) do |c|
-                    c.bom_ref = subC["bom-ref"]
-                    c.group = subC["type"]
-                    c.name = subC["name"]
-                    c.version = subC["version"]
-                end
-                # Links the components to the sboms
-                @sbom.sbom_components << @c unless @sbom.sbom_components.include?(@c)
+                if SbomComponent.find_by(purl: subC["purl"])
+                    @c = SbomComponent.find_by(purl: subC["purl"])
+                    @sbom.sbom_components << @c unless @sbom.sbom_components.include?(@c)
+                else
+                    # If it does not exist, it creates the component
+                    @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
+                    
+                    # Links the dependency with the sbomComponent (looks for a match between purl and ref)
+                    if @d = Dependency.find_by(ref: subC["purl"])
+                        @c.dependencies << @d
+                    end
 
-                @c = @sbom.sbom_components.create(bom_ref: subC["bom-ref"], group: subC["type"], name: subC["name"], version: subC["version"], purl:subC["purl"])
-                # Links the dependency with the sbomComponent (looks for a match between purl and ref)
-                if @d = Dependency.find_by(ref: subC["purl"])
-                    @c.dependencies << @d
-                end
-
-                @props = subC["properties"]
-                # creates sbom_component properties for array of object input
-                if @props
-                    @props.each do |p|
-                        @m = @c.properties.create(name: p["name"], value: p["value"])
+                    @props = subC["properties"]
+                    # creates sbom_component properties for array of object input
+                    if @props
+                        @props.each do |p|
+                            @m = @c.properties.create(name: p["name"], value: p["value"])
+                        end
                     end
                 end
             end
@@ -119,20 +117,17 @@ class SbomsController < ApplicationController
         if @vulns
             @vulns.each do |v|
                 # Find existing vulnerability or create new one
-                # @vuln = Vulnerability.find_or_create_by(vulnID: v["id"]) do |vuln|
-                #     vuln.bom_ref = v["bom-ref"]
-                #     vuln.description = v["description"]
-                #     vuln.recommendation = v["advisories"][0]["url"]
-                # end
                 if Vulnerability.find_by(vulnID: v["id"])
-                    @sbom.vulnerabilities << Vulnerability.find_by(vulnID: v["id"])
+                    @v = Vulnerability.find_by(vulnID: v["id"])
+                    @sbom.vulnerabilities << @v unless @sbom.vulnerabilities.include?(@v)
                     next
                 else
+                    # Creates new vulnerability if it does not exist
                     @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"])
                     @affected = v["affects"]
                     if @affected
                         @affected.each do |a|
-                            @vuln.affected << a["ref"]
+                            @vuln.affected.append(a["ref"])
                         end
                     end
                     @ratings = v["ratings"]
