@@ -16,6 +16,7 @@ import TreeButton from './TreeButton';
 // setTrigger [pls help]
 // sbom is the actual SBOM json file
 const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
+    console.log("inside accordion")
 
     // create a state for showing or hiding the form
     const [showForm, setShowForm] = useState(false);

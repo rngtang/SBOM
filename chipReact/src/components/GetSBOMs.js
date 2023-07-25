@@ -5,13 +5,15 @@ import MyAccordion from './ViewSBOMsAccordian';
 export default function GetSBOMs ({sbomName, vulnID, trigger, setTrigger, userId, setLoading}) {
   
   const [sboms, setSboms] = useState([]);
-  const baseSbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
-  const sbomsUrl = vulnID ? `${baseSbomsUrl}?vulnID=${vulnID}` : baseSbomsUrl;
+  const sbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
+  // const sbomsUrl = vulnID ? `${baseSbomsUrl}?vulnID=${vulnID}` : baseSbomsUrl;
 
   const fetchSboms = () => {
+    console.log("this is the url", sbomsUrl);
     fetch(sbomsUrl)
         .then((response) => response.json())
         .then((data) => {
+            console.log("this is the data", data);
             setSboms(data)
         });
   }
@@ -23,6 +25,9 @@ export default function GetSBOMs ({sbomName, vulnID, trigger, setTrigger, userId
   return (
     <div>
       {sboms.map((sbom) => {
+        console.log("outside")
+        console.log("from sbom", sbom.name)
+        console.log("from search", sbomName)
         if (sbom.name && ((sbom.name.includes(sbomName) || sbomName === '') && sbom.archive === false)) {
           return <MyAccordion key={sbom.id} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading} />
         }

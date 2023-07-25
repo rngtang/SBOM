@@ -80,6 +80,7 @@ function ViewSBOMs({ userId }) {
           if (!response.ok) {
             throw new Error('Failed to upload the SBOM.');
           }
+          console.log("supposed to have posted")
           setLoading(false);
           setTrigger(prevTrigger => !prevTrigger);
           return response.json();
