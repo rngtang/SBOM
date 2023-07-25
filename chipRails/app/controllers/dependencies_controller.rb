@@ -45,8 +45,12 @@ class DependenciesController < ApplicationController
         dependencies = sbom.dependencies
         
         # Assume the first dependency is the root of the tree
-        root_ref = dependencies.first.ref
-        tree = build_dependency_tree(dependencies, root_ref)
+        root_ref = "SBOM #" + sbom_id
+        tree = {"name" => root_ref, "children" => []}
+        
+        dependencies.each do |dependency|
+            tree["children"].push(build_dependency_tree(dependencies, dependency.ref))
+        end
 
         render json: tree
     end
@@ -55,23 +59,27 @@ class DependenciesController < ApplicationController
 
     def build_dependency_tree(dependencies, root_ref)
         tree = {"name" => root_ref, "children" => []}
-      
-            
+    
         dependencies.each do |dependency|
           if dependency["ref"] == root_ref  # Check if this dependency is the root_ref
             # For each dependency that this dependency depends on
             dependency["dependsOn"].each do |ref|
               # Check if this dependency is in the original dependencies list
-              if dependencies.any? { |dep| dep["ref"] == ref }
+              matching_dep = dependencies.find { |dep| dep["ref"] == ref }
+              if matching_dep
                 # If it is, recursively build its tree
                 tree["children"].push(build_dependency_tree(dependencies, ref))
+              else
+                # If it's not found, add a null end node
+                tree["children"].push({"name" => ref, "children" => []})
               end
             end
           end
         end
-      
+    
         tree
-      
     end
 
 end
+    
+    

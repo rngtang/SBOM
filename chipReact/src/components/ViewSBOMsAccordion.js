@@ -1,5 +1,5 @@
 import React from 'react';
-import './ViewAccordian.css';
+import './ViewAccordion.css';
 import Accordion from 'react-bootstrap/Accordion';
 import DeleteButton from './DeleteButton';
 import ViewVulnsButton from './ViewVulnsButton';
@@ -15,8 +15,7 @@ import TreeButton from './TreeButton';
 // trigger [no clue bro]
 // setTrigger [pls help]
 // sbom is the actual SBOM json file
-const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
-    console.log("inside accordion")
+const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom, setLoading }) => {
 
     // create a state for showing or hiding the form
     const [showForm, setShowForm] = useState(false);
@@ -34,8 +33,8 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
                                 <p>v.{sbom.specVersion}</p>
                             </div>
                             <TreeButton sbomId={sbom.id}/>
-                            <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} />
-                            <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} />
+                            <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading} />
+                            <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} setLoading={setLoading}/>
                         </div>
                     </Accordion.Header>
 
@@ -49,7 +48,7 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom }) => {
 
                         <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p>
                             <ViewVulnsButton sbomId={sbom.id} sbomName={sbom.name} sbomDesc={sbom.description} trigger={trigger} setTrigger={setTrigger} />
-                            <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger} />
+                            <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>
                         </div>
                     </Accordion.Body>
 

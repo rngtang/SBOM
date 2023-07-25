@@ -1,3 +1,4 @@
+/* user an overlay as a background */
 .overlay {
     position: fixed;
     z-index: 1;
@@ -8,6 +9,7 @@
     background: linear-gradient(to bottom, var(--dukeblue), white);
 }
 
+/* format the text in a container*/
 .text {
     margin: auto;
     background-color: #EEF3FC;
@@ -20,6 +22,7 @@
     transform: translate(-50%, -50%);
 }
 
+/* format the hyperlink */
 .text a {
     color: var(--shaleblue);
     font-size: 20px;

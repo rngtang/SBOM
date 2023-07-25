@@ -68,4 +68,8 @@ echo -e "${COLOR}You have now created $selected_file.json, which is your SBOM to
 # ./bin/syft $selected_file -o json=$selected_file.json
 
 # echo -e "${COLOR} Finished creating $selected_file.json ${NC}"
+<<<<<<< HEAD
 # echo -e "${COLOR}You have now created $selected_file.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"        
+=======
+# echo -e "${COLOR}You have now created $selected_file.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"        
+>>>>>>> development

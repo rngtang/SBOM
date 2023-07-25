@@ -38,10 +38,10 @@ class ScriptsController < ApplicationController
         
         # combine cdxgen and grype outputs into one file 
         sudo apt-get install jq ./
-        jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.FINAL.json
+        jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.LINUX.json
         
         # finished
-        echo -e "${COLOR}You have now created $selected_file.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"        
+        echo -e "${COLOR}You have now created $selected_file.LINUX.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"        
                 
         SCRIPT
         send_data script_code, filename: 'install_linux.sh', type: 'text/x-sh'
@@ -88,10 +88,10 @@ class ScriptsController < ApplicationController
         brew install jq
 
         # Combine the JSON files into one
-        jq -s 'add' $selected_file.1.json $selected_file.2.json > result.json
+        jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.MAC.json
 
         # Output the results
-        echo -e "${COLOR}You have now created $selected_file.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}" 
+        echo -e "${COLOR}You have now created $selected_file.MAC.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}" 
 
         SCRIPT
         send_data mac_code, filename: 'mac_install.sh', type: 'text/x-sh'
@@ -111,7 +111,7 @@ class ScriptsController < ApplicationController
         
         # run cdxgen to create sbom
         Write-Host "Creating $selectedFile.json..." -ForegroundColor Green 
-        cdxgen -r -o "${selectedFile}.json"
+        cdxgen -r -o "${selectedFile}.WINDOWS.json"
         
         # Remove .xml file if it exists
         $xmlFile = "${selectedFile}.xml"
@@ -120,7 +120,7 @@ class ScriptsController < ApplicationController
         }
         
         # finish
-        Write-Host "You have now created $selectedFile.json, which is your SBOM to upload." -ForegroundColor Green
+        Write-Host "You have now created $selectedFile.WINDOWS.json, which is your SBOM to upload." -ForegroundColor Green
         
         # exit the terminal 
         # Read-Host -Prompt "Press Enter to exit script and terminal" 
@@ -129,6 +129,18 @@ class ScriptsController < ApplicationController
         SCRIPT
         send_data ps_code, filename: 'windows_install.ps1', type: 'text/plain'
     end 
+
+    def docker
+        docker_code = <<-DOCKERFILE
+        FROM node:14
+        WORKDIR /app
+        COPY . .
+        RUN npm install -g @cyclonedx/cdxgen@8.6.0
+        RUN wget https://raw.githubusercontent.com/anchore/grype/main/install.sh && chmod +x install.sh && ./install.sh
+        CMD ["./install_linux.sh"]
+        DOCKERFILE
+        send_data docker_code, filename: 'Dockerfile', type: 'text/plain'
+    end
     
   end
   

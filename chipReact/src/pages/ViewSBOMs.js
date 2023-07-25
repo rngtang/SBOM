@@ -1,13 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyAccordian from '../components/ViewSBOMsAccordian.js';
-import styles from './ViewSBOMs.module.css';
 import { Button } from 'react-bootstrap';
-import TreeTest from './tree-rendering/TreeTest';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
-import { useNavigate } from 'react-router-dom';
 
 function ViewSBOMs({ userId }) {
   const [selectedSbomId, setSelectedSbomId] = useState(null);
@@ -71,34 +67,37 @@ function ViewSBOMs({ userId }) {
         formData.append('name', userName);
       }
       formData.append('description', userDesc);
-
-      fetch((`http://localhost:8080/users/${userId}/sboms`), {
+      console.log(formData);
+      fetch((`http://localhost:8080/users/${userId}/sboms`), { 
         method: 'POST',
         body: formData
       })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Failed to upload the SBOM.');
-          }
-          console.log("supposed to have posted")
-          setLoading(false);
-          setTrigger(prevTrigger => !prevTrigger);
-          return response.json();
-        })
-
-      setFormSubmitted(false);
-    }, 500);
+      .then((response) => {
+        if (!response.ok) {
+          console.log("blah" + {response})
+          throw new Error('Failed to upload the SBOM.');
+        }
+        console.log("it POSTED ????");
+        setLoading(false);
+        setTrigger(prevTrigger => !prevTrigger); // will toggle getSBOMs useEffect
+        return response.json();
+      })
+      .then((data) => {
+      });
+      setFormSubmitted(false); //reset
+    }, 500); // Adjust the delay if needed
   }
 
   return (
     <>
       <section id='header'>
-        <form id="buttonContainer" onSubmit={(event) => event.preventDefault()} noValidate >
+
+        <form id="uploadForm" onSubmit={(event) => event.preventDefault()} noValidate >
           <div>
             <input
               type="text" required
               value={userName}
-              className="buttonInput"
+              className="formInput"
               onChange={(event) => setUserName(event.target.value)}
               placeholder="*Enter SBOM Name"
               style={{ borderColor: formSubmitted && !userName ? 'red' : '' }}
@@ -111,7 +110,7 @@ function ViewSBOMs({ userId }) {
             <input
               type="text" required
               value={userDesc}
-              className="buttonInput"
+              className="formInput"
               onChange={(event) => setUserDesc(event.target.value)}
               placeholder="*Enter SBOM Description"
               style={{ borderColor: formSubmitted && !userDesc ? 'red' : '' }}
@@ -150,7 +149,7 @@ function ViewSBOMs({ userId }) {
         <div id='sbomHeader'>
           <h5>Your SBOMs</h5>
         </div>
-        <div id='sbomList' className={styles.list}>
+        <div id='sbomList' className="list">
           <div id='sbomHeadRow'>
             <p>SBOM LIST</p>
             <div id='rowFunct'>

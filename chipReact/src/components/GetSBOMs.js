@@ -3,7 +3,9 @@ import * as React from 'react';
 import MyAccordion from './ViewSBOMsAccordian';
 
 export default function GetSBOMs ({sbomName, vulnID, trigger, setTrigger, userId, setLoading}) {
-  
+  // sbomName is the name of the SBOM
+  // trigger is a parameter for the useEffect, when it changes accordian will "refresh"
+  // userId is the ID of the user, not the netid
   const [sboms, setSboms] = useState([]);
   const sbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
   // const sbomsUrl = vulnID ? `${baseSbomsUrl}?vulnID=${vulnID}` : baseSbomsUrl;
@@ -22,17 +24,21 @@ export default function GetSBOMs ({sbomName, vulnID, trigger, setTrigger, userId
     fetchSboms();
   }, [trigger, vulnID]);
 
-  return (
-    <div>
-      {sboms.map((sbom) => {
-        console.log("outside")
-        console.log("from sbom", sbom.name)
-        console.log("from search", sbomName)
-        if (sbom.name && ((sbom.name.includes(sbomName) || sbomName === '') && sbom.archive === false)) {
-          return <MyAccordion key={sbom.id} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading} />
-        }
-        return null;
-      })}
-    </div>
-  );
+    return (
+        <div>
+            {sboms.map((sbom => {
+                // debugger lines
+                // console.log(sbomName)
+                // console.log(sbom.id.toString() == sbomName.sbomName)
+
+                // if SBOM data was fetched, show accoridon of SBOM
+                if (sbom.name) {
+                    if ((sbom.name.includes(sbomName) || sbomName == null) && (sbom.archive == false)){
+                        return (<MyAccordion userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>)
+                    }
+                }
+                
+            }))}
+        </div>
+    );
 };
