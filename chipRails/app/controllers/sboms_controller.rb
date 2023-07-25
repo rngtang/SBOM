@@ -123,16 +123,13 @@ class SbomsController < ApplicationController
                     next
                 else
                     # Creates new vulnerability if it does not exist
+                    @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"])
                     @affected = v["affects"]
                     if @affected
-                        aff = Array.new
                         @affected.each do |a|
-                            aff.push(a["ref"])
+                            @vuln.affected.append(a["ref"])
                         end
                     end
-
-                    @vuln = @sbom.vulnerabilities.create(bom_ref: v["bom-ref"], vulnID: v["id"], description: v["description"], recommendation: v["advisories"][0]["url"], affected: aff)
-
                     @ratings = v["ratings"]
                     if @ratings
                         @ratings.each do |r|
