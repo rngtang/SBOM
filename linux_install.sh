@@ -10,7 +10,7 @@ echo -e "${COLOR} Project (directory) name: ${NC} $selected_file"
 
 # install cdxgen
 echo -e "${COLOR}--- INSTALLING CDXGEN... ---${NC}"  
-npm install -g @cyclonedx/cdxgen@8.6.0
+sudo npm install -g @cyclonedx/cdxgen@8.6.0
 echo -e "${COLOR}--- Successful: INSTALLED CDXGEN ---${NC}"
 
 # install grype

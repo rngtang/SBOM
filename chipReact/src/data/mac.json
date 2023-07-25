@@ -1,5 +1,6 @@
 {
     "title": "For MacOS",
+    "notice": "This script will run sudo, requiring admin permissions.",
     "text": [
       "Use the button below to download the shell script. This will go into your Downloads (user/downloads).", 
       "Move the script into your project directory. It should be on the highest level inside your project in order to scan everything.", 
