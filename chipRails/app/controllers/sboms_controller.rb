@@ -129,7 +129,6 @@ class SbomsController < ApplicationController
                         aff = Array.new
 
                         # Appends the affected elements to the array
-                        # Helping Judy
                         @affected.each do |a|
                             aff.push(a["ref"])
                         end
