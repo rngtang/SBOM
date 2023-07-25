@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useNavigate } from 'react';
 import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
@@ -17,7 +17,7 @@ function ViewSBOMs({ userId }) {
   const [trigger, setTrigger] = useState(false);
 
   const fileInput = useRef();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Handle upload button click
   const handleButtonClick = () => {
@@ -30,9 +30,9 @@ function ViewSBOMs({ userId }) {
     }
   }
 
-  const handleViewClick = (id) => {
-    navigate(`/treetest/${id}`);
-  }
+  // const handleViewClick = (id) => {
+  //   navigate(`/treetest/${id}`);
+  // }
 
   // Fetch names
   const fetchNames = () => {

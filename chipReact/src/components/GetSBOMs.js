@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as React from 'react';
-import MyAccordion from './ViewSBOMsAccordian';
+import MyAccordion from './ViewSBOMsAccordion';
 
 export default function GetSBOMs ({sbomName, vulnID, trigger, setTrigger, userId, setLoading}) {
   // sbomName is the name of the SBOM
