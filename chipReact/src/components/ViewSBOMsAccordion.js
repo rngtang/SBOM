@@ -1,5 +1,5 @@
 import React from 'react';
-import './ViewAccordian.css';
+import './ViewAccordion.css';
 import Accordion from 'react-bootstrap/Accordion';
 import DeleteButton from './DeleteButton';
 import ViewVulnsButton from './ViewVulnsButton';

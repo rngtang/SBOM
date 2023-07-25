@@ -15,7 +15,7 @@ class ScriptsController < ApplicationController
         
         # install cdxgen
         echo -e "${COLOR}--- INSTALLING CDXGEN... ---${NC}"  
-        npm install -g @cyclonedx/cdxgen@8.6.0
+        sudo npm install -g @cyclonedx/cdxgen@8.6.0
         echo -e "${COLOR}--- Successful: INSTALLED CDXGEN ---${NC}"
         
         # install grype
@@ -64,7 +64,7 @@ class ScriptsController < ApplicationController
 
         # Install CDXGEN
         echo -e "${COLOR}--- INSTALLING CDXGEN... ---${NC}"  
-        npm install -g @cyclonedx/cdxgen@8.6.0
+        sudo npm install -g @cyclonedx/cdxgen@8.6.0
         echo -e "${COLOR}--- Successful: INSTALLED CDXGEN ---${NC}"
 
         # Install Grype
