@@ -5,9 +5,11 @@ import prereq1 from '../data/prereq.json';
 import data1 from '../data/linux.json';
 import data2 from '../data/mac.json';
 import data3 from '../data/windows.json';
+import data4 from '../data/docker.json';
 import DownloadLinuxScript from '../components/DownloadLinuxScript';
 import DownloadMacScript from '../components/DownloadMacScript';
 import DownloadWindowsScript from '../components/DownloadWindowsScript';
+import DownloadDockerfileScript from '../components/DownloadDockerfileScript';
 
 // title is the title of the section
 // para1 is the intro paragraph
@@ -61,6 +63,7 @@ const AnotherPage = () => {
             <Section title={data1.title} notice={data1.notice} text={data1.text} code={data1.code} downloadComponent={<DownloadLinuxScript />} />
             <Section title={data2.title} text={data2.text} code={data2.code} downloadComponent={<DownloadMacScript />} />
             <Section title={data3.title} notice={data3.notice} text={data3.text} code={data3.code} downloadComponent={<DownloadWindowsScript />} />
+            <Section title={data4.title} notice={data4.notice} text={data4.text} code={data4.code} downloadComponent={<DownloadDockerfileScript />} />
         </>
     );
 };
