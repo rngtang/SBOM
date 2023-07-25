@@ -39,47 +39,45 @@ class DependenciesController < ApplicationController
         params.permit(:ref, dependsOn: [])
     end
 
-    def dependencies_tree
-        sbom_id = params[:sbom_id]
-        sbom = Sbom.find(sbom_id)
-        dependencies = sbom.dependencies
-        
-        # Assume the first dependency is the root of the tree
-        root_ref = "SBOM #" + sbom_id
-        tree = {"name" => root_ref, "children" => []}
-        
-        dependencies.each do |dependency|
-            tree["children"].push(build_dependency_tree(dependencies, dependency.ref))
-        end
+def dependencies_tree
+  sbom_id = params[:sbom_id]
+  sbom = Sbom.find(sbom_id)
+  dependencies = sbom.dependencies
 
-        render json: tree
+  # The root_ref is the name of the root node
+  root_ref = "pkg:application/bird-app-2@0.1.0"
+  tree = build_dependency_tree(dependencies, root_ref)
+
+  render json: tree
+end
+
+
+def build_dependency_tree(dependencies, root_ref)
+# Initialize the tree with the modified name
+formatted_name = root_ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, "")
+tree = {"name" => formatted_name, "children" => []}
+
+# Find the matching dependency
+matching_dep = dependencies.find { |dep| dep["ref"] == root_ref }
+
+if matching_dep
+  # For each dependency that this dependency depends on
+  matching_dep["dependsOn"].each do |ref|
+    # Check if this dependency is in the original dependencies list
+    dep = dependencies.find { |dep| dep["ref"] == ref }
+    if dep
+      # If it is, recursively build its tree
+      tree["children"].push(build_dependency_tree(dependencies, ref))
+    else
+      # If it's not found, add a null end node with the modified name
+      tree["children"].push({"name" => ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, ""), "children" => []})
     end
+  end
+end
 
-    private
+tree
+end
 
-    def build_dependency_tree(dependencies, root_ref)
-        tree = {"name" => root_ref, "children" => []}
-    
-        dependencies.each do |dependency|
-          if dependency["ref"] == root_ref  # Check if this dependency is the root_ref
-            # For each dependency that this dependency depends on
-            dependency["dependsOn"].each do |ref|
-              # Check if this dependency is in the original dependencies list
-              matching_dep = dependencies.find { |dep| dep["ref"] == ref }
-              if matching_dep
-                # If it is, recursively build its tree
-                tree["children"].push(build_dependency_tree(dependencies, ref))
-              else
-                # If it's not found, add a null end node
-                tree["children"].push({"name" => ref, "children" => []})
-              end
-            end
-          end
-        end
-    
-        tree
-    end
+
 
 end
-    
-    
