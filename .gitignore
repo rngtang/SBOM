@@ -10,6 +10,7 @@ chipReact/coverage
 
 # production
 chipReact/build
+node_modules
 
 # misc
 chipReact/.DS_Store
