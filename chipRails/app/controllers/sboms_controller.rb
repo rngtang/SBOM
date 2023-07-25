@@ -24,8 +24,17 @@ class SbomsController < ApplicationController
 
     def sbomNames
         @user = User.find(params[:user_id])
-        render json: @user.sboms.pluck(:name), status: :ok
+        render json: @user.sboms.where(archive: false).pluck(:name), status: :ok
     end
+
+    def sbomTop
+        @user = User.find(params[:user_id])
+        sbomtop = @user.sboms.where(archive: false).as_json(
+            only: [:id, :bomFormat, :specVersion, :serialNumber, :version, :name, :description, :metadata, :archive], 
+            methods: [:vuln_number]
+        )
+        render json: sbomtop, status: :ok
+    end 
 
     def show
         @sbom = Sbom.find(params[:id])

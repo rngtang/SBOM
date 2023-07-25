@@ -8,15 +8,14 @@ import MyAccordion from './ViewSBOMsAccordion'
 export default function GetSBOMs ({sbomName, trigger, setTrigger, userId, setLoading}) {
     // create states for the SBOM and the route to access the SBOM
     const [sboms, setSboms] = useState([])
-    const sbomsUrl = `http://localhost:8080/users/${userId}/sboms`;
+    const sbomsUrl = `http://localhost:8080/users/${userId}/sbom_top`;
 
-    // create a handle to fetch SBOMs, turning it into a json file
+    // create a handle to fetch SBOM details (just the top), turning it into a json file
     const fetchSboms = () => {
         fetch(sbomsUrl)
             .then((response) => response.json())
             .then((data) => {
-                // debugger line
-                // console.log("sbom data", data)
+                console.log("sbom data", data)
                 setSboms(data)
             })
     }

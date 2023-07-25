@@ -16,4 +16,10 @@ class Sbom < ApplicationRecord
     serialize :sbom_components, Array 
     serialize :dependencies, Array
     serialize :metadata, Object
+
+    # Method to count the number of vulnerabilities
+    def vuln_number
+        vulnerabilities.count
+    end
+
 end

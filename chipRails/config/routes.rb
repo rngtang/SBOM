@@ -49,7 +49,8 @@ Rails.application.routes.draw do
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
   
   get '/users/:user_id/sbom_names', to: 'sboms#sbomNames'
-  
+  get '/users/:user_id/sbom_top', to: 'sboms#sbomTop'
+
 
   get '/scripts/linux', to: 'scripts#linux'
   get '/scripts/windows', to: 'scripts#windows'

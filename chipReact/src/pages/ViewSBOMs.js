@@ -40,7 +40,7 @@ function ViewSBOMs({ userId }) {
     }
   }
 
-  // fix this fetch
+  // fetches the names of all sboms with a certain user
   const fetchNames = () => {
     fetch(`http://localhost:8080/users/${userId}/sbom_names`)
       .then((response) => response.json())

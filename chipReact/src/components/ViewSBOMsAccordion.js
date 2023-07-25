@@ -46,7 +46,8 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom, setLoading }) =>
                         </p>
                         </div>
 
-                        <div id='bodyRight'><p>{sbom.vulnerabilities.length} Vulnerabilities Found</p>
+                        {/* need to pass in # of vulnerabilities from endpoint (formerly sbom.vulnerabilities.length) */}
+                        <div id='bodyRight'><p>{sbom.vuln_number} Vulnerabilities Found</p>
                             <ViewVulnsButton sbomId={sbom.id} sbomName={sbom.name} sbomDesc={sbom.description} trigger={trigger} setTrigger={setTrigger} />
                             <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>
                         </div>
