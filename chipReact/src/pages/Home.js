@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 // import headerImage from '../images/header-1.png';
 import chip2 from './images/chip2.png';
-import LogoSlider from './LogoSlider';
+import LogoSlider from '../components/LogoSlider';
 
 const Intro = () => {
     return (
