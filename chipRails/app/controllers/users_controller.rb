@@ -6,11 +6,13 @@ class UsersController < ApplicationController
         render json: @users, status: :ok
     end
 
+    # Finds user by id
     def show 
         @user = User.find(params[:id])
         render json: @user, status: :ok
     end
 
+    # Destroy user
     def destroy
         @user.destroy
         respond_to do |format|
@@ -19,6 +21,7 @@ class UsersController < ApplicationController
         end
     end
 
+    # Updates a user
     def update
         respond_to do |format|
             if @user.update(user_params)
@@ -35,6 +38,7 @@ class UsersController < ApplicationController
         @user = User.new
     end
 
+    # Creates a new user
     def create
         @user = User.new(user_params)
         respond_to do |format|

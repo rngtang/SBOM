@@ -1,23 +1,17 @@
 # MySQL. Versions 5.5.8 and up are supported.
-#
-# Install the MySQL driver
-#   gem install mysql2
-#
-# Ensure the MySQL gem is defined in your Gemfile
-#   gem "mysql2"
-#
-# And be sure to use new-style password hashing:
-#   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
-#
+
+# Sets the default configuration of the database
 default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # The databse name, username, password, and host are defined in the docker compose file
   database: <%= ENV['DB_NAME'] %>
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %> 
   host: <%= ENV['DB_HOST'] %>
 
+# The environment configuration for development, test, and production are the same as the default configuration
 development:
   <<: *default
 

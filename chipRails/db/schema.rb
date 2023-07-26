@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_19_180022) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_18_150555) do
   create_table "dependencies", charset: "utf8mb4", force: :cascade do |t|
     t.string "ref"
     t.text "dependsOn"
@@ -106,9 +106,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_19_180022) do
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "email"
     t.string "netid"
+    t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "username"
   end
 
   create_table "vulnerabilities", charset: "utf8mb4", force: :cascade do |t|

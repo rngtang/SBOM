@@ -25,11 +25,13 @@ class SbomComponentsController < ApplicationController
         end
     end
 
+    # Creates an SbomComponent
     def create
         @sbom = Sbom.find(params[:sbom_id])
         @sbom_component = @sbom.SbomComponents.new(sbom_component_params)
     end
 
+    # Sets parameters that an SbomComponent accepts
     def sbom_component_params
         params.permit(:bom_ref, :group, :name, :version, :purl)
     end
