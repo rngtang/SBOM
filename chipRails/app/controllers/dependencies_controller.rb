@@ -45,7 +45,7 @@ def dependencies_tree
   dependencies = sbom.dependencies
 
   # The root_ref is the name of the root node
-  root_ref = "pkg:application/bird-app-2@0.1.0"
+  root_ref = dependencies.first.ref
   tree = build_dependency_tree(dependencies, root_ref)
 
   render json: tree
