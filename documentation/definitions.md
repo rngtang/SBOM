@@ -4,7 +4,7 @@ SBOM(Software Bill of Management): a document that contains all parts used in a 
 
 SBOM Format: The method in which the information in the SBOM is laid out. We use a CycloneDX format, which is more focused on tracking the dependencies within our project.
 
-Dependencies: Parts 
+Dependencies: A software often calls upon code wri
 {
     "id": 0,
     "bomFormat": "string",
