@@ -5,10 +5,12 @@ import React, { useState, useRef, useEffect } from 'react';
 
 // userId is the ID of the user, not the netid
 // sbomId is the [] ID of the SBOM
-// trigger [i dont knowwww]
+// trigger [rerenders components when boolean is changed]
 // name is name of the SBOM
 // description is the description of the SBOM
-export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name, description }) {
+
+
+export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name, description, setLoading }) {
   // debugger line
   console.log({ sbomId })
   // create states for user file upload and archive route
@@ -23,23 +25,26 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
     // Set loading state to true before fetch request
     // setLoading(true);
 
-    // prevent empty inputs
-    e.preventDefault();
+    console.log("file upload triggered")
 
+    // prevent empty inputs
+
+    e.preventDefault();
+    setLoading(true);
     //debugger line
     // console.log({ sbomId })
 
     // create a state for form data
     const formData = new FormData();
-
     // 
+
     setTimeout(() => {
       const file = e.target.files[0];
       formData.append('file', file);
       formData.append('name', name); // Continue with the file upload or further processing
       formData.append('description', description);
 
-      fetch(`http://localhost:8080/users/${userId}sboms`, { //dummy user 1 for now
+      fetch(`http://localhost:8080/users/${userId}/sboms`, { //dummy user 1 for now
         method: 'POST',
         body: formData
       })
@@ -63,27 +68,22 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
           // console.log(archiveUrl)
 
           // return archive route
-          return fetch(archiveUrl)
+          return (fetch(archiveUrl)
+          .then(setLoading(false)))
         })
       // fetch(archiveUrl)          
       // setFormSubmitted(false); //reset
     }, 500); // Adjust the delay if needed
   }
-
+  
   // create a handle for clicking on button
   const handleButtonClick = (e) => {
+    // prevents toggle of accordion on button click
     e.stopPropagation()
+    e.preventDefault()
+    console.log("button clicked")
+    //opens fileinput box
     fileInput.current?.click();
-
-    // safety net dialogue
-    // e.preventDefault()
-    // console.log(trigger)
-    // if(window.confirm("Are you sure you want to delete this SBOM forever?")){
-    //     fetch(archiveUrl)
-    //     .then(console.log({sbomId}))
-    //     .then(setTrigger(prevTrigger => !prevTrigger))
-    //     .then(console.log({trigger}))
-
   }
 
   return (
@@ -99,6 +99,10 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
         type="file"
         style={{ display: 'none' }}
         onChange={handleFileUpload}
+        // prevents toggle of accordion on button click
+        onClick={(e)=>{
+          e.stopPropagation();
+        }}
       />
     </div>
   );

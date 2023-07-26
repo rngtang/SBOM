@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_19_180022) do
   create_table "dependencies", charset: "utf8mb4", force: :cascade do |t|
     t.string "ref"
     t.text "dependsOn"
     t.bigint "sbom_id", null: false
+    t.bigint "sbom_component_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sbom_component_id"], name: "index_dependencies_on_sbom_component_id"
     t.index ["sbom_id"], name: "index_dependencies_on_sbom_id"
   end
 
@@ -52,10 +54,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.string "name"
     t.string "version"
     t.string "purl"
-    t.bigint "sbom_id", null: false
+    t.bigint "sbom_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["sbom_id"], name: "index_sbom_components_on_sbom_id"
+  end
+
+  create_table "sbom_components_sboms", id: false, charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "sbom_id", null: false
+    t.bigint "sbom_component_id", null: false
   end
 
   create_table "sboms", charset: "utf8mb4", force: :cascade do |t|
@@ -70,6 +77,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_sboms_on_user_id"
+  end
+
+  create_table "sboms_vulnerabilities", id: false, charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "sbom_id", null: false
+    t.bigint "vulnerability_id", null: false
   end
 
   create_table "sources", charset: "utf8mb4", force: :cascade do |t|
@@ -94,9 +106,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "email"
     t.string "netid"
-    t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
   end
 
   create_table "vulnerabilities", charset: "utf8mb4", force: :cascade do |t|
@@ -105,12 +117,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_175308) do
     t.string "description"
     t.string "recommendation"
     t.text "affected"
-    t.bigint "sbom_id", null: false
+    t.bigint "sbom_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["sbom_id"], name: "index_vulnerabilities_on_sbom_id"
   end
 
+  add_foreign_key "dependencies", "sbom_components"
   add_foreign_key "dependencies", "sboms"
   add_foreign_key "metadata", "sboms"
   add_foreign_key "properties", "sbom_components"

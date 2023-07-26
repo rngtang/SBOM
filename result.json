@@ -1,15 +1,15 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:79e42b7c-882b-4a7e-a94b-ea5d9a89f825",
+  "serialNumber": "urn:uuid:a078e66e-3d6d-4188-a37a-bd234aa5d2d2",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-07-06T10:48:36-04:00",
+    "timestamp": "2023-07-20T16:43:24-04:00",
     "tools": [
       {
         "vendor": "anchore",
         "name": "grype",
-        "version": "0.63.1"
+        "version": "0.64.2"
       }
     ]
   },
@@ -933,6 +933,40 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/axios@1.4.0?package-id=4a1d3961931e1d10",
+      "type": "library",
+      "name": "axios",
+      "version": "1.4.0",
+      "purl": "pkg:npm/axios@1.4.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/axios/node_modules/form-data@4.0.0?package-id=63cc7e8f939c9423",
+      "type": "library",
+      "name": "axios/node_modules/form-data",
+      "version": "4.0.0",
+      "purl": "pkg:npm/axios/node_modules/form-data@4.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/axobject-query@3.2.1?package-id=1545c7fa29cfcb13",
       "type": "library",
       "name": "axobject-query",
@@ -1091,6 +1125,23 @@
       "name": "babel-loader/node_modules/schema-utils",
       "version": "2.7.1",
       "purl": "pkg:npm/babel-loader/node_modules/schema-utils@2.7.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/babel-plugin@11.11.0?package-id=3d34e3a1d040324f",
+      "type": "library",
+      "name": "babel-plugin",
+      "version": "11.11.0",
+      "purl": "pkg:npm/emotion/babel-plugin@11.11.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -1392,6 +1443,40 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/emotion/babel-plugin/node_modules/escape-string-regexp@4.0.0?package-id=a4c2e8c78ab80e98",
+      "type": "library",
+      "name": "babel-plugin/node_modules/escape-string-regexp",
+      "version": "4.0.0",
+      "purl": "pkg:npm/emotion/babel-plugin/node_modules/escape-string-regexp@4.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/babel-plugin/node_modules/source-map@0.5.7?package-id=4cb59a4d0644aae8",
+      "type": "library",
+      "name": "babel-plugin/node_modules/source-map",
+      "version": "0.5.7",
+      "purl": "pkg:npm/emotion/babel-plugin/node_modules/source-map@0.5.7",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/svgr/babel-preset@5.5.0?package-id=9824ec08726050f3",
       "type": "library",
       "name": "babel-preset",
@@ -1494,6 +1579,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:gem/better_errors@2.10.1?package-id=c21aedb93dfeee34",
+      "type": "library",
+      "name": "better_errors",
+      "version": "2.10.1",
+      "purl": "pkg:gem/better_errors@2.10.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "ruby"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "gem"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/bfj@7.0.2?package-id=4cc6fbb75f0488ec",
       "type": "library",
       "name": "bfj",
@@ -1550,6 +1652,23 @@
       "name": "bindex",
       "version": "0.8.1",
       "purl": "pkg:gem/bindex@0.8.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "ruby"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "gem"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:gem/binding_of_caller@1.0.0?package-id=d27fd834040d91c2",
+      "type": "library",
+      "name": "binding_of_caller",
+      "version": "1.0.0",
+      "purl": "pkg:gem/binding_of_caller@1.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -1715,6 +1834,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/bootstrap@5.3.0?package-id=c0da79b6dea2e04b",
+      "type": "library",
+      "name": "bootstrap",
+      "version": "5.3.0",
+      "purl": "pkg:npm/bootstrap@5.3.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/brace-expansion@1.1.11?package-id=6b2b218c87acd72e",
       "type": "library",
       "name": "brace-expansion",
@@ -1856,6 +1992,23 @@
       "name": "bytes",
       "version": "3.0.0",
       "purl": "pkg:npm/bytes@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/cache@11.11.0?package-id=033fa86f30fe29cb",
+      "type": "library",
+      "name": "cache",
+      "version": "11.11.0",
+      "purl": "pkg:npm/emotion/cache@11.11.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -2021,6 +2174,40 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/chain-function@1.0.1?package-id=dacdc9e108a93ae7",
+      "type": "library",
+      "name": "chain-function",
+      "version": "1.0.1",
+      "purl": "pkg:npm/chain-function@1.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/chained-function@0.5.0?package-id=83d3b45e70a7ea65",
+      "type": "library",
+      "name": "chained-function",
+      "version": "0.5.0",
+      "purl": "pkg:npm/chained-function@0.5.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/chalk@2.4.2?package-id=bb4975d95a0f26e4",
       "type": "library",
       "name": "chalk",
@@ -2157,6 +2344,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/classnames@2.3.2?package-id=2fef0976406ceccd",
+      "type": "library",
+      "name": "classnames",
+      "version": "2.3.2",
+      "purl": "pkg:npm/classnames@2.3.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/clean-css@5.3.2?package-id=c332ce2933be99db",
       "type": "library",
       "name": "clean-css",
@@ -2196,6 +2400,23 @@
       "name": "cliui",
       "version": "7.0.4",
       "purl": "pkg:npm/cliui@7.0.4",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/clone@2.1.2?package-id=0e7ee099b6415395",
+      "type": "library",
+      "name": "clone",
+      "version": "2.1.2",
+      "purl": "pkg:npm/clone@2.1.2",
       "properties": [
         {
           "name": "syft:package:language",
@@ -2349,6 +2570,23 @@
       "name": "combined-stream",
       "version": "1.0.8",
       "purl": "pkg:npm/combined-stream@1.0.8",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/commander@7.2.0?package-id=0818676489285792",
+      "type": "library",
+      "name": "commander",
+      "version": "7.2.0",
+      "purl": "pkg:npm/commander@7.2.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -2825,6 +3063,23 @@
       "name": "cookie-signature",
       "version": "1.0.6",
       "purl": "pkg:npm/cookie-signature@1.0.6",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/popperjs/core@2.11.8?package-id=cb8323b397c86895",
+      "type": "library",
+      "name": "core",
+      "version": "2.11.8",
+      "purl": "pkg:npm/popperjs/core@2.11.8",
       "properties": [
         {
           "name": "syft:package:language",
@@ -3670,6 +3925,618 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/d3@7.8.5?package-id=91e4877324223ee4",
+      "type": "library",
+      "name": "d3",
+      "version": "7.8.5",
+      "purl": "pkg:npm/d3@7.8.5",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-array@3.2.4?package-id=716ee0a052a95840",
+      "type": "library",
+      "name": "d3-array",
+      "version": "3.2.4",
+      "purl": "pkg:npm/d3-array@3.2.4",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-axis@3.0.0?package-id=b962863df09d49c8",
+      "type": "library",
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "purl": "pkg:npm/d3-axis@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-brush@3.0.0?package-id=8b237abae280fa4c",
+      "type": "library",
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "purl": "pkg:npm/d3-brush@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-chord@3.0.1?package-id=19b3750441772f65",
+      "type": "library",
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-chord@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-color@3.1.0?package-id=6512c39c586a555f",
+      "type": "library",
+      "name": "d3-color",
+      "version": "3.1.0",
+      "purl": "pkg:npm/d3-color@3.1.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-contour@4.0.2?package-id=d2931043c300b6df",
+      "type": "library",
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "purl": "pkg:npm/d3-contour@4.0.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-delaunay@6.0.4?package-id=6bcb828855f58f6c",
+      "type": "library",
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "purl": "pkg:npm/d3-delaunay@6.0.4",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-dispatch@3.0.1?package-id=71d9b390e762f5ca",
+      "type": "library",
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-dispatch@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-drag@3.0.0?package-id=83c186656fe9213c",
+      "type": "library",
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "purl": "pkg:npm/d3-drag@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-dsv@3.0.1?package-id=d6eec24a55b13a3d",
+      "type": "library",
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-dsv@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-dsv/node_modules/commander@7.2.0?package-id=c6b9d0aea71ba8b5",
+      "type": "library",
+      "name": "d3-dsv/node_modules/commander",
+      "version": "7.2.0",
+      "purl": "pkg:npm/d3-dsv/node_modules/commander@7.2.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-ease@3.0.1?package-id=31a9272208fe9875",
+      "type": "library",
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-ease@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-fetch@3.0.1?package-id=20ddbf9aa7ad91d7",
+      "type": "library",
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-fetch@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-force@3.0.0?package-id=ce2afa59617fd294",
+      "type": "library",
+      "name": "d3-force",
+      "version": "3.0.0",
+      "purl": "pkg:npm/d3-force@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-format@3.1.0?package-id=a4340f95d109fa93",
+      "type": "library",
+      "name": "d3-format",
+      "version": "3.1.0",
+      "purl": "pkg:npm/d3-format@3.1.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-geo@3.1.0?package-id=b6b556d1af69d171",
+      "type": "library",
+      "name": "d3-geo",
+      "version": "3.1.0",
+      "purl": "pkg:npm/d3-geo@3.1.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-hierarchy@1.1.9?package-id=bc114639e25a07c7",
+      "type": "library",
+      "name": "d3-hierarchy",
+      "version": "1.1.9",
+      "purl": "pkg:npm/d3-hierarchy@1.1.9",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-interpolate@3.0.1?package-id=5150fc24b58ba5ec",
+      "type": "library",
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-interpolate@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-path@1.0.9?package-id=dd4bfddd552a3055",
+      "type": "library",
+      "name": "d3-path",
+      "version": "1.0.9",
+      "purl": "pkg:npm/d3-path@1.0.9",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-polygon@3.0.1?package-id=6dc379064dee9e38",
+      "type": "library",
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-polygon@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-quadtree@3.0.1?package-id=b713c36ef403598e",
+      "type": "library",
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-quadtree@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-random@3.0.1?package-id=59468b02d75db9cb",
+      "type": "library",
+      "name": "d3-random",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-random@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-scale@4.0.2?package-id=e352ab255835424d",
+      "type": "library",
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "purl": "pkg:npm/d3-scale@4.0.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-scale-chromatic@3.0.0?package-id=73b8c6e89b707322",
+      "type": "library",
+      "name": "d3-scale-chromatic",
+      "version": "3.0.0",
+      "purl": "pkg:npm/d3-scale-chromatic@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-selection@3.0.0?package-id=bd9a2bcca9879b54",
+      "type": "library",
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "purl": "pkg:npm/d3-selection@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-shape@1.3.7?package-id=60e940bcfcd6e3a3",
+      "type": "library",
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "purl": "pkg:npm/d3-shape@1.3.7",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-time@3.1.0?package-id=a90aefd33e7d815d",
+      "type": "library",
+      "name": "d3-time",
+      "version": "3.1.0",
+      "purl": "pkg:npm/d3-time@3.1.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-time-format@4.1.0?package-id=4e6eafb5097c0003",
+      "type": "library",
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "purl": "pkg:npm/d3-time-format@4.1.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-timer@3.0.1?package-id=cb692640f195025b",
+      "type": "library",
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-timer@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-transition@3.0.1?package-id=58f251adcc4a60ae",
+      "type": "library",
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "purl": "pkg:npm/d3-transition@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3-zoom@3.0.0?package-id=803b3c010dd25500",
+      "type": "library",
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "purl": "pkg:npm/d3-zoom@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3/node_modules/d3-hierarchy@3.1.2?package-id=02542c659ce0dbac",
+      "type": "library",
+      "name": "d3/node_modules/d3-hierarchy",
+      "version": "3.1.2",
+      "purl": "pkg:npm/d3/node_modules/d3-hierarchy@3.1.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3/node_modules/d3-path@3.1.0?package-id=a410f50853854452",
+      "type": "library",
+      "name": "d3/node_modules/d3-path",
+      "version": "3.1.0",
+      "purl": "pkg:npm/d3/node_modules/d3-path@3.1.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d3/node_modules/d3-shape@3.2.0?package-id=a5a1c8e84c3f7d40",
+      "type": "library",
+      "name": "d3/node_modules/d3-shape",
+      "version": "3.2.0",
+      "purl": "pkg:npm/d3/node_modules/d3-shape@3.2.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/d33@3.5.17?package-id=afd9d33ea828f6a7",
+      "type": "library",
+      "name": "d33",
+      "version": "3.5.17",
+      "purl": "pkg:npm/d33@3.5.17",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/damerau-levenshtein@1.0.8?package-id=11e11b45b30b9014",
       "type": "library",
       "name": "damerau-levenshtein",
@@ -3751,6 +4618,23 @@
         {
           "name": "syft:package:type",
           "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:gem/debug_inspector@1.1.0?package-id=d321f4c48528f9df",
+      "type": "library",
+      "name": "debug_inspector",
+      "version": "1.1.0",
+      "purl": "pkg:gem/debug_inspector@1.1.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "ruby"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "gem"
         }
       ]
     },
@@ -3879,6 +4763,23 @@
       "name": "define-properties",
       "version": "1.2.0",
       "purl": "pkg:npm/define-properties@1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/delaunator@5.0.0?package-id=f414b4dd4935930a",
+      "type": "library",
+      "name": "delaunator",
+      "version": "5.0.0",
+      "purl": "pkg:npm/delaunator@5.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -4202,6 +5103,40 @@
       "name": "dom-converter",
       "version": "0.2.0",
       "purl": "pkg:npm/dom-converter@0.2.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/dom-helpers@3.4.0?package-id=5b6c024099279cc7",
+      "type": "library",
+      "name": "dom-helpers",
+      "version": "3.4.0",
+      "purl": "pkg:npm/dom-helpers@3.4.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/dom-helpers@5.2.1?package-id=48fa46df23052e8f",
+      "type": "library",
+      "name": "dom-helpers",
+      "version": "5.2.1",
+      "purl": "pkg:npm/dom-helpers@5.2.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -6628,6 +7563,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/find-root@1.1.0?package-id=8b92dffcdc1835f7",
+      "type": "library",
+      "name": "find-root",
+      "version": "1.1.0",
+      "purl": "pkg:npm/find-root@1.1.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/find-up@5.0.0?package-id=706ca57cbeb5c087",
       "type": "library",
       "name": "find-up",
@@ -6922,6 +7874,23 @@
       "name": "form-data",
       "version": "3.0.1",
       "purl": "pkg:npm/form-data@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/form-data@4.0.0?package-id=47d38d3f3f755df2",
+      "type": "library",
+      "name": "form-data",
+      "version": "4.0.0",
+      "purl": "pkg:npm/form-data@4.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -7733,6 +8702,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/emotion/hash@0.9.1?package-id=134b6fd70db84b9d",
+      "type": "library",
+      "name": "hash",
+      "version": "0.9.1",
+      "purl": "pkg:npm/emotion/hash@0.9.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/svgr/hast-util-to-babel-ast@5.5.0?package-id=56a186bf05747df0",
       "type": "library",
       "name": "hast-util-to-babel-ast",
@@ -8311,6 +9297,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/swc/helpers@0.5.1?package-id=1e702a8dae5d3509",
+      "type": "library",
+      "name": "helpers",
+      "version": "0.5.1",
+      "purl": "pkg:npm/swc/helpers@0.5.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/babel/helpers@7.22.5?package-id=e69bbdda25ba30f6",
       "type": "library",
       "name": "helpers",
@@ -8333,6 +9336,57 @@
       "name": "highlight",
       "version": "7.22.5",
       "purl": "pkg:npm/babel/highlight@7.22.5",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/hoist-non-react-statics@3.3.2?package-id=51bb15b46b83c70b",
+      "type": "library",
+      "name": "hoist-non-react-statics",
+      "version": "3.3.2",
+      "purl": "pkg:npm/hoist-non-react-statics@3.3.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/hoist-non-react-statics/node_modules/react-is@16.13.1?package-id=8e7d802ad6842e83",
+      "type": "library",
+      "name": "hoist-non-react-statics/node_modules/react-is",
+      "version": "16.13.1",
+      "purl": "pkg:npm/hoist-non-react-statics/node_modules/react-is@16.13.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/restart/hooks@0.4.9?package-id=925e241fa55a3a86",
+      "type": "library",
+      "name": "hooks",
+      "version": "0.4.9",
+      "purl": "pkg:npm/restart/hooks@0.4.9",
       "properties": [
         {
           "name": "syft:package:language",
@@ -9008,6 +10062,40 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/internmap@2.0.3?package-id=e18475a16861a3f3",
+      "type": "library",
+      "name": "internmap",
+      "version": "2.0.3",
+      "purl": "pkg:npm/internmap@2.0.3",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/invariant@2.2.4?package-id=c0b3485199b35c4f",
+      "type": "library",
+      "name": "invariant",
+      "version": "2.2.4",
+      "purl": "pkg:npm/invariant@2.2.4",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:gem/io-console@0.6.0?package-id=15f9e94c2e190c20",
       "type": "library",
       "name": "io-console",
@@ -9455,6 +10543,23 @@
       "name": "is-potential-custom-element-name",
       "version": "1.0.1",
       "purl": "pkg:npm/is-potential-custom-element-name@1.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/is-prop-valid@1.2.1?package-id=6a6bdfdb7cae88e0",
+      "type": "library",
+      "name": "is-prop-valid",
+      "version": "1.2.1",
+      "purl": "pkg:npm/emotion/is-prop-valid@1.2.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -12782,6 +13887,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:gem/json@2.6.3?package-id=5f815165311e9c27",
+      "type": "library",
+      "name": "json",
+      "version": "2.6.3",
+      "purl": "pkg:gem/json@2.6.3",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "ruby"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "gem"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/json-parse-even-better-errors@2.3.1?package-id=643e4e9e02885d52",
       "type": "library",
       "name": "json-parse-even-better-errors",
@@ -13620,6 +14742,23 @@
       "name": "memfs",
       "version": "3.5.3",
       "purl": "pkg:npm/memfs@3.5.3",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/memoize@0.8.1?package-id=25db9f121f6cf589",
+      "type": "library",
+      "name": "memoize",
+      "version": "0.8.1",
+      "purl": "pkg:npm/emotion/memoize@0.8.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -18851,6 +19990,57 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/prop-types-extra@1.1.1?package-id=d49858ade49e8d2f",
+      "type": "library",
+      "name": "prop-types-extra",
+      "version": "1.1.1",
+      "purl": "pkg:npm/prop-types-extra@1.1.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/prop-types-extra/node_modules/react-is@16.13.1?package-id=a08e79a092dbb177",
+      "type": "library",
+      "name": "prop-types-extra/node_modules/react-is",
+      "version": "16.13.1",
+      "purl": "pkg:npm/prop-types-extra/node_modules/react-is@16.13.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/prop-types-extra/node_modules/warning@4.0.3?package-id=0f137709ad43654b",
+      "type": "library",
+      "name": "prop-types-extra/node_modules/warning",
+      "version": "4.0.3",
+      "purl": "pkg:npm/prop-types-extra/node_modules/warning@4.0.3",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/prop-types/node_modules/react-is@16.13.1?package-id=b467e1f2e2e90d59",
       "type": "library",
       "name": "prop-types/node_modules/react-is",
@@ -18890,6 +20080,23 @@
       "name": "proxy-addr/node_modules/ipaddr.js",
       "version": "1.9.1",
       "purl": "pkg:npm/proxy-addr/node_modules/ipaddr.js@1.9.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/proxy-from-env@1.1.0?package-id=78ff2721025782c1",
+      "type": "library",
+      "name": "proxy-from-env",
+      "version": "1.1.0",
+      "purl": "pkg:npm/proxy-from-env@1.1.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -19310,6 +20517,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/emotion/react@11.11.1?package-id=21d5e74e441cacf6",
+      "type": "library",
+      "name": "react",
+      "version": "11.11.1",
+      "purl": "pkg:npm/emotion/react@11.11.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/testing-library/react@13.4.0?package-id=88e90b53a6830d9d",
       "type": "library",
       "name": "react",
@@ -19349,6 +20573,91 @@
       "name": "react-app-polyfill",
       "version": "3.0.0",
       "purl": "pkg:npm/react-app-polyfill@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-bootstrap@2.8.0?package-id=0c7109edb033cc25",
+      "type": "library",
+      "name": "react-bootstrap",
+      "version": "2.8.0",
+      "purl": "pkg:npm/react-bootstrap@2.8.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-bootstrap/node_modules/warning@4.0.3?package-id=82794925e7f7eb6c",
+      "type": "library",
+      "name": "react-bootstrap/node_modules/warning",
+      "version": "4.0.3",
+      "purl": "pkg:npm/react-bootstrap/node_modules/warning@4.0.3",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-d3@0.4.0?package-id=d47671f5f3ab43a3",
+      "type": "library",
+      "name": "react-d3",
+      "version": "0.4.0",
+      "purl": "pkg:npm/react-d3@0.4.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-d3-tree@3.6.1?package-id=814fe49ead01df62",
+      "type": "library",
+      "name": "react-d3-tree",
+      "version": "3.6.1",
+      "purl": "pkg:npm/react-d3-tree@3.6.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-d3/node_modules/d3@3.5.17?package-id=03a58dbadd027e50",
+      "type": "library",
+      "name": "react-d3/node_modules/d3",
+      "version": "3.5.17",
+      "purl": "pkg:npm/react-d3/node_modules/d3@3.5.17",
       "properties": [
         {
           "name": "syft:package:language",
@@ -19548,11 +20857,62 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/react-is@16.13.1?package-id=32d75e9066234e9c",
+      "type": "library",
+      "name": "react-is",
+      "version": "16.13.1",
+      "purl": "pkg:npm/react-is@16.13.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/react-is@17.0.2?package-id=b1e1e7781cc6c286",
       "type": "library",
       "name": "react-is",
       "version": "17.0.2",
       "purl": "pkg:npm/react-is@17.0.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-lifecycles-compat@3.0.4?package-id=7624cac038accab4",
+      "type": "library",
+      "name": "react-lifecycles-compat",
+      "version": "3.0.4",
+      "purl": "pkg:npm/react-lifecycles-compat@3.0.4",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-pro-sidebar@1.1.0-alpha.1?package-id=176c80b4ae29a9f8",
+      "type": "library",
+      "name": "react-pro-sidebar",
+      "version": "1.1.0-alpha.1",
+      "purl": "pkg:npm/react-pro-sidebar@1.1.0-alpha.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -19599,11 +20959,113 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/react-router@6.14.0?package-id=79db46ed95ca2eec",
+      "type": "library",
+      "name": "react-router",
+      "version": "6.14.0",
+      "purl": "pkg:npm/react-router@6.14.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-router-dom@6.14.0?package-id=9324ae5ac2bc45b8",
+      "type": "library",
+      "name": "react-router-dom",
+      "version": "6.14.0",
+      "purl": "pkg:npm/react-router-dom@6.14.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/react-scripts@5.0.1?package-id=8f5fe347d10a915e",
       "type": "library",
       "name": "react-scripts",
       "version": "5.0.1",
       "purl": "pkg:npm/react-scripts@5.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/trendmicro/react-sidenav@0.5.0?package-id=3ef8add3ae62e49e",
+      "type": "library",
+      "name": "react-sidenav",
+      "version": "0.5.0",
+      "purl": "pkg:npm/trendmicro/react-sidenav@0.5.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/bkrem/react-transition-group@1.3.3?package-id=cb84d46e077a399f",
+      "type": "library",
+      "name": "react-transition-group",
+      "version": "1.3.3",
+      "purl": "pkg:npm/bkrem/react-transition-group@1.3.3",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-transition-group@4.4.5?package-id=8e70677c86802767",
+      "type": "library",
+      "name": "react-transition-group",
+      "version": "4.4.5",
+      "purl": "pkg:npm/react-transition-group@4.4.5",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/bkrem/react-transition-group/node_modules/dom-helpers@3.4.0?package-id=fdb6d6393e85636b",
+      "type": "library",
+      "name": "react-transition-group/node_modules/dom-helpers",
+      "version": "3.4.0",
+      "purl": "pkg:npm/bkrem/react-transition-group/node_modules/dom-helpers@3.4.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -20500,6 +21962,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/robust-predicates@3.0.2?package-id=6a4f47ed29738ecb",
+      "type": "library",
+      "name": "robust-predicates",
+      "version": "3.0.2",
+      "purl": "pkg:npm/robust-predicates@3.0.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/rollup@2.79.1?package-id=bad9c5a57452379d",
       "type": "library",
       "name": "rollup",
@@ -20619,6 +22098,57 @@
       ]
     },
     {
+      "bom-ref": "pkg:gem/rouge@4.1.2?package-id=2634252aad9b670e",
+      "type": "library",
+      "name": "rouge",
+      "version": "4.1.2",
+      "purl": "pkg:gem/rouge@4.1.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "ruby"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "gem"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/remix-run/router@1.7.0?package-id=af24b23d2519f4cf",
+      "type": "library",
+      "name": "router",
+      "version": "1.7.0",
+      "purl": "pkg:npm/remix-run/router@1.7.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:gem/ruby-saml@1.15.0?package-id=b6c7eafd28ff45f7",
+      "type": "library",
+      "name": "ruby-saml",
+      "version": "1.15.0",
+      "purl": "pkg:gem/ruby-saml@1.15.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "ruby"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "gem"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:gem/rubyzip@2.3.2?package-id=f947615058ddb293",
       "type": "library",
       "name": "rubyzip",
@@ -20658,6 +22188,40 @@
       "name": "runtime",
       "version": "7.22.5",
       "purl": "pkg:npm/babel/runtime@7.22.5",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/babel/runtime@7.22.6?package-id=a7b81afd8e4601f9",
+      "type": "library",
+      "name": "runtime",
+      "version": "7.22.6",
+      "purl": "pkg:npm/babel/runtime@7.22.6",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/rw@1.3.3?package-id=480e43a325fb3fe5",
+      "type": "library",
+      "name": "rw",
+      "version": "1.3.3",
+      "purl": "pkg:npm/rw@1.3.3",
       "properties": [
         {
           "name": "syft:package:language",
@@ -21095,6 +22659,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/emotion/serialize@1.1.2?package-id=31d093ac14f7587f",
+      "type": "library",
+      "name": "serialize",
+      "version": "1.1.2",
+      "purl": "pkg:npm/emotion/serialize@1.1.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/serialize-javascript@6.0.1?package-id=bc25948af0cf4771",
       "type": "library",
       "name": "serialize-javascript",
@@ -21321,6 +22902,23 @@
       "name": "shebang-regex",
       "version": "3.0.0",
       "purl": "pkg:npm/shebang-regex@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/sheet@1.2.2?package-id=fd8b6c6b89f5028e",
+      "type": "library",
+      "name": "sheet",
+      "version": "1.2.2",
+      "purl": "pkg:npm/emotion/sheet@1.2.2",
       "properties": [
         {
           "name": "syft:package:language",
@@ -21703,6 +23301,23 @@
         {
           "name": "syft:package:type",
           "value": "gem"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/react-aria/ssr@3.7.0?package-id=28dac9dfd7ade5cb",
+      "type": "library",
+      "name": "ssr",
+      "version": "3.7.0",
+      "purl": "pkg:npm/react-aria/ssr@3.7.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
         }
       ]
     },
@@ -22115,11 +23730,45 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/emotion/styled@11.11.0?package-id=1e41ba5ef930d621",
+      "type": "library",
+      "name": "styled",
+      "version": "11.11.0",
+      "purl": "pkg:npm/emotion/styled@11.11.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/stylehacks@5.1.1?package-id=9f4c11154f38a272",
       "type": "library",
       "name": "stylehacks",
       "version": "5.1.1",
       "purl": "pkg:npm/stylehacks@5.1.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/stylis@4.2.0?package-id=a8a8441e1743a40c",
+      "type": "library",
+      "name": "stylis",
+      "version": "4.2.0",
+      "purl": "pkg:npm/stylis@4.2.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -23560,11 +25209,79 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/restart/ui@1.6.6?package-id=52cb665671b66d07",
+      "type": "library",
+      "name": "ui",
+      "version": "1.6.6",
+      "purl": "pkg:npm/restart/ui@1.6.6",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/restart/ui/node_modules/uncontrollable@8.0.2?package-id=0cc92cb3a0630282",
+      "type": "library",
+      "name": "ui/node_modules/uncontrollable",
+      "version": "8.0.2",
+      "purl": "pkg:npm/restart/ui/node_modules/uncontrollable@8.0.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/restart/ui/node_modules/warning@4.0.3?package-id=11601ec17db3d800",
+      "type": "library",
+      "name": "ui/node_modules/warning",
+      "version": "4.0.3",
+      "purl": "pkg:npm/restart/ui/node_modules/warning@4.0.3",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/unbox-primitive@1.0.2?package-id=7574f89192953406",
       "type": "library",
       "name": "unbox-primitive",
       "version": "1.0.2",
       "purl": "pkg:npm/unbox-primitive@1.0.2",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/uncontrollable@7.2.1?package-id=5a283640cadd913a",
+      "type": "library",
+      "name": "uncontrollable",
+      "version": "7.2.1",
+      "purl": "pkg:npm/uncontrollable@7.2.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -23650,6 +25367,23 @@
       "name": "unique-string",
       "version": "2.0.0",
       "purl": "pkg:npm/unique-string@2.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/unitless@0.8.1?package-id=31736b06dde9a7e5",
+      "type": "library",
+      "name": "unitless",
+      "version": "0.8.1",
+      "purl": "pkg:npm/emotion/unitless@0.8.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -23781,6 +25515,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/emotion/use-insertion-effect-with-fallbacks@1.0.1?package-id=1c4df293dbfb5133",
+      "type": "library",
+      "name": "use-insertion-effect-with-fallbacks",
+      "version": "1.0.1",
+      "purl": "pkg:npm/emotion/use-insertion-effect-with-fallbacks@1.0.1",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/testing-library/user-event@13.5.0?package-id=82ee2b2256430fcf",
       "type": "library",
       "name": "user-event",
@@ -23854,6 +25605,23 @@
       "name": "utila",
       "version": "0.4.0",
       "purl": "pkg:npm/utila@0.4.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/utils@1.2.1?package-id=99457154643639d5",
+      "type": "library",
+      "name": "utils",
+      "version": "1.2.1",
+      "purl": "pkg:npm/emotion/utils@1.2.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -24070,6 +25838,23 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/warning@3.0.0?package-id=1f6305a55f6202eb",
+      "type": "library",
+      "name": "warning",
+      "version": "3.0.0",
+      "purl": "pkg:npm/warning@3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/webassemblyjs/wasm-edit@1.11.6?package-id=7b83b3285d9c4b10",
       "type": "library",
       "name": "wasm-edit",
@@ -24177,6 +25962,23 @@
       "name": "wbuf",
       "version": "1.7.3",
       "purl": "pkg:npm/wbuf@1.7.3",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/emotion/weak-memoize@0.3.1?package-id=4ec7edc7950344bb",
+      "type": "library",
+      "name": "weak-memoize",
+      "version": "0.3.1",
+      "purl": "pkg:npm/emotion/weak-memoize@0.3.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -25591,8 +27393,17 @@
         "pkg:npm/@testing-library/jest-dom@5.16.5",
         "pkg:npm/@testing-library/react@13.4.0",
         "pkg:npm/@testing-library/user-event@13.5.0",
+        "pkg:npm/@trendmicro/react-sidenav@0.5.0",
+        "pkg:npm/axios@1.4.0",
+        "pkg:npm/bootstrap@5.3.0",
+        "pkg:npm/d3@7.8.5",
+        "pkg:npm/d33@3.5.17",
         "pkg:npm/react@18.2.0",
+        "pkg:npm/react-bootstrap@2.8.0",
+        "pkg:npm/react-d3-tree@3.6.1",
         "pkg:npm/react-dom@18.2.0",
+        "pkg:npm/react-pro-sidebar@1.1.0-alpha.1",
+        "pkg:npm/react-router-dom@6.14.0",
         "pkg:npm/react-scripts@5.0.1",
         "pkg:npm/web-vitals@2.1.4"
       ]
@@ -26664,6 +28475,23 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/@bkrem/react-transition-group@1.3.3",
+      "dependsOn": [
+        "pkg:npm/chain-function",
+        "pkg:npm/dom-helpers",
+        "pkg:npm/loose-envify",
+        "pkg:npm/prop-types",
+        "pkg:npm/react-lifecycles-compat",
+        "pkg:npm/warning"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@bkrem/react-transition-group/node_modules/dom-helpers@3.4.0",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime"
+      ]
+    },
+    {
       "ref": "pkg:npm/@csstools/normalize.css@12.0.0",
       "dependsOn": []
     },
@@ -26756,6 +28584,108 @@
     },
     {
       "ref": "pkg:npm/@csstools/selector-specificity@2.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/babel-plugin@11.11.0",
+      "dependsOn": [
+        "pkg:npm/@babel/helper-module-imports",
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@emotion/hash",
+        "pkg:npm/@emotion/memoize",
+        "pkg:npm/@emotion/serialize",
+        "pkg:npm/babel-plugin-macros",
+        "pkg:npm/convert-source-map",
+        "pkg:npm/escape-string-regexp",
+        "pkg:npm/find-root",
+        "pkg:npm/source-map",
+        "pkg:npm/stylis"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/babel-plugin/node_modules/escape-string-regexp@4.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/babel-plugin/node_modules/source-map@0.5.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/cache@11.11.0",
+      "dependsOn": [
+        "pkg:npm/@emotion/memoize",
+        "pkg:npm/@emotion/sheet",
+        "pkg:npm/@emotion/utils",
+        "pkg:npm/@emotion/weak-memoize",
+        "pkg:npm/stylis"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/hash@0.9.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/is-prop-valid@1.2.1",
+      "dependsOn": [
+        "pkg:npm/@emotion/memoize"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/memoize@0.8.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/react@11.11.1",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@emotion/babel-plugin",
+        "pkg:npm/@emotion/cache",
+        "pkg:npm/@emotion/serialize",
+        "pkg:npm/@emotion/use-insertion-effect-with-fallbacks",
+        "pkg:npm/@emotion/utils",
+        "pkg:npm/@emotion/weak-memoize",
+        "pkg:npm/hoist-non-react-statics"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/serialize@1.1.2",
+      "dependsOn": [
+        "pkg:npm/@emotion/hash",
+        "pkg:npm/@emotion/memoize",
+        "pkg:npm/@emotion/unitless",
+        "pkg:npm/@emotion/utils",
+        "pkg:npm/csstype"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/sheet@1.2.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/styled@11.11.0",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@emotion/babel-plugin",
+        "pkg:npm/@emotion/is-prop-valid",
+        "pkg:npm/@emotion/serialize",
+        "pkg:npm/@emotion/use-insertion-effect-with-fallbacks",
+        "pkg:npm/@emotion/utils"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@emotion/unitless@0.8.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/use-insertion-effect-with-fallbacks@1.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/utils@1.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@emotion/weak-memoize@0.3.1",
       "dependsOn": []
     },
     {
@@ -27308,6 +29238,50 @@
       ]
     },
     {
+      "ref": "pkg:npm/@popperjs/core@2.11.8",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@react-aria/ssr@3.7.0",
+      "dependsOn": [
+        "pkg:npm/@swc/helpers"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@remix-run/router@1.7.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@restart/hooks@0.4.9",
+      "dependsOn": [
+        "pkg:npm/dequal"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@restart/ui@1.6.6",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@popperjs/core",
+        "pkg:npm/@react-aria/ssr",
+        "pkg:npm/@restart/hooks",
+        "pkg:npm/@types/warning",
+        "pkg:npm/dequal",
+        "pkg:npm/dom-helpers",
+        "pkg:npm/uncontrollable",
+        "pkg:npm/warning"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@restart/ui/node_modules/uncontrollable@8.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@restart/ui/node_modules/warning@4.0.3",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
+      ]
+    },
+    {
       "ref": "pkg:npm/@rollup/plugin-babel@5.3.1",
       "dependsOn": [
         "pkg:npm/@babel/helper-module-imports",
@@ -27460,6 +29434,12 @@
         "pkg:npm/@svgr/plugin-jsx",
         "pkg:npm/@svgr/plugin-svgo",
         "pkg:npm/loader-utils"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@swc/helpers@0.5.1",
+      "dependsOn": [
+        "pkg:npm/tslib"
       ]
     },
     {
@@ -27626,6 +29606,16 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/@trendmicro/react-sidenav@0.5.0",
+      "dependsOn": [
+        "pkg:npm/chained-function",
+        "pkg:npm/classnames",
+        "pkg:npm/prop-types",
+        "pkg:npm/uncontrollable",
+        "pkg:npm/warning"
+      ]
+    },
+    {
       "ref": "pkg:npm/@trysound/sax@0.2.0",
       "dependsOn": []
     },
@@ -27687,6 +29677,10 @@
         "pkg:npm/@types/express-serve-static-core",
         "pkg:npm/@types/node"
       ]
+    },
+    {
+      "ref": "pkg:npm/@types/d3-hierarchy@1.1.8",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/@types/eslint@8.40.2",
@@ -27941,7 +29935,7 @@
       "dependsOn": []
     },
     {
-      "ref": "pkg:npm/@types/react@18.2.12",
+      "ref": "pkg:npm/@types/react@17.0.62",
       "dependsOn": [
         "pkg:npm/@types/prop-types",
         "pkg:npm/@types/scheduler",
@@ -27950,6 +29944,12 @@
     },
     {
       "ref": "pkg:npm/@types/react-dom@18.2.5",
+      "dependsOn": [
+        "pkg:npm/@types/react"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@types/react-transition-group@4.4.6",
       "dependsOn": [
         "pkg:npm/@types/react"
       ]
@@ -28010,6 +30010,10 @@
     },
     {
       "ref": "pkg:npm/@types/trusted-types@2.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@types/warning@3.0.0",
       "dependsOn": []
     },
     {
@@ -28472,6 +30476,22 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/axios@1.4.0",
+      "dependsOn": [
+        "pkg:npm/follow-redirects",
+        "pkg:npm/form-data",
+        "pkg:npm/proxy-from-env"
+      ]
+    },
+    {
+      "ref": "pkg:npm/axios/node_modules/form-data@4.0.0",
+      "dependsOn": [
+        "pkg:npm/asynckit",
+        "pkg:npm/combined-stream",
+        "pkg:npm/mime-types"
+      ]
+    },
+    {
       "ref": "pkg:npm/axobject-query@3.2.1",
       "dependsOn": [
         "pkg:npm/dequal"
@@ -28725,6 +30745,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/bootstrap@5.3.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/brace-expansion@1.1.11",
       "dependsOn": [
         "pkg:npm/balanced-match",
@@ -28812,6 +30836,14 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/chain-function@1.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/chained-function@0.5.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/chalk@2.4.2",
       "dependsOn": [
         "pkg:npm/ansi-styles",
@@ -28858,6 +30890,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/classnames@2.3.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/clean-css@5.3.2",
       "dependsOn": [
         "pkg:npm/source-map"
@@ -28874,6 +30910,10 @@
         "pkg:npm/strip-ansi",
         "pkg:npm/wrap-ansi"
       ]
+    },
+    {
+      "ref": "pkg:npm/clone@2.1.2",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/co@4.6.0",
@@ -29240,6 +31280,241 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/d3@7.8.5",
+      "dependsOn": [
+        "pkg:npm/d3-array",
+        "pkg:npm/d3-axis",
+        "pkg:npm/d3-brush",
+        "pkg:npm/d3-chord",
+        "pkg:npm/d3-color",
+        "pkg:npm/d3-contour",
+        "pkg:npm/d3-delaunay",
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-drag",
+        "pkg:npm/d3-dsv",
+        "pkg:npm/d3-ease",
+        "pkg:npm/d3-fetch",
+        "pkg:npm/d3-force",
+        "pkg:npm/d3-format",
+        "pkg:npm/d3-geo",
+        "pkg:npm/d3-hierarchy",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-path",
+        "pkg:npm/d3-polygon",
+        "pkg:npm/d3-quadtree",
+        "pkg:npm/d3-random",
+        "pkg:npm/d3-scale",
+        "pkg:npm/d3-scale-chromatic",
+        "pkg:npm/d3-selection",
+        "pkg:npm/d3-shape",
+        "pkg:npm/d3-time",
+        "pkg:npm/d3-time-format",
+        "pkg:npm/d3-timer",
+        "pkg:npm/d3-transition",
+        "pkg:npm/d3-zoom"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-array@3.2.4",
+      "dependsOn": [
+        "pkg:npm/internmap"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-axis@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-brush@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-drag",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-selection",
+        "pkg:npm/d3-transition"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-chord@3.0.1",
+      "dependsOn": [
+        "pkg:npm/d3-path"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-color@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-contour@4.0.2",
+      "dependsOn": [
+        "pkg:npm/d3-array"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-delaunay@6.0.4",
+      "dependsOn": [
+        "pkg:npm/delaunator"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-dispatch@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-drag@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-selection"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-dsv@3.0.1",
+      "dependsOn": [
+        "pkg:npm/commander",
+        "pkg:npm/iconv-lite",
+        "pkg:npm/rw"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-dsv/node_modules/commander@7.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-ease@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-fetch@3.0.1",
+      "dependsOn": [
+        "pkg:npm/d3-dsv"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-force@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-quadtree",
+        "pkg:npm/d3-timer"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-format@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-geo@3.1.0",
+      "dependsOn": [
+        "pkg:npm/d3-array"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-hierarchy@1.1.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-interpolate@3.0.1",
+      "dependsOn": [
+        "pkg:npm/d3-color"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-path@1.0.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-polygon@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-quadtree@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-random@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-scale@4.0.2",
+      "dependsOn": [
+        "pkg:npm/d3-array",
+        "pkg:npm/d3-format",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-time",
+        "pkg:npm/d3-time-format"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-scale-chromatic@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-color",
+        "pkg:npm/d3-interpolate"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-selection@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-shape@1.3.7",
+      "dependsOn": [
+        "pkg:npm/d3-path"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-time@3.1.0",
+      "dependsOn": [
+        "pkg:npm/d3-array"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-time-format@4.1.0",
+      "dependsOn": [
+        "pkg:npm/d3-time"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-timer@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3-transition@3.0.1",
+      "dependsOn": [
+        "pkg:npm/d3-color",
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-ease",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-timer"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3-zoom@3.0.0",
+      "dependsOn": [
+        "pkg:npm/d3-dispatch",
+        "pkg:npm/d3-drag",
+        "pkg:npm/d3-interpolate",
+        "pkg:npm/d3-selection",
+        "pkg:npm/d3-transition"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d3/node_modules/d3-hierarchy@3.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3/node_modules/d3-path@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/d3/node_modules/d3-shape@3.2.0",
+      "dependsOn": [
+        "pkg:npm/d3-path"
+      ]
+    },
+    {
+      "ref": "pkg:npm/d33@3.5.17",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/damerau-levenshtein@1.0.8",
       "dependsOn": []
     },
@@ -29311,6 +31586,12 @@
       "dependsOn": [
         "pkg:npm/has-property-descriptors",
         "pkg:npm/object-keys"
+      ]
+    },
+    {
+      "ref": "pkg:npm/delaunator@5.0.0",
+      "dependsOn": [
+        "pkg:npm/robust-predicates"
       ]
     },
     {
@@ -29396,6 +31677,13 @@
       "ref": "pkg:npm/dom-converter@0.2.0",
       "dependsOn": [
         "pkg:npm/utila"
+      ]
+    },
+    {
+      "ref": "pkg:npm/dom-helpers@5.2.1",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/csstype"
       ]
     },
     {
@@ -30220,6 +32508,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/find-root@1.1.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/find-up@5.0.0",
       "dependsOn": [
         "pkg:npm/locate-path",
@@ -30555,6 +32847,16 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/hoist-non-react-statics@3.3.2",
+      "dependsOn": [
+        "pkg:npm/react-is"
+      ]
+    },
+    {
+      "ref": "pkg:npm/hoist-non-react-statics/node_modules/react-is@16.13.1",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/hoopy@0.1.4",
       "dependsOn": []
     },
@@ -30768,6 +33070,16 @@
         "pkg:npm/get-intrinsic",
         "pkg:npm/has",
         "pkg:npm/side-channel"
+      ]
+    },
+    {
+      "ref": "pkg:npm/internmap@2.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/invariant@2.2.4",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
       ]
     },
     {
@@ -33411,6 +35723,23 @@
       ]
     },
     {
+      "ref": "pkg:npm/prop-types-extra@1.1.1",
+      "dependsOn": [
+        "pkg:npm/react-is",
+        "pkg:npm/warning"
+      ]
+    },
+    {
+      "ref": "pkg:npm/prop-types-extra/node_modules/react-is@16.13.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/prop-types-extra/node_modules/warning@4.0.3",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
+      ]
+    },
+    {
       "ref": "pkg:npm/prop-types/node_modules/react-is@16.13.1",
       "dependsOn": []
     },
@@ -33423,6 +35752,10 @@
     },
     {
       "ref": "pkg:npm/proxy-addr/node_modules/ipaddr.js@1.9.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/proxy-from-env@1.1.0",
       "dependsOn": []
     },
     {
@@ -33501,6 +35834,43 @@
         "pkg:npm/raf",
         "pkg:npm/regenerator-runtime",
         "pkg:npm/whatwg-fetch"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-bootstrap@2.8.0",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@restart/hooks",
+        "pkg:npm/@restart/ui",
+        "pkg:npm/@types/react-transition-group",
+        "pkg:npm/classnames",
+        "pkg:npm/dom-helpers",
+        "pkg:npm/invariant",
+        "pkg:npm/prop-types",
+        "pkg:npm/prop-types-extra",
+        "pkg:npm/react-transition-group",
+        "pkg:npm/uncontrollable",
+        "pkg:npm/warning"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-bootstrap/node_modules/warning@4.0.3",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-d3-tree@3.6.1",
+      "dependsOn": [
+        "pkg:npm/@bkrem/react-transition-group",
+        "pkg:npm/@types/d3-hierarchy",
+        "pkg:npm/clone",
+        "pkg:npm/d3-hierarchy",
+        "pkg:npm/d3-selection",
+        "pkg:npm/d3-shape",
+        "pkg:npm/d3-zoom",
+        "pkg:npm/dequal",
+        "pkg:npm/uuid"
       ]
     },
     {
@@ -33589,8 +35959,34 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/react-lifecycles-compat@3.0.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/react-pro-sidebar@1.1.0-alpha.1",
+      "dependsOn": [
+        "pkg:npm/@emotion/react",
+        "pkg:npm/@emotion/styled",
+        "pkg:npm/@popperjs/core",
+        "pkg:npm/classnames"
+      ]
+    },
+    {
       "ref": "pkg:npm/react-refresh@0.11.0",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/react-router@6.14.0",
+      "dependsOn": [
+        "pkg:npm/@remix-run/router"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-router-dom@6.14.0",
+      "dependsOn": [
+        "pkg:npm/@remix-run/router",
+        "pkg:npm/react-router"
+      ]
     },
     {
       "ref": "pkg:npm/react-scripts@5.0.1",
@@ -33642,6 +36038,15 @@
         "pkg:npm/webpack-dev-server",
         "pkg:npm/webpack-manifest-plugin",
         "pkg:npm/workbox-webpack-plugin"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-transition-group@4.4.5",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/dom-helpers",
+        "pkg:npm/loose-envify",
+        "pkg:npm/prop-types"
       ]
     },
     {
@@ -33818,6 +36223,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/robust-predicates@3.0.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/rollup@2.79.1",
       "dependsOn": []
     },
@@ -33859,6 +36268,10 @@
       "dependsOn": [
         "pkg:npm/queue-microtask"
       ]
+    },
+    {
+      "ref": "pkg:npm/rw@1.3.3",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/safe-array-concat@1.0.0",
@@ -34288,6 +36701,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/stylis@4.2.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/sucrase@3.32.0",
       "dependsOn": [
         "pkg:npm/@jridgewell/gen-mapping",
@@ -34642,6 +37059,15 @@
       ]
     },
     {
+      "ref": "pkg:npm/uncontrollable@7.2.1",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime",
+        "pkg:npm/@types/react",
+        "pkg:npm/invariant",
+        "pkg:npm/react-lifecycles-compat"
+      ]
+    },
+    {
       "ref": "pkg:npm/unicode-canonical-property-names-ecmascript@2.0.0",
       "dependsOn": []
     },
@@ -34755,6 +37181,12 @@
       "ref": "pkg:npm/walker@1.0.8",
       "dependsOn": [
         "pkg:npm/makeerror"
+      ]
+    },
+    {
+      "ref": "pkg:npm/warning@3.0.0",
+      "dependsOn": [
+        "pkg:npm/loose-envify"
       ]
     },
     {
@@ -35322,12 +37754,60 @@
     {
       "ref": "pkg:npm/yocto-queue@0.1.0",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:application/sbom",
+      "dependsOn": [
+        "pkg:npm/axios@1.4.0",
+        "pkg:npm/d3@7.8.5",
+        "pkg:npm/react-d3@0.4.0",
+        "pkg:npm/react-d3-tree@3.6.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@babel/runtime@7.22.6",
+      "dependsOn": [
+        "pkg:npm/regenerator-runtime"
+      ]
+    },
+    {
+      "ref": "pkg:npm/commander@7.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/dom-helpers@3.4.0",
+      "dependsOn": [
+        "pkg:npm/@babel/runtime"
+      ]
+    },
+    {
+      "ref": "pkg:npm/form-data@4.0.0",
+      "dependsOn": [
+        "pkg:npm/asynckit",
+        "pkg:npm/combined-stream",
+        "pkg:npm/mime-types"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-d3@0.4.0",
+      "dependsOn": [
+        "pkg:npm/d3",
+        "pkg:npm/react"
+      ]
+    },
+    {
+      "ref": "pkg:npm/react-d3/node_modules/d3@3.5.17",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/react-is@16.13.1",
+      "dependsOn": []
     }
   ],
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "vulnerabilities": [
     {
-      "bom-ref": "urn:uuid:ea726d0e-2d53-4867-89c2-d591b195fba5",
+      "bom-ref": "urn:uuid:602f21b9-3ba2-4dbc-a3bc-e1d3fbf4616c",
       "id": "GHSA-23gm-4mrr-r6pg",
       "source": {
         "name": "github-language-javascript",
@@ -35360,7 +37840,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a33eb9eb-c435-44fe-a4b6-943e708501d3",
+      "bom-ref": "urn:uuid:d770f610-e78a-4771-a84c-7e100eb743a5",
       "id": "GHSA-3rhh-9j6r-68h4",
       "source": {
         "name": "github-language-javascript",
@@ -35393,7 +37873,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e2720b69-a730-4d19-ad6c-cb738739ce37",
+      "bom-ref": "urn:uuid:318cbdd9-04d3-437a-9f5d-8ac212241d54",
       "id": "GHSA-4g8v-vg43-wpgf",
       "source": {
         "name": "github-language-ruby",
@@ -35426,7 +37906,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:edb377eb-040b-4140-95c4-6a3cc9a983d3",
+      "bom-ref": "urn:uuid:204b0de3-b08a-4a17-a5b0-60d957580f67",
       "id": "GHSA-8rmg-jf7p-4p22",
       "source": {
         "name": "github-language-javascript",
@@ -35459,7 +37939,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:afa319af-4dd0-4b66-9f4c-3a576b752e66",
+      "bom-ref": "urn:uuid:054a8bee-9edf-4de8-b2ca-d631a0bb73aa",
       "id": "GHSA-g6vf-4cpv-p24v",
       "source": {
         "name": "github-language-javascript",
@@ -35492,7 +37972,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b408f67c-aad2-4982-a3c6-0f265c271363",
+      "bom-ref": "urn:uuid:a0056638-69d3-4d9c-a389-57394e02c010",
       "id": "GHSA-hc6q-2mpp-qw7j",
       "source": {
         "name": "github-language-javascript",
@@ -35528,7 +38008,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5e410e36-7e8e-46fc-8e10-bc079eccf1b1",
+      "bom-ref": "urn:uuid:607a347e-8a7e-4cff-8549-fcde767086f1",
       "id": "GHSA-j8xg-fqg3-53r7",
       "source": {
         "name": "github-language-javascript",
@@ -35564,7 +38044,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:010c06e4-e189-4c9b-88be-fee5771e5e4a",
+      "bom-ref": "urn:uuid:df40b2ab-077c-4871-bce0-b105990077e8",
       "id": "GHSA-mjrf-wm8v-9r4q",
       "source": {
         "name": "github-language-javascript",
@@ -35597,7 +38077,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:44f207a7-e534-44c6-bbed-5b7512dc6841",
+      "bom-ref": "urn:uuid:88072a87-c921-42df-ac6d-2af39e4671e0",
       "id": "GHSA-pp5q-5wmm-4hr2",
       "source": {
         "name": "github-language-javascript",
@@ -35630,7 +38110,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:78875288-a28e-4f94-9d92-c44e8ddbbd21",
+      "bom-ref": "urn:uuid:df464e2d-a234-42dd-9553-0362b5787cab",
       "id": "GHSA-wgw4-q5ph-839h",
       "source": {
         "name": "github-language-javascript",
@@ -35663,7 +38143,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e1ed5806-d375-4302-bbf6-da12ab959943",
+      "bom-ref": "urn:uuid:8e0c7613-5937-472a-8e2e-9ff822acbe87",
       "id": "GHSA-x743-4v5w-frpj",
       "source": {
         "name": "github-language-javascript",

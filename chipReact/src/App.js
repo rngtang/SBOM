@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import ViewSBOMs from './pages/ViewSBOMs';
 import GenerateSBOMs from './pages/GenerateSBOMs';
 import Logout from './pages/Logout';
 import MySideNav from './components/MySideNav';
-import { Button } from 'react-bootstrap';
 import Vulnerability from './pages/Vulnerability';
+import SbomTree from './pages/tree-rendering/SbomTree';
 
 const App = () => {
   // create states for being logged in, in the process of logging out, the ID of the user, the user's preferred name, the user's netid
@@ -78,11 +78,11 @@ const App = () => {
         <div className="row">
           <main role="main" className="main-content">
             {/* load navbar */}
-            {!loggingOut && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} />}
+            {!loggingOut && <MySideNav loggedIn={loggedIn} username={userName} netid={netId} handleLoginClick={handleLoginClick} />}
             <div className='pages'>
-              {/* login button */}
-              {!loggedIn && !loggingOut && <Button className="login-button" onClick={handleLoginClick}>Log in</Button>}
               <Routes>
+                <Route exact path='/' element={<Navigate to ="/home" />}/>
+                <Route exact path="/" element={<Home />} />
                 {/* routes that are always open */}
                 <Route path="/home" element={<Home />} />
                 <Route path="/logout" element={<Logout setLoggedIn={setLoggedIn} setLoggingOut={setLoggingOut} loggedIn={loggedIn} loggingOut={loggingOut} />} />
@@ -90,6 +90,7 @@ const App = () => {
                 {loggedIn && userId && (
                   <>
                     <Route path="/viewsboms" element={<ViewSBOMs userId={userId} />} />
+                    <Route path="/sbom/:sbomId" element={<SbomTree />} />
                     <Route path="/generatesboms" element={<GenerateSBOMs />} />
                     <Route path="/vulnerability" element={<Vulnerability />} />
                   </>

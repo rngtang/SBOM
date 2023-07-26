@@ -1,0 +1,12 @@
+{
+    "title": "For MacOS",
+    "notice": "This script will run sudo, requiring admin permissions.",
+    "text": [
+      "Use the button below to download the shell script. This will go into your Downloads (user/downloads).", 
+      "Move the script into your project directory. It should be on the highest level inside your project in order to scan everything.", 
+      "Open your mac terminal and navigate to inside your project directory. This should be the same location as step 2. You can check to see if your script is in the correct place by running the command 'ls', which should display the file 'mac_install.sh'.", 
+      "From there, execute the shell script with the following command.", 
+      "Check to see that your SBOM was created properly. Your SBOM should be a (FINAL).json file titled with the name of your project directory."
+    ],
+    "code": "bash mac_install.sh"
+  }
