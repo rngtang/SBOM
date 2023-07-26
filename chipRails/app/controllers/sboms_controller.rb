@@ -2,6 +2,7 @@ class SbomsController < ApplicationController
     protect_from_forgery with: :null_session
     before_action :set_sboms, only: %i[ show edit update destroy ]
 
+    # Updates the name or description of an SBOM
     def update 
         @sbom = Sbom.find(params[:id])
         @sbom.update(update_sbom_params)
@@ -22,11 +23,13 @@ class SbomsController < ApplicationController
         end
     end
 
+    # Finds sbom associated to a user_id and returns name
     def sbomNames
         @user = User.find(params[:user_id])
         render json: @user.sboms.where(archive: false).pluck(:name), status: :ok
     end
 
+    # Returns the parameters of an sbom
     def sbomTop
         @user = User.find(params[:user_id])
         sbomtop = @user.sboms.where(archive: false).as_json(
@@ -41,6 +44,7 @@ class SbomsController < ApplicationController
         render json: @sbom, status: :ok
     end
 
+    # Sets the column archive to "true" to archive the sbom
     def archive
         @sbom = Sbom.find(params[:id])
         @sbom.update(archive: true)
@@ -87,6 +91,7 @@ class SbomsController < ApplicationController
             @sc.each do |subC|
                 # Finds or creates the components by purl
                 if SbomComponent.find_by(purl: subC["purl"])
+                    # If the component already exists, it is associated to the sbom if it does not already contains it
                     @c = SbomComponent.find_by(purl: subC["purl"])
                     @sbom.sbom_components << @c unless @sbom.sbom_components.include?(@c)
                 else
@@ -98,8 +103,8 @@ class SbomsController < ApplicationController
                         @c.dependencies << @d
                     end
 
-                    @props = subC["properties"]
                     # creates sbom_component properties for array of object input
+                    @props = subC["properties"]
                     if @props
                         @props.each do |p|
                             @m = @c.properties.create(name: p["name"], value: p["value"])
@@ -121,12 +126,13 @@ class SbomsController < ApplicationController
             end
         end
 
-        # creates vulnerabilities assoc with sboms
+        # creates vulnerabilities
         @vulns = data["vulnerabilities"]
         if @vulns
             @vulns.each do |v|
+                # Finds or creates vulnerabilities by the vulnID
                 if Vulnerability.find_by(vulnID: v["id"])
-                    # If the vulnerability exists, the it is appended to the sbom
+                    # If the vulnerability exists, then it is appended to the sbom if it does not already has it
                     @v = Vulnerability.find_by(vulnID: v["id"])
                     @sbom.vulnerabilities << @v unless @sbom.vulnerabilities.include?(@v)
                     next
