@@ -17,10 +17,11 @@ echo -e "${COLOR}--- ** Checking CDXGEN installation... ---${NC}"
 if which cdxgen >/dev/null 2>&1; then
     echo -e "${COLOR}--- CDXGEN is already installed. Skipping re-installation... ---${NC}"
 else
-    echo -e "${COLOR}--- INSTALLING CDXGEN... ---${NC}"
+    echo -e "${COLOR}--- Cdxgen was not found. INSTALLING CDXGEN... ---${NC}"
     # see if way to install without sudo
-    mkdir -p ./bin
-    npm install --prefix ./bin @cyclonedx/cdxgen@8.6.0
+    # mkdir -p ./bin
+    # npm install --prefix ./bin @cyclonedx/cdxgen@8.6.0
+    sudo npm install -g @cyclonedx/cdxgen@8.6.0
     echo -e "${COLOR}--- Successful: INSTALLED CDXGEN ---${NC}"
 fi
 
@@ -42,25 +43,22 @@ echo -e "${COLOR} Creating an SBOM for your file. This may take a while... ${NC}
 cdxgen -r -o $selected_file.1.json
 echo -e "${COLOR} Finished running cdxgen on $selected_file. Running grype... ${NC}"
 
-
-echo "BEFORE"
 # run grype on SBOM (piped in from cdxgen)
 ./bin/grype sbom:$selected_file.1.json -o cyclonedx-json > $selected_file.2.json
-echo "AFTER"
 
 # remove the extra .xml file created
 if [ -f $selected_file.1.xml ]; then
     rm $selected_file.1.xml
 fi
 
-# combine cdxgen and grype outputs into one file using jq. First check if jq is installed. 
+# combine cdxgen and grype outputs into one file using jq, install jq locally. First check if jq is installed. 
 # sudo apt-get install jq ./
 echo -e "${COLOR}--- ** CHECKING JQ INSTALLATION... ---${NC}"
 
 if [ -x "./jq" ]; then
     echo -e "${COLOR}--- JQ is already installed. Skipping re-installation... ---${NC}"
 else
-    echo -e "${COLOR}--- INSTALLING JQ... ---${NC}"
+    echo -e "${COLOR}--- JQ was not found. INSTALLING JQ... ---${NC}"
     wget -O jq https://github.com/stedolan/jq/releases/latest/download/jq-linux64
     chmod +x jq
     echo -e "${COLOR}--- Successful: INSTALLED JQ ---${NC}"
