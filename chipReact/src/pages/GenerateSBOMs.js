@@ -59,7 +59,7 @@ const AnotherPage = () => {
         <>
             <Prereq title={prereq1.title} para1={prereq1.para1} docker={prereq1.docker} />
             <Section title={data1.title} notice={data1.notice} text={data1.text} code={data1.code} downloadComponent={<DownloadLinuxScript />} />
-            <Section title={data2.title} text={data2.text} code={data2.code} downloadComponent={<DownloadMacScript />} />
+            <Section title={data2.title} notice={data2.notice} text={data2.text} code={data2.code} downloadComponent={<DownloadMacScript />} />
             <Section title={data3.title} notice={data3.notice} text={data3.text} code={data3.code} downloadComponent={<DownloadWindowsScript />} />
         </>
     );

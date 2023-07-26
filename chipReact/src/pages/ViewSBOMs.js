@@ -64,7 +64,6 @@ function ViewSBOMs({ userId }) {
     const formData = new FormData();
     console.log("preparing to get names");
 
-    setTimeout(() => {
       const file = event.target.files[0];
       formData.append('file', file);
 
@@ -94,7 +93,6 @@ function ViewSBOMs({ userId }) {
       .then((data) => {
       });
       setFormSubmitted(false); //reset
-    }, 500); // Adjust the delay if needed
   }
 
   return (
