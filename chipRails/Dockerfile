@@ -2,7 +2,7 @@ FROM ruby:3.2.2
 
 ### System sbomComponents
 RUN apt-get update -y
-RUN apt-get install -y build-essential libpq-dev nodejs
+RUN apt-get install -y build-essential nodejs
 
 ### Install Gems
 RUN mkdir /app
