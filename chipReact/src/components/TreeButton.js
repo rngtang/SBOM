@@ -3,7 +3,9 @@ import { Button } from 'react-bootstrap';
 
 
 export default function TreeButton ({sbomId}) {
+    // create navigate function
     const navigate = useNavigate();
+    // routes user to tree page on button click
     const handleButtonClick = () => {
       navigate(`/sbom/${sbomId}`);
     }
@@ -16,11 +18,3 @@ export default function TreeButton ({sbomId}) {
         </div>
     )
 }
-
-
-{/* <div id='sbomView' className={styles.section}>
-          <button onClick={() => handleViewClick(1)}>View SBOM #1</button>
-          <button onClick={() => handleViewClick(2)}>View SBOM #2</button>
-        </div>
-        {selectedSbomId && <SbomTree sbomId={selectedSbomId} />}
-      </> */}

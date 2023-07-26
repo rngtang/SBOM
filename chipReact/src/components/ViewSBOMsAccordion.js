@@ -32,13 +32,15 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom, setLoading }) =>
                                 <p id='cyc'>{sbom.bomFormat}</p>
                                 <p>v.{sbom.specVersion}</p>
                             </div>
+                            {/* all buttons for sbom tree, deletion, update */}
                             <TreeButton sbomId={sbom.id}/>
                             <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading} />
                             <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} setLoading={setLoading}/>
                         </div>
                     </Accordion.Header>
-
+                    {/* toggle accordion open body */}
                     <Accordion.Body>
+                        {/* gives metadata of sbom */}
                         <div id='meta'> <p id='metaHead'>Metadata: </p> <p id='tab'>
                             Timestamp: {meta.timestamp}
                             <br></br> Tools: {meta.tools[0].vendor} - {meta.tools[0].name} - v.{meta.tools[0].version}
@@ -48,6 +50,7 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom, setLoading }) =>
 
                         {/* need to pass in # of vulnerabilities from endpoint (formerly sbom.vulnerabilities.length) */}
                         <div id='bodyRight'><p>{sbom.vuln_number} Vulnerabilities Found</p>
+                            {/* buttons for vulnerability page and edit sbom */}
                             <ViewVulnsButton sbomId={sbom.id} sbomName={sbom.name} sbomDesc={sbom.description} trigger={trigger} setTrigger={setTrigger} />
                             <EditButton showForm={showForm} setShowForm={setShowForm} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>
                         </div>
