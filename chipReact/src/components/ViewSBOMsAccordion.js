@@ -24,7 +24,7 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom, setLoading }) =>
     if (meta != null) {
         return (
             <Accordion alwaysOpen>
-                <Accordion.Item eventKey="0" flush>
+                <Accordion.Item eventKey="0">
 
                     <Accordion.Header><p id='name'>{sbom.name}</p>
                         <div id='accordianRight'>

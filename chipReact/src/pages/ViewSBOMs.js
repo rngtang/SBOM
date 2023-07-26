@@ -13,12 +13,12 @@ function ViewSBOMs({ userId }) {
   // console.log("CURRENT USER, from view: ", userId);
 
   // create states for a lot of things [someone please update this]
-  const [selectedSbomId, setSelectedSbomId] = useState(null);
+  // const [selectedSbomId, setSelectedSbomId] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [userName, setUserName] = useState(null);
-  const [userDesc, setUserDesc] = useState(null);
-  const [sbomName, setSbomName] = useState(null);
+  const [userName, setUserName] = useState("");
+  const [userDesc, setUserDesc] = useState("");
+  const [sbomName, setSbomName] = useState("");
   const [nameMatch, setNameMatch] = useState(false);
   const [trigger, setTrigger] = useState(false);
 

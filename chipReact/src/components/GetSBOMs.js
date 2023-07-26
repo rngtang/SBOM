@@ -38,7 +38,7 @@ export default function GetSBOMs ({sbomName, trigger, setTrigger, userId, setLoa
                 // if SBOM data was fetched, show accoridon of SBOM
                 if (sbom.name) {
                     if ((sbom.name.includes(sbomName) || sbomName == null) && (sbom.archive == false)){
-                        return (<MyAccordion userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>)
+                        return (<MyAccordion key={sbom.id} userId={userId} meta={sbom.metadata[0]} sbom={sbom} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading}/>)
                     }
                 }
                 
