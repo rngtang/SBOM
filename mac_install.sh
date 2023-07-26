@@ -61,5 +61,14 @@ fi
 # Combine the JSON files into one
 jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.MAC.json
 
+# remove the extra .1 file created
+if [ -f $selected_file.1.json ]; then
+    rm $selected_file.1.json
+fi
+# remove the extra .2 file created
+if [ -f $selected_file.2.json ]; then
+    rm $selected_file.2.json
+fi
+
 # Output the results
 echo -e "${COLOR}You have now created $selected_file.MAC.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}" 

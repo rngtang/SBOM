@@ -66,5 +66,14 @@ fi
 
 jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.LINUX.json
 
+# remove the extra .1 file created
+if [ -f $selected_file.1.json ]; then
+    rm $selected_file.1.json
+fi
+# remove the extra .2 file created
+if [ -f $selected_file.2.json ]; then
+    rm $selected_file.2.json
+fi
+
 # finished
 echo -e "${COLOR}You have now created $selected_file.LINUX.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"        
