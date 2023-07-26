@@ -5,6 +5,6 @@ class Metadatum < ApplicationRecord
     belongs_to :sbom
     has_many :tools, dependent: :destroy
 
-    # Creates array
+    # Makes tools an array
     serialize :tools, Array
 end

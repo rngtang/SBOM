@@ -8,6 +8,6 @@ class SbomComponent < ApplicationRecord
     # Many-to-many associations
     has_and_belongs_to_many :sboms
 
-    # Creates array
+    # Makes properties an array
     serialize :properties, Array
 end

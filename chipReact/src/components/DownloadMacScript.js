@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import styles from '../pages/GenerateSBOMs.module.css'; // import CSS file
+import styles from '../pages/GenerateSBOMs.module.css'; // import CSS filed
 
 export default function DownloadLinuxScript() {
+  // create a state for catching an error (for display purposes)
   const [error, setError] = useState(null);
+  // create a state for routing the file URL, as if it is a pseudo end point
   const [fileurl, setFileurl] = useState(null);
 
   const handleDownload = () => {
+    // hit endpoint to fetch script 
     fetch("http://localhost:8080/scripts/mac", {
       method: 'GET',
       headers: {
@@ -14,6 +17,7 @@ export default function DownloadLinuxScript() {
       },
     })
       .then((response) => {
+        // catch errors
         if (!response.ok) {
           throw new Error('Failed to download the script.');
         }
@@ -21,10 +25,12 @@ export default function DownloadLinuxScript() {
         return response.blob();
       })
       .then((blob) => {
+        // create file URL, as if it is a pseudo end point
         const url = URL.createObjectURL(blob);
         console.log(url)
         setFileurl(url);
       })
+      // throw errors
       .catch((error) => {
         setError(error.message);
       });
