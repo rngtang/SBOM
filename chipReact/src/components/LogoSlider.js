@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import '../pages/Home.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // Import the image files
@@ -8,8 +8,8 @@ import ciscoLogo from './images/cisco.png';
 
 
 const images = [
-  ciscoLogo,  
   itoLogo,
+  ciscoLogo
 ];
 
 export default function LogoSlider () {

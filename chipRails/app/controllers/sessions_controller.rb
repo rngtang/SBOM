@@ -1,5 +1,9 @@
 class SessionsController < ActionController::Base
     protect_from_forgery with: :exception, except: :create
+    def new
+      redirect_to "https://shib.oit.duke.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://chip.duke.edu"
+    end
+    
     def current_user
       @current_user ||= User.find_by(id: session[:user_id])
     end

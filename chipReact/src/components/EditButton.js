@@ -87,6 +87,8 @@ export default function EditButton({ showForm, setShowForm, sbom, trigger, setTr
                     setLoading(false);
                 })
         }
+        setUserName("");
+        setUserDesc("");
     }
 
     return (
