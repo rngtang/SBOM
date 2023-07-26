@@ -47,13 +47,13 @@ function ViewSBOMs({ userId }) {
       .then((data) => {
         const match = data.some((n) => n === userName);
         if (match) {
-          console.log("matched a name");
+          // console.log("matched a name");
           // alert("You need a unique name for your SBOM.");
           setNameMatch(true);
         } else {
           setNameMatch(false);
         }
-        console.log(data);
+        // console.log(data);
       })
   }
 
@@ -62,7 +62,7 @@ function ViewSBOMs({ userId }) {
     fetchNames();
     setLoading(true); // Set loading state to true before fetch request
     const formData = new FormData();
-    console.log("preparing to get names");
+    // console.log("preparing to get names");
 
       const file = event.target.files[0];
       formData.append('file', file);
@@ -75,17 +75,17 @@ function ViewSBOMs({ userId }) {
         formData.append('name', userName); // Continue with the file upload or further processing
       }
       formData.append('description', userDesc);
-      console.log(formData);
+      // console.log(formData);
       fetch((`http://localhost:8080/users/${userId}/sboms`), { 
         method: 'POST',
         body: formData
       })
       .then((response) => {
         if (!response.ok) {
-          console.log("blah" + {response})
+          // console.log("blah" + {response})
           throw new Error('Failed to upload the SBOM.');
         }
-        console.log("it POSTED ????");
+        // console.log("it POSTED ????");
         setLoading(false);
         setTrigger(prevTrigger => !prevTrigger); // will toggle getSBOMs useEffect
         return response.json();

@@ -44,7 +44,7 @@ const App = () => {
 
       // data from SHIB
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data) {
           setUserId(data.id);
           setNetId(data.netid);

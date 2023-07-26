@@ -12,7 +12,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name, description, setLoading }) {
   // debugger line
-  console.log({ sbomId })
+  // console.log({ sbomId })
   // create states for user file upload and archive route
   const fileInput = useRef();
   const archiveUrl = `http://localhost:8080/sboms/${sbomId}/archive`
@@ -25,7 +25,7 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
     // Set loading state to true before fetch request
     // setLoading(true);
 
-    console.log("file upload triggered")
+    // console.log("file upload triggered")
 
     // prevent empty inputs
 
@@ -52,7 +52,7 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
           if (!response.ok) {
             throw new Error('Failed to upload the SBOM.');
           }
-          console.log("it POSTED ????");
+          // console.log("it POSTED ????");
           // setLoading(false);
 
           // toggle getSBOMs useEffect
@@ -81,7 +81,7 @@ export default function UpdateButton({ userId, sbomId, trigger, setTrigger, name
     // prevents toggle of accordion on button click
     e.stopPropagation()
     e.preventDefault()
-    console.log("button clicked")
+    // console.log("button clicked")
     //opens fileinput box
     fileInput.current?.click();
   }
