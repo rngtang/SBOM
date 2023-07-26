@@ -4,12 +4,13 @@ SBOM(Software Bill of Management): a document that contains all parts used in a 
 
 SBOM Format: The method in which the information in the SBOM is laid out. We use a CycloneDX format, which is more focused on tracking the dependencies within our project.
 
-Dependencies: A software often calls upon code wri
+Dependencies (Component): A software often calls upon code from other libraries. These code sections are called dependencies, as they depend on code not written from within the app.
+
+SBOM serial number: This is an identification string that is specific to the dependency in your specific SBOM.
+
+Metadata: 
 {
-    "id": 0,
-    "bomFormat": "string",
     "specVersion": "string",
-    "serialNumber": "string",
     "version": int,
     "name": "string",
     "description": "string",
