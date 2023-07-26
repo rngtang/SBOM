@@ -1,0 +1,27 @@
+/* create box and blend it in with the navbar */
+#profile {
+    background-color: var(--dukeblue);
+    border: none;
+    outline: none;
+    font-weight: 300;
+    position: absolute;
+    bottom: 16px;
+    width: auto;
+    box-shadow: 0 -4px 4px -4px rgba(255, 255, 255, 1);
+    padding: 16px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+/* properties of the name text */
+#profile p:first-of-type {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* properties of the netid text */
+#profile p {
+    color: white;
+    margin: 0;
+    padding: 0;
+}

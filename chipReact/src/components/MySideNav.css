@@ -1,0 +1,60 @@
+/* positioning and sizing of sidebar */
+.sidebar {
+    height: 95vh;
+    width: 208px;
+    position: sticky;
+    top: 20px;
+    border-radius: 16px;
+    display: inline-block;
+}
+
+/* nav button texts */
+.nav-link {
+    color: var(--limestone);
+    padding-left: 24px;
+}
+
+/* nav button positioning and colors */
+.nav-item {
+    text-align: left;
+    font-weight: 300;
+    border-radius: 8px;
+    margin: 4px 6px;
+    transition: background-color 0.3s;
+}
+
+/* hover on nav button styling */
+.nav-item:hover {
+    background-color: var(--limestone);
+    border-radius: 8px;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+/* on the page for nav button styling */
+.nav-item .active {
+    color: var(--limestone);
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 8px 4px;
+    padding-left: 24px;
+    background-image: linear-gradient(to top right, #0577B1, #0672A9);
+    box-shadow: 1px 1px black;
+}
+
+/* line below logo styling */
+.navbar-logo {
+    width: auto;
+    margin: 0 8px;
+    box-shadow: 0 4px 4px -4px rgba(255, 255, 255, 1);
+}
+
+/* logo image sizing and positioning */
+.logo-image {
+    width: 128px;
+    height: auto;
+    display: block;
+    margin: 8px auto;
+    margin-top: 20px;
+    padding: 16px 0 8px 0;
+}

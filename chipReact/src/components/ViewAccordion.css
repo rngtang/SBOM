@@ -1,0 +1,107 @@
+/* spacing and styling for buttons and text on the right of the accordion header */
+#accordianRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    font-size: small;
+    margin-right: 5%;
+}
+.accordion-header p {
+    width: 50%;
+}
+
+/* center aligns accordionheader name */
+#name {
+    margin-bottom: 0px;
+}
+
+/* styling and centering of sbom type column text on accordion header */
+#type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#type p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: auto;
+}
+
+#cyc {
+    font-weight: 600;
+}
+
+/* styling and spacing of open toggle accordion body */
+.accordion-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #EEF3FC;
+    position: relative;
+    height: 100%;
+    min-height: fit-content;
+    border-radius: 0 0 6px 6px;
+    /* overflow: auto; */
+}
+
+/* sizing of the right side of accordion body */
+#bodyRight {
+    width: 50%;
+}
+/* vulnerabilities number message styling/sizing */
+
+#bodyRight p {
+    width: 100%;
+    height: 21px;
+    padding-left: 3px;
+    background-color: red;
+    border-radius: 3px;
+    color: white;
+}
+
+/* sbom meta text display */
+#meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+#metaHead {
+    margin-bottom: 0px;
+}
+/* indented meta information */
+#tab {
+    margin: 0 0 0 18px;
+}
+
+/* edit form spacing on display */
+#editForm {
+    margin-top: 10px;
+    min-height: 100%;
+}
+
+/* input for edits spacing and styling */
+#editForm input {
+    margin: 2px 4px 2px 0;
+    border-radius: 4px;
+    padding: 4px;
+    border: solid gray 1px;
+}
+
+/* overall positioning of edit form fields and buttons */
+#edits {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    min-height: 100%;
+}
+
+/* vulnerability button sizing and positioning */
+#viewVulns {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 8px;
+}

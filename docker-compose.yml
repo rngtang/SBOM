@@ -1,5 +1,3 @@
-# shoved into .dockerignore
-
 version: '3.8'
 services:
   db:
@@ -12,6 +10,9 @@ services:
       MYSQL_PASSWORD: password
     ports:
       - "3307:3306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+
   rails_app:
     build: ./chipRails
     entrypoint: ./entrypoint.sh
@@ -32,6 +33,10 @@ services:
       DB_NAME: db_development
       DB_PASSWORD: password
       DB_HOST: db
+      ASSERTION_CONSUMER_SERVICE_URL: 'http://localhost:8080/saml/consume'
+
+    stdin_open: true 
+    tty: true
   react_app:
     build: ./chipReact
     volumes:
@@ -42,5 +47,9 @@ services:
     image: chip_react:latest
     container_name: chip_react
     command: ./entrypoint.sh
+    environment:
+      REACT_APP_ACS_URL: http://localhost:8080/Shibboleth.sso/saml/consume
+      
 volumes: 
-  exclude:
+  exclude: 
+  mysqldata:

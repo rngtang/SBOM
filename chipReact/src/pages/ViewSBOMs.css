@@ -1,0 +1,134 @@
+/* header positioning (upload form and button) */
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin-right: 0;
+  width: 100%;
+  max-width: 83vw;
+}
+
+/* upload form and input spacing and styling */
+#uploadForm {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  background-color: #EEF3FC;
+  display: flex;
+  border-radius: 8px;
+  margin: 12px 32px 0px 32px;
+  padding: 8px;
+  align-items: center;
+}
+
+.formInput {
+  border: 1px solid;
+  margin: 0px 8px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* upload form error text when someone uploads with empty input fields */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-left: 12px;
+  position: absolute;
+}
+
+/* upload button styling */
+#uploadButton {
+  margin: 8px;
+  font-weight: 500;
+  border: none;
+  background-image: linear-gradient(to top right, var(--shaleblue) 40%, #6db7dc);
+}
+
+/* searchbar and input size and styling */
+#searchBar {
+  margin-top: 16px;
+  width: 30%;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0px 8px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+/* sbom list (your sboms) positioning */
+.mainBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 80vw;
+}
+
+/* (Your SBOMs) sbom list header styling */
+#sbomHeader {
+  width: 92.5%;
+  height: 60px;
+  background-image: linear-gradient(to left, #49A3F1, #1668d5);
+  color: white;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  margin-top: 33px;
+  z-index: 1;
+  padding: 7px 0 0 30px;
+}
+
+/* accordion list and header sizing and  positioning*/
+.list {
+  padding: 0;
+  padding-top: 20px;
+  border-radius: 10px;
+  margin: -32px 35px 35px 35px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  max-width: 75vw;
+  background-color: white;
+}
+
+/* accordion headings and spacing */
+#sbomHeadRow {
+  margin: 25px 0 0 1.5%;
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: small;
+}
+
+/* accordion headings on the right spacing */
+#rowFunct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 42%;
+  margin-right: 9.5%;
+}
+
+/* (VIZUALIZATION) */
+#vizhead {
+  margin-left: -64px;
+  overflow:hidden;
+}
+
+/* (DELETE) */
+#delete {
+  margin-left: -30px
+}
+
+/* (UPDATE) */
+#update {
+  margin-right: 9px;
+}
+

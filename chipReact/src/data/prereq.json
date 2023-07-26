@@ -1,0 +1,4 @@
+{
+    "title": "Creating and scanning SBOMs",
+    "para1": "The following page details the steps for creating SBOMs. Please note that there are different steps to follow depending on which operating system you are using. All processes will essentially download a script onto your local machine, which you can then run to execute all the steps of creating, scanning, and uploading an SBOM for you."
+  }
