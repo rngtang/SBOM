@@ -48,9 +48,9 @@ function SbomTree() {
 
   useEffect(() => {
     const fetchTreeData = async () => {
-      //const result = await axios(`http://localhost:8080/sboms/${sbomId}/dependencies_tree`);
-      const result = samplejson;
-      const treeData = result;
+      const result = await axios(`http://localhost:8080/sboms/${sbomId}/dependencies_tree`);
+      //const result = samplejson;
+      const treeData = result.data;
       assignDepth(treeData);
       setData(treeData);
     };

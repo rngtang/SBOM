@@ -54,7 +54,7 @@ end
 
 def build_dependency_tree(dependencies, root_ref)
 # Initialize the tree with the modified name
-formatted_name = root_ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, "")
+formatted_name = root_ref.gsub(/pkg:(npm|application)\//, "")
 tree = {"name" => formatted_name, "children" => []}
 
 # Find the matching dependency
