@@ -6,7 +6,7 @@ Here is a comprehensive list of our API routes and what they can be used for:
 
 SBOMs - Everything about sboms
 
-        2. GET          /sboms/{sbomId}
+        1. GET          /sboms/{sbomId}
         Finds sbom by id.
                 Responses:
                 200 -   successful operation
@@ -115,10 +115,10 @@ SBOMs - Everything about sboms
                                 ]
                         }
                 404 -   invalid {sbomId}
-        3. GET          /sboms
+        2. GET          /sboms
         Finds all sboms.
                 200 -   returns json with list of all sboms
-        4. GET          /sboms/{sbomId}/vulnerabilities
+        3. GET          /sboms/{sbomId}/vulnerabilities
         Finds all vulnerabilities of sbom with id of {sbomId}.
                 200 -   returns json
                         "vulnerabilities": [
@@ -157,7 +157,7 @@ SBOMs - Everything about sboms
                                         }
                                 ]
                         404 -   invalid {sbomId}
-        5. GET          /sboms/{sbomId}/metadata
+        4. GET          /sboms/{sbomId}/metadata
         Finds the metadata of sbom with id of {sbomId}.
                 200 -   returns json
                         "metadata": [
@@ -180,7 +180,7 @@ SBOMs - Everything about sboms
                                                 ]
                                         }
                                 ]
-        6. GET          /sboms/{sbomId}/sbomComponents
+        5. GET          /sboms/{sbomId}/sbomComponents
         Finds all components of sbom with id of {sbomId}.
                 200 -   returns json
                         "sbom_components": [
@@ -206,13 +206,13 @@ SBOMs - Everything about sboms
                                                 ]
                                         }
                                 ]
-        7. POST         /users/{userId}/sboms
+        6. POST         /users/{userId}/sboms
         Add a new sbom to a user's sbom list.
                 input:
                         requires json file submission
                                 "sbom": {}
                         permits all other fields
-        8. PUT          /sboms/{sbomId}
+        7. PUT          /sboms/{sbomId}
         Edit a sbom's name and description.
                 input:
                         requires json format
@@ -225,7 +225,7 @@ SBOMs - Everything about sboms
 
 SBOM COMPONENTS - Everything about sbom components
 
-        10. GET         /sbom_components/{sbom_componentId}
+        1. GET         /sbom_components/{sbom_componentId}
         Finds a specific sbom component.
                 200 -   returns json
                         {
@@ -253,7 +253,7 @@ SBOM COMPONENTS - Everything about sbom components
         
 METADATA - Everything about metadata
 
-        11. GET         /metadata/{metadatumId}/tools
+        1. GET         /metadata/{metadatumId}/tools
         Finds the tools used to create the sbom.
                 200 -   returns json
                         "tools": [
@@ -268,7 +268,7 @@ METADATA - Everything about metadata
                                         }
                                 ]
                 404 -   invalid {metadatumId}
-        13. GET         /metadata/{metadatumId}
+        2. GET         /metadata/{metadatumId}
         Finds a specific metadatum.
                 200 -   returns json
                         {
@@ -292,7 +292,7 @@ METADATA - Everything about metadata
         
 VULNERABILITIES - Everything about vulnerabilities
 
-        14. GET          /vulnerabilities
+        1. GET          /vulnerabilities
         Finds all vulnerabilities.
                 200 -   returns json
                         [
@@ -330,7 +330,7 @@ VULNERABILITIES - Everything about vulnerabilities
                                         ]
                                 }
                         ]
-        15. GET         /vulnerabilities/{vulnerabilityId}/ratings
+        2. GET         /vulnerabilities/{vulnerabilityId}/ratings
         Finds the rating of a specific vulnerability.
                 200 -   returns json
                         "ratings": [
@@ -344,7 +344,7 @@ VULNERABILITIES - Everything about vulnerabilities
                                         }
                                 ]
                 404 -   invalid {vulnerabilityId}
-        16. GET         /vulnerabilities/{vulnerabilityId}
+        3. GET         /vulnerabilities/{vulnerabilityId}
         Finds a specific vulnerability.
                 200 -   returns json
                          {
@@ -381,7 +381,7 @@ VULNERABILITIES - Everything about vulnerabilities
                                 ]
                         }
                 404 -   invalid {vulnerabilityId}
-        17. GET         /vulnerabilities/{vulnerabilityId}/sources
+        4. GET         /vulnerabilities/{vulnerabilityId}/sources
         Finds the source of a specific vulnerability.
                 200 -   returns json
                         "sources": [
@@ -398,7 +398,7 @@ VULNERABILITIES - Everything about vulnerabilities
 
 DEPENDENCIES - Everything about dependencies
 
-        18. GET         /sboms/{sbomId}/dependencies
+        1. GET         /sboms/{sbomId}/dependencies
         Finds all dependencies of specific sbom.
         19. GET         /dependencies/{dependencyId}/tree
         Finds all direct children of specific dependency.
@@ -407,23 +407,23 @@ DEPENDENCIES - Everything about dependencies
 
 USERS - Everything about users
 
-        21. GET         /users
+        1. GET         /users
         Finds all users.
-        22. POST        /users
+        2. POST        /users
         Creates a new user.
-        23. GET         /users/{userId}
+        3. GET         /users/{userId}
         Finds a specific user.
-        1. GET          /users/{userId}/sboms
+        4. GET          /users/{userId}/sboms
         Finds all sboms associated with a user with id of {userId}.
 
 SCRIPTS - All about sbom creation scripts
 
-        24. GET         /scripts/linux
+        1. GET         /scripts/linux
         Finds a Linux script for downloading and creating an SBOM
-        25. GET         /scripts/windows
+        2. GET         /scripts/windows
         Finds a Windows script for downloading and creating an sbom.
 
 AUTHORIZATION - About user authorization
 
-        26. POST        /sessions
+        1. POST        /sessions
         Creates a new session for the current user.
