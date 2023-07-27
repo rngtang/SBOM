@@ -5,6 +5,6 @@ class Dependency < ApplicationRecord
     belongs_to :sbom
     belongs_to :sbomComponent, optional: true;
 
-    # Creates array
+    # Makes dependsOn an array
     serialize :dependsOn, Array
 end

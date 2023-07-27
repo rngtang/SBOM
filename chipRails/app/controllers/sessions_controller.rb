@@ -70,7 +70,9 @@ class SessionsController < ActionController::Base
       end
       hash
     end
-    
+
+    # TODO: replace the urn oid with a variable for easier updates in the future (maybe for different institutions, etc.)
+
     def fetch_netid(attributes_hash)
       attributes_hash.dig("urn:oid:0.9.2342.19200300.100.1.1", 0)
     end

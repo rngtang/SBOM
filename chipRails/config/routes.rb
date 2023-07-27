@@ -56,7 +56,6 @@ Rails.application.routes.draw do
   get '/scripts/windows', to: 'scripts#windows'
   get '/scripts/mac', to: 'scripts#mac'
 
-  resources :references
   # root "articles#index"
 
   resources :sessions, only: [:new, :create, :destroy]

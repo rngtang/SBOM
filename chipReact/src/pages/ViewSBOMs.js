@@ -14,12 +14,12 @@ function ViewSBOMs({ userId }) {
   // console.log("CURRENT USER, from view: ", userId);
 
   // create states for a lot of things [someone please update this]
-  const [selectedSbomId, setSelectedSbomId] = useState(null);
+  // const [selectedSbomId, setSelectedSbomId] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [userName, setUserName] = useState(null);
-  const [userDesc, setUserDesc] = useState(null);
-  const [sbomName, setSbomName] = useState(null);
+  const [userName, setUserName] = useState("");
+  const [userDesc, setUserDesc] = useState("");
+  const [sbomName, setSbomName] = useState("");
   const [nameMatch, setNameMatch] = useState(false);
   const [trigger, setTrigger] = useState(false);
 
@@ -48,13 +48,13 @@ function ViewSBOMs({ userId }) {
       .then((data) => {
         const match = data.some((n) => n === userName);
         if (match) {
-          console.log("matched a name");
+          // console.log("matched a name");
           // alert("You need a unique name for your SBOM.");
           setNameMatch(true);
         } else {
           setNameMatch(false);
         }
-        console.log(data);
+        // console.log(data);
       })
   }
 
@@ -63,9 +63,8 @@ function ViewSBOMs({ userId }) {
     fetchNames();
     setLoading(true); // Set loading state to true before fetch request
     const formData = new FormData();
-    console.log("preparing to get names");
+    // console.log("preparing to get names");
 
-    setTimeout(() => {
       const file = event.target.files[0];
       formData.append('file', file);
 
@@ -77,17 +76,17 @@ function ViewSBOMs({ userId }) {
         formData.append('name', userName); // Continue with the file upload or further processing
       }
       formData.append('description', userDesc);
-      console.log(formData);
+      // console.log(formData);
       fetch((`http://localhost:8080/users/${userId}/sboms`), { 
         method: 'POST',
         body: formData
       })
       .then((response) => {
         if (!response.ok) {
-          console.log("blah" + {response})
+          // console.log("blah" + {response})
           throw new Error('Failed to upload the SBOM.');
         }
-        console.log("it POSTED ????");
+        // console.log("it POSTED ????");
         setLoading(false);
         setTrigger(prevTrigger => !prevTrigger); // will toggle getSBOMs useEffect
         return response.json();
@@ -95,7 +94,6 @@ function ViewSBOMs({ userId }) {
       .then((data) => {
       });
       setFormSubmitted(false); //reset
-    }, 500); // Adjust the delay if needed
   }
 
   return (

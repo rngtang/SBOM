@@ -1,10 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# This file is used to test the database. It creates at least two objects for each type and associates them to another.
+# 
+# Some objects have a foreign key optional (Sboms and Vulnerabilites). These are created both with and without a foreign key.
+# 
+# The join tables are tested associating an already created sbomComponent to an sbom and also associating an already reacted vulnerability
+# to an Sbom
 
 # Creating some users
 puts 'seeding'
