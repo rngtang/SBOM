@@ -1,41 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import Tree from 'react-d3-tree';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
-
-const containerStyles = {
-  width: '100%',
-  height: '800px',
-};
+import React, { useEffect } from 'react';
+import { Network } from 'vis-network';
+import { DataSet } from 'vis-data';
 
 function SbomTree() {
-  const [data, setData] = useState(null);
-  const { sbomId } = useParams();
-
-  const renderCustomNodeElement = ({ nodeDatum, toggleNode }) => (
-    <g>
-      <circle r={45} style={{ fill: '#B0E0E6' }} onClick={toggleNode} />
-      <foreignObject x="-60" y="-15" width="300" height="30"> {/* Adjust the dimensions here */}
-        <div style={{ textAlign: 'center', backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '2px', border: '1px solid black' }}> {/* Add a border here */}
-          <span>{nodeDatum.name}</span>
-        </div>
-      </foreignObject>
-    </g>
-  );
-
   useEffect(() => {
-    const fetchTreeData = async () => {
-      const result = await axios(`http://localhost:8080/sboms/${sbomId}/dependencies_tree`);
-      setData(result.data);
+    // create an array with nodes
+    const nodes = new DataSet([
+      { id: 1, label: '@testing-library/jest-dom' },
+      { id: 2, label: '@testing-library/react' },
+      { id: 3, label: '@testing-library/user-event' },
+      { id: 4, label: 'react' },
+      { id: 5, label: 'react-dom' },
+      { id: 6, label: 'react-scripts' },
+      { id: 7, label: 'web-vitals' }
+    ]);
+
+    // create an array with edges
+    const edges = new DataSet([
+      { from: 1, to: 3 },
+      { from: 1, to: 2 },
+      { from: 1, to: 4 },
+      { from: 1, to: 5 },
+      { from: 1, to: 6 },
+      { from: 1, to: 7 },
+      { from: 2, to: 7 }
+    ]);
+
+    // create a network
+    const container = document.getElementById('mynetwork');
+    const data = {
+      nodes: nodes,
+      edges: edges
     };
-    fetchTreeData();
-  }, [sbomId]);
+    const options = {};
+    new Network(container, data, options);
+  }, []);
 
   return (
-    <div style={containerStyles}>
-      {data && <Tree data={data} translate={{ x: 400, y: 200 }} separation={{ siblings: 1.3, nonSiblings: 2 }} depthFactor={800} renderCustomNodeElement={renderCustomNodeElement} pathFunc='elbow' />} {/* Increase the depthFactor here */}
-
-    </div>
+    <div id="mynetwork" style={{ width: '800px', height: '400px' }}></div>
   );
 }
 

@@ -53,30 +53,35 @@ end
 
 
 def build_dependency_tree(dependencies, root_ref)
-# Initialize the tree with the modified name
-formatted_name = root_ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, "")
-tree = {"name" => formatted_name, "children" => []}
+  # Initialize the tree with the modified name
+  formatted_name = root_ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, "")
+  tree = {"id" => root_ref, "label" => formatted_name}
 
-# Find the matching dependency
-matching_dep = dependencies.find { |dep| dep["ref"] == root_ref }
+  # Find the matching dependency
+  matching_dep = dependencies.find { |dep| dep["ref"] == root_ref }
 
-if matching_dep
-  # For each dependency that this dependency depends on
-  matching_dep["dependsOn"].each do |ref|
-    # Check if this dependency is in the original dependencies list
-    dep = dependencies.find { |dep| dep["ref"] == ref }
-    if dep
-      # If it is, recursively build its tree
-      tree["children"].push(build_dependency_tree(dependencies, ref))
-    else
-      # If it's not found, add a null end node with the modified name
-      tree["children"].push({"name" => ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, ""), "children" => []})
+  if matching_dep
+    # For each dependency that this dependency depends on
+    matching_dep["dependsOn"].each do |ref|
+      # Check if this dependency is in the original dependencies list
+      dep = dependencies.find { |dep| dep["ref"] == ref }
+      if dep
+        # If it is, recursively build its tree
+        tree["edges"] ||= []
+        tree["edges"].push({"from" => root_ref, "to" => ref})
+        tree["nodes"] ||= []
+        tree["nodes"].push(build_dependency_tree(dependencies, ref))
+      else
+        # If it's not found, add a null end node with the modified name
+        tree["nodes"] ||= []
+        tree["nodes"].push({"id" => ref, "label" => ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, "")})
+      end
     end
   end
+
+  tree
 end
 
-tree
-end
 
 
 
