@@ -400,9 +400,9 @@ DEPENDENCIES - Everything about dependencies
 
         1. GET         /sboms/{sbomId}/dependencies
         Finds all dependencies of specific sbom.
-        19. GET         /dependencies/{dependencyId}/tree
+        2. GET         /dependencies/{dependencyId}/tree
         Finds all direct children of specific dependency.
-        20. GET         /sboms/{sbomId}/dependencies_tree
+        3. GET         /sboms/{sbomId}/dependencies_tree
         Finds a dependency tree for a specific SBOM.
 
 USERS - Everything about users
@@ -419,9 +419,11 @@ USERS - Everything about users
 SCRIPTS - All about sbom creation scripts
 
         1. GET         /scripts/linux
-        Finds a Linux script for downloading and creating an SBOM
+        Finds and downloads a Linux script for downloading and creating an SBOM
         2. GET         /scripts/windows
-        Finds a Windows script for downloading and creating an sbom.
+        Finds and downloads a Windows script for downloading and creating an SBOM.
+        3. GET         /scripts/mac
+        Finds and downloads a Mac script for downloading and creating an SBOM
 
 AUTHORIZATION - About user authorization
 
