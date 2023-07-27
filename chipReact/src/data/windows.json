@@ -9,5 +9,5 @@
       "Check to see that your SBOM was created properly. Your SBOM should be a (title).WINDOWS.json file titled with the name of your project directory.",
       "Please note that these steps will only create an SBOM with components and dependencies, and will NOT be able to find the vulnerabilities of your project. If you wish to have a file with both SBOM and vulnerabilities, you must use Docker and the linux/mac script above."
     ],
-    "code": "./windows_install.ps1"
+    "code": [["./windows_install.ps1"]]
   }
