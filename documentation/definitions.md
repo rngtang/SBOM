@@ -6,106 +6,16 @@ SBOM Format: The method in which the information in the SBOM is laid out. We use
 
 Dependencies (Component): A software often calls upon code from other libraries. These code sections are called dependencies, as they depend on code not written from within the app.
 
-SBOM serial number: This is an identification string that is specific to the dependency in your specific SBOM.
+SBOM serial number: This is an identification string that is specific to your SBOM.
 
-Metadata: 
-{
-    "specVersion": "string",
-    "version": int,
-    "name": "string",
-    "description": "string",
-    "archive": boolean,
-    "user_id": 0,
-    "created_at": "2023-07-19T18:29:45.992Z",
-    "updated_at": "2023-07-19T19:37:42.519Z",
-    "metadata": [
-            {
-                    "id": 0,
-                    "timestamp": "2023-07-06T10:48:36-04:00",
-                    "sbom_id": 1,
-                    "created_at": "2023-07-19T18:29:46.288Z",
-                    "updated_at": "2023-07-19T18:29:46.288Z",
-                    "tools": [
-                            {
-                                    "id": 0,
-                                    "vendor": "string",
-                                    "name": "string",
-                                    "version": "string",
-                                    "metadatum_id": 0,
-                                    "created_at": "2023-07-19T18:29:46.315Z",
-                                    "updated_at": "2023-07-19T18:29:46.315Z"
-                            }
-                    ]
-            }
-    ],
-    "vulnerabilities": [
-            {
-                    "id": 0,
-                    "bom_ref": "string",
-                    "vulnID": "string",
-                    "description": "string",
-                    "recommendation": "string (link)",
-                    "affected": [
-                            "string"
-                    ],
-                    "sbom_id": 0,
-                    "created_at": "2023-07-19T18:29:46.348Z",
-                    "updated_at": "2023-07-19T18:29:46.348Z",
-                    "ratings": [
-                            {
-                                    "id": 0,
-                                    "score": "string,
-                                    "severity": "string",
-                                    "vulnerability_id": 0,
-                                    "created_at": "2023-07-19T18:29:46.384Z",
-                                    "updated_at": "2023-07-19T18:29:46.384Z"
-                            }
-                    ],
-                    "sources": [
-                            {
-                                    "id": 0,
-                                    "name": "string",
-                                    "url": "string",
-                                    "vulnerability_id": 0,
-                                    "created_at": "2023-07-19T18:29:46.419Z",
-                                    "updated_at": "2023-07-19T18:29:46.419Z"
-                            }
-                    ]
-            }
-    ],
-    "sbom_components": [
-            {
-                    "id": 0,
-                    "bom_ref": "string",
-                    "group": "string",
-                    "name": "string",
-                    "version": "string",
-                    "purl": "string",
-                    "sbom_id": 0,
-                    "created_at": "2023-07-19T18:29:46.041Z",
-                    "updated_at": "2023-07-19T18:29:46.041Z",
-                    "properties": [
-                            {
-                                    "id": 0,
-                                    "name": "string",
-                                    "value": "string",
-                                    "sbom_component_id": 0,
-                                    "created_at": "2023-07-19T18:29:46.072Z",
-                                    "updated_at": "2023-07-19T18:29:46.072Z"
-                            }
-                    ]
-            }
-    ],
-    "dependencies": [
-            {
-                    "id": 0,
-                    "ref": "string",
-                    "dependsOn": [
-                            "string"
-                    ],
-                    "sbom_id": 0,
-                    "created_at": "2023-07-19T18:29:46.228Z",
-                    "updated_at": "2023-07-19T18:29:46.228Z"
-            }
-    ]
-}
+Metadata: In general, this provides information about the data it is included in. In SBOMs, this can be seen in the timestamp the SBOM was created and the tools used to create the SBOM
+
+Vulnerabilities: A weakness in the code of a component that allows for exploitation by bad actors that can compromise the security and functionality of the software the component is a part of.
+
+Vulnerability source: This is generally where the vulnerability information is decided and from, for example, a vulnerability source can be Github, Google, or Amazon. A description of the vulnerability, what to do about it, and its severity can be found here.
+
+Tools: Included in the metadata, this includes a description of what program was used to create the SBOM.
+
+BOM-ref: An identification string specific to a component. This is used to identify the component and also reference the component, for example, it can be used by a vulnerability description to show the component the vulnerability directly affects.
+
+Component Group (Type): This describes what kind of function or nature a component has in an application and, for example, can be a library, a configuration file, or an executable.

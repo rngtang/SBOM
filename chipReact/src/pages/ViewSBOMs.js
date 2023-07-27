@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
-import SbomTree from './SbomTree';
+import SbomTree from './tree-rendering/SbomTree';
 
 // someone made great comments for this file already. please come back and finish, thanks! -james :)
 
