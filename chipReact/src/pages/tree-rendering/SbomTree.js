@@ -19,10 +19,9 @@ function SbomTree() {
     const edges = new DataSet([
       { from: 1, to: 3 },
       { from: 1, to: 2 },
-      { from: 1, to: 4 },
-      { from: 1, to: 5 },
-      { from: 1, to: 6 },
-      { from: 1, to: 7 },
+      { from: 2, to: 4 },
+      { from: 3, to: 5 },
+      { from: 2, to: 6 },
       { from: 2, to: 7 }
     ]);
 
