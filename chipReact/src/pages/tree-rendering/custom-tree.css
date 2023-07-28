@@ -1,4 +1,4 @@
-.node__root circle {
+/* .node__root circle {
     fill: red;
   }
   
@@ -25,4 +25,8 @@
   .node__leaf circle {
     fill: violet;
   }
-  
+   */
+
+.leaf {
+  fill: gray;
+}
