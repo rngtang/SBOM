@@ -18,13 +18,6 @@ class SbomComponentsController < ApplicationController
         @sbom_component = SbomComponent.new
     end
 
-    def destroy
-        @sbom_component = SbomComponent.find(params[:id])
-        if @sbom_component.present?
-            @sbom_component.destroy
-        end
-    end
-
     # Creates an SbomComponent
     def create
         @sbom = Sbom.find(params[:sbom_id])
