@@ -9,7 +9,7 @@ export default function DeleteButton({ sbomId, trigger, setTrigger, setLoading }
 
         if (window.confirm("Are you sure you want to delete this SBOM forever?")) {
             // if yes, hit the GET endpoint from the archiveUrl, which will change the archive parameter for this SBOM to true
-            return fetch(archiveUrl)
+            fetch(archiveUrl)
             .then(setTrigger(prevTrigger => !prevTrigger))
             .then(setLoading(false))
         } else {
