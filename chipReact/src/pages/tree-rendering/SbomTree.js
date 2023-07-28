@@ -115,14 +115,20 @@ function SbomTree() {
   useEffect(() => {
     const fetchTreeData = async () => {
       const result = await axios(`http://localhost:8080/sboms/${sbomId}/dependencies_tree`);
+<<<<<<< HEAD
       //const result = samplejson;
       const treeData = result.data;
       assignDepth(treeData);
       setData(treeData);
+=======
+      const dataWithCollapsedFlag = addCollapsedFlag(result.data);
+      setData(dataWithCollapsedFlag);
+>>>>>>> development
     };
     fetchTreeData();
   }, [sbomId]);
 
+<<<<<<< HEAD
   const handleButtonClick = () => {
     navigate('/viewSBOMs');
   }
@@ -143,6 +149,20 @@ function SbomTree() {
       </div>
     </>
     
+=======
+  const addCollapsedFlag = (node, level = 0) => {
+    return {
+      ...node,
+      collapsed: level > 0, // set collapsed to true for all nodes except the root
+      children: node.children.map(child => addCollapsedFlag(child, level + 1))
+    };
+  };
+
+  return (
+    <div style={containerStyles}>
+      {data && <Tree data={data} translate={{ x: 400, y: 200 }} generateNodeProps={generateNodeProps} />}
+    </div>
+>>>>>>> development
   );
 }
 
