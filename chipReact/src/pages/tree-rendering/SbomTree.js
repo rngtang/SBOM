@@ -35,7 +35,18 @@ function SbomTree() {
   useEffect(() => {
     fetchAffected()}
     );
-
+  
+  const fetchSbom = () => {
+    fetch(`http://localhost:8080/sboms/${sbomId}`)
+    .then((response) => response.json())
+    .then((data) => {
+      setSbomName(data.name)
+      setSbomDesc(data.description)
+    })
+  }
+  useEffect(() => {
+    fetchSbom()
+  });
   const assignDepth = (node, depth = 0) => {
     node.depth = depth;
     if (node.children) {
@@ -117,7 +128,7 @@ function SbomTree() {
   }
 
   return (
-    <div>
+    <>
       <div className={styles.header}>
             <Button type='submit'className={styles.button} onClick={handleButtonClick}>
                 &#8592; Go back to all SBOMs 
@@ -130,7 +141,7 @@ function SbomTree() {
       <div style={containerStyles}>
         {data && <Tree data={data} translate={{ x: 400, y: 200 }} separation={{ siblings: 1.5, nonSiblings: 3 }} depthFactor={800} renderCustomNodeElement={renderCustomNodeElement} pathFunc='disjointelbow' />} {/* Increase the depthFactor here */}
       </div>
-    </div>
+    </>
     
   );
 }
