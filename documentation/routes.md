@@ -1,4 +1,4 @@
-Version 0.9 -------------- 7/19/23 -----------------
+Version 0.99 -------------- 7/28/23 -----------------
 
 -- API ROUTES --
 Here is a comprehensive list of our API routes and what they can be used for:
@@ -7,10 +7,9 @@ Here is a comprehensive list of our API routes and what they can be used for:
 SBOMs - Everything about sboms
 
         1. GET          /sboms/{sbomId}
-        Finds sbom by id.
-                Responses:
-                200 -   successful operation
-                        returns a json file
+        Finds one sbom by that sbom's id.
+        Responses:
+                200 -   successful, returns a json file for SBOM
                         {
                                 "id": 0,
                                 "bomFormat": "string",
@@ -115,12 +114,16 @@ SBOMs - Everything about sboms
                                 ]
                         }
                 404 -   invalid {sbomId}
+
         2. GET          /sboms
-        Finds all sboms.
-                200 -   returns json with list of all sboms
+        Finds all sboms. 
+        Responses:
+                200 -   successful, returns json with list of all sboms
+
         3. GET          /sboms/{sbomId}/vulnerabilities
         Finds all vulnerabilities of sbom with id of {sbomId}.
-                200 -   returns json
+        Responses:
+                200 -   successful, returns json with all vulnerabilities for that sbom
                         "vulnerabilities": [
                                         {
                                                 "id": 0,
@@ -156,10 +159,12 @@ SBOMs - Everything about sboms
                                                 ]
                                         }
                                 ]
-                        404 -   invalid {sbomId}
+                404 -   invalid {sbomId}
+
         4. GET          /sboms/{sbomId}/metadata
         Finds the metadata of sbom with id of {sbomId}.
-                200 -   returns json
+        Responses: 
+                200 -   successful, returns json of metadata
                         "metadata": [
                                         {
                                                 "id": 0,
@@ -180,9 +185,11 @@ SBOMs - Everything about sboms
                                                 ]
                                         }
                                 ]
+
         5. GET          /sboms/{sbomId}/sbomComponents
         Finds all components of sbom with id of {sbomId}.
-                200 -   returns json
+        Responses:
+                200 -   successful, returns json of sbom_components
                         "sbom_components": [
                                         {
                                                 "id": 0,
@@ -206,12 +213,14 @@ SBOMs - Everything about sboms
                                                 ]
                                         }
                                 ]
+
         6. POST         /users/{userId}/sboms
         Add a new sbom to a user's sbom list.
                 input:
                         requires json file submission
                                 "sbom": {}
                         permits all other fields
+
         7. PUT          /sboms/{sbomId}
         Edit a sbom's name and description.
                 input:
@@ -330,6 +339,7 @@ VULNERABILITIES - Everything about vulnerabilities
                                         ]
                                 }
                         ]
+
         2. GET         /vulnerabilities/{vulnerabilityId}/ratings
         Finds the rating of a specific vulnerability.
                 200 -   returns json
@@ -344,6 +354,7 @@ VULNERABILITIES - Everything about vulnerabilities
                                         }
                                 ]
                 404 -   invalid {vulnerabilityId}
+
         3. GET         /vulnerabilities/{vulnerabilityId}
         Finds a specific vulnerability.
                 200 -   returns json
@@ -381,6 +392,7 @@ VULNERABILITIES - Everything about vulnerabilities
                                 ]
                         }
                 404 -   invalid {vulnerabilityId}
+
         4. GET         /vulnerabilities/{vulnerabilityId}/sources
         Finds the source of a specific vulnerability.
                 200 -   returns json
@@ -400,8 +412,10 @@ DEPENDENCIES - Everything about dependencies
 
         1. GET         /sboms/{sbomId}/dependencies
         Finds all dependencies of specific sbom.
+
         2. GET         /dependencies/{dependencyId}/tree
         Finds all direct children of specific dependency.
+
         3. GET         /sboms/{sbomId}/dependencies_tree
         Finds a dependency tree for a specific SBOM.
 
@@ -409,23 +423,34 @@ USERS - Everything about users
 
         1. GET         /users
         Finds all users.
+
         2. POST        /users
         Creates a new user.
+
         3. GET         /users/{userId}
         Finds a specific user.
+
         4. GET          /users/{userId}/sboms
         Finds all sboms associated with a user with id of {userId}.
 
 SCRIPTS - All about sbom creation scripts
 
         1. GET         /scripts/linux
-        Finds and downloads a Linux script for downloading and creating an SBOM
+        Finds and downloads a Linux script for downloading and creating an SBOM.
+
         2. GET         /scripts/windows
         Finds and downloads a Windows script for downloading and creating an SBOM.
+
         3. GET         /scripts/mac
-        Finds and downloads a Mac script for downloading and creating an SBOM
+        Finds and downloads a Mac script for downloading and creating an SBOM.
 
-AUTHORIZATION - About user authorization
+AUTHORIZATION - All about user authentication 
 
-        1. POST        /sessions
-        Creates a new session for the current user.
+        1. POST         /saml/consume
+        Creates a new session (cookies) for the current user.
+        
+        2. GET          /current_user 
+        Declares current user to be the user who's user id corresponds with the session id.
+
+        GET             /destroy
+        Deletes the session (cookie) for current user when they log out.
