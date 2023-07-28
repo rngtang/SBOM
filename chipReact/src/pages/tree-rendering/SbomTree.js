@@ -70,7 +70,8 @@ function SbomTree() {
           // console.log(affected[i] + " " + nodeDatum.name)
           return (
             <g>
-              <circle r={85} style={{ fill: 'red' }} onClick={toggleNode} />
+              {/* , stroke: '#ff0000', 'stroke-width': 5  */}
+              <circle r={85} style={{ fill: '#ff0000'}} onClick={toggleNode} />
               <foreignObject x="-60" y="-35" width="120" height="80">
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '2px', border: '1px solid black' }}>
                   <span style={{ fontSize: '20px', fontFamily: 'Times New Roman' }}>{nodeDatum.name}</span>

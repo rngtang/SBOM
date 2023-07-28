@@ -27,6 +27,11 @@
   }
    */
 
-.leaf {
-  fill: gray;
+/* .rd3t-leaf-node circle {
+  fill: rgb(183, 178, 178) !important;
+} */
+
+  
+.rd3t-node:hover {
+  stroke-width: 5px !important;
 }
