@@ -51,7 +51,7 @@ class SessionsController < ActionController::Base
       else
         Rails.logger.error "SAML response invalid. Errors: #{response.errors}"
         flash.now.alert = 'SAML response invalid'
-        render 'new'
+        redirect_to :action => 'new'
       end
     end
     
