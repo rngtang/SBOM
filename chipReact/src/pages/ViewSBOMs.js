@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ViewSBOMs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import GetSBOMs from '../components/GetSBOMs';
 import Spinner from 'react-bootstrap/Spinner';
 import SbomTree from './tree-rendering/SbomTree';
+import ModalBox from '../components/ModalBox';
 
 // someone made great comments for this file already. please come back and finish, thanks! -james :)
 
@@ -22,9 +23,6 @@ function ViewSBOMs({ userId }) {
   const [sbomName, setSbomName] = useState("");
   const [nameMatch, setNameMatch] = useState(false);
   const [trigger, setTrigger] = useState(false);
-
-
-  
 
   // create a state for file input
   const fileInput = useRef();
@@ -147,9 +145,7 @@ function ViewSBOMs({ userId }) {
           />
         </form>
 
-        {loading && <Spinner animation="border" role="status" variant="info">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>}
+        {loading && <ModalBox />}
 
         <div id='searchBar'>
           <input

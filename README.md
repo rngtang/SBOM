@@ -1,5 +1,5 @@
 
-Version 1. 6/20/2023 ------------------------------------------------------------------
+Version 0.99 7/28/2023 ------------------------------------------------------------------
 
 -- BACKGROUND --
 Welcome to the Centralized Hub for Inventories Platform (CHIP), a web-based application
@@ -21,10 +21,5 @@ formatted JSON file that has been created with Syft, an open-source SBOM generat
 
 
 -- HOW TO USE --
-To use our application, you will need the following:
-
-        1. Docker Desktop.
-        2. A SBOM JSON file in the CycloneDX format. You can either upload your own if
-        it already exists, or you can create one using Syft (full instructions below).
 
         

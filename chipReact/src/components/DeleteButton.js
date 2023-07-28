@@ -6,18 +6,16 @@ export default function DeleteButton({ sbomId, trigger, setTrigger, setLoading }
     const handleButtonClick = (e) => {
         e.stopPropagation()
         setLoading(true)
-        // debugger lines below
-        // console.log(trigger)
-        // console.log({ sbomId })
+
         if (window.confirm("Are you sure you want to delete this SBOM forever?")) {
+            // if yes, hit the GET endpoint from the archiveUrl, which will change the archive parameter for this SBOM to true
             fetch(archiveUrl)
-            // debugger line below
-            // .then(console.log({ sbomId }))
+            // change trigger to make accordion reload
             .then(setTrigger(prevTrigger => !prevTrigger))
+            // done, so stop loading
             .then(setLoading(false))
-            // debugger line below
-            // .then(console.log({ trigger }))
         } else {
+            // not executed, so no load
             setLoading(false);
         }
     }
