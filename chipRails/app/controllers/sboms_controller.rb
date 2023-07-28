@@ -50,14 +50,6 @@ class SbomsController < ApplicationController
         @sbom.update(archive: true)
     end
 
-    def destroy     
-        @sbom.destroy
-        respond_to do |format|
-            format.html { redirect_to '/sboms', notice: "SBOM was successfully destroyed." }
-            format.json { head :no_content}
-        end
-    end
-
     def create
         # error = MyError.new
         # p error
