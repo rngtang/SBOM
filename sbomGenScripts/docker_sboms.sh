@@ -41,4 +41,4 @@ if [ -f $selected_file.2.json ]; then
 fi
 
 # Output the results
-echo -e "${COLOR}You have now created $selected_file.SBOM.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}" 
+echo -e "${COLOR}You have now created $selected_file.SBOM.json, which is your SBOM to upload.${NC}" 
