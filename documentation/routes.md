@@ -7,8 +7,8 @@ Here is a comprehensive list of our API routes and what they can be used for:
 SBOMs - Everything about sboms
 
         1. GET          /sboms/{sbomId}
-        Finds one sbom by that sbom's id.
-        Responses:
+        Finds one sbom by sbom id.
+                Responses:
                 200 -   successful, returns a json file for SBOM
                         {
                                 "id": 0,
@@ -117,12 +117,12 @@ SBOMs - Everything about sboms
 
         2. GET          /sboms
         Finds all sboms. 
-        Responses:
+                Responses:
                 200 -   successful, returns json with list of all sboms
 
         3. GET          /sboms/{sbomId}/vulnerabilities
         Finds all vulnerabilities of sbom with id of {sbomId}.
-        Responses:
+                Responses:
                 200 -   successful, returns json with all vulnerabilities for that sbom
                         "vulnerabilities": [
                                         {
@@ -163,7 +163,7 @@ SBOMs - Everything about sboms
 
         4. GET          /sboms/{sbomId}/metadata
         Finds the metadata of sbom with id of {sbomId}.
-        Responses: 
+                Responses: 
                 200 -   successful, returns json of metadata
                         "metadata": [
                                         {
@@ -186,10 +186,10 @@ SBOMs - Everything about sboms
                                         }
                                 ]
 
-        5. GET          /sboms/{sbomId}/sbomComponents
+        5. GET          /sboms/{sbomId}/sbom_components
         Finds all components of sbom with id of {sbomId}.
-        Responses:
-                200 -   successful, returns json of sbom_components
+                Responses:
+                200 -   successful, returns json of sbom_components for just that one SBOM
                         "sbom_components": [
                                         {
                                                 "id": 0,
@@ -216,14 +216,14 @@ SBOMs - Everything about sboms
 
         6. POST         /users/{userId}/sboms
         Add a new sbom to a user's sbom list.
-                input:
+                Input:
                         requires json file submission
                                 "sbom": {}
                         permits all other fields
 
         7. PUT          /sboms/{sbomId}
         Edit a sbom's name and description.
-                input:
+                Input:
                         requires json format
                                 "sbom":{}
                         permits name and description
@@ -234,9 +234,13 @@ SBOMs - Everything about sboms
 
 SBOM COMPONENTS - Everything about sbom components
 
-        1. GET         /sbom_components/{sbom_componentId}
+        1. GET          /sbom_components
+        Fin
+
+        1. GET          /sbom_components/{sbom_componentId}
         Finds a specific sbom component.
-                200 -   returns json
+                Responses:
+                200 -   successful, returns json with just one sbom_component
                         {
                                 "id": 0,
                                 "bom_ref": "string",
@@ -264,7 +268,8 @@ METADATA - Everything about metadata
 
         1. GET         /metadata/{metadatumId}/tools
         Finds the tools used to create the sbom.
-                200 -   returns json
+                Responses:
+                200 -   successful, returns json with just metadata for all sboms with a user
                         "tools": [
                                         {
                                                 "id": 0,
@@ -277,9 +282,12 @@ METADATA - Everything about metadata
                                         }
                                 ]
                 404 -   invalid {metadatumId}
+
+        ** WILL POSSIBLY GET RID OF 
         2. GET         /metadata/{metadatumId}
         Finds a specific metadatum.
-                200 -   returns json
+                Responses:
+                200 -   successful, returns json
                         {
                                 "id": 0,
                                 "timestamp": "2023-07-06T10:48:36-04:00",
@@ -302,8 +310,9 @@ METADATA - Everything about metadata
 VULNERABILITIES - Everything about vulnerabilities
 
         1. GET          /vulnerabilities
-        Finds all vulnerabilities.
-                200 -   returns json
+        Finds all vulnerabilities of a user.
+                Responses:
+                200 -   successful, returns json
                         [
                                 {
                                         "id": 0,
@@ -340,23 +349,9 @@ VULNERABILITIES - Everything about vulnerabilities
                                 }
                         ]
 
-        2. GET         /vulnerabilities/{vulnerabilityId}/ratings
-        Finds the rating of a specific vulnerability.
-                200 -   returns json
-                        "ratings": [
-                                        {
-                                                "id": 0,
-                                                "score": "string,
-                                                "severity": "string",
-                                                "vulnerability_id": 0,
-                                                "created_at": "2023-07-19T18:29:46.384Z",
-                                                "updated_at": "2023-07-19T18:29:46.384Z"
-                                        }
-                                ]
-                404 -   invalid {vulnerabilityId}
-
-        3. GET         /vulnerabilities/{vulnerabilityId}
-        Finds a specific vulnerability.
+        2. GET         /vulnerabilities/{vulnerabilityId}
+        Finds all the information of a specific vulnerability.
+                Responses:
                 200 -   returns json
                          {
                                 "id": 0,
@@ -393,9 +388,25 @@ VULNERABILITIES - Everything about vulnerabilities
                         }
                 404 -   invalid {vulnerabilityId}
 
+        3. GET         /vulnerabilities/{vulnerabilityId}/ratings
+        Finds the rating of a specific vulnerability.
+                200 -   successful, returns json
+                        "ratings": [
+                                        {
+                                                "id": 0,
+                                                "score": "string,
+                                                "severity": "string",
+                                                "vulnerability_id": 0,
+                                                "created_at": "2023-07-19T18:29:46.384Z",
+                                                "updated_at": "2023-07-19T18:29:46.384Z"
+                                        }
+                                ]
+                404 -   invalid {vulnerabilityId}
+
         4. GET         /vulnerabilities/{vulnerabilityId}/sources
-        Finds the source of a specific vulnerability.
-                200 -   returns json
+        Finds the sources of a specific vulnerability.
+                Responses: 
+                200 -   successful, returns json
                         "sources": [
                                         {
                                                 "id": 0,

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # opens up /sboms (GET [all, :id], PUT, DELETE)
   # opens up /sboms/:id/metadata (GET)
 
-  # opens up /sboms/:id/sbom_components (GET[all, :id], DELETE)
+  # opens up /sboms/:id/sbom_components (GET[all, :id], DELETE all)
   # why delete for sbom_components 
   resources :sboms, shallow: true do
     resources :metadata, only: [:index]
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :dependencies, only: [:index]
   end
 
-  # delete all sboms (do we use this??)
+  # really just a GET request, if try to delete will instead redirect to just showing all sboms
   delete '/sboms', to: 'sboms#index'
 
   # change sbom archive parameter to true so it no longer displays in accordion
@@ -46,11 +46,10 @@ Rails.application.routes.draw do
   # creates dependency tree with all dependencies
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
 
-  
   resources :users, shallow: true do
     resources :sboms
   end
-  # delete all users (do we use this??)
+  # really just a GET request, if try to delete will instead redirect to just showing all users
   delete '/users', to: 'users#index'
   
   # routes for fast accordion building 
