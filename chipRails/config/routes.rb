@@ -51,6 +51,7 @@ Rails.application.routes.draw do
   get '/users/:user_id/sbom_names', to: 'sboms#sbomNames'
   get '/users/:user_id/sbom_top', to: 'sboms#sbomTop'
 
+  get '/sboms/:sbom_id/vuln_affected', to: 'vulnerabilities#vulnaffected'
 
   get '/scripts/linux', to: 'scripts#linux'
   get '/scripts/windows', to: 'scripts#windows'
