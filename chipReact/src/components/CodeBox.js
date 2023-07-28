@@ -6,7 +6,8 @@ const CodeBox = ({ text }) => {
 
     // handling clicking on the clipboard
     const handleCopyClick = async () => {
-        await navigator.clipboard.writeText(text);
+        // join the array elements into a single string with line breaks
+        await navigator.clipboard.writeText(text.join('\n'));
         setIsCopied(true);
 
         // reset the isCopied state after two seconds
@@ -15,7 +16,7 @@ const CodeBox = ({ text }) => {
 
     return (
         <div style={styles.box}>
-            <code style={styles.code}>{text}</code>
+            {text.map((line, index) => <code key={index} style={styles.code}>{line}</code>)}
             <button onClick={handleCopyClick} style={styles.button}>
                 {isCopied ? <i class="fa-solid fa-check"></i> : <i className="fa-regular fa-copy"></i>}
             </button>
@@ -30,9 +31,9 @@ const styles = {
         width: '100%',
         height: 'auto',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column', // changed this to column so the lines stack vertically
         justifyContent: 'space-between',
-        alignItems: 'center',
+        alignItems: 'flex-start', // aligns the lines to the left
         border: 'none',
         outline: 'none',
         backgroundColor: '#E5E5E5',
@@ -53,7 +54,8 @@ const styles = {
         backgroundColor: 'transparent',
         border: 'none',
         cursor: 'pointer',
-        top: '50%',
+        alignSelf: 'flex-end', // positions the button at the end of the code box
+        marginTop: '10px', // add some space between the code and the button
         marginRight: '10px',
     },
     icon: {

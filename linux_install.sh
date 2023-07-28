@@ -64,7 +64,7 @@ else
     echo -e "${COLOR}--- Successful: INSTALLED JQ ---${NC}"
 fi
 
-jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.LINUX.json
+jq -s 'add' $selected_file.1.json $selected_file.2.json > $selected_file.SBOM.json
 
 # remove the extra .1 file created
 if [ -f $selected_file.1.json ]; then
@@ -76,4 +76,4 @@ if [ -f $selected_file.2.json ]; then
 fi
 
 # finished
-echo -e "${COLOR}You have now created $selected_file.LINUX.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"        
+echo -e "${COLOR}You have now created $selected_file.SBOM.json, which is your SBOM to upload. Your vulnerabilities are stored in the grype database and can be seen with <grype db status>${NC}"        

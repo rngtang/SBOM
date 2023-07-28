@@ -210,15 +210,24 @@ class ScriptsController < ApplicationController
     end 
 
     def docker
-        docker_code = <<-DOCKERFILE
-        FROM node:14
-        WORKDIR /app
-        COPY . .
-        RUN npm install -g @cyclonedx/cdxgen@8.6.0
-        RUN wget https://raw.githubusercontent.com/anchore/grype/main/install.sh && chmod +x install.sh && ./install.sh
-        CMD ["./install_linux.sh"]
+        dockerfile_code = <<-DOCKERFILE
+        FROM ubuntu:20.04
+
+        # Install dependencies
+        RUN apt-get update \\
+            && apt-get install -y curl wget npm
+
+        # Create a directory for the project
+        WORKDIR /project
+
+        # Copy bash script into the Docker image
+        COPY linux_install.sh /project
+
+        # Expose volume for external mounting
+        VOLUME ["/project"]
         DOCKERFILE
-        send_data docker_code, filename: 'Dockerfile', type: 'text/plain'
+
+        send_data dockerfile_code, filename: 'Dockerfile', type: 'text/x-docker'
     end
     
   end

@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   get '/scripts/linux', to: 'scripts#linux'
   get '/scripts/windows', to: 'scripts#windows'
   get '/scripts/mac', to: 'scripts#mac'
+  get 'scripts/docker', to: 'scripts#docker'
 
   # root "articles#index"
 

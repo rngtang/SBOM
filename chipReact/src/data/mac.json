@@ -8,5 +8,5 @@
       "From there, execute the shell script with the following command.", 
       "Check to see that your SBOM was created properly. Your SBOM should be a (title).MAC.json file titled with the name of your project directory."
     ],
-    "code": "bash mac_install.sh"
+    "code":[[ "bash mac_install.sh"]]
   }
