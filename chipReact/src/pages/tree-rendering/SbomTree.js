@@ -128,13 +128,13 @@ function SbomTree() {
   const handleButtonClick = () => {
     navigate('/viewSBOMs');
   }
-    const addCollapsedFlag = (node, level = 0) => {
-    return {
-      ...node,
-      collapsed: level > 0, // set collapsed to true for all nodes except the root
-      children: node.children.map(child => addCollapsedFlag(child, level + 1))
-    };
-  };
+  //   const addCollapsedFlag = (node, level = 0) => {
+  //   return {
+  //     ...node,
+  //     collapsed: level > 0, // set collapsed to true for all nodes except the root
+  //     children: node.children.map(child => addCollapsedFlag(child, level + 1))
+  //   };
+  // };
 
 
   return (
