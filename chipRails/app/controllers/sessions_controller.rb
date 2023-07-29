@@ -25,7 +25,7 @@ class SessionsController < ActionController::Base
     def create
       saml_response = params[:SAMLResponse]
       
-      response = OneLogin::RubySaml::Response.new(saml_response, settings: saml_settings)
+      response = OneLogin::RubySaml::Response.new(saml_response, settings: saml_settings, allowed_clock_drift: 5.seconds)
       if response.is_valid?
         attributes_hash = convert_to_hash(response.attributes)
     
