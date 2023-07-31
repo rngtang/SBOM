@@ -1,7 +1,7 @@
-Version 0.99 -------------- 7/28/23 -----------------
+Version 0.999 -------------- 7/31/23 -----------------
 
 -- API ROUTES --
-Here is a comprehensive list of the API routes that are either actively used in our application or useful for understanding our application. Each route describes what it are used for and which file(s) it is used in:
+Here is a comprehensive list of the API routes that are either actively used in our application or useful for understanding our application. Each route describes what it is used for and which file(s) it is used in:
 
 
 SBOMs - Everything about sboms
