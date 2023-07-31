@@ -185,34 +185,20 @@ SBOMs - Everything about sboms
                                                 ]
                                         }
                                 ]
-
-        5. GET          /sboms/{sbomId}/sbom_components
-        Finds all components of sbom with id of {sbomId}.
+        5. GET          /users/{userId}/sbom_names
+        Get just the names of a user's uploaded, non-archived, SBOMs. Used to check against having two of the same names.
+                Responses: 
+                200 -   successful, returns array of just names 
+        
+        6. GET          /users/{userId}/sbom_top
+        Gets every parameter except sbom_components, dependencies, and vulnerabilities for all SBOMs of a user. Used for faster accordion loading. 
                 Responses:
-                200 -   successful, returns json of sbom_components for just that one SBOM
-                        "sbom_components": [
-                                        {
-                                                "id": 0,
-                                                "bom_ref": "string",
-                                                "group": "string",
-                                                "name": "string",
-                                                "version": "string",
-                                                "purl": "string",
-                                                "sbom_id": 0,
-                                                "created_at": "2023-07-19T18:29:46.041Z",
-                                                "updated_at": "2023-07-19T18:29:46.041Z",
-                                                "properties": [
-                                                        {
-                                                                "id": 0,
-                                                                "name": "string",
-                                                                "value": "string",
-                                                                "sbom_component_id": 0,
-                                                                "created_at": "2023-07-19T18:29:46.072Z",
-                                                                "updated_at": "2023-07-19T18:29:46.072Z"
-                                                        }
-                                                ]
-                                        }
-                                ]
+                200 -   successful, 
+        
+        5. GET          /sboms/{sbomId}/archive
+        Change archive (boolean) parameter of SBOM from false to true so it no longer displays in accordion.
+                Responses: 
+                204 -   successful, no content. Boolean changed.
 
         6. POST         /users/{userId}/sboms
         Add a new sbom to a user's sbom list.
@@ -222,7 +208,7 @@ SBOMs - Everything about sboms
                         permits all other fields
 
         7. PUT          /sboms/{sbomId}
-        Edit a sbom's name and description.
+        Edit a sbom's name and description (user-given fields).
                 Input:
                         requires json format
                                 "sbom":{}
