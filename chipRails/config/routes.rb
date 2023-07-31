@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   # creates dependency tree with all dependencies
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
 
+  get '/vulnerabilities', to: 'vulnerabilities#index'
   get '/sboms', to: 'sboms#index'
   resources :users, only: [:show], shallow: true do
     resources :sboms, only: [:index, :new, :create]
