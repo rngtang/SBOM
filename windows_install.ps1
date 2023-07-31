@@ -17,17 +17,17 @@ else {
 }
 
 # run cdxgen to create sbom
-Write-Host "Creating $selectedFile.WINDOWS.json..." -ForegroundColor Green 
-cdxgen -r -o "${selectedFile}.WINDOWS.json"
+Write-Host "Creating $selectedFile.SBOM.json..." -ForegroundColor Green 
+cdxgen -r -o "${selectedFile}.SBOM.json"
 
 # Remove .xml file if it exists
-$xmlFile = "${selectedFile}.WINDOWS.xml"
+$xmlFile = "${selectedFile}.SBOM.xml"
 if (Test-Path $xmlFile -PathType Leaf) {
     Remove-Item $xmlFile
 }
 
 # finish
-Write-Host "You have now created $selectedFile.WINDOWS.json, which is your SBOM to upload. Please note that this file does not include any vulnerabilities." -ForegroundColor Green
+Write-Host "You have now created $selectedFile.SBOM.json, which is your SBOM to upload. Please note that this file does not include any vulnerabilities." -ForegroundColor Green
 
 # exit the terminal 
 # Read-Host -Prompt "Press Enter to exit script and terminal" 

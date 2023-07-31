@@ -2,7 +2,6 @@
 
 # set ability to execute itself
 chmod +x "$0" 
-
 # set colors 
 COLOR='\033[0;32m'
 NC='\033[0m'
@@ -13,7 +12,6 @@ echo -e "${COLOR} Project (directory) name: ${NC} $selected_file"
 
 # install cdxgen
 echo -e "${COLOR}--- ** Checking CDXGEN installation... ---${NC}"
-
 if which cdxgen >/dev/null 2>&1; then
     echo -e "${COLOR}--- CDXGEN is already installed. Skipping re-installation. ---${NC}"
 else
@@ -32,7 +30,6 @@ echo -e "${COLOR} Finished running cdxgen on $selected_file. Proceeding to grype
 
 # check for or install grype, and run it depending on where it is
 echo -e "${COLOR}--- ** Checking GRYPE installation... ---${NC}"
-
 if [ -x "./bin/grype" ]; then
     echo -e "${COLOR}--- GRYPE is already installed. Skipping re-installation and running grype... ---${NC}"
     ./bin/grype sbom:$selected_file.1.json -o cyclonedx-json > $selected_file.2.json
@@ -53,7 +50,6 @@ echo -e "${COLOR} Finished running grype on $selected_file. Proceeding to jq. ${
 
 # combine cdxgen and grype outputs into one file using jq, install jq locally. First check if jq is installed. 
 echo -e "${COLOR}--- ** Checking JQ installation... ---${NC}"
-
 if [ -x "./jq" ] || which jq >/dev/null 2>&1; then
     echo -e "${COLOR}--- JQ is already installed. Skipping re-installation. ---${NC}"
 else
