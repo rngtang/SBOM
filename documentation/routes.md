@@ -1,7 +1,7 @@
 Version 0.99 -------------- 7/28/23 -----------------
 
 -- API ROUTES --
-Here is a comprehensive list of our API routes and what they can be used for:
+Here is a comprehensive list of the API routes that are actively used in our application along with what they are used for:
 
 
 SBOMs - Everything about sboms
@@ -115,13 +115,8 @@ SBOMs - Everything about sboms
                         }
                 404 -   invalid {sbomId}
 
-        2. GET          /sboms
-        Finds all sboms. 
-                Responses:
-                200 -   successful, returns json with list of all sboms
-
-        3. GET          /sboms/{sbomId}/vulnerabilities
-        Finds all vulnerabilities of sbom with id of {sbomId}.
+        2. GET          /sboms/{sbomId}/vulnerabilities
+        Finds all vulnerabilities of sbom with id of {sbomId}. [Used in Vulnerabilities.js]
                 Responses:
                 200 -   successful, returns json with all vulnerabilities for that sbom
                         "vulnerabilities": [
@@ -161,54 +156,66 @@ SBOMs - Everything about sboms
                                 ]
                 404 -   invalid {sbomId}
 
-        4. GET          /sboms/{sbomId}/metadata
-        Finds the metadata of sbom with id of {sbomId}.
-                Responses: 
-                200 -   successful, returns json of metadata
-                        "metadata": [
-                                        {
-                                                "id": 0,
-                                                "timestamp": "2023-07-06T10:48:36-04:00",
-                                                "sbom_id": 1,
-                                                "created_at": "2023-07-19T18:29:46.288Z",
-                                                "updated_at": "2023-07-19T18:29:46.288Z",
-                                                "tools": [
-                                                        {
-                                                                "id": 0,
-                                                                "vendor": "string",
-                                                                "name": "string",
-                                                                "version": "string",
-                                                                "metadatum_id": 0,
-                                                                "created_at": "2023-07-19T18:29:46.315Z",
-                                                                "updated_at": "2023-07-19T18:29:46.315Z"
-                                                        }
-                                                ]
-                                        }
-                                ]
-        5. GET          /users/{userId}/sbom_names
+        6. GET          /users/{userId}/sbom_names
         Get just the names of a user's uploaded, non-archived, SBOMs. Used to check against having two of the same names.
                 Responses: 
                 200 -   successful, returns array of just names 
+                        [
+                                "dummy2"
+                        ]
         
-        6. GET          /users/{userId}/sbom_top
-        Gets every parameter except sbom_components, dependencies, and vulnerabilities for all SBOMs of a user. Used for faster accordion loading. 
+        7. GET          /users/{userId}/sbom_top
+        Gets every parameter except sbom components, dependencies, and vulnerabilities for all SBOMs of a user. Used for faster accordion loading. [Used in GetSBOMs.js]
                 Responses:
-                200 -   successful, 
+                200 -   successful, returns json of just certain parts of all SBOMs
+                        [
+                                {
+                                        "id": 2,
+                                        "bomFormat": "CycloneDX",
+                                        "specVersion": "1.4",
+                                        "serialNumber": "urn:uuid:79e42b7c-882b-4a7e-a94b-ea5d9a89f825",
+                                        "version": 1,
+                                        "name": "dummy2",
+                                        "description": "hello!",
+                                        "archive": false,
+                                        "metadata": [
+                                                {
+                                                        "id": 2,
+                                                        "timestamp": "2023-07-06T10:48:36-04:00",
+                                                        "sbom_id": 2,
+                                                        "created_at": "2023-07-31T14:38:41.837Z",
+                                                        "updated_at": "2023-07-31T14:38:41.837Z",
+                                                        "tools": [
+                                                                {
+                                                                        "id": 2,
+                                                                        "vendor": "anchore",
+                                                                        "name": "grype",
+                                                                        "version": "0.63.1",
+                                                                        "metadatum_id": 2,
+                                                                        "created_at": "2023-07-31T14:38:41.848Z",
+                                                                        "updated_at": "2023-07-31T14:38:41.848Z"
+                                                                }
+                                                        ]
+                                                }
+                                        ],
+                                        "vuln_number": 2
+                                }
+                        ]
         
-        5. GET          /sboms/{sbomId}/archive
-        Change archive (boolean) parameter of SBOM from false to true so it no longer displays in accordion.
+        8. GET          /sboms/{sbomId}/archive
+        Change archive (boolean) parameter of SBOM from false to true so it no longer displays in accordion. [Used in DeleteButton.js]
                 Responses: 
                 204 -   successful, no content. Boolean changed.
 
-        6. POST         /users/{userId}/sboms
+        9. POST         /users/{userId}/sboms
         Add a new sbom to a user's sbom list.
                 Input:
                         requires json file submission
                                 "sbom": {}
                         permits all other fields
 
-        7. PUT          /sboms/{sbomId}
-        Edit a sbom's name and description (user-given fields).
+        10. PUT          /sboms/{sbomId}
+        Edit a sbom's name and description (user-given fields). [Used in EditButton.js]
                 Input:
                         requires json format
                                 "sbom":{}
@@ -217,81 +224,6 @@ SBOMs - Everything about sboms
                                         "name": "string",
                                         "description": "string
                                 }
-
-SBOM COMPONENTS - Everything about sbom components
-
-        1. GET          /sbom_components
-        Fin
-
-        1. GET          /sbom_components/{sbom_componentId}
-        Finds a specific sbom component.
-                Responses:
-                200 -   successful, returns json with just one sbom_component
-                        {
-                                "id": 0,
-                                "bom_ref": "string",
-                                "group": "string",
-                                "name": "string",
-                                "version": "string",
-                                "purl": "string",
-                                "sbom_id": 0,
-                                "created_at": "2023-07-19T18:29:46.041Z",
-                                "updated_at": "2023-07-19T18:29:46.041Z",
-                                "properties": [
-                                        {
-                                                "id": 0,
-                                                "name": "string",
-                                                "value": "string",
-                                                "sbom_component_id": 0,
-                                                "created_at": "2023-07-19T18:29:46.072Z",
-                                                "updated_at": "2023-07-19T18:29:46.072Z"
-                                        }
-                                ]
-                        }
-                404 -   invalid {sbom_componentId}
-        
-METADATA - Everything about metadata
-
-        1. GET         /metadata/{metadatumId}/tools
-        Finds the tools used to create the sbom.
-                Responses:
-                200 -   successful, returns json with just metadata for all sboms with a user
-                        "tools": [
-                                        {
-                                                "id": 0,
-                                                "vendor": "string",
-                                                "name": "string",
-                                                "version": "string",
-                                                "metadatum_id": 0,
-                                                "created_at": "2023-07-19T18:29:46.315Z",
-                                                "updated_at": "2023-07-19T18:29:46.315Z"
-                                        }
-                                ]
-                404 -   invalid {metadatumId}
-
-        ** WILL POSSIBLY GET RID OF 
-        2. GET         /metadata/{metadatumId}
-        Finds a specific metadatum.
-                Responses:
-                200 -   successful, returns json
-                        {
-                                "id": 0,
-                                "timestamp": "2023-07-06T10:48:36-04:00",
-                                "sbom_id": 1,
-                                "created_at": "2023-07-19T18:29:46.288Z",
-                                "updated_at": "2023-07-19T18:29:46.288Z",
-                                "tools": [
-                                        {
-                                                "id": 0,
-                                                "vendor": "string",
-                                                "name": "string",
-                                                "version": "string",
-                                                "metadatum_id": 0,
-                                                "created_at": "2023-07-19T18:29:46.315Z",
-                                                "updated_at": "2023-07-19T18:29:46.315Z"
-                                        }
-                                ]
-                        }
         
 VULNERABILITIES - Everything about vulnerabilities
 
@@ -447,7 +379,8 @@ AUTHORIZATION - All about user authentication
         Creates a new session (cookies) for the current user.
         
         2. GET          /current_user 
-        Declares current user to be the user who's user id corresponds with the session id.
+        Declares current user to be the user who's user id corresponds with the session id. [Used in App.js]
+                Responses:
 
-        GET             /destroy
-        Deletes the session (cookie) for current user when they log out.
+        3. GET             /destroy
+        Deletes the session (cookie) for current user when they log out. [Used in MySideNav.js]
