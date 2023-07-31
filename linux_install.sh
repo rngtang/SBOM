@@ -60,28 +60,27 @@ else
 fi
 
 # use jq to filter out just the vulnerabilities of the grype file 
-jq '{ vulnerabilities: .vulnerabilities }' $selected_file.2.json > vulnerabilities.json
+jq '{ vulnerabilities: .vulnerabilities, components: .components}' $selected_file.2.json > grypefiltered.json
 # use jq to combine the vulnerabilities with the first (cdxgen) file
-jq -s 'add' $selected_file.1.json vulnerabilities.json > $selected_file.SBOM.json
+jq -s 'add' $selected_file.1.json grypefiltered.json > $selected_file.SBOM.json
 
-
-# CLEAN UP
-# remove the extra .xml file created
-if [ -f $selected_file.1.xml ]; then
-    rm $selected_file.1.xml
-fi
-# remove the extra .1 file created
-if [ -f $selected_file.1.json ]; then
-    rm $selected_file.1.json
-fi
-# remove the extra .2 file created
-if [ -f $selected_file.2.json ]; then
-    rm $selected_file.2.json
-fi
-# remove the vulnerabilities file created
-if [ -f vulnerabilities.json ]; then
-    rm vulnerabilities.json
-fi
+# # CLEAN UP
+# # remove the extra .xml file created
+# if [ -f $selected_file.1.xml ]; then
+#     rm $selected_file.1.xml
+# fi
+# # remove the extra .1 file created
+# if [ -f $selected_file.1.json ]; then
+#     rm $selected_file.1.json
+# fi
+# # remove the extra .2 file created
+# if [ -f $selected_file.2.json ]; then
+#     rm $selected_file.2.json
+# fi
+# # remove the vulnerabilities file created
+# if [ -f grypefiltered.json ]; then
+#     rm grypefiltered.json
+# fi
 
 # finished
 echo -e "${COLOR}You have now created $selected_file.SBOM.json, which is your SBOM to upload. ${NC}" 
