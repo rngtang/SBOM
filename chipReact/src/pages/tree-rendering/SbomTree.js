@@ -7,6 +7,7 @@ import './custom-tree.css';
 import  styles from '../Vulnerability.module.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import ModalTree from '../../components/ModalTree';
 
 
 const containerStyles = {
@@ -22,6 +23,7 @@ function SbomTree() {
   const [affected, setAffected] = useState(null);
   const [sbomName, setSbomName] = useState("");
   const [sbomDesc, setSbomDesc] = useState("");
+  const [showModal, setShowModal] = useState(true);
 
   // get all refs of affected things;
       const fetchAffected = () => {
@@ -151,6 +153,10 @@ function SbomTree() {
       <div style={containerStyles}>
         {data && <Tree data={data} translate={{ x: 400, y: 200 }} separation={{ siblings: 1.5, nonSiblings: 3 }} depthFactor={800} renderCustomNodeElement={renderCustomNodeElement} pathFunc='disjointelbow' />} {/* Increase the depthFactor here */}
       </div>
+      <ModalTree
+          show={showModal}
+          onHide={() => setShowModal(false)}
+      />
     </>
     
 

@@ -7,7 +7,7 @@ export default function TreeButton ({sbomId}) {
     const navigate = useNavigate();
     // routes user to tree page on button click
     const handleButtonClick = () => {
-      navigate(`/sbom/${sbomId}`);
+        navigate(`/sbom/${sbomId}`);
     }
     
     return (
