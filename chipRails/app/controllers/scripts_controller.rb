@@ -65,10 +65,9 @@ class ScriptsController < ApplicationController
         fi
 
         # use jq to filter out just the vulnerabilities of the grype file 
-        jq '{ vulnerabilities: .vulnerabilities }' $selected_file.2.json > vulnerabilities.json
+        jq '{ vulnerabilities: .vulnerabilities, components: .components}' $selected_file.2.json > grypefiltered.json
         # use jq to combine the vulnerabilities with the first (cdxgen) file
-        jq -s 'add' $selected_file.1.json vulnerabilities.json > $selected_file.SBOM.json
-
+        jq -s 'add' $selected_file.1.json grypefiltered.json > $selected_file.SBOM.json
 
         # CLEAN UP
         # remove the extra .xml file created
@@ -84,8 +83,8 @@ class ScriptsController < ApplicationController
             rm $selected_file.2.json
         fi
         # remove the vulnerabilities file created
-        if [ -f vulnerabilities.json ]; then
-            rm vulnerabilities.json
+        if [ -f grypefiltered.json ]; then
+            rm grypefiltered.json
         fi
 
         # finished
@@ -156,10 +155,9 @@ class ScriptsController < ApplicationController
         fi
 
         # use jq to filter out just the vulnerabilities of the grype file 
-        jq '{ vulnerabilities: .vulnerabilities }' $selected_file.2.json > vulnerabilities.json
+        jq '{ vulnerabilities: .vulnerabilities, components: .components}' $selected_file.2.json > grypefiltered.json
         # use jq to combine the vulnerabilities with the first (cdxgen) file
-        jq -s 'add' $selected_file.1.json vulnerabilities.json > $selected_file.SBOM.json
-
+        jq -s 'add' $selected_file.1.json grypefiltered.json > $selected_file.SBOM.json
 
         # CLEAN UP
         # remove the extra .xml file created
@@ -175,8 +173,8 @@ class ScriptsController < ApplicationController
             rm $selected_file.2.json
         fi
         # remove the vulnerabilities file created
-        if [ -f vulnerabilities.json ]; then
-            rm vulnerabilities.json
+        if [ -f grypefiltered.json ]; then
+            rm grypefiltered.json
         fi
 
         # finished
