@@ -35,20 +35,23 @@ function SbomTree() {
             })
     }
   useEffect(() => {
-    fetchAffected()}
+    fetchAffected()
+  }, []
     );
   
   const fetchSbom = () => {
-    fetch(`http://localhost:8080/sboms/${sbomId}`)
+    fetch(`http://localhost:8080/sboms/${sbomId}/namedesc`)
     .then((response) => response.json())
     .then((data) => {
-      setSbomName(data.name)
-      setSbomDesc(data.description)
+      setSbomName(data[0])
+      setSbomDesc(data[1])
     })
   }
   useEffect(() => {
     fetchSbom()
-  });
+  }, [sbomId]);
+
+  
   const assignDepth = (node, depth = 0) => {
     node.depth = depth;
     if (node.children) {
@@ -128,7 +131,7 @@ function SbomTree() {
   }, [sbomId]);
 
   const handleButtonClick = () => {
-    navigate('/viewSBOMs');
+    navigate('/viewsboms');
   }
   //   const addCollapsedFlag = (node, level = 0) => {
   //   return {
