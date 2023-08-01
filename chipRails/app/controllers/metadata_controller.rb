@@ -16,6 +16,6 @@ class MetadataController < ApplicationController
 
     # Parameters that a metadatum accepts
     def user_params
-        params.require(:metadatum).permit(:timestamp)
+        params.require(:metadatum).permit(:timestamp, :rootNode)
     end
 end
