@@ -5,7 +5,7 @@ export default function DownloadLinuxScript() {
   // create a state for catching an error (for display purposes)
   const [error, setError] = useState(null);
   // create a state for routing the file URL, as if it is a pseudo end point
-  const [fileurl, setFileurl] = useState(0);
+  const [fileurl, setFileurl] = useState(null);
 
   const handleDownload = () => {
     // hit endpoint to fetch script 
