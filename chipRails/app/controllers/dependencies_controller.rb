@@ -39,17 +39,18 @@ class DependenciesController < ApplicationController
         params.permit(:ref, dependsOn: [])
     end
 
-def dependencies_tree
-  sbom_id = params[:sbom_id]
-  sbom = Sbom.find(sbom_id)
-  dependencies = sbom.dependencies
+    def dependencies_tree
+      sbom_id = params[:sbom_id]
+      @sbom = Sbom.find(sbom_id)
+      dependencies = @sbom.dependencies
 
-  # The root_ref is the name of the root node
-  root_ref = dependencies.first.ref
-  tree = build_dependency_tree(dependencies, root_ref)
+      # The root_ref is the name of the root node
+      @meta = Metadatum.find_by(sbom_id: params[:sbom_id])
+      root_ref = @meta.rootNode
+      tree = build_dependency_tree(dependencies, root_ref)
 
-  render json: tree
-end
+      render json: tree
+    end
 
 
 def build_dependency_tree(dependencies, root_ref)

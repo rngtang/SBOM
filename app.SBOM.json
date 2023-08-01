@@ -1,17 +1,35 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:94986b0c-d05b-4e50-90e8-b1167a9503e4",
+  "serialNumber": "urn:uuid:4b046676-bc1a-46e1-b010-392795547e2a",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-07-26T15:18:17-04:00",
+    "timestamp": "2023-08-01T15:33:51.311Z",
     "tools": [
       {
-        "vendor": "anchore",
-        "name": "grype",
-        "version": "0.64.2"
+        "vendor": "cyclonedx",
+        "name": "cdxgen",
+        "version": "8.6.0"
       }
-    ]
+    ],
+    "authors": [
+      {
+        "name": "Prabhu Subramanian",
+        "email": "prabhu@appthreat.com"
+      }
+    ],
+    "component": {
+      "author": "",
+      "publisher": "",
+      "group": "",
+      "name": "chip_react",
+      "version": "0.1.0",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:application/chip_react@0.1.0",
+      "type": "application",
+      "bom-ref": "pkg:application/chip_react@0.1.0"
+    }
   },
   "components": [
     {
@@ -423,23 +441,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/ajv@8.12.0?package-id=57744f148c55ee07",
-      "type": "library",
-      "name": "ajv",
-      "version": "8.12.0",
-      "purl": "pkg:npm/ajv@8.12.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/ajv-formats@2.1.1?package-id=72077d0d7423d03f",
       "type": "library",
       "name": "ajv-formats",
@@ -632,23 +633,6 @@
       "name": "argparse",
       "version": "1.0.10",
       "purl": "pkg:npm/argparse@1.0.10",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/argparse@2.0.1?package-id=642afa9fdaa265df",
-      "type": "library",
-      "name": "argparse",
-      "version": "2.0.1",
-      "purl": "pkg:npm/argparse@2.0.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -865,23 +849,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/astral-regex@2.0.0?package-id=b45e08acec6cce52",
-      "type": "library",
-      "name": "astral-regex",
-      "version": "2.0.0",
-      "purl": "pkg:npm/astral-regex@2.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/async@3.2.4?package-id=a5c479f158196cb6",
       "type": "library",
       "name": "async",
@@ -921,23 +888,6 @@
       "name": "at-least-node",
       "version": "1.0.0",
       "purl": "pkg:npm/at-least-node@1.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/appthreat/atom@0.10.1?package-id=a795e64bb3dca4f1",
-      "type": "library",
-      "name": "atom",
-      "version": "0.10.1",
-      "purl": "pkg:npm/appthreat/atom@0.10.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -1783,23 +1733,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/body-parser@1.20.2?package-id=42fde7f303be57c1",
-      "type": "library",
-      "name": "body-parser",
-      "version": "1.20.2",
-      "purl": "pkg:npm/body-parser@1.20.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/body-parser/node_modules/bytes@3.1.2?package-id=280c74896689caf9",
       "type": "library",
       "name": "body-parser/node_modules/bytes",
@@ -1902,23 +1835,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/boolean@3.2.0?package-id=25b9a173037eb0d2",
-      "type": "library",
-      "name": "boolean",
-      "version": "3.2.0",
-      "purl": "pkg:npm/boolean@3.2.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:gem/bootsnap@1.16.0?package-id=d3752936ba005a6a",
       "type": "library",
       "name": "bootsnap",
@@ -1958,23 +1874,6 @@
       "name": "brace-expansion",
       "version": "1.1.11",
       "purl": "pkg:npm/brace-expansion@1.1.11",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/brace-expansion@2.0.1?package-id=342632655bb24f5a",
-      "type": "library",
-      "name": "brace-expansion",
-      "version": "2.0.1",
-      "purl": "pkg:npm/brace-expansion@2.0.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -2055,23 +1954,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/buffer-equal-constant-time@1.0.1?package-id=14a2b38514436781",
-      "type": "library",
-      "name": "buffer-equal-constant-time",
-      "version": "1.0.1",
-      "purl": "pkg:npm/buffer-equal-constant-time@1.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/buffer-from@1.1.2?package-id=274d9ee9687d10c0",
       "type": "library",
       "name": "buffer-from",
@@ -2140,62 +2022,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/bytes@3.1.2?package-id=ca76dc7bcf193f40",
-      "type": "library",
-      "name": "bytes",
-      "version": "3.1.2",
-      "purl": "pkg:npm/bytes@3.1.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/emotion/cache@11.11.0?package-id=033fa86f30fe29cb",
       "type": "library",
       "name": "cache",
       "version": "11.11.0",
       "purl": "pkg:npm/emotion/cache@11.11.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/cacheable-lookup@5.0.4?package-id=aa0c2b14f5a255eb",
-      "type": "library",
-      "name": "cacheable-lookup",
-      "version": "5.0.4",
-      "purl": "pkg:npm/cacheable-lookup@5.0.4",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/cacheable-request@7.0.4?package-id=2b40c4b79760d34e",
-      "type": "library",
-      "name": "cacheable-request",
-      "version": "7.0.4",
-      "purl": "pkg:npm/cacheable-request@7.0.4",
       "properties": [
         {
           "name": "syft:package:language",
@@ -2361,40 +2192,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/cyclonedx/cdxgen@8.6.0?package-id=300629744985ccef",
-      "type": "library",
-      "name": "cdxgen",
-      "version": "8.6.0",
-      "purl": "pkg:npm/cyclonedx/cdxgen@8.6.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/cyclonedx/cdxgen-plugins-bin@1.2.0?package-id=b3fdb43544229a2a",
-      "type": "library",
-      "name": "cdxgen-plugins-bin",
-      "version": "1.2.0",
-      "purl": "pkg:npm/cyclonedx/cdxgen-plugins-bin@1.2.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/chain-function@1.0.1?package-id=dacdc9e108a93ae7",
       "type": "library",
       "name": "chain-function",
@@ -2480,40 +2277,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/cheerio@1.0.0-rc.12?package-id=11e10213dea654c1",
-      "type": "library",
-      "name": "cheerio",
-      "version": "1.0.0-rc.12",
-      "purl": "pkg:npm/cheerio@1.0.0-rc.12",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/cheerio-select@2.1.0?package-id=72c276941d9ae197",
-      "type": "library",
-      "name": "cheerio-select",
-      "version": "2.1.0",
-      "purl": "pkg:npm/cheerio-select@2.1.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/chokidar@3.5.3?package-id=d39b5008b75adc31",
       "type": "library",
       "name": "chokidar",
@@ -2536,23 +2299,6 @@
       "name": "chokidar/node_modules/glob-parent",
       "version": "5.1.2",
       "purl": "pkg:npm/chokidar/node_modules/glob-parent@5.1.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/chownr@2.0.0?package-id=e7f65c29fe7524ba",
-      "type": "library",
-      "name": "chownr",
-      "version": "2.0.0",
-      "purl": "pkg:npm/chownr@2.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -2684,45 +2430,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/cliui@8.0.1?package-id=e23c4ca38fdbac13",
-      "type": "library",
-      "name": "cliui",
-      "version": "8.0.1",
-      "purl": "pkg:npm/cliui@8.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/clone@2.1.2?package-id=0e7ee099b6415395",
       "type": "library",
       "name": "clone",
       "version": "2.1.2",
       "purl": "pkg:npm/clone@2.1.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/clone-response@1.0.3?package-id=7b9fa42cde9e2a86",
-      "type": "library",
-      "name": "clone-response",
-      "version": "1.0.3",
-      "purl": "pkg:npm/clone-response@1.0.3",
       "properties": [
         {
           "name": "syft:package:language",
@@ -3024,23 +2736,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/compression/node_modules/bytes@3.0.0?package-id=d29134999aff34d9",
-      "type": "library",
-      "name": "compression/node_modules/bytes",
-      "version": "3.0.0",
-      "purl": "pkg:npm/compression/node_modules/bytes@3.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/compression/node_modules/debug@2.6.9?package-id=819f0d7345d38311",
       "type": "library",
       "name": "compression/node_modules/debug",
@@ -3160,62 +2855,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/connect@3.7.0?package-id=2c89eb91d02235c0",
-      "type": "library",
-      "name": "connect",
-      "version": "3.7.0",
-      "purl": "pkg:npm/connect@3.7.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/connect-history-api-fallback@2.0.0?package-id=1ba53ab3ed2826b8",
       "type": "library",
       "name": "connect-history-api-fallback",
       "version": "2.0.0",
       "purl": "pkg:npm/connect-history-api-fallback@2.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/connect/node_modules/debug@2.6.9?package-id=e6e9251d1f66d741",
-      "type": "library",
-      "name": "connect/node_modules/debug",
-      "version": "2.6.9",
-      "purl": "pkg:npm/connect/node_modules/debug@2.6.9",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/connect/node_modules/ms@2.0.0?package-id=a9aedb7d75a77a34",
-      "type": "library",
-      "name": "connect/node_modules/ms",
-      "version": "2.0.0",
-      "purl": "pkg:npm/connect/node_modules/ms@2.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -3947,23 +3591,6 @@
       "name": "css-select",
       "version": "4.3.0",
       "purl": "pkg:npm/css-select@4.3.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/css-select@5.1.0?package-id=20bcfaec0853007b",
-      "type": "library",
-      "name": "css-select",
-      "version": "5.1.0",
-      "purl": "pkg:npm/css-select@5.1.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -5030,40 +4657,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/decompress-response@6.0.0?package-id=1b2ea1e7870e436e",
-      "type": "library",
-      "name": "decompress-response",
-      "version": "6.0.0",
-      "purl": "pkg:npm/decompress-response@6.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/decompress-response/node_modules/mimic-response@3.1.0?package-id=0911f1543f153eb2",
-      "type": "library",
-      "name": "decompress-response/node_modules/mimic-response",
-      "version": "3.1.0",
-      "purl": "pkg:npm/decompress-response/node_modules/mimic-response@3.1.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/dedent@0.7.0?package-id=5e4d7c6e401097b3",
       "type": "library",
       "name": "dedent",
@@ -5137,23 +4730,6 @@
       "name": "default-gateway",
       "version": "6.0.3",
       "purl": "pkg:npm/default-gateway@6.0.3",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/defer-to-connect@2.0.1?package-id=6f52b396f4f46539",
-      "type": "library",
-      "name": "defer-to-connect",
-      "version": "2.0.1",
-      "purl": "pkg:npm/defer-to-connect@2.0.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -5574,23 +5150,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/dom-serializer@2.0.0?package-id=ef710a81898219ad",
-      "type": "library",
-      "name": "dom-serializer",
-      "version": "2.0.0",
-      "purl": "pkg:npm/dom-serializer@2.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/testing-library/dom/node_modules/ansi-styles@4.3.0?package-id=025265ea91eb582c",
       "type": "library",
       "name": "dom/node_modules/ansi-styles",
@@ -5778,45 +5337,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/domhandler@5.0.3?package-id=0b77fd6cad43a676",
-      "type": "library",
-      "name": "domhandler",
-      "version": "5.0.3",
-      "purl": "pkg:npm/domhandler@5.0.3",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/domutils@2.8.0?package-id=d81a2780bea7049d",
       "type": "library",
       "name": "domutils",
       "version": "2.8.0",
       "purl": "pkg:npm/domutils@2.8.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/domutils@3.1.0?package-id=7ecc3c507d96b902",
-      "type": "library",
-      "name": "domutils",
-      "version": "3.1.0",
-      "purl": "pkg:npm/domutils@3.1.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -5897,40 +5422,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/ecdsa-sig-formatter@1.0.11?package-id=510229025ce39530",
-      "type": "library",
-      "name": "ecdsa-sig-formatter",
-      "version": "1.0.11",
-      "purl": "pkg:npm/ecdsa-sig-formatter@1.0.11",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/edn-data@1.0.0?package-id=b6d48cec2b0a9879",
-      "type": "library",
-      "name": "edn-data",
-      "version": "1.0.0",
-      "purl": "pkg:npm/edn-data@1.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/ee-first@1.1.1?package-id=71b82f4424ff7791",
       "type": "library",
       "name": "ee-first",
@@ -5999,23 +5490,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/emoji-regex@8.0.0?package-id=e98b2e340a596d5d",
-      "type": "library",
-      "name": "emoji-regex",
-      "version": "8.0.0",
-      "purl": "pkg:npm/emoji-regex@8.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/emoji-regex@9.2.2?package-id=92783669cb1fd33c",
       "type": "library",
       "name": "emoji-regex",
@@ -6067,23 +5541,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/end-of-stream@1.4.4?package-id=9c89be854441092b",
-      "type": "library",
-      "name": "end-of-stream",
-      "version": "1.4.4",
-      "purl": "pkg:npm/end-of-stream@1.4.4",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/enhanced-resolve@5.15.0?package-id=2e64a777142cd6d4",
       "type": "library",
       "name": "enhanced-resolve",
@@ -6106,23 +5563,6 @@
       "name": "entities",
       "version": "2.2.0",
       "purl": "pkg:npm/entities@2.2.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/entities@4.5.0?package-id=c20b31f3e4135776",
-      "type": "library",
-      "name": "entities",
-      "version": "4.5.0",
-      "purl": "pkg:npm/entities@4.5.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -6310,23 +5750,6 @@
       "name": "es-to-primitive",
       "version": "1.2.1",
       "purl": "pkg:npm/es-to-primitive@1.2.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/es6-error@4.1.1?package-id=1e6da063ab921f1e",
-      "type": "library",
-      "name": "es6-error",
-      "version": "4.1.1",
-      "purl": "pkg:npm/es6-error@4.1.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -8056,23 +7479,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/finalhandler@1.1.2?package-id=d6b60813c27a7717",
-      "type": "library",
-      "name": "finalhandler",
-      "version": "1.1.2",
-      "purl": "pkg:npm/finalhandler@1.1.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/finalhandler@1.2.0?package-id=95a4d591edf6aae4",
       "type": "library",
       "name": "finalhandler",
@@ -8112,23 +7518,6 @@
       "name": "finalhandler/node_modules/ms",
       "version": "2.0.0",
       "purl": "pkg:npm/finalhandler/node_modules/ms@2.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/finalhandler/node_modules/on-finished@2.3.0?package-id=ad7f64d3f53107b3",
-      "type": "library",
-      "name": "finalhandler/node_modules/on-finished",
-      "version": "2.3.0",
-      "purl": "pkg:npm/finalhandler/node_modules/on-finished@2.3.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -8549,23 +7938,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/fs-minipass@2.1.0?package-id=89950e80b70749ee",
-      "type": "library",
-      "name": "fs-minipass",
-      "version": "2.1.0",
-      "purl": "pkg:npm/fs-minipass@2.1.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/fs-monkey@1.0.4?package-id=d10fe33e49ca2eb8",
       "type": "library",
       "name": "fs-monkey",
@@ -8753,23 +8125,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/babel/generator@7.22.9?package-id=6bed7009fcd22520",
-      "type": "library",
-      "name": "generator",
-      "version": "7.22.9",
-      "purl": "pkg:npm/babel/generator@7.22.9",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/gensync@1.0.0-beta.2?package-id=99468aef319002a4",
       "type": "library",
       "name": "gensync",
@@ -8855,23 +8210,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/get-stream@5.2.0?package-id=3a85009b1c5bc687",
-      "type": "library",
-      "name": "get-stream",
-      "version": "5.2.0",
-      "purl": "pkg:npm/get-stream@5.2.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/get-stream@6.0.1?package-id=7891ffda05f4de5f",
       "type": "library",
       "name": "get-stream",
@@ -8923,23 +8261,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/glob@8.1.0?package-id=278dbc0e9638751c",
-      "type": "library",
-      "name": "glob",
-      "version": "8.1.0",
-      "purl": "pkg:npm/glob@8.1.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/glob-parent@6.0.2?package-id=b560edb3aeea8fd3",
       "type": "library",
       "name": "glob-parent",
@@ -8962,23 +8283,6 @@
       "name": "glob-to-regexp",
       "version": "0.4.1",
       "purl": "pkg:npm/glob-to-regexp@0.4.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/global-agent@3.0.0?package-id=c28c2b1b4556dca6",
-      "type": "library",
-      "name": "global-agent",
-      "version": "3.0.0",
-      "purl": "pkg:npm/global-agent@3.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -9132,23 +8436,6 @@
       "name": "gopd",
       "version": "1.0.1",
       "purl": "pkg:npm/gopd@1.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/got@11.8.6?package-id=ba68a2e6c8f480dd",
-      "type": "library",
-      "name": "got",
-      "version": "11.8.6",
-      "purl": "pkg:npm/got@11.8.6",
       "properties": [
         {
           "name": "syft:package:language",
@@ -9875,23 +9162,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/babel/helper-split-export-declaration@7.22.6?package-id=956a3602318105f0",
-      "type": "library",
-      "name": "helper-split-export-declaration",
-      "version": "7.22.6",
-      "purl": "pkg:npm/babel/helper-split-export-declaration@7.22.6",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/babel/helper-string-parser@7.22.5?package-id=94ae2884cd37a936",
       "type": "library",
       "name": "helper-string-parser",
@@ -10300,40 +9570,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/htmlparser2@8.0.2?package-id=0778ffa2eac5381e",
-      "type": "library",
-      "name": "htmlparser2",
-      "version": "8.0.2",
-      "purl": "pkg:npm/htmlparser2@8.0.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/http-cache-semantics@4.1.1?package-id=47a8a70f24f7f061",
-      "type": "library",
-      "name": "http-cache-semantics",
-      "version": "4.1.1",
-      "purl": "pkg:npm/http-cache-semantics@4.1.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/http-deceiver@1.2.7?package-id=11f4286d5dca3f32",
       "type": "library",
       "name": "http-deceiver",
@@ -10356,23 +9592,6 @@
       "name": "http-errors",
       "version": "2.0.0",
       "purl": "pkg:npm/http-errors@2.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/http-errors/node_modules/statuses@2.0.1?package-id=2149c013987203aa",
-      "type": "library",
-      "name": "http-errors/node_modules/statuses",
-      "version": "2.0.1",
-      "purl": "pkg:npm/http-errors/node_modules/statuses@2.0.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -10453,40 +9672,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/szmarczak/http-timer@4.0.6?package-id=1c76b17009721e38",
-      "type": "library",
-      "name": "http-timer",
-      "version": "4.0.6",
-      "purl": "pkg:npm/szmarczak/http-timer@4.0.6",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/http2-wrapper@1.0.3?package-id=20205adb4e71342c",
-      "type": "library",
-      "name": "http2-wrapper",
-      "version": "1.0.3",
-      "purl": "pkg:npm/http2-wrapper@1.0.3",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/https-proxy-agent@5.0.1?package-id=230cb48a27259a56",
       "type": "library",
       "name": "https-proxy-agent",
@@ -10534,23 +9719,6 @@
         {
           "name": "syft:package:type",
           "value": "gem"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/iconv-lite@0.4.24?package-id=90b5347c43ce63eb",
-      "type": "library",
-      "name": "iconv-lite",
-      "version": "0.4.24",
-      "purl": "pkg:npm/iconv-lite@0.4.24",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
         }
       ]
     },
@@ -10959,23 +10127,6 @@
         {
           "name": "syft:package:type",
           "value": "gem"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/sindresorhus/is@4.6.0?package-id=96445340077d68ab",
-      "type": "library",
-      "name": "is",
-      "version": "4.6.0",
-      "purl": "pkg:npm/sindresorhus/is@4.6.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
         }
       ]
     },
@@ -14669,23 +13820,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/js-yaml@4.1.0?package-id=c4be16becf788aab",
-      "type": "library",
-      "name": "js-yaml",
-      "version": "4.1.0",
-      "purl": "pkg:npm/js-yaml@4.1.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/jsdom@16.7.0?package-id=1f7bb35a96db8773",
       "type": "library",
       "name": "jsdom",
@@ -14733,23 +13867,6 @@
         {
           "name": "syft:package:type",
           "value": "gem"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/json-buffer@3.0.1?package-id=5f5042bcff1f304a",
-      "type": "library",
-      "name": "json-buffer",
-      "version": "3.0.1",
-      "purl": "pkg:npm/json-buffer@3.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
         }
       ]
     },
@@ -14805,45 +13922,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/json-schema-traverse@1.0.0?package-id=1c9a21f957c4c462",
-      "type": "library",
-      "name": "json-schema-traverse",
-      "version": "1.0.0",
-      "purl": "pkg:npm/json-schema-traverse@1.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/json-stable-stringify-without-jsonify@1.0.1?package-id=863275333a17babc",
       "type": "library",
       "name": "json-stable-stringify-without-jsonify",
       "version": "1.0.1",
       "purl": "pkg:npm/json-stable-stringify-without-jsonify@1.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/json-stringify-safe@5.0.1?package-id=1beac3eb8302110d",
-      "type": "library",
-      "name": "json-stringify-safe",
-      "version": "5.0.1",
-      "purl": "pkg:npm/json-stringify-safe@5.0.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -14912,57 +13995,6 @@
       "name": "jsx-ast-utils",
       "version": "3.3.3",
       "purl": "pkg:npm/jsx-ast-utils@3.3.3",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/jwa@2.0.0?package-id=0482607a27ad8126",
-      "type": "library",
-      "name": "jwa",
-      "version": "2.0.0",
-      "purl": "pkg:npm/jwa@2.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/jws@4.0.0?package-id=129c06f39bfa309e",
-      "type": "library",
-      "name": "jws",
-      "version": "4.0.0",
-      "purl": "pkg:npm/jws@4.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/keyv@4.5.3?package-id=34b9c462d942beab",
-      "type": "library",
-      "name": "keyv",
-      "version": "4.5.3",
-      "purl": "pkg:npm/keyv@4.5.3",
       "properties": [
         {
           "name": "syft:package:language",
@@ -15400,23 +14432,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/lodash.truncate@4.4.2?package-id=09960126f23a29b6",
-      "type": "library",
-      "name": "lodash.truncate",
-      "version": "4.4.2",
-      "purl": "pkg:npm/lodash.truncate@4.4.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/lodash.uniq@4.5.0?package-id=60a50795019b04de",
       "type": "library",
       "name": "lodash.uniq",
@@ -15502,45 +14517,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/lowercase-keys@2.0.0?package-id=0dab0d805b30ab51",
-      "type": "library",
-      "name": "lowercase-keys",
-      "version": "2.0.0",
-      "purl": "pkg:npm/lowercase-keys@2.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/lru-cache@5.1.1?package-id=981349dec657f0b2",
       "type": "library",
       "name": "lru-cache",
       "version": "5.1.1",
       "purl": "pkg:npm/lru-cache@5.1.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/lru-cache@6.0.0?package-id=4fc632cc046a7a7b",
-      "type": "library",
-      "name": "lru-cache",
-      "version": "6.0.0",
-      "purl": "pkg:npm/lru-cache@6.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -15668,40 +14649,6 @@
         {
           "name": "syft:package:type",
           "value": "gem"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/matcher@3.0.0?package-id=1eefc930520d8a8f",
-      "type": "library",
-      "name": "matcher",
-      "version": "3.0.0",
-      "purl": "pkg:npm/matcher@3.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/matcher/node_modules/escape-string-regexp@4.0.0?package-id=a3f73306e7d243dd",
-      "type": "library",
-      "name": "matcher/node_modules/escape-string-regexp",
-      "version": "4.0.0",
-      "purl": "pkg:npm/matcher/node_modules/escape-string-regexp@4.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
         }
       ]
     },
@@ -15961,23 +14908,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/mimic-response@1.0.1?package-id=99e751df9267c488",
-      "type": "library",
-      "name": "mimic-response",
-      "version": "1.0.1",
-      "purl": "pkg:npm/mimic-response@1.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/min-indent@1.0.1?package-id=a95cd2a7f340ac0a",
       "type": "library",
       "name": "min-indent",
@@ -16131,45 +15061,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/minimatch@5.1.6?package-id=407528357c62b8ba",
-      "type": "library",
-      "name": "minimatch",
-      "version": "5.1.6",
-      "purl": "pkg:npm/minimatch@5.1.6",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/minimist@1.2.8?package-id=ac8f9601624f84d6",
       "type": "library",
       "name": "minimist",
       "version": "1.2.8",
       "purl": "pkg:npm/minimist@1.2.8",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/minipass@3.3.6?package-id=2d61b8a82e05142c",
-      "type": "library",
-      "name": "minipass",
-      "version": "3.3.6",
-      "purl": "pkg:npm/minipass@3.3.6",
       "properties": [
         {
           "name": "syft:package:language",
@@ -16199,45 +15095,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/minizlib@2.1.2?package-id=7c89bfaa3532db28",
-      "type": "library",
-      "name": "minizlib",
-      "version": "2.1.2",
-      "purl": "pkg:npm/minizlib@2.1.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/mkdirp@0.5.6?package-id=c0e2713bbdf5cf17",
       "type": "library",
       "name": "mkdirp",
       "version": "0.5.6",
       "purl": "pkg:npm/mkdirp@0.5.6",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/mkdirp@1.0.4?package-id=1a334949517215b2",
-      "type": "library",
-      "name": "mkdirp",
-      "version": "1.0.4",
-      "purl": "pkg:npm/mkdirp@1.0.4",
       "properties": [
         {
           "name": "syft:package:language",
@@ -16578,23 +15440,6 @@
       "name": "node-releases",
       "version": "2.0.12",
       "purl": "pkg:npm/node-releases@2.0.12",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/node-stream-zip@1.15.0?package-id=a91f464d2cb30c8a",
-      "type": "library",
-      "name": "node-stream-zip",
-      "version": "1.15.0",
-      "purl": "pkg:npm/node-stream-zip@1.15.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -17083,23 +15928,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/p-cancelable@2.1.1?package-id=c5994400458a247c",
-      "type": "library",
-      "name": "p-cancelable",
-      "version": "2.1.1",
-      "purl": "pkg:npm/p-cancelable@2.1.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/p-limit@3.1.0?package-id=39d25869dd9e7ac5",
       "type": "library",
       "name": "p-limit",
@@ -17168,23 +15996,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/packageurl-js@1.0.2?package-id=c62978060adf0c74",
-      "type": "library",
-      "name": "packageurl-js",
-      "version": "1.0.2",
-      "purl": "pkg:npm/packageurl-js@1.0.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/param-case@3.0.4?package-id=927e67137994f34e",
       "type": "library",
       "name": "param-case",
@@ -17236,62 +16047,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/parse-packagejson-name@1.0.1?package-id=6bfd279ede10d0a5",
-      "type": "library",
-      "name": "parse-packagejson-name",
-      "version": "1.0.1",
-      "purl": "pkg:npm/parse-packagejson-name@1.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/parse5@6.0.1?package-id=6b4ccc46379de82f",
       "type": "library",
       "name": "parse5",
       "version": "6.0.1",
       "purl": "pkg:npm/parse5@6.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/parse5@7.1.2?package-id=0220a4a189b8b3c8",
-      "type": "library",
-      "name": "parse5",
-      "version": "7.1.2",
-      "purl": "pkg:npm/parse5@7.1.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/parse5-htmlparser2-tree-adapter@7.0.0?package-id=8340e94cc7fc9661",
-      "type": "library",
-      "name": "parse5-htmlparser2-tree-adapter",
-      "version": "7.0.0",
-      "purl": "pkg:npm/parse5-htmlparser2-tree-adapter@7.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -17326,23 +16086,6 @@
       "name": "parser",
       "version": "7.22.5",
       "purl": "pkg:npm/babel/parser@7.22.5",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/babel/parser@7.22.7?package-id=23b567629a63f7e5",
-      "type": "library",
-      "name": "parser",
-      "version": "7.22.7",
-      "purl": "pkg:npm/babel/parser@7.22.7",
       "properties": [
         {
           "name": "syft:package:language",
@@ -21078,23 +19821,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/prettify-xml@1.2.0?package-id=76002a1246c6d83b",
-      "type": "library",
-      "name": "prettify-xml",
-      "version": "1.2.0",
-      "purl": "pkg:npm/prettify-xml@1.2.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/pretty-bytes@5.6.0?package-id=112f469df32d7813",
       "type": "library",
       "name": "pretty-bytes",
@@ -21299,23 +20025,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/properties-reader@2.2.0?package-id=e0d8ae4c777fcfb6",
-      "type": "library",
-      "name": "properties-reader",
-      "version": "2.2.0",
-      "purl": "pkg:npm/properties-reader@2.2.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/proxy-addr@2.0.7?package-id=9236e8f5e94f983a",
       "type": "library",
       "name": "proxy-addr",
@@ -21418,23 +20127,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/pump@3.0.0?package-id=d4ce813ca976d681",
-      "type": "library",
-      "name": "pump",
-      "version": "3.0.0",
-      "purl": "pkg:npm/pump@3.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/punycode@2.3.0?package-id=2057deefcca40253",
       "type": "library",
       "name": "punycode",
@@ -21508,23 +20200,6 @@
       "name": "queue-microtask",
       "version": "1.2.3",
       "purl": "pkg:npm/queue-microtask@1.2.3",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/quick-lru@5.1.1?package-id=928054bae07f2743",
-      "type": "library",
-      "name": "quick-lru",
-      "version": "5.1.1",
-      "purl": "pkg:npm/quick-lru@5.1.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -21763,23 +20438,6 @@
       "name": "raw-body",
       "version": "2.5.1",
       "purl": "pkg:npm/raw-body@2.5.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/raw-body@2.5.2?package-id=7a33b02bb06dc351",
-      "type": "library",
-      "name": "raw-body",
-      "version": "2.5.2",
-      "purl": "pkg:npm/raw-body@2.5.2",
       "properties": [
         {
           "name": "syft:package:language",
@@ -23050,23 +21708,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/resolve-alpn@1.2.1?package-id=087306b7cabb9a38",
-      "type": "library",
-      "name": "resolve-alpn",
-      "version": "1.2.1",
-      "purl": "pkg:npm/resolve-alpn@1.2.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/resolve-cwd@3.0.0?package-id=d27a41757fd97ec6",
       "type": "library",
       "name": "resolve-cwd",
@@ -23203,23 +21844,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/responselike@2.0.1?package-id=5bfd27e767a8cb52",
-      "type": "library",
-      "name": "responselike",
-      "version": "2.0.1",
-      "purl": "pkg:npm/responselike@2.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/retry@0.13.1?package-id=24962f37fda446d0",
       "type": "library",
       "name": "retry",
@@ -23276,23 +21900,6 @@
       "name": "rimraf",
       "version": "3.0.2",
       "purl": "pkg:npm/rimraf@3.0.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/roarr@2.15.4?package-id=d82782b1aff78e97",
-      "type": "library",
-      "name": "roarr",
-      "version": "2.15.4",
-      "purl": "pkg:npm/roarr@2.15.4",
       "properties": [
         {
           "name": "syft:package:language",
@@ -23565,23 +22172,6 @@
       "name": "safe-array-concat",
       "version": "1.0.0",
       "purl": "pkg:npm/safe-array-concat@1.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/safe-buffer@5.1.2?package-id=4faa6cd82c318c0d",
-      "type": "library",
-      "name": "safe-buffer",
-      "version": "5.1.2",
-      "purl": "pkg:npm/safe-buffer@5.1.2",
       "properties": [
         {
           "name": "syft:package:language",
@@ -23900,40 +22490,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/semver@7.5.4?package-id=69ded6e5c43f5e27",
-      "type": "library",
-      "name": "semver",
-      "version": "7.5.4",
-      "purl": "pkg:npm/semver@7.5.4",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/semver-compare@1.0.0?package-id=870f2b38e8c4fc60",
-      "type": "library",
-      "name": "semver-compare",
-      "version": "1.0.0",
-      "purl": "pkg:npm/semver-compare@1.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/semver/node_modules/lru-cache@6.0.0?package-id=0865826149023bbe",
       "type": "library",
       "name": "semver/node_modules/lru-cache",
@@ -24041,23 +22597,6 @@
       "name": "serialize",
       "version": "1.1.2",
       "purl": "pkg:npm/emotion/serialize@1.1.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/serialize-error@7.0.1?package-id=cfc2559daad89c23",
-      "type": "library",
-      "name": "serialize-error",
-      "version": "7.0.1",
-      "purl": "pkg:npm/serialize-error@7.0.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -24410,74 +22949,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/slice-ansi@4.0.0?package-id=58c470fbab5db876",
-      "type": "library",
-      "name": "slice-ansi",
-      "version": "4.0.0",
-      "purl": "pkg:npm/slice-ansi@4.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/slice-ansi/node_modules/ansi-styles@4.3.0?package-id=109a5484d0c39a61",
-      "type": "library",
-      "name": "slice-ansi/node_modules/ansi-styles",
-      "version": "4.3.0",
-      "purl": "pkg:npm/slice-ansi/node_modules/ansi-styles@4.3.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/slice-ansi/node_modules/color-convert@2.0.1?package-id=c08e02b682459dee",
-      "type": "library",
-      "name": "slice-ansi/node_modules/color-convert",
-      "version": "2.0.1",
-      "purl": "pkg:npm/slice-ansi/node_modules/color-convert@2.0.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/slice-ansi/node_modules/color-name@1.1.4?package-id=0bf51fe524224470",
-      "type": "library",
-      "name": "slice-ansi/node_modules/color-name",
-      "version": "1.1.4",
-      "purl": "pkg:npm/slice-ansi/node_modules/color-name@1.1.4",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/sockjs@0.3.24?package-id=f859848d21363db5",
       "type": "library",
       "name": "sockjs",
@@ -24733,23 +23204,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/sprintf-js@1.1.2?package-id=d80060b12cc55c01",
-      "type": "library",
-      "name": "sprintf-js",
-      "version": "1.1.2",
-      "purl": "pkg:npm/sprintf-js@1.1.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:gem/sprockets@4.2.0?package-id=a9f350118fd20e0a",
       "type": "library",
       "name": "sprockets",
@@ -24789,23 +23243,6 @@
       "name": "ssr",
       "version": "3.7.0",
       "purl": "pkg:npm/react-aria/ssr@3.7.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/ssri@8.0.1?package-id=62a64c39992f40d8",
-      "type": "library",
-      "name": "ssri",
-      "version": "8.0.1",
-      "purl": "pkg:npm/ssri@8.0.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -24874,23 +23311,6 @@
       "name": "stackframe",
       "version": "1.3.4",
       "purl": "pkg:npm/stackframe@1.3.4",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/statuses@1.5.0?package-id=15b9e83b217f649e",
-      "type": "library",
-      "name": "statuses",
-      "version": "1.5.0",
-      "purl": "pkg:npm/statuses@1.5.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -25583,23 +24003,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/table@6.8.1?package-id=76ee7cbfa378d459",
-      "type": "library",
-      "name": "table",
-      "version": "6.8.1",
-      "purl": "pkg:npm/table@6.8.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/tailwindcss@3.3.2?package-id=a8c377e0c3b5a454",
       "type": "library",
       "name": "tailwindcss",
@@ -25622,40 +24025,6 @@
       "name": "tapable",
       "version": "2.2.1",
       "purl": "pkg:npm/tapable@2.2.1",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/tar@6.1.15?package-id=23e63f784fcc7867",
-      "type": "library",
-      "name": "tar",
-      "version": "6.1.15",
-      "purl": "pkg:npm/tar@6.1.15",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/tar/node_modules/minipass@5.0.0?package-id=1b3cf5b714d290a7",
-      "type": "library",
-      "name": "tar/node_modules/minipass",
-      "version": "5.0.0",
-      "purl": "pkg:npm/tar/node_modules/minipass@5.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -26280,23 +24649,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/babel/traverse@7.22.8?package-id=f9d070fa1add657a",
-      "type": "library",
-      "name": "traverse",
-      "version": "7.22.8",
-      "purl": "pkg:npm/babel/traverse@7.22.8",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/tryer@1.0.1?package-id=3e6b6003c1c0f1fe",
       "type": "library",
       "name": "tryer",
@@ -26472,23 +24824,6 @@
       "name": "type-detect",
       "version": "4.0.8",
       "purl": "pkg:npm/type-detect@4.0.8",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/type-fest@0.13.1?package-id=67b0cf9e0af430d4",
-      "type": "library",
-      "name": "type-fest",
-      "version": "0.13.1",
-      "purl": "pkg:npm/type-fest@0.13.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -26761,23 +25096,6 @@
       "name": "typescript",
       "version": "4.9.5",
       "purl": "pkg:npm/typescript@4.9.5",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/typescript@5.1.6?package-id=9f1aaca4f80f9108",
-      "type": "library",
-      "name": "typescript",
-      "version": "5.1.6",
-      "purl": "pkg:npm/typescript@5.1.6",
       "properties": [
         {
           "name": "syft:package:language",
@@ -27322,23 +25640,6 @@
       "name": "uuid",
       "version": "8.3.2",
       "purl": "pkg:npm/uuid@8.3.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/uuid@9.0.0?package-id=9d811db45c7e4f2b",
-      "type": "library",
-      "name": "uuid",
-      "version": "9.0.0",
-      "purl": "pkg:npm/uuid@9.0.0",
       "properties": [
         {
           "name": "syft:package:language",
@@ -28847,45 +27148,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/xml-js@1.6.11?package-id=5fe7fb02ade1020e",
-      "type": "library",
-      "name": "xml-js",
-      "version": "1.6.11",
-      "purl": "pkg:npm/xml-js@1.6.11",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/xml-name-validator@3.0.0?package-id=1684b5b92da9bc2e",
       "type": "library",
       "name": "xml-name-validator",
       "version": "3.0.0",
       "purl": "pkg:npm/xml-name-validator@3.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/xmlbuilder@15.1.1?package-id=3794596230911930",
-      "type": "library",
-      "name": "xmlbuilder",
-      "version": "15.1.1",
-      "purl": "pkg:npm/xmlbuilder@15.1.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -28966,23 +27233,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/yallist@4.0.0?package-id=df688dcfcbd0ff52",
-      "type": "library",
-      "name": "yallist",
-      "version": "4.0.0",
-      "purl": "pkg:npm/yallist@4.0.0",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/yaml@1.10.2?package-id=a80a6f312663f0fc",
       "type": "library",
       "name": "yaml",
@@ -29017,45 +27267,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:npm/yargs@17.7.2?package-id=d5f9b7486bc47b4b",
-      "type": "library",
-      "name": "yargs",
-      "version": "17.7.2",
-      "purl": "pkg:npm/yargs@17.7.2",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:npm/yargs-parser@20.2.9?package-id=e3fce6769f68f633",
       "type": "library",
       "name": "yargs-parser",
       "version": "20.2.9",
       "purl": "pkg:npm/yargs-parser@20.2.9",
-      "properties": [
-        {
-          "name": "syft:package:language",
-          "value": "javascript"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "npm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:npm/yargs-parser@21.1.1?package-id=147a5b879da8503f",
-      "type": "library",
-      "name": "yargs-parser",
-      "version": "21.1.1",
-      "purl": "pkg:npm/yargs-parser@21.1.1",
       "properties": [
         {
           "name": "syft:package:language",
@@ -29105,1238 +27321,6 @@
   "services": [],
   "dependencies": [
     {
-      "ref": "pkg:application/bin",
-      "dependsOn": [
-        "pkg:npm/@cyclonedx/cdxgen@8.6.0"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@appthreat/atom@0.10.1",
-      "dependsOn": [
-        "pkg:npm/@babel/parser",
-        "pkg:npm/typescript",
-        "pkg:npm/yargs"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/code-frame@7.22.5",
-      "dependsOn": [
-        "pkg:npm/@babel/highlight"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/generator@7.22.9",
-      "dependsOn": [
-        "pkg:npm/@babel/types",
-        "pkg:npm/@jridgewell/gen-mapping",
-        "pkg:npm/@jridgewell/trace-mapping",
-        "pkg:npm/jsesc"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/helper-environment-visitor@7.22.5",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@babel/helper-function-name@7.22.5",
-      "dependsOn": [
-        "pkg:npm/@babel/template",
-        "pkg:npm/@babel/types"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/helper-hoist-variables@7.22.5",
-      "dependsOn": [
-        "pkg:npm/@babel/types"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/helper-split-export-declaration@7.22.6",
-      "dependsOn": [
-        "pkg:npm/@babel/types"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/helper-string-parser@7.22.5",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@babel/helper-validator-identifier@7.22.5",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@babel/highlight@7.22.5",
-      "dependsOn": [
-        "pkg:npm/@babel/helper-validator-identifier",
-        "pkg:npm/chalk",
-        "pkg:npm/js-tokens"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/parser@7.22.7",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@babel/template@7.22.5",
-      "dependsOn": [
-        "pkg:npm/@babel/code-frame",
-        "pkg:npm/@babel/parser",
-        "pkg:npm/@babel/types"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/traverse@7.22.8",
-      "dependsOn": [
-        "pkg:npm/@babel/code-frame",
-        "pkg:npm/@babel/generator",
-        "pkg:npm/@babel/helper-environment-visitor",
-        "pkg:npm/@babel/helper-function-name",
-        "pkg:npm/@babel/helper-hoist-variables",
-        "pkg:npm/@babel/helper-split-export-declaration",
-        "pkg:npm/@babel/parser",
-        "pkg:npm/@babel/types",
-        "pkg:npm/debug",
-        "pkg:npm/globals"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@babel/types@7.22.5",
-      "dependsOn": [
-        "pkg:npm/@babel/helper-string-parser",
-        "pkg:npm/@babel/helper-validator-identifier",
-        "pkg:npm/to-fast-properties"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@cyclonedx/cdxgen@8.6.0",
-      "dependsOn": [
-        "pkg:npm/@babel/parser",
-        "pkg:npm/@babel/traverse",
-        "pkg:npm/cheerio",
-        "pkg:npm/edn-data",
-        "pkg:npm/glob",
-        "pkg:npm/global-agent",
-        "pkg:npm/got",
-        "pkg:npm/js-yaml",
-        "pkg:npm/jws",
-        "pkg:npm/node-stream-zip",
-        "pkg:npm/packageurl-js",
-        "pkg:npm/parse-packagejson-name",
-        "pkg:npm/prettify-xml",
-        "pkg:npm/properties-reader",
-        "pkg:npm/semver",
-        "pkg:npm/ssri",
-        "pkg:npm/table",
-        "pkg:npm/tar",
-        "pkg:npm/uuid",
-        "pkg:npm/xml-js",
-        "pkg:npm/xmlbuilder",
-        "pkg:npm/yargs"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@cyclonedx/cdxgen-plugins-bin@1.2.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@jridgewell/gen-mapping@0.3.3",
-      "dependsOn": [
-        "pkg:npm/@jridgewell/set-array",
-        "pkg:npm/@jridgewell/sourcemap-codec",
-        "pkg:npm/@jridgewell/trace-mapping"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@jridgewell/resolve-uri@3.1.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@jridgewell/set-array@1.1.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@jridgewell/sourcemap-codec@1.4.15",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@jridgewell/trace-mapping@0.3.18",
-      "dependsOn": [
-        "pkg:npm/@jridgewell/resolve-uri",
-        "pkg:npm/@jridgewell/sourcemap-codec"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@jridgewell/trace-mapping/node_modules/@jridgewell/sourcemap-codec@1.4.14",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@sindresorhus/is@4.6.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@szmarczak/http-timer@4.0.6",
-      "dependsOn": [
-        "pkg:npm/defer-to-connect"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@types/cacheable-request@6.0.3",
-      "dependsOn": [
-        "pkg:npm/@types/http-cache-semantics",
-        "pkg:npm/@types/keyv",
-        "pkg:npm/@types/node",
-        "pkg:npm/@types/responselike"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@types/http-cache-semantics@4.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@types/keyv@3.1.4",
-      "dependsOn": [
-        "pkg:npm/@types/node"
-      ]
-    },
-    {
-      "ref": "pkg:npm/@types/node@20.4.5",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/@types/responselike@1.0.0",
-      "dependsOn": [
-        "pkg:npm/@types/node"
-      ]
-    },
-    {
-      "ref": "pkg:npm/accepts@1.3.8",
-      "dependsOn": [
-        "pkg:npm/mime-types",
-        "pkg:npm/negotiator"
-      ]
-    },
-    {
-      "ref": "pkg:npm/ajv@8.12.0",
-      "dependsOn": [
-        "pkg:npm/fast-deep-equal",
-        "pkg:npm/json-schema-traverse",
-        "pkg:npm/require-from-string",
-        "pkg:npm/uri-js"
-      ]
-    },
-    {
-      "ref": "pkg:npm/ansi-regex@5.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/ansi-styles@3.2.1",
-      "dependsOn": [
-        "pkg:npm/color-convert"
-      ]
-    },
-    {
-      "ref": "pkg:npm/argparse@2.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/astral-regex@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/balanced-match@1.0.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/body-parser@1.20.2",
-      "dependsOn": [
-        "pkg:npm/bytes",
-        "pkg:npm/content-type",
-        "pkg:npm/debug",
-        "pkg:npm/depd",
-        "pkg:npm/destroy",
-        "pkg:npm/http-errors",
-        "pkg:npm/iconv-lite",
-        "pkg:npm/on-finished",
-        "pkg:npm/qs",
-        "pkg:npm/raw-body",
-        "pkg:npm/type-is",
-        "pkg:npm/unpipe"
-      ]
-    },
-    {
-      "ref": "pkg:npm/body-parser/node_modules/debug@2.6.9",
-      "dependsOn": [
-        "pkg:npm/ms"
-      ]
-    },
-    {
-      "ref": "pkg:npm/body-parser/node_modules/ms@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/boolbase@1.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/boolean@3.2.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/brace-expansion@2.0.1",
-      "dependsOn": [
-        "pkg:npm/balanced-match"
-      ]
-    },
-    {
-      "ref": "pkg:npm/buffer-equal-constant-time@1.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/bytes@3.1.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/cacheable-lookup@5.0.4",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/cacheable-request@7.0.4",
-      "dependsOn": [
-        "pkg:npm/clone-response",
-        "pkg:npm/get-stream",
-        "pkg:npm/http-cache-semantics",
-        "pkg:npm/keyv",
-        "pkg:npm/lowercase-keys",
-        "pkg:npm/normalize-url",
-        "pkg:npm/responselike"
-      ]
-    },
-    {
-      "ref": "pkg:npm/call-bind@1.0.2",
-      "dependsOn": [
-        "pkg:npm/function-bind",
-        "pkg:npm/get-intrinsic"
-      ]
-    },
-    {
-      "ref": "pkg:npm/chalk@2.4.2",
-      "dependsOn": [
-        "pkg:npm/ansi-styles",
-        "pkg:npm/escape-string-regexp",
-        "pkg:npm/supports-color"
-      ]
-    },
-    {
-      "ref": "pkg:npm/cheerio@1.0.0-rc.12",
-      "dependsOn": [
-        "pkg:npm/cheerio-select",
-        "pkg:npm/dom-serializer",
-        "pkg:npm/domhandler",
-        "pkg:npm/domutils",
-        "pkg:npm/htmlparser2",
-        "pkg:npm/parse5",
-        "pkg:npm/parse5-htmlparser2-tree-adapter"
-      ]
-    },
-    {
-      "ref": "pkg:npm/cheerio-select@2.1.0",
-      "dependsOn": [
-        "pkg:npm/boolbase",
-        "pkg:npm/css-select",
-        "pkg:npm/css-what",
-        "pkg:npm/domelementtype",
-        "pkg:npm/domhandler",
-        "pkg:npm/domutils"
-      ]
-    },
-    {
-      "ref": "pkg:npm/chownr@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/cliui@8.0.1",
-      "dependsOn": [
-        "pkg:npm/string-width",
-        "pkg:npm/strip-ansi",
-        "pkg:npm/wrap-ansi"
-      ]
-    },
-    {
-      "ref": "pkg:npm/clone-response@1.0.3",
-      "dependsOn": [
-        "pkg:npm/mimic-response"
-      ]
-    },
-    {
-      "ref": "pkg:npm/color-convert@1.9.3",
-      "dependsOn": [
-        "pkg:npm/color-name"
-      ]
-    },
-    {
-      "ref": "pkg:npm/color-name@1.1.3",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/compressible@2.0.18",
-      "dependsOn": [
-        "pkg:npm/mime-db"
-      ]
-    },
-    {
-      "ref": "pkg:npm/compression@1.7.4",
-      "dependsOn": [
-        "pkg:npm/accepts",
-        "pkg:npm/bytes",
-        "pkg:npm/compressible",
-        "pkg:npm/debug",
-        "pkg:npm/on-headers",
-        "pkg:npm/safe-buffer",
-        "pkg:npm/vary"
-      ]
-    },
-    {
-      "ref": "pkg:npm/compression/node_modules/bytes@3.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/compression/node_modules/debug@2.6.9",
-      "dependsOn": [
-        "pkg:npm/ms"
-      ]
-    },
-    {
-      "ref": "pkg:npm/compression/node_modules/ms@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/connect@3.7.0",
-      "dependsOn": [
-        "pkg:npm/debug",
-        "pkg:npm/finalhandler",
-        "pkg:npm/parseurl",
-        "pkg:npm/utils-merge"
-      ]
-    },
-    {
-      "ref": "pkg:npm/connect/node_modules/debug@2.6.9",
-      "dependsOn": [
-        "pkg:npm/ms"
-      ]
-    },
-    {
-      "ref": "pkg:npm/connect/node_modules/ms@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/content-type@1.0.5",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/css-select@5.1.0",
-      "dependsOn": [
-        "pkg:npm/boolbase",
-        "pkg:npm/css-what",
-        "pkg:npm/domhandler",
-        "pkg:npm/domutils",
-        "pkg:npm/nth-check"
-      ]
-    },
-    {
-      "ref": "pkg:npm/css-what@6.1.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/debug@4.3.4",
-      "dependsOn": [
-        "pkg:npm/ms"
-      ]
-    },
-    {
-      "ref": "pkg:npm/decompress-response@6.0.0",
-      "dependsOn": [
-        "pkg:npm/mimic-response"
-      ]
-    },
-    {
-      "ref": "pkg:npm/decompress-response/node_modules/mimic-response@3.1.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/defer-to-connect@2.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/define-properties@1.2.0",
-      "dependsOn": [
-        "pkg:npm/has-property-descriptors",
-        "pkg:npm/object-keys"
-      ]
-    },
-    {
-      "ref": "pkg:npm/depd@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/destroy@1.2.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/detect-node@2.1.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/dom-serializer@2.0.0",
-      "dependsOn": [
-        "pkg:npm/domelementtype",
-        "pkg:npm/domhandler",
-        "pkg:npm/entities"
-      ]
-    },
-    {
-      "ref": "pkg:npm/domelementtype@2.3.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/domhandler@5.0.3",
-      "dependsOn": [
-        "pkg:npm/domelementtype"
-      ]
-    },
-    {
-      "ref": "pkg:npm/domutils@3.1.0",
-      "dependsOn": [
-        "pkg:npm/dom-serializer",
-        "pkg:npm/domelementtype",
-        "pkg:npm/domhandler"
-      ]
-    },
-    {
-      "ref": "pkg:npm/ecdsa-sig-formatter@1.0.11",
-      "dependsOn": [
-        "pkg:npm/safe-buffer"
-      ]
-    },
-    {
-      "ref": "pkg:npm/edn-data@1.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/ee-first@1.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/emoji-regex@8.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/encodeurl@1.0.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/end-of-stream@1.4.4",
-      "dependsOn": [
-        "pkg:npm/once"
-      ]
-    },
-    {
-      "ref": "pkg:npm/entities@4.5.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/es6-error@4.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/escalade@3.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/escape-html@1.0.3",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/escape-string-regexp@1.0.5",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/fast-deep-equal@3.1.3",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/finalhandler@1.1.2",
-      "dependsOn": [
-        "pkg:npm/debug",
-        "pkg:npm/encodeurl",
-        "pkg:npm/escape-html",
-        "pkg:npm/on-finished",
-        "pkg:npm/parseurl",
-        "pkg:npm/statuses",
-        "pkg:npm/unpipe"
-      ]
-    },
-    {
-      "ref": "pkg:npm/finalhandler/node_modules/debug@2.6.9",
-      "dependsOn": [
-        "pkg:npm/ms"
-      ]
-    },
-    {
-      "ref": "pkg:npm/finalhandler/node_modules/ms@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/finalhandler/node_modules/on-finished@2.3.0",
-      "dependsOn": [
-        "pkg:npm/ee-first"
-      ]
-    },
-    {
-      "ref": "pkg:npm/fs-minipass@2.1.0",
-      "dependsOn": [
-        "pkg:npm/minipass"
-      ]
-    },
-    {
-      "ref": "pkg:npm/fs.realpath@1.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/function-bind@1.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/get-caller-file@2.0.5",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/get-intrinsic@1.2.1",
-      "dependsOn": [
-        "pkg:npm/function-bind",
-        "pkg:npm/has",
-        "pkg:npm/has-proto",
-        "pkg:npm/has-symbols"
-      ]
-    },
-    {
-      "ref": "pkg:npm/get-stream@5.2.0",
-      "dependsOn": [
-        "pkg:npm/pump"
-      ]
-    },
-    {
-      "ref": "pkg:npm/glob@8.1.0",
-      "dependsOn": [
-        "pkg:npm/fs.realpath",
-        "pkg:npm/inflight",
-        "pkg:npm/inherits",
-        "pkg:npm/minimatch",
-        "pkg:npm/once"
-      ]
-    },
-    {
-      "ref": "pkg:npm/global-agent@3.0.0",
-      "dependsOn": [
-        "pkg:npm/boolean",
-        "pkg:npm/es6-error",
-        "pkg:npm/matcher",
-        "pkg:npm/roarr",
-        "pkg:npm/semver",
-        "pkg:npm/serialize-error"
-      ]
-    },
-    {
-      "ref": "pkg:npm/globals@11.12.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/globalthis@1.0.3",
-      "dependsOn": [
-        "pkg:npm/define-properties"
-      ]
-    },
-    {
-      "ref": "pkg:npm/got@11.8.6",
-      "dependsOn": [
-        "pkg:npm/@sindresorhus/is",
-        "pkg:npm/@szmarczak/http-timer",
-        "pkg:npm/@types/cacheable-request",
-        "pkg:npm/@types/responselike",
-        "pkg:npm/cacheable-lookup",
-        "pkg:npm/cacheable-request",
-        "pkg:npm/decompress-response",
-        "pkg:npm/http2-wrapper",
-        "pkg:npm/lowercase-keys",
-        "pkg:npm/p-cancelable",
-        "pkg:npm/responselike"
-      ]
-    },
-    {
-      "ref": "pkg:npm/has@1.0.3",
-      "dependsOn": [
-        "pkg:npm/function-bind"
-      ]
-    },
-    {
-      "ref": "pkg:npm/has-flag@3.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/has-property-descriptors@1.0.0",
-      "dependsOn": [
-        "pkg:npm/get-intrinsic"
-      ]
-    },
-    {
-      "ref": "pkg:npm/has-proto@1.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/has-symbols@1.0.3",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/htmlparser2@8.0.2",
-      "dependsOn": [
-        "pkg:npm/domelementtype",
-        "pkg:npm/domhandler",
-        "pkg:npm/domutils",
-        "pkg:npm/entities"
-      ]
-    },
-    {
-      "ref": "pkg:npm/http-cache-semantics@4.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/http-errors@2.0.0",
-      "dependsOn": [
-        "pkg:npm/depd",
-        "pkg:npm/inherits",
-        "pkg:npm/setprototypeof",
-        "pkg:npm/statuses",
-        "pkg:npm/toidentifier"
-      ]
-    },
-    {
-      "ref": "pkg:npm/http-errors/node_modules/statuses@2.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/http2-wrapper@1.0.3",
-      "dependsOn": [
-        "pkg:npm/quick-lru",
-        "pkg:npm/resolve-alpn"
-      ]
-    },
-    {
-      "ref": "pkg:npm/iconv-lite@0.4.24",
-      "dependsOn": [
-        "pkg:npm/safer-buffer"
-      ]
-    },
-    {
-      "ref": "pkg:npm/inflight@1.0.6",
-      "dependsOn": [
-        "pkg:npm/once",
-        "pkg:npm/wrappy"
-      ]
-    },
-    {
-      "ref": "pkg:npm/inherits@2.0.4",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/is-fullwidth-code-point@3.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/js-tokens@4.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/js-yaml@4.1.0",
-      "dependsOn": [
-        "pkg:npm/argparse"
-      ]
-    },
-    {
-      "ref": "pkg:npm/jsesc@2.5.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/json-buffer@3.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/json-schema-traverse@1.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/json-stringify-safe@5.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/jwa@2.0.0",
-      "dependsOn": [
-        "pkg:npm/buffer-equal-constant-time",
-        "pkg:npm/ecdsa-sig-formatter",
-        "pkg:npm/safe-buffer"
-      ]
-    },
-    {
-      "ref": "pkg:npm/jws@4.0.0",
-      "dependsOn": [
-        "pkg:npm/jwa",
-        "pkg:npm/safe-buffer"
-      ]
-    },
-    {
-      "ref": "pkg:npm/keyv@4.5.3",
-      "dependsOn": [
-        "pkg:npm/json-buffer"
-      ]
-    },
-    {
-      "ref": "pkg:npm/lodash.truncate@4.4.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/lowercase-keys@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/lru-cache@6.0.0",
-      "dependsOn": [
-        "pkg:npm/yallist"
-      ]
-    },
-    {
-      "ref": "pkg:npm/matcher@3.0.0",
-      "dependsOn": [
-        "pkg:npm/escape-string-regexp"
-      ]
-    },
-    {
-      "ref": "pkg:npm/matcher/node_modules/escape-string-regexp@4.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/media-typer@0.3.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/mime-db@1.52.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/mime-types@2.1.35",
-      "dependsOn": [
-        "pkg:npm/mime-db"
-      ]
-    },
-    {
-      "ref": "pkg:npm/mimic-response@1.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/minimatch@5.1.6",
-      "dependsOn": [
-        "pkg:npm/brace-expansion"
-      ]
-    },
-    {
-      "ref": "pkg:npm/minipass@3.3.6",
-      "dependsOn": [
-        "pkg:npm/yallist"
-      ]
-    },
-    {
-      "ref": "pkg:npm/minizlib@2.1.2",
-      "dependsOn": [
-        "pkg:npm/minipass",
-        "pkg:npm/yallist"
-      ]
-    },
-    {
-      "ref": "pkg:npm/mkdirp@1.0.4",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/ms@2.1.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/negotiator@0.6.3",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/node-stream-zip@1.15.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/normalize-url@6.1.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/nth-check@2.1.1",
-      "dependsOn": [
-        "pkg:npm/boolbase"
-      ]
-    },
-    {
-      "ref": "pkg:npm/object-inspect@1.12.3",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/object-keys@1.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/on-finished@2.4.1",
-      "dependsOn": [
-        "pkg:npm/ee-first"
-      ]
-    },
-    {
-      "ref": "pkg:npm/on-headers@1.0.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/once@1.4.0",
-      "dependsOn": [
-        "pkg:npm/wrappy"
-      ]
-    },
-    {
-      "ref": "pkg:npm/p-cancelable@2.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/packageurl-js@1.0.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/parse-packagejson-name@1.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/parse5@7.1.2",
-      "dependsOn": [
-        "pkg:npm/entities"
-      ]
-    },
-    {
-      "ref": "pkg:npm/parse5-htmlparser2-tree-adapter@7.0.0",
-      "dependsOn": [
-        "pkg:npm/domhandler",
-        "pkg:npm/parse5"
-      ]
-    },
-    {
-      "ref": "pkg:npm/parseurl@1.3.3",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/prettify-xml@1.2.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/properties-reader@2.2.0",
-      "dependsOn": [
-        "pkg:npm/mkdirp"
-      ]
-    },
-    {
-      "ref": "pkg:npm/pump@3.0.0",
-      "dependsOn": [
-        "pkg:npm/end-of-stream",
-        "pkg:npm/once"
-      ]
-    },
-    {
-      "ref": "pkg:npm/punycode@2.3.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/qs@6.11.0",
-      "dependsOn": [
-        "pkg:npm/side-channel"
-      ]
-    },
-    {
-      "ref": "pkg:npm/quick-lru@5.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/raw-body@2.5.2",
-      "dependsOn": [
-        "pkg:npm/bytes",
-        "pkg:npm/http-errors",
-        "pkg:npm/iconv-lite",
-        "pkg:npm/unpipe"
-      ]
-    },
-    {
-      "ref": "pkg:npm/require-directory@2.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/require-from-string@2.0.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/resolve-alpn@1.2.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/responselike@2.0.1",
-      "dependsOn": [
-        "pkg:npm/lowercase-keys"
-      ]
-    },
-    {
-      "ref": "pkg:npm/roarr@2.15.4",
-      "dependsOn": [
-        "pkg:npm/boolean",
-        "pkg:npm/detect-node",
-        "pkg:npm/globalthis",
-        "pkg:npm/json-stringify-safe",
-        "pkg:npm/semver-compare",
-        "pkg:npm/sprintf-js"
-      ]
-    },
-    {
-      "ref": "pkg:npm/safe-buffer@5.1.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/safer-buffer@2.1.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/sax@1.2.4",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/semver@7.5.4",
-      "dependsOn": [
-        "pkg:npm/lru-cache"
-      ]
-    },
-    {
-      "ref": "pkg:npm/semver-compare@1.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/serialize-error@7.0.1",
-      "dependsOn": [
-        "pkg:npm/type-fest"
-      ]
-    },
-    {
-      "ref": "pkg:npm/setprototypeof@1.2.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/side-channel@1.0.4",
-      "dependsOn": [
-        "pkg:npm/call-bind",
-        "pkg:npm/get-intrinsic",
-        "pkg:npm/object-inspect"
-      ]
-    },
-    {
-      "ref": "pkg:npm/slice-ansi@4.0.0",
-      "dependsOn": [
-        "pkg:npm/ansi-styles",
-        "pkg:npm/astral-regex",
-        "pkg:npm/is-fullwidth-code-point"
-      ]
-    },
-    {
-      "ref": "pkg:npm/slice-ansi/node_modules/ansi-styles@4.3.0",
-      "dependsOn": [
-        "pkg:npm/color-convert"
-      ]
-    },
-    {
-      "ref": "pkg:npm/slice-ansi/node_modules/color-convert@2.0.1",
-      "dependsOn": [
-        "pkg:npm/color-name"
-      ]
-    },
-    {
-      "ref": "pkg:npm/slice-ansi/node_modules/color-name@1.1.4",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/sprintf-js@1.1.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/ssri@8.0.1",
-      "dependsOn": [
-        "pkg:npm/minipass"
-      ]
-    },
-    {
-      "ref": "pkg:npm/statuses@1.5.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/string-width@4.2.3",
-      "dependsOn": [
-        "pkg:npm/emoji-regex",
-        "pkg:npm/is-fullwidth-code-point",
-        "pkg:npm/strip-ansi"
-      ]
-    },
-    {
-      "ref": "pkg:npm/strip-ansi@6.0.1",
-      "dependsOn": [
-        "pkg:npm/ansi-regex"
-      ]
-    },
-    {
-      "ref": "pkg:npm/supports-color@5.5.0",
-      "dependsOn": [
-        "pkg:npm/has-flag"
-      ]
-    },
-    {
-      "ref": "pkg:npm/table@6.8.1",
-      "dependsOn": [
-        "pkg:npm/ajv",
-        "pkg:npm/lodash.truncate",
-        "pkg:npm/slice-ansi",
-        "pkg:npm/string-width",
-        "pkg:npm/strip-ansi"
-      ]
-    },
-    {
-      "ref": "pkg:npm/tar@6.1.15",
-      "dependsOn": [
-        "pkg:npm/chownr",
-        "pkg:npm/fs-minipass",
-        "pkg:npm/minipass",
-        "pkg:npm/minizlib",
-        "pkg:npm/mkdirp",
-        "pkg:npm/yallist"
-      ]
-    },
-    {
-      "ref": "pkg:npm/tar/node_modules/minipass@5.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/to-fast-properties@2.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/toidentifier@1.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/type-fest@0.13.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/type-is@1.6.18",
-      "dependsOn": [
-        "pkg:npm/media-typer",
-        "pkg:npm/mime-types"
-      ]
-    },
-    {
-      "ref": "pkg:npm/typescript@5.1.6",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/unpipe@1.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/uri-js@4.4.1",
-      "dependsOn": [
-        "pkg:npm/punycode"
-      ]
-    },
-    {
-      "ref": "pkg:npm/utils-merge@1.0.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/uuid@9.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/vary@1.1.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/wrap-ansi@7.0.0",
-      "dependsOn": [
-        "pkg:npm/ansi-styles",
-        "pkg:npm/string-width",
-        "pkg:npm/strip-ansi"
-      ]
-    },
-    {
-      "ref": "pkg:npm/wrap-ansi/node_modules/ansi-styles@4.3.0",
-      "dependsOn": [
-        "pkg:npm/color-convert"
-      ]
-    },
-    {
-      "ref": "pkg:npm/wrap-ansi/node_modules/color-convert@2.0.1",
-      "dependsOn": [
-        "pkg:npm/color-name"
-      ]
-    },
-    {
-      "ref": "pkg:npm/wrap-ansi/node_modules/color-name@1.1.4",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/wrappy@1.0.2",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/xml-js@1.6.11",
-      "dependsOn": [
-        "pkg:npm/sax"
-      ]
-    },
-    {
-      "ref": "pkg:npm/xmlbuilder@15.1.1",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/y18n@5.0.8",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/yallist@4.0.0",
-      "dependsOn": []
-    },
-    {
-      "ref": "pkg:npm/yargs@17.7.2",
-      "dependsOn": [
-        "pkg:npm/cliui",
-        "pkg:npm/escalade",
-        "pkg:npm/get-caller-file",
-        "pkg:npm/require-directory",
-        "pkg:npm/string-width",
-        "pkg:npm/y18n",
-        "pkg:npm/yargs-parser"
-      ]
-    },
-    {
-      "ref": "pkg:npm/yargs-parser@21.1.1",
-      "dependsOn": []
-    },
-    {
       "ref": "pkg:application/chip_react@0.1.0",
       "dependsOn": [
         "pkg:npm/@testing-library/jest-dom@5.16.5",
@@ -30371,6 +27355,12 @@
       "dependsOn": [
         "pkg:npm/@jridgewell/gen-mapping",
         "pkg:npm/@jridgewell/trace-mapping"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@babel/code-frame@7.22.5",
+      "dependsOn": [
+        "pkg:npm/@babel/highlight"
       ]
     },
     {
@@ -30498,6 +27488,23 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/@babel/helper-environment-visitor@7.22.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@babel/helper-function-name@7.22.5",
+      "dependsOn": [
+        "pkg:npm/@babel/template",
+        "pkg:npm/@babel/types"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@babel/helper-hoist-variables@7.22.5",
+      "dependsOn": [
+        "pkg:npm/@babel/types"
+      ]
+    },
+    {
       "ref": "pkg:npm/@babel/helper-member-expression-to-functions@7.22.5",
       "dependsOn": [
         "pkg:npm/@babel/types"
@@ -30571,6 +27578,14 @@
       ]
     },
     {
+      "ref": "pkg:npm/@babel/helper-string-parser@7.22.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@babel/helper-validator-identifier@7.22.5",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/@babel/helper-validator-option@7.22.5",
       "dependsOn": []
     },
@@ -30589,6 +27604,14 @@
         "pkg:npm/@babel/template",
         "pkg:npm/@babel/traverse",
         "pkg:npm/@babel/types"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@babel/highlight@7.22.5",
+      "dependsOn": [
+        "pkg:npm/@babel/helper-validator-identifier",
+        "pkg:npm/chalk",
+        "pkg:npm/js-tokens"
       ]
     },
     {
@@ -31351,6 +28374,14 @@
       ]
     },
     {
+      "ref": "pkg:npm/@babel/template@7.22.5",
+      "dependsOn": [
+        "pkg:npm/@babel/code-frame",
+        "pkg:npm/@babel/parser",
+        "pkg:npm/@babel/types"
+      ]
+    },
+    {
       "ref": "pkg:npm/@babel/traverse@7.22.5",
       "dependsOn": [
         "pkg:npm/@babel/code-frame",
@@ -31363,6 +28394,14 @@
         "pkg:npm/@babel/types",
         "pkg:npm/debug",
         "pkg:npm/globals"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@babel/types@7.22.5",
+      "dependsOn": [
+        "pkg:npm/@babel/helper-string-parser",
+        "pkg:npm/@babel/helper-validator-identifier",
+        "pkg:npm/to-fast-properties"
       ]
     },
     {
@@ -32042,11 +29081,42 @@
       ]
     },
     {
+      "ref": "pkg:npm/@jridgewell/gen-mapping@0.3.3",
+      "dependsOn": [
+        "pkg:npm/@jridgewell/set-array",
+        "pkg:npm/@jridgewell/sourcemap-codec",
+        "pkg:npm/@jridgewell/trace-mapping"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@jridgewell/resolve-uri@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@jridgewell/set-array@1.1.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/@jridgewell/source-map@0.3.3",
       "dependsOn": [
         "pkg:npm/@jridgewell/gen-mapping",
         "pkg:npm/@jridgewell/trace-mapping"
       ]
+    },
+    {
+      "ref": "pkg:npm/@jridgewell/sourcemap-codec@1.4.15",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/@jridgewell/trace-mapping@0.3.18",
+      "dependsOn": [
+        "pkg:npm/@jridgewell/resolve-uri",
+        "pkg:npm/@jridgewell/sourcemap-codec"
+      ]
+    },
+    {
+      "ref": "pkg:npm/@jridgewell/trace-mapping/node_modules/@jridgewell/sourcemap-codec@1.4.14",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/@leichtgewicht/ip-codec@2.0.4",
@@ -33108,6 +30178,13 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/accepts@1.3.8",
+      "dependsOn": [
+        "pkg:npm/mime-types",
+        "pkg:npm/negotiator"
+      ]
+    },
+    {
       "ref": "pkg:npm/acorn@8.9.0",
       "dependsOn": []
     },
@@ -33192,6 +30269,16 @@
     {
       "ref": "pkg:npm/ansi-html-community@0.0.8",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/ansi-regex@5.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/ansi-styles@3.2.1",
+      "dependsOn": [
+        "pkg:npm/color-convert"
+      ]
     },
     {
       "ref": "pkg:npm/any-promise@1.3.0",
@@ -33513,6 +30600,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/balanced-match@1.0.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/batch@0.6.1",
       "dependsOn": []
     },
@@ -33559,10 +30650,20 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/body-parser/node_modules/debug@2.6.9",
+      "dependsOn": [
+        "pkg:npm/ms"
+      ]
+    },
+    {
       "ref": "pkg:npm/body-parser/node_modules/iconv-lite@0.4.24",
       "dependsOn": [
         "pkg:npm/safer-buffer"
       ]
+    },
+    {
+      "ref": "pkg:npm/body-parser/node_modules/ms@2.0.0",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/bonjour-service@1.1.1",
@@ -33572,6 +30673,10 @@
         "pkg:npm/fast-deep-equal",
         "pkg:npm/multicast-dns"
       ]
+    },
+    {
+      "ref": "pkg:npm/boolbase@1.0.0",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/bootstrap@5.3.0",
@@ -33622,6 +30727,13 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/call-bind@1.0.2",
+      "dependsOn": [
+        "pkg:npm/function-bind",
+        "pkg:npm/get-intrinsic"
+      ]
+    },
+    {
       "ref": "pkg:npm/callsites@3.1.0",
       "dependsOn": []
     },
@@ -33664,6 +30776,14 @@
     {
       "ref": "pkg:npm/chained-function@0.5.0",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/chalk@2.4.2",
+      "dependsOn": [
+        "pkg:npm/ansi-styles",
+        "pkg:npm/escape-string-regexp",
+        "pkg:npm/supports-color"
+      ]
     },
     {
       "ref": "pkg:npm/char-regex@1.0.2",
@@ -33746,6 +30866,16 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/color-convert@1.9.3",
+      "dependsOn": [
+        "pkg:npm/color-name"
+      ]
+    },
+    {
+      "ref": "pkg:npm/color-name@1.1.3",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/colord@2.9.3",
       "dependsOn": []
     },
@@ -33776,6 +30906,34 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/compressible@2.0.18",
+      "dependsOn": [
+        "pkg:npm/mime-db"
+      ]
+    },
+    {
+      "ref": "pkg:npm/compression@1.7.4",
+      "dependsOn": [
+        "pkg:npm/accepts",
+        "pkg:npm/bytes",
+        "pkg:npm/compressible",
+        "pkg:npm/debug",
+        "pkg:npm/on-headers",
+        "pkg:npm/safe-buffer",
+        "pkg:npm/vary"
+      ]
+    },
+    {
+      "ref": "pkg:npm/compression/node_modules/debug@2.6.9",
+      "dependsOn": [
+        "pkg:npm/ms"
+      ]
+    },
+    {
+      "ref": "pkg:npm/compression/node_modules/ms@2.0.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/compression/node_modules/safe-buffer@5.1.2",
       "dependsOn": []
     },
@@ -33796,6 +30954,10 @@
       "dependsOn": [
         "pkg:npm/safe-buffer"
       ]
+    },
+    {
+      "ref": "pkg:npm/content-type@1.0.5",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/convert-source-map@1.9.0",
@@ -33948,6 +31110,10 @@
     },
     {
       "ref": "pkg:npm/css-tree/node_modules/source-map@0.6.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/css-what@6.1.0",
       "dependsOn": []
     },
     {
@@ -34295,6 +31461,12 @@
       ]
     },
     {
+      "ref": "pkg:npm/debug@4.3.4",
+      "dependsOn": [
+        "pkg:npm/ms"
+      ]
+    },
+    {
       "ref": "pkg:npm/decimal.js@10.4.3",
       "dependsOn": []
     },
@@ -34344,6 +31516,13 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/define-properties@1.2.0",
+      "dependsOn": [
+        "pkg:npm/has-property-descriptors",
+        "pkg:npm/object-keys"
+      ]
+    },
+    {
       "ref": "pkg:npm/delaunator@5.0.0",
       "dependsOn": [
         "pkg:npm/robust-predicates"
@@ -34354,11 +31533,23 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/depd@2.0.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/dequal@2.0.3",
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/destroy@1.2.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/detect-newline@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/detect-node@2.1.0",
       "dependsOn": []
     },
     {
@@ -34438,6 +31629,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/domelementtype@2.3.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/domexception@2.0.1",
       "dependsOn": [
         "pkg:npm/webidl-conversions"
@@ -34481,6 +31676,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/ee-first@1.1.1",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/ejs@3.1.9",
       "dependsOn": [
         "pkg:npm/jake"
@@ -34500,6 +31699,10 @@
     },
     {
       "ref": "pkg:npm/emojis-list@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/encodeurl@1.0.2",
       "dependsOn": []
     },
     {
@@ -34607,6 +31810,18 @@
         "pkg:npm/is-date-object",
         "pkg:npm/is-symbol"
       ]
+    },
+    {
+      "ref": "pkg:npm/escalade@3.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/escape-html@1.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/escape-string-regexp@1.0.5",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/escodegen@2.0.0",
@@ -35110,6 +32325,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/fast-deep-equal@3.1.3",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/fast-glob@3.2.12",
       "dependsOn": [
         "pkg:npm/@nodelib/fs.stat",
@@ -35203,6 +32422,16 @@
         "pkg:npm/statuses",
         "pkg:npm/unpipe"
       ]
+    },
+    {
+      "ref": "pkg:npm/finalhandler/node_modules/debug@2.6.9",
+      "dependsOn": [
+        "pkg:npm/ms"
+      ]
+    },
+    {
+      "ref": "pkg:npm/finalhandler/node_modules/ms@2.0.0",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/find-cache-dir@3.3.2",
@@ -35359,7 +32588,15 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/fs.realpath@1.0.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/fsevents@2.3.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/function-bind@1.1.1",
       "dependsOn": []
     },
     {
@@ -35378,6 +32615,19 @@
     {
       "ref": "pkg:npm/gensync@1.0.0-beta.2",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/get-caller-file@2.0.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/get-intrinsic@1.2.1",
+      "dependsOn": [
+        "pkg:npm/function-bind",
+        "pkg:npm/has",
+        "pkg:npm/has-proto",
+        "pkg:npm/has-symbols"
+      ]
     },
     {
       "ref": "pkg:npm/get-own-enumerable-property-symbols@3.0.2",
@@ -35440,6 +32690,16 @@
       ]
     },
     {
+      "ref": "pkg:npm/globals@11.12.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/globalthis@1.0.3",
+      "dependsOn": [
+        "pkg:npm/define-properties"
+      ]
+    },
+    {
       "ref": "pkg:npm/globby@11.1.0",
       "dependsOn": [
         "pkg:npm/array-union",
@@ -35483,7 +32743,31 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/has@1.0.3",
+      "dependsOn": [
+        "pkg:npm/function-bind"
+      ]
+    },
+    {
       "ref": "pkg:npm/has-bigints@1.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/has-flag@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/has-property-descriptors@1.0.0",
+      "dependsOn": [
+        "pkg:npm/get-intrinsic"
+      ]
+    },
+    {
+      "ref": "pkg:npm/has-proto@1.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/has-symbols@1.0.3",
       "dependsOn": []
     },
     {
@@ -35595,6 +32879,16 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/http-errors@2.0.0",
+      "dependsOn": [
+        "pkg:npm/depd",
+        "pkg:npm/inherits",
+        "pkg:npm/setprototypeof",
+        "pkg:npm/statuses",
+        "pkg:npm/toidentifier"
+      ]
+    },
+    {
       "ref": "pkg:npm/http-parser-js@0.5.8",
       "dependsOn": []
     },
@@ -35690,6 +32984,17 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/inflight@1.0.6",
+      "dependsOn": [
+        "pkg:npm/once",
+        "pkg:npm/wrappy"
+      ]
+    },
+    {
+      "ref": "pkg:npm/inherits@2.0.4",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/ini@1.3.8",
       "dependsOn": []
     },
@@ -35775,6 +33080,10 @@
     },
     {
       "ref": "pkg:npm/is-extglob@2.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/is-fullwidth-code-point@3.0.0",
       "dependsOn": []
     },
     {
@@ -37083,6 +34392,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/js-tokens@4.0.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/js-yaml@3.14.1",
       "dependsOn": [
         "pkg:npm/argparse",
@@ -37120,6 +34433,10 @@
         "pkg:npm/ws",
         "pkg:npm/xml-name-validator"
       ]
+    },
+    {
+      "ref": "pkg:npm/jsesc@2.5.2",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/json-parse-even-better-errors@2.3.1",
@@ -37297,6 +34614,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/media-typer@0.3.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/memfs@3.5.3",
       "dependsOn": [
         "pkg:npm/fs-monkey"
@@ -37328,6 +34649,16 @@
     {
       "ref": "pkg:npm/mime@1.6.0",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/mime-db@1.52.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/mime-types@2.1.35",
+      "dependsOn": [
+        "pkg:npm/mime-db"
+      ]
     },
     {
       "ref": "pkg:npm/mimic-fn@2.1.0",
@@ -37392,6 +34723,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/ms@2.1.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/multicast-dns@7.2.5",
       "dependsOn": [
         "pkg:npm/dns-packet",
@@ -37416,6 +34751,10 @@
     },
     {
       "ref": "pkg:npm/natural-compare-lite@1.4.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/negotiator@0.6.3",
       "dependsOn": []
     },
     {
@@ -37450,9 +34789,19 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/normalize-url@6.1.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/npm-run-path@4.0.1",
       "dependsOn": [
         "pkg:npm/path-key"
+      ]
+    },
+    {
+      "ref": "pkg:npm/nth-check@2.1.1",
+      "dependsOn": [
+        "pkg:npm/boolbase"
       ]
     },
     {
@@ -37468,11 +34817,19 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/object-inspect@1.12.3",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/object-is@1.1.5",
       "dependsOn": [
         "pkg:npm/call-bind",
         "pkg:npm/define-properties"
       ]
+    },
+    {
+      "ref": "pkg:npm/object-keys@1.1.1",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/object.assign@4.1.4",
@@ -37527,6 +34884,22 @@
     {
       "ref": "pkg:npm/obuf@1.1.2",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/on-finished@2.4.1",
+      "dependsOn": [
+        "pkg:npm/ee-first"
+      ]
+    },
+    {
+      "ref": "pkg:npm/on-headers@1.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/once@1.4.0",
+      "dependsOn": [
+        "pkg:npm/wrappy"
+      ]
     },
     {
       "ref": "pkg:npm/onetime@5.1.2",
@@ -37600,6 +34973,10 @@
     },
     {
       "ref": "pkg:npm/parse5@6.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/parseurl@1.3.3",
       "dependsOn": []
     },
     {
@@ -38320,8 +35697,18 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/punycode@2.3.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/q@1.5.1",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/qs@6.11.0",
+      "dependsOn": [
+        "pkg:npm/side-channel"
+      ]
     },
     {
       "ref": "pkg:npm/querystringify@2.2.0",
@@ -38711,6 +36098,14 @@
       ]
     },
     {
+      "ref": "pkg:npm/require-directory@2.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/require-from-string@2.0.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/requires-port@1.0.0",
       "dependsOn": []
     },
@@ -38848,6 +36243,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/safer-buffer@2.1.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/sanitize.css@13.0.0",
       "dependsOn": []
     },
@@ -38857,6 +36256,10 @@
         "pkg:npm/klona",
         "pkg:npm/neo-async"
       ]
+    },
+    {
+      "ref": "pkg:npm/sax@1.2.4",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/saxes@5.0.1",
@@ -38999,6 +36402,10 @@
       ]
     },
     {
+      "ref": "pkg:npm/setprototypeof@1.2.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/shebang-command@2.0.0",
       "dependsOn": [
         "pkg:npm/shebang-regex"
@@ -39011,6 +36418,14 @@
     {
       "ref": "pkg:npm/shell-quote@1.8.1",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/side-channel@1.0.4",
+      "dependsOn": [
+        "pkg:npm/call-bind",
+        "pkg:npm/get-intrinsic",
+        "pkg:npm/object-inspect"
+      ]
     },
     {
       "ref": "pkg:npm/signal-exit@3.0.7",
@@ -39138,6 +36553,14 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/string-width@4.2.3",
+      "dependsOn": [
+        "pkg:npm/emoji-regex",
+        "pkg:npm/is-fullwidth-code-point",
+        "pkg:npm/strip-ansi"
+      ]
+    },
+    {
       "ref": "pkg:npm/string-width/node_modules/emoji-regex@8.0.0",
       "dependsOn": []
     },
@@ -39184,6 +36607,12 @@
         "pkg:npm/get-own-enumerable-property-symbols",
         "pkg:npm/is-obj",
         "pkg:npm/is-regexp"
+      ]
+    },
+    {
+      "ref": "pkg:npm/strip-ansi@6.0.1",
+      "dependsOn": [
+        "pkg:npm/ansi-regex"
       ]
     },
     {
@@ -39248,6 +36677,12 @@
         "pkg:npm/minimatch",
         "pkg:npm/once",
         "pkg:npm/path-is-absolute"
+      ]
+    },
+    {
+      "ref": "pkg:npm/supports-color@5.5.0",
+      "dependsOn": [
+        "pkg:npm/has-flag"
       ]
     },
     {
@@ -39450,10 +36885,18 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/to-fast-properties@2.0.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/to-regex-range@5.0.1",
       "dependsOn": [
         "pkg:npm/is-number"
       ]
+    },
+    {
+      "ref": "pkg:npm/toidentifier@1.0.1",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/tough-cookie@4.1.3",
@@ -39530,6 +36973,13 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/type-is@1.6.18",
+      "dependsOn": [
+        "pkg:npm/media-typer",
+        "pkg:npm/mime-types"
+      ]
+    },
+    {
       "ref": "pkg:npm/typed-array-length@1.0.4",
       "dependsOn": [
         "pkg:npm/call-bind",
@@ -39595,6 +37045,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/unpipe@1.0.0",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/unquote@1.1.1",
       "dependsOn": []
     },
@@ -39607,6 +37061,12 @@
       "dependsOn": [
         "pkg:npm/escalade",
         "pkg:npm/picocolors"
+      ]
+    },
+    {
+      "ref": "pkg:npm/uri-js@4.4.1",
+      "dependsOn": [
+        "pkg:npm/punycode"
       ]
     },
     {
@@ -39634,6 +37094,10 @@
       "dependsOn": []
     },
     {
+      "ref": "pkg:npm/utils-merge@1.0.1",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/uuid@8.3.2",
       "dependsOn": []
     },
@@ -39644,6 +37108,10 @@
         "pkg:npm/convert-source-map",
         "pkg:npm/source-map"
       ]
+    },
+    {
+      "ref": "pkg:npm/vary@1.1.2",
+      "dependsOn": []
     },
     {
       "ref": "pkg:npm/w3c-hr-time@1.0.2",
@@ -40155,6 +37623,34 @@
       ]
     },
     {
+      "ref": "pkg:npm/wrap-ansi@7.0.0",
+      "dependsOn": [
+        "pkg:npm/ansi-styles",
+        "pkg:npm/string-width",
+        "pkg:npm/strip-ansi"
+      ]
+    },
+    {
+      "ref": "pkg:npm/wrap-ansi/node_modules/ansi-styles@4.3.0",
+      "dependsOn": [
+        "pkg:npm/color-convert"
+      ]
+    },
+    {
+      "ref": "pkg:npm/wrap-ansi/node_modules/color-convert@2.0.1",
+      "dependsOn": [
+        "pkg:npm/color-name"
+      ]
+    },
+    {
+      "ref": "pkg:npm/wrap-ansi/node_modules/color-name@1.1.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/wrappy@1.0.2",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:npm/write-file-atomic@3.0.3",
       "dependsOn": [
         "pkg:npm/imurmurhash",
@@ -40173,6 +37669,10 @@
     },
     {
       "ref": "pkg:npm/xmlchars@2.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/y18n@5.0.8",
       "dependsOn": []
     },
     {
@@ -40204,10 +37704,9 @@
       "dependsOn": []
     }
   ],
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "vulnerabilities": [
     {
-      "bom-ref": "urn:uuid:347a4157-77c6-4ad9-ab5d-6c9fc322863f",
+      "bom-ref": "urn:uuid:2e6ec3c0-5830-4da0-8a34-2394fc900e4e",
       "id": "GHSA-23gm-4mrr-r6pg",
       "source": {
         "name": "github-language-javascript",
@@ -40240,7 +37739,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e90cf9d7-2b80-4e97-b981-86fa5ead4037",
+      "bom-ref": "urn:uuid:a0a1e462-9675-43ba-b66d-fd7662b2ca90",
       "id": "GHSA-3rhh-9j6r-68h4",
       "source": {
         "name": "github-language-javascript",
@@ -40273,7 +37772,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dd7c64d5-3d33-46d6-a763-e6670b7c118d",
+      "bom-ref": "urn:uuid:64a9f426-9cce-4b51-a7b3-beac1a9f1caf",
       "id": "GHSA-4g8v-vg43-wpgf",
       "source": {
         "name": "github-language-ruby",
@@ -40306,7 +37805,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:95d536d1-acfb-4df7-a68b-84794af9a13d",
+      "bom-ref": "urn:uuid:ce581e7d-6eab-4d3f-b458-f05df06549d4",
       "id": "GHSA-8rmg-jf7p-4p22",
       "source": {
         "name": "github-language-javascript",
@@ -40339,7 +37838,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f9783674-dc15-493f-b250-ed66c9068662",
+      "bom-ref": "urn:uuid:15e99475-d2b9-412a-b35a-8b87b2e5d703",
       "id": "GHSA-g6vf-4cpv-p24v",
       "source": {
         "name": "github-language-javascript",
@@ -40372,7 +37871,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e2498786-8cf7-4ba4-a996-c602d78b653a",
+      "bom-ref": "urn:uuid:6bac3e01-4c36-492e-9f16-05d0eaf77687",
       "id": "GHSA-hc6q-2mpp-qw7j",
       "source": {
         "name": "github-language-javascript",
@@ -40408,7 +37907,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1a691667-e2f0-45f5-8377-bb28dc6ca532",
+      "bom-ref": "urn:uuid:a255df19-3c71-4d01-b287-3ed5914fa6fc",
       "id": "GHSA-j8xg-fqg3-53r7",
       "source": {
         "name": "github-language-javascript",
@@ -40444,7 +37943,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ec8905e7-c4fa-495b-a037-4c586036d817",
+      "bom-ref": "urn:uuid:7fe36cc0-dc3f-4101-b177-dec482018923",
       "id": "GHSA-mjrf-wm8v-9r4q",
       "source": {
         "name": "github-language-javascript",
@@ -40477,7 +37976,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:805befd1-a033-41de-9d59-e54b1a9a42af",
+      "bom-ref": "urn:uuid:64e7495e-568c-4d19-b3ac-bcddc1b8bb16",
       "id": "GHSA-pp5q-5wmm-4hr2",
       "source": {
         "name": "github-language-javascript",
@@ -40510,7 +38009,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1f5a7937-0ff6-48bd-acbc-507dbb2228b8",
+      "bom-ref": "urn:uuid:6ec9c8ba-0e3c-47e8-a673-0e6ad2f398f6",
       "id": "GHSA-wgw4-q5ph-839h",
       "source": {
         "name": "github-language-javascript",
@@ -40543,7 +38042,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:23917134-4329-48ed-aa4d-1388da70173a",
+      "bom-ref": "urn:uuid:0c525e79-b740-4ecb-b8fc-502f5154e015",
       "id": "GHSA-x743-4v5w-frpj",
       "source": {
         "name": "github-language-javascript",

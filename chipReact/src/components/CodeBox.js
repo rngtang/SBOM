@@ -31,9 +31,10 @@ const styles = {
         width: '100%',
         height: 'auto',
         display: 'flex',
-        flexDirection: 'column', // changed this to column so the lines stack vertically
+        flexDirection: 'row', 
         justifyContent: 'space-between',
         alignItems: 'flex-start', // aligns the lines to the left
+        textAlign: 'center',
         border: 'none',
         outline: 'none',
         backgroundColor: '#E5E5E5',
@@ -45,9 +46,9 @@ const styles = {
     },
     code: {
         whiteSpace: 'pre-wrap',
-        margin: '0',
+        margin: 'auto',
+        marginLeft: '0',
         textAlign: 'left',
-        marginRight: '15px',
         color: '#012169'
     },
     button: {
@@ -55,8 +56,6 @@ const styles = {
         border: 'none',
         cursor: 'pointer',
         alignSelf: 'flex-end', // positions the button at the end of the code box
-        marginTop: '10px', // add some space between the code and the button
-        marginRight: '10px',
     },
     icon: {
         fontSize: '16px',

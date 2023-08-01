@@ -67,7 +67,7 @@ const AnotherPage = () => {
             <Section title={data1.title} notice={data1.notice} text={data1.text} code={data1.code} downloadComponent={<DownloadLinuxScript />} />
             <Section title={data2.title} notice={data2.notice} text={data2.text} code={data2.code} downloadComponent={<DownloadMacScript />} />
             <Section title={data3.title} notice={data3.notice} text={data3.text} code={data3.code} downloadComponent={<DownloadWindowsScript />} />
-            <Section title={data4.title} notice={data4.notice} text={data4.text} code={data4.code} downloadComponent={<DownloadDockerfile />} />
+            <Section title={data4.title} notice={data4.notice} text={data4.text} code={data4.code} />
         </>
     );
 };
