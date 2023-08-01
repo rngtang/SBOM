@@ -16,9 +16,6 @@ if which cdxgen >/dev/null 2>&1; then
     echo -e "${COLOR}--- CDXGEN is already installed. Skipping re-installation. ---${NC}"
 else
     echo -e "${COLOR}--- Cdxgen was not found. INSTALLING CDXGEN... ---${NC}"
-    # see if way to install without sudo
-    # mkdir -p ./bin
-    # npm install --prefix ./bin @cyclonedx/cdxgen@8.6.0
     sudo npm install -g @cyclonedx/cdxgen@8.6.0
     echo -e "${COLOR}--- Successful: INSTALLED CDXGEN ---${NC}"
 fi
