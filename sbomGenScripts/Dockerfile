@@ -13,4 +13,3 @@ COPY docker_sboms.sh .
 WORKDIR /app
 
 CMD ["/sboms/docker_sboms.sh"]
-#CMD ["/bin/bash"]

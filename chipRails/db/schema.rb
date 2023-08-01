@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_150555) do
 
   create_table "metadata", charset: "utf8mb4", force: :cascade do |t|
     t.string "timestamp"
+    t.string "rootNode"
     t.bigint "sbom_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
