@@ -9,6 +9,7 @@ COPY package-lock.json .
 RUN npm install 
 
 WORKDIR /app
+
 # prepare any folders that might be needed by node_modules once we move this over at runtime
 RUN mkdir -p node_modules/.cache && chmod -R 777 node_modules/.cache
 RUN chmod -R 777 node_modules/
