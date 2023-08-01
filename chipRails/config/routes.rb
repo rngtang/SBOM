@@ -65,6 +65,6 @@ Rails.application.routes.draw do
   get '/current_user', to: 'sessions#index' 
   get '/destroy', to: 'sessions#destroy'
 
-  get '/sboms/:sbom_id/vuln_trace/:id', to: 'vulnerabilities#vuln_trace'
+  get '/sboms/:sbom_id/vuln_trace', to: 'vulnerabilities#vuln_trace'
 
 end

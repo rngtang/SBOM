@@ -47,9 +47,12 @@ class VulnerabilitiesController < ApplicationController
     end
     
     def vuln_trace
-      @vuln = Vulnerability.find(params[:id]).affected[0]
+      @vulns = Sbom.find(params[:sbom_id]).vulnerabilities
       @dependencies = Sbom.find(params[:sbom_id]).dependencies
-      trace = build_vuln_trace(@dependencies, @vuln)
+      trace = {}
+      for vuln in @vulns
+        trace[vuln.id] = build_vuln_trace(@dependencies, vuln.affected[0])
+      end
       render json: trace, status: :ok
     end
 
@@ -57,24 +60,16 @@ class VulnerabilitiesController < ApplicationController
     def build_vuln_trace(dependencies, pkg)
       pkg = pkg.gsub(/pkg:(npm|application)\//, "")
       pkg = pkg[/[^@]+/]
-      # puts pkg
-      # pkg = pkg[\/$]
       trace = []
       matching_ref = ""
       for dpd in dependencies
         for r in dpd.dependsOn
           r=r.gsub(/@\d.*$/, "")
           if r.ends_with?("/" + pkg) or r.ends_with?("/@" + pkg)
-            # r.endsin (/pkg or /@pkg)
-            # puts r
-            # puts pkg
-            # puts dpd.ref
-            # puts ""
             trace << dpd.ref
           end
         end
       end
-      # trace["children"].push(build_vuln_trace(dependencies, matching_ref))
       trace
     end
 
