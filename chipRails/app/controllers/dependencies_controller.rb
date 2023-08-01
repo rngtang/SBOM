@@ -41,13 +41,14 @@ class DependenciesController < ApplicationController
 
     def dependencies_tree
       sbom_id = params[:sbom_id]
-      sbom = Sbom.find(sbom_id)
-      dependencies = sbom.dependencies
+      @sbom = Sbom.find(sbom_id)
+      dependencies = @sbom.dependencies
 
       # The root_ref is the name of the root node
-      root_ref = dependencies.first.ref
+      @meta = Metadatum.find_by(sbom_id: params[:sbom_id])
+      root_ref = @meta.rootNode
       tree = build_dependency_tree(dependencies, root_ref)
-
+      
       render json: tree
     end
 
