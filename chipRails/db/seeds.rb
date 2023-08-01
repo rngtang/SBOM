@@ -19,8 +19,8 @@ sbom3 = user1.sboms.create(bomFormat: 'CycloneDX', specVersion: '1.4', serialNum
 sbom4 = user2.sboms.create(bomFormat: 'CycloneDX', specVersion: '1.4', serialNumber: 'serial number 4', version: 1, name: 'sbom 4', description: 'description sbom4', archive: true)
 
 # Creates some metadata associated with the sboms
-metadatum1 = sbom1.metadata.create(timestamp: '2023-06-22 7:22:00')
-metadatum2 = sbom2.metadata.create(timestamp: '2023-06-22 7:22:00')
+metadatum1 = sbom1.metadata.create(timestamp: '2023-06-22 7:22:00', rootNode: "wrgwegwrherqhrheerh")
+metadatum2 = sbom2.metadata.create(timestamp: '2023-06-22 7:22:00', rootNode: "giwrji[hupuip]")
 
 # Creates some sbomComponents associated with the sboms
 sbomComponent1 = sbom1.sbom_components.create(bom_ref: 'reference component 1', group: 'library', name: 'sbomComponent NAME 1', version: '1.1', purl: 'eiwghjewoijg')

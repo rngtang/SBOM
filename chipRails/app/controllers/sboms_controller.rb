@@ -109,7 +109,8 @@ class SbomsController < ApplicationController
 
         # creates metadata, why is it an array? idk has_many
         @mtd = data["metadata"]
-        @m = @sbom.metadata.create(timestamp: @mtd["timestamp"])
+        @rn = @mtd["component"]
+        @m = @sbom.metadata.create(timestamp: @mtd["timestamp"], rootNode: @rn["purl"])
         
         # creates tools for metadata for array of object input
         @t = @mtd["tools"]
