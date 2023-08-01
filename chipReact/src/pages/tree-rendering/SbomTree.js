@@ -25,6 +25,13 @@ function SbomTree() {
   const [sbomDesc, setSbomDesc] = useState("");
   const [showModal, setShowModal] = useState(true);
 
+  const treeConfig = {
+    // enableLegacyTransitions: true,
+    separation: { siblings: 0.25, nonSiblings: 0.35 },
+    // nodeSize: { x: 10, y: 10 },
+    dimensions: { height: 800, width: 400 }
+  };
+
   // get all refs of affected things;
       const fetchAffected = () => {
         fetch(`http://localhost:8080/sboms/${sbomId}/vuln_affected`)
@@ -151,7 +158,8 @@ function SbomTree() {
             </div>
         </div>
       <div style={containerStyles}>
-        {data && <Tree data={data} translate={{ x: 400, y: 200 }} separation={{ siblings: 1.5, nonSiblings: 3 }} depthFactor={800} renderCustomNodeElement={renderCustomNodeElement} pathFunc='disjointelbow' />} {/* Increase the depthFactor here */}
+        {/* {data && <Tree data={data} translate={{ x: 400, y: 200 }} separation={{ siblings: 1.25, nonSiblings: 2 }} depthFactor={900} renderCustomNodeElement={renderCustomNodeElement} pathFunc='diagonal' dimensions={{height:0,width:0}} />} Increase the depthFactor here */}
+        {data && <Tree data={data} {...treeConfig} />}
       </div>
       <ModalTree
           show={showModal}
