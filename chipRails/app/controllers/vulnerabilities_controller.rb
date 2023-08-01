@@ -75,3 +75,5 @@ class VulnerabilitiesController < ApplicationController
 
 
 end
+
+# an attempt was made to create a function with a full trace, following the line of dependencies which contain the affected package
