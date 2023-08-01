@@ -28,6 +28,21 @@ export default function DownloadLinuxScript() {
         // debugger line
         // console.log(url);
         setFileurl(url);
+
+        /// download it
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute(
+          'download',
+          `linux_install.sh`,
+        );
+        // Append to html link element page
+        document.body.appendChild(link);
+        // Start download
+        link.click();
+        // Clean up and remove the link
+        link.parentNode.removeChild(link);
+
       })
       // throw errors
       .catch((error) => {
@@ -38,11 +53,11 @@ export default function DownloadLinuxScript() {
   return (
     <div>
       <a
-        href={fileurl}
-        download="linux_install.sh"
-        // if target set to blank, opens download in new tab
-        // target="_blank"
-        rel="noreferrer" // security line
+        // href={fileurl}
+        // download="linux_install.sh"
+        // // if target set to blank, opens download in new tab
+        // // target="_blank"
+        // rel="noreferrer" // security line
       >
         <button onClick={handleDownload} className={styles.button}>DOWNLOAD LINUX SCRIPT</button>
       </a>

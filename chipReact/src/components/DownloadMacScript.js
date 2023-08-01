@@ -27,8 +27,23 @@ export default function DownloadLinuxScript() {
       .then((blob) => {
         // create file URL, as if it is a pseudo end point
         const url = URL.createObjectURL(blob);
-        console.log(url)
+        // console.log(url)
         setFileurl(url);
+
+        /// download it
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute(
+          'download',
+          `mac_install.sh`,
+        );
+        // Append to html link element page
+        document.body.appendChild(link);
+        // Start download
+        link.click();
+        // Clean up and remove the link
+        link.parentNode.removeChild(link);
+
       })
       // throw errors
       .catch((error) => {
@@ -39,10 +54,10 @@ export default function DownloadLinuxScript() {
   return (
     <div>
       <a 
-        href = {fileurl}
-        download = "mac_install.sh"
-        // target="_blank" // if target set to blank, opens download in new tab
-        rel="noreferrer" // security 
+        // href = {fileurl}
+        // download = "mac_install.sh"
+        // // target="_blank" // if target set to blank, opens download in new tab
+        // rel="noreferrer" // security 
       >
         <button onClick={handleDownload} className={styles.button}>DOWNLOAD MAC SCRIPT</button>
       </a>
