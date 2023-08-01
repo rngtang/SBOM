@@ -77,3 +77,46 @@ class VulnerabilitiesController < ApplicationController
 end
 
 # an attempt was made to create a function with a full trace, following the line of dependencies which contain the affected package
+# below is the recursive function attempt
+
+# def vuln_trace
+#   @vuln = Vulnerability.find(params[:id]).affected[0]
+#   @dependencies = Sbom.find(params[:sbom_id]).dependencies
+#   trace = build_vuln_trace(@dependencies, @vuln)
+#   render json: trace, status: :ok
+# end
+
+
+# def build_vuln_trace(dependencies, pkg)
+#   # removes extra string and version number from pkg, as these often cause false mismatches
+#   pkg = pkg.gsub(/pkg:(npm|application)\//, "")
+#   pkg = pkg[/[^@]+/]
+#   # puts pkg
+#   # pkg = pkg[\/$]
+#   # creates object to store the name of package we are looking for and any dependencies it appears in
+#   trace = {name => pkg, children => []}
+#   # loops through all dependencies
+#   for dpd in dependencies
+#     for r in dpd.dependsOn
+#       # removes version number from pkg in dependsOn to remove possibility of false mismatch
+#       r=r.gsub(/@\d.*$/, "")
+#       # loops through the list of pkgs that dependency depends on and checks if that pkg ends with the name of the pkg we are looking for
+#       # specifically looks for the name of the pkg with a "/" or "/@" to avoid possibility of false match
+#       if r.ends_with?("/" + pkg) or r.ends_with?("/@" + pkg)
+#         # r.endsin (/pkg or /@pkg)
+#         # puts r
+#         # puts pkg
+#         # puts dpd.ref
+#         # puts ""
+#         # if it does match, now look for this package in dependencies and continue building tree off of that
+#         trace[children].push(build_vuln_trace(dependencies, dpd.ref))
+#       end
+#     end
+#   end
+#   # return the tree
+#   trace
+# end
+
+
+# it worked for some vulnerabilities, however occasionally it will create a loop and find a package inside a package we have already found before, therefore a endless recursive loop
+# good luck for whoever touches this next
