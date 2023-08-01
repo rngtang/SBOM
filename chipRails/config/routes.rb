@@ -53,7 +53,10 @@ Rails.application.routes.draw do
   get '/users/:user_id/sbom_names', to: 'sboms#sbomNames'
   get '/users/:user_id/sbom_top', to: 'sboms#sbomTop'
 
-  # routes for generating an SBOM
+  # testing ability to trace up vulnerabilities
+  get '/sboms/:sbom_id/vuln_affected', to: 'vulnerabilities#vulnaffected'
+
+  # routes for generating an sbom
   get '/scripts/linux', to: 'scripts#linux'
   get '/scripts/windows', to: 'scripts#windows'
   get '/scripts/mac', to: 'scripts#mac'

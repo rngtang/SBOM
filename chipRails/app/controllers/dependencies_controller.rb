@@ -51,27 +51,25 @@ class DependenciesController < ApplicationController
       render json: tree
     end
 
-    def build_dependency_tree(dependencies, root_ref)
-    # Initialize the tree with the modified name
-    formatted_name = root_ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, "")
-    tree = {"name" => formatted_name, "children" => []}
+def build_dependency_tree(dependencies, root_ref)
+# Initialize the tree with the modified name
+formatted_name = root_ref.gsub(/pkg:(npm|application)\//, "")
+tree = {"name" => formatted_name, "children" => []}
 
-    # Find the matching dependency
-    matching_dep = dependencies.find { |dep| dep["ref"] == root_ref }
+# Find the matching dependency
+matching_dep = dependencies.find { |dep| dep["ref"] == root_ref }
 
-    if matching_dep
-      # For each dependency that this dependency depends on
-      matching_dep["dependsOn"].each do |ref|
-        # Check if this dependency is in the original dependencies list
-        dep = dependencies.find { |dep| dep["ref"] == ref }
-        if dep
-          # If it is, recursively build its tree
-          tree["children"].push(build_dependency_tree(dependencies, ref))
-        else
-          # If it's not found, add a null end node with the modified name
-          tree["children"].push({"name" => ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, ""), "children" => []})
-        end
-      end
+if matching_dep
+  # For each dependency that this dependency depends on
+  matching_dep["dependsOn"].each do |ref|
+    # Check if this dependency is in the original dependencies list
+    dep = dependencies.find { |dep| dep["ref"] == ref }
+    if dep
+      # If it is, recursively build its tree
+      tree["children"].push(build_dependency_tree(dependencies, ref))
+    else
+      # If it's not found, add a null end node with the modified name
+      tree["children"].push({"name" => ref.gsub(/pkg:(npm|application)\//, "").gsub(/@\d+.\d+.\d+/, ""), "children" => []})
     end
 
     tree

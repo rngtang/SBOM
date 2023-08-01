@@ -23,6 +23,18 @@ class VulnerabilitiesController < ApplicationController
         end
     end
 
+    def vulnaffected
+      @sbom = Sbom.find(params[:sbom_id])
+      @vulnerabilities = @sbom.vulnerabilities
+      @affected = [];
+      for vuln in @vulnerabilities do
+        for i in vuln.affected do
+          @affected << i
+        end
+      end 
+      render json: @affected, status: :ok
+    end
+
     # Renders to show a vulnerability
     def show
         @vulnerability = Vulnerability.find(params[:id])
@@ -33,4 +45,5 @@ class VulnerabilitiesController < ApplicationController
     def vulnerability_params
         params.permit(:bom_ref, :vulnID, :description, :recommendation, affected: [])
     end
+    
 end
