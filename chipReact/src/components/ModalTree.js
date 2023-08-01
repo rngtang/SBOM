@@ -16,7 +16,16 @@ function ModalTree(props) {
                     Dependency Tree generator alert. 
                 </Modal.Title>
                 <Modal.Body>
-                    <p>The following Dependency Tree might not have all the transitive dependencies of your software.</p>
+                    <p>The following Dependency Tree might not have all the transitive dependencies of your software. CDXgen (the tool used to generate the SBOM) only supports the following package manifests to generate the dependency tree:
+                        <ul>
+                            <li>package-lock.json</li>
+                            <li>yarn.lock</li>
+                            <li>pnpm-lock.yaml</li>
+                            <li>Maven (pom.xml)</li>
+                            <li>Gradle</li>
+                            <li>Python (requirements.txt, setup.py, pyproject.toml, poetry.lock)</li>
+                        </ul>
+                    </p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button onClick={props.onHide}>I understand</Button>
