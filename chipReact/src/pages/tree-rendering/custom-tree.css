@@ -1,3 +1,16 @@
 .rd3t-node:hover {
   stroke-width: 5px !important;
 }
+
+.rd3t-node circle {
+  r: 10;
+}
+
+.rd3t-leaf-node circle {
+  r: 10;
+}
+
+.rd3t-label__title {
+  fill: royalblue !important;
+  translate: -50px 25px;
+}

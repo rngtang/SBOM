@@ -27,10 +27,10 @@ function SbomTree() {
 
   const treeConfig = {
     enableLegacyTransitions: true,
-    separation: { siblings: 0.25, nonSiblings: 0.35 },
+    separation: { siblings: 0.35, nonSiblings: 0.35 },
     shouldCollapseNeighborNodes: true,
     scaleExtent: { min: 0.25, max: 0.75 },
-    nodeSize: { x: 350, y: 140 },
+    nodeSize: { x: 340, y: 140 },
     initialDepth: 1,
     translate: { x: 100, y: 400 },
     zoom: 0.75,
