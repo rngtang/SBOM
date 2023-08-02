@@ -26,9 +26,14 @@ function SbomTree() {
   const [showModal, setShowModal] = useState(true);
 
   const treeConfig = {
-    // enableLegacyTransitions: true,
+    enableLegacyTransitions: true,
     separation: { siblings: 0.25, nonSiblings: 0.35 },
-    // nodeSize: { x: 10, y: 10 },
+    shouldCollapseNeighborNodes: true,
+    scaleExtent: { min: 0.25, max: 0.75 },
+    nodeSize: { x: 350, y: 140 },
+    initialDepth: 1,
+    translate: { x: 100, y: 400 },
+    zoom: 0.75,
     dimensions: { height: 800, width: 400 }
   };
 
