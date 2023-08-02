@@ -12,13 +12,17 @@ gem 'byebug'
 #auth stuff
 gem 'ruby-saml', '~> 1.13'
 
-group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'debug', platforms: %i[mri mingw x64_mingw]
+# group :development, :test do
+#   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+#   gem 'better_errors'
+#   gem 'binding_of_caller'
+#   gem 'debug', platforms: %i[mri mingw x64_mingw]
 
+# end
+group :development do
+  gem 'better_errors'
 end
+
 
 # For HTTP requests
 gem 'rack-cors'
@@ -62,6 +66,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem 'rufus-scheduler'
+gem 'httparty'
 # add SAML capabilities
 
 # Use Sass to process CSS
