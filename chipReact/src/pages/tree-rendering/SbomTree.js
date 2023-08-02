@@ -107,7 +107,7 @@ function SbomTree() {
     }
     return (
     <g>
-      <circle r={85} style={{ fill: getColorByDepth(nodeDatum.depth) }} onClick={toggleNode} />
+      <circle r={85} style={{ fill:'#6F8FAF' }} onClick={toggleNode} />
       <foreignObject x="-60" y="-35" width="120" height="80">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '2px', border: '1px solid black' }}>
           <span style={{ fontSize: '20px', fontFamily: 'Times New Roman' }}>{nodeDatum.name}</span>
