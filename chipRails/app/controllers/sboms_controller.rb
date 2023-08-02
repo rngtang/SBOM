@@ -50,6 +50,14 @@ class SbomsController < ApplicationController
         @sbom.update(archive: true)
     end
 
+    def namedesc
+        @sbom = Sbom.find(params[:id])
+        @top = []
+        @top << @sbom.name
+        @top << @sbom.description
+        render json: @top, status: :ok
+    end
+
     def destroy     
         @sbom.destroy
         respond_to do |format|
@@ -117,7 +125,8 @@ class SbomsController < ApplicationController
 
         # creates metadata, why is it an array? idk has_many
         @mtd = data["metadata"]
-        @m = @sbom.metadata.create(timestamp: @mtd["timestamp"])
+        @rn = @mtd["component"]
+        @m = @sbom.metadata.create(timestamp: @mtd["timestamp"], rootNode: @rn["purl"])
         
         # creates tools for metadata for array of object input
         @t = @mtd["tools"]

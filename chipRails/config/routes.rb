@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   delete '/users', to: 'users#index'
 
   get '/sboms/:id/archive', to: 'sboms#archive'
-
+  get '/sboms/:id/namedesc', to: 'sboms#namedesc'
   get '/sboms/:sbom_id/dependencies_tree', to: 'dependencies#dependencies_tree'
   
   get '/users/:user_id/sbom_names', to: 'sboms#sbomNames'
@@ -64,5 +64,7 @@ Rails.application.routes.draw do
   post '/saml/consume', to: 'sessions#create'
   get '/current_user', to: 'sessions#index' 
   get '/destroy', to: 'sessions#destroy'
+
+  get '/sboms/:sbom_id/vuln_trace', to: 'vulnerabilities#vuln_trace'
 
 end
