@@ -50,8 +50,11 @@ const WhatAreSBOMs = () => {
                 A Software Bill of Materials (SBOM) is a formal record of all software packages and components used by a software project or machine. 
             </p>
             <p>
-                These components can be commercial or open-source, and in turn rely on other components themselves. This creates a series of reliances, or a chain of dependencies, that is not easily visible to the creator or user of the main project.
+                These components can be commercial or open-source, and in turn rely on other components themselves. This creates a series of reliances, or a chain of dependencies, that is not easily visible to the creator or user of the main project. 
             </p> 
+            <p>
+                In this way, an SBOM brings transparency and security to a software project.
+            </p>
         </div>
     );
 };
@@ -60,6 +63,9 @@ const OurProject = () => {
     return (
         <div className="section">
             <h3>Our Project</h3>
+            <p>
+                Due to the heirarchical nature of SBOMs, most of them are at or over tens of thousands of lines of text, which make them impossible to parse manually. While there is already plenty technology that exists to create SBOMs, there are still not any standarized or widely used resources for easily making sense of and using them. 
+            </p>
             <p>
                 Our team, composed of students from Duke University, is working in collaboration with Duke's Information Technology Security Office (ITSO) to explore the most active open-source projects in the SBOM and supply chain security space. We aim to develop a user-friendly interface that makes it easy for development teams at Duke to gather and share this information.
             </p>
