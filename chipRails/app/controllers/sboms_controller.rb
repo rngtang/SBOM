@@ -50,6 +50,14 @@ class SbomsController < ApplicationController
         @sbom.update(archive: true)
     end
 
+    def namedesc
+        @sbom = Sbom.find(params[:id])
+        @top = []
+        @top << @sbom.name
+        @top << @sbom.description
+        render json: @top, status: :ok
+    end
+
     def destroy     
         @sbom.destroy
         respond_to do |format|
