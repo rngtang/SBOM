@@ -1,0 +1,329 @@
+{
+    "name": "bird-app-2",
+    "children": [
+      {
+        "name": "@testing-library/jest-dom",
+        "children": [
+          {
+            "name": "@adobe/css-tools",
+            "children": [
+              {
+                "name": "css-toolkit",
+                "children": [
+                  {
+                    "name": "css-parser",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "@babel/runtime",
+            "children": [
+              {
+                "name": "babel-core",
+                "children": [
+                  {
+                    "name": "babel-transform",
+                    "children": [
+                        {
+                            "name": "babel-adjust",
+                            "children": [
+                              {
+                                "name": "babel-transfer",
+                                "children": [
+                                    
+                                ]
+                              }
+                            ]
+                          }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "@types/testing-library__jest-dom",
+            "children": []
+          },
+          {
+            "name": "aria-query",
+            "children": []
+          },
+          {
+            "name": "dom-accessibility-api",
+            "children": []
+          },
+          {
+            "name": "redent",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "@testing-library/react",
+        "children": [
+          {
+            "name": "@babel/runtime",
+            "children": []
+          },
+          {
+            "name": "@testing-library/dom",
+            "children": [
+                {
+                    "name": "@testing-library/react-dom",
+                    "children": [
+                      {
+                        "name": "@testing-transform",
+                        "children": [
+                            
+                        ]
+                      }
+                    ]
+                  }
+            ]
+          },
+          {
+            "name": "@types/react-dom",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "@testing-library/user-event",
+        "children": [
+          {
+            "name": "@babel/runtime",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "react",
+        "children": [
+          {
+            "name": "loose-envify",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "react-dom",
+        "children": [
+          {
+            "name": "loose-envify",
+            "children": []
+          },
+          {
+            "name": "scheduler",
+            "children": [
+                {
+                    "name": "scheduler-core",
+                    "children": []
+                  }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "react-scripts",
+        "children": [
+          {
+            "name": "@babel/core",
+            "children": []
+          },
+          {
+            "name": "@pmmmwh/react-refresh-webpack-plugin",
+            "children": []
+          },
+          {
+            "name": "@svgr/webpack",
+            "children": []
+          },
+          {
+            "name": "babel-jest",
+            "children": []
+          },
+          {
+            "name": "babel-loader",
+            "children": []
+          },
+          {
+            "name": "babel-plugin-named-asset-import",
+            "children": []
+          },
+          {
+            "name": "babel-preset-react-app",
+            "children": []
+          },
+          {
+            "name": "bfj",
+            "children": []
+          },
+          {
+            "name": "browserslist",
+            "children": []
+          },
+          {
+            "name": "camelcase",
+            "children": []
+          },
+          {
+            "name": "case-sensitive-paths-webpack-plugin",
+            "children": []
+          },
+          {
+            "name": "css-loader",
+            "children": []
+          },
+          {
+            "name": "css-minimizer-webpack-plugin",
+            "children": []
+          },
+          {
+            "name": "dotenv",
+            "children": []
+          },
+          {
+            "name": "dotenv-expand",
+            "children": []
+          },
+          {
+            "name": "eslint",
+            "children": []
+          },
+          {
+            "name": "eslint-config-react-app",
+            "children": []
+          },
+          {
+            "name": "eslint-webpack-plugin",
+            "children": []
+          },
+          {
+            "name": "file-loader",
+            "children": []
+          },
+          {
+            "name": "fs-extra",
+            "children": []
+          },
+          {
+            "name": "html-webpack-plugin",
+            "children": []
+          },
+          {
+            "name": "identity-obj-proxy",
+            "children": []
+          },
+          {
+            "name": "jest",
+            "children": []
+          },
+          {
+            "name": "jest-resolve",
+            "children": []
+          },
+          {
+            "name": "jest-watch-typeahead",
+            "children": []
+          },
+          {
+            "name": "mini-css-extract-plugin",
+            "children": []
+          },
+          {
+            "name": "postcss",
+            "children": []
+          },
+          {
+            "name": "postcss-flexbugs-fixes",
+            "children": []
+          },
+          {
+            "name": "postcss-loader",
+            "children": []
+          },
+          {
+            "name": "postcss-normalize",
+            "children": []
+          },
+          {
+            "name": "postcss-preset-env",
+            "children": []
+          },
+          {
+            "name": "prompts",
+            "children": []
+          },
+          {
+            "name": "react-app-polyfill",
+            "children": []
+          },
+          {
+            "name": "react-dev-utils",
+            "children": []
+          },
+          {
+            "name": "react-refresh",
+            "children": []
+          },
+          {
+            "name": "resolve",
+            "children": []
+          },
+          {
+            "name": "resolve-url-loader",
+            "children": []
+          },
+          {
+            "name": "sass-loader",
+            "children": []
+          },
+          {
+            "name": "semver",
+            "children": []
+          },
+          {
+            "name": "source-map-loader",
+            "children": []
+          },
+          {
+            "name": "style-loader",
+            "children": []
+          },
+          {
+            "name": "tailwindcss",
+            "children": []
+          },
+          {
+            "name": "terser-webpack-plugin",
+            "children": []
+          },
+          {
+            "name": "webpack",
+            "children": []
+          },
+          {
+            "name": "webpack-dev-server",
+            "children": []
+          },
+          {
+            "name": "webpack-manifest-plugin",
+            "children": []
+          },
+          {
+            "name": "workbox-webpack-plugin",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "web-vitals",
+        "children": []
+      }
+    ]
+  }
+  

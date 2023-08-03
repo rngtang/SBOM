@@ -6,7 +6,7 @@
       "Move the script into your project directory. It should be on the highest level inside your project in order to scan everything.", 
       "Open your mac terminal and navigate to inside your project directory. This should be the same location as step 2. You can check to see if your script is in the correct place by running the command 'ls', which should display the file 'mac_install.sh'.", 
       "From there, execute the shell script with the following command.", 
-      "Check to see that your SBOM was created properly. Your SBOM should be a (title).MAC.json file titled with the name of your project directory."
+      "Check to see that your SBOM was created properly. Your SBOM should be a (title).SBOM.json file titled with the name of your project directory."
     ],
-    "code": "bash mac_install.sh"
+    "code":[[ "bash mac_install.sh"]]
   }

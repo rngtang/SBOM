@@ -50,6 +50,14 @@ class SbomsController < ApplicationController
         @sbom.update(archive: true)
     end
 
+    def namedesc
+        @sbom = Sbom.find(params[:id])
+        @top = []
+        @top << @sbom.name
+        @top << @sbom.description
+        render json: @top, status: :ok
+    end
+
     def destroy     
         @sbom.destroy
         respond_to do |format|
@@ -103,6 +111,7 @@ class SbomsController < ApplicationController
                         @c.dependencies << @d
                     end
 
+                    @props = subC["properties"]
                     # creates sbom_component properties for array of object input
                     @props = subC["properties"]
                     if @props
@@ -116,7 +125,8 @@ class SbomsController < ApplicationController
 
         # creates metadata, why is it an array? idk has_many
         @mtd = data["metadata"]
-        @m = @sbom.metadata.create(timestamp: @mtd["timestamp"])
+        @rn = @mtd["component"]
+        @m = @sbom.metadata.create(timestamp: @mtd["timestamp"], rootNode: @rn["purl"])
         
         # creates tools for metadata for array of object input
         @t = @mtd["tools"]
@@ -126,13 +136,13 @@ class SbomsController < ApplicationController
             end
         end
 
-        # creates vulnerabilities
+        # creates vulnerabilities assoc with sboms
         @vulns = data["vulnerabilities"]
         if @vulns
             @vulns.each do |v|
                 # Finds or creates vulnerabilities by the vulnID
                 if Vulnerability.find_by(vulnID: v["id"])
-                    # If the vulnerability exists, then it is appended to the sbom if it does not already has it
+                    # If the vulnerability exists, the it is appended to the sbom
                     @v = Vulnerability.find_by(vulnID: v["id"])
                     @sbom.vulnerabilities << @v unless @sbom.vulnerabilities.include?(@v)
                     next

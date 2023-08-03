@@ -132,3 +132,10 @@
   margin-right: 9px;
 }
 
+.moreInfo {
+  display: inline;
+  margin-left: 5px;
+  margin-top: -2px;
+  width: 20px;
+  length: 20px;
+}

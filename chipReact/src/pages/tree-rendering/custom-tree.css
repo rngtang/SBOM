@@ -1,28 +1,16 @@
-.node__root circle {
-    fill: red;
-  }
-  
-  .node__branch-0 circle {
-    fill: orange;
-  }
-  
-  .node__branch-1 circle {
-    fill: yellow;
-  }
-  
-  .node__branch-2 circle {
-    fill: green;
-  }
-  
-  .node__branch-3 circle {
-    fill: blue;
-  }
-  
-  .node__branch-4 circle {
-    fill: indigo;
-  }
-  
-  .node__leaf circle {
-    fill: violet;
-  }
-  
+.rd3t-node:hover {
+  stroke-width: 5px !important;
+}
+
+.rd3t-node circle {
+  r: 10;
+}
+
+.rd3t-leaf-node circle {
+  r: 10;
+}
+
+.rd3t-label__title {
+  fill: royalblue !important;
+  translate: -50px 25px;
+}

@@ -1,0 +1,15 @@
+{
+  "title": "For Docker",
+  "notice": "This script will run sudo, requiring admin permissions.",
+  "text": [
+    "Install Docker: If Docker isn't installed on your machine, download and install it from the official Docker website (docker.com/get-started).",
+    "Open a terminal and navigate to the directory where your project is located.", 
+    "Run the Docker image by typing the command below", 
+    "Check to see that your SBOM was created properly. Your SBOM should be an app.SBOM.json file."
+  ],
+  "code": [
+    [
+      "docker run --rm -v $(pwd):/app:rw -t rngtang/chip-image"
+    ]
+  ]  
+}

@@ -33,7 +33,7 @@ const MyAccordion = ({ userId, meta, trigger, setTrigger, sbom, setLoading }) =>
                                 <p>v.{sbom.specVersion}</p>
                             </div>
                             {/* all buttons for sbom tree, deletion, update */}
-                            <TreeButton sbomId={sbom.id}/>
+                            <TreeButton sbomId={sbom.id} sbomName={sbom.name} sbomDesc={sbom.description}/>
                             <DeleteButton sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} setLoading={setLoading} />
                             <UpdateButton userId={userId} sbomId={sbom.id} trigger={trigger} setTrigger={setTrigger} name={sbom.name} description={sbom.description} setLoading={setLoading}/>
                         </div>
