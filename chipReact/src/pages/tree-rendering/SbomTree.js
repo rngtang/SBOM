@@ -25,17 +25,6 @@ function SbomTree() {
   const [sbomDesc, setSbomDesc] = useState("");
   const [showModal, setShowModal] = useState(true);
 
-  const treeConfig = {
-    enableLegacyTransitions: true,
-    separation: { siblings: 0.35, nonSiblings: 0.35 },
-    shouldCollapseNeighborNodes: true,
-    scaleExtent: { min: 0.25, max: 0.75 },
-    nodeSize: { x: 340, y: 140 },
-    initialDepth: 1,
-    translate: { x: 100, y: 400 },
-    zoom: 0.75,
-    dimensions: { height: 800, width: 400 }
-  };
 
   // get all refs of affected things;
   const fetchAffected = () => {
@@ -97,36 +86,38 @@ function SbomTree() {
 
   // }
 
-  // const renderCustomNodeElement = ({ nodeDatum, toggleNode }) => {
-  //   if (affected){
-  //     for (let i = 0; i < affected.length; i++) {
-  //       if (affected[i].includes(nodeDatum.name)){
-  //         // console.log(affected[i].includes(nodeDatum.name))
-  //         // console.log(affected[i] + " " + nodeDatum.name)
-  //         return (
-  //           <g>
-  //             {/* , stroke: '#ff0000', 'stroke-width': 5  */}
-  //             <circle r={85} style={{ fill: '#ff0000'}} onClick={toggleNode} />
-  //             <foreignObject x="-60" y="-35" width="120" height="80">
-  //               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '2px', border: '1px solid black' }}>
-  //                 <span style={{ fontSize: '20px', fontFamily: 'Times New Roman' }}>{nodeDatum.name}</span>
-  //               </div>
-  //             </foreignObject>
-  //           </g>
-  //         )
-  //       }
-  //     }
-  //   }
-  //   return (
-  //   <g>
-  //     <circle r={85} style={{ fill: getColorByDepth(nodeDatum.depth) }} onClick={toggleNode} />
-  //     <foreignObject x="-60" y="-35" width="120" height="80">
-  //       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '2px', border: '1px solid black' }}>
-  //         <span style={{ fontSize: '20px', fontFamily: 'Times New Roman' }}>{nodeDatum.name}</span>
-  //       </div>
-  //     </foreignObject>
-  //   </g>
-  // )};  
+  const renderCustomNodeElement = ({ nodeDatum, toggleNode }) => {
+    if (affected){
+      for (let i = 0; i < affected.length; i++) {
+        if (affected[i].includes(nodeDatum.name)){
+          // console.log(affected[i].includes(nodeDatum.name))
+          // console.log(affected[i] + " " + nodeDatum.name)
+          return (
+            <g>
+              {/* , stroke: '#ff0000', 'stroke-width': 5  */}
+              <circle r={85} style={{ fill: '#ff0000'}} onClick={toggleNode} />
+              <text class="rd3t-label__title" text-anchor="start" x="40">{nodeDatum.name}</text>
+              {/* <foreignObject x="-60" y="-35" width="120" height="80">
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '2px', border: '1px solid black' }}>
+                  <span style={{ fontSize: '20px', fontFamily: 'Times New Roman' }}>{nodeDatum.name}</span>
+                </div>
+              </foreignObject> */}
+            </g>
+          )
+        }
+      }
+    }
+    return (
+    <g>
+      <circle r={85} style={{  }} onClick={toggleNode} />
+      <text class="rd3t-label__title" text-anchor="start" x="40">{nodeDatum.name}</text>
+      {/* <foreignObject x="-60" y="-35" width="120" height="80">
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '2px', border: '1px solid black' }}>
+          <span style={{ fontSize: '20px', fontFamily: 'Times New Roman' }}>{nodeDatum.name}</span>
+        </div>
+      </foreignObject> */}
+    </g>
+  )};  
 
 
   useEffect(() => {
@@ -152,6 +143,19 @@ function SbomTree() {
   //     children: node.children.map(child => addCollapsedFlag(child, level + 1))
   //   };
   // };
+
+  const treeConfig = {
+    enableLegacyTransitions: true,
+    separation: { siblings: 0.35, nonSiblings: 0.35 },
+    shouldCollapseNeighborNodes: true,
+    scaleExtent: { min: 0.25, max: 0.75 },
+    nodeSize: { x: 340, y: 140 },
+    initialDepth: 1,
+    translate: { x: 100, y: 400 },
+    zoom: 0.75,
+    dimensions: { height: 800, width: 400 },
+    renderCustomNodeElement: renderCustomNodeElement
+  };
 
 
   return (
