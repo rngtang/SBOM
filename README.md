@@ -25,5 +25,5 @@ The second page is 'Generate SBOMs'. This is where users can choose between four
 The final page on the navigation bar is actually just a log out button. 
 
 
-
+Original Repository from GitLab. Credits to: Judy Chen, Olivia Chen, Alice Hu, James Mu, Caleb Kiprono, and Raul Ng
 
